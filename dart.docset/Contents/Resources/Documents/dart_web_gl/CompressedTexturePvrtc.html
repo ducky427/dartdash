@@ -1,0 +1,284 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>CompressedTexturePvrtc class / dart:web_gl Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:web_gl" data-type="CompressedTexturePvrtc">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_web_gl.html">dart:web_gl</a> &rsaquo; <a href="../dart_web_gl/CompressedTexturePvrtc.html">CompressedTexturePvrtc</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../crypto.html">crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_typed_data.html">dart:typed_data</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_gl.html">dart:web_gl</a></h2><ul class="icon">
+<li><a href="../dart_web_gl/ActiveInfo.html"><div class="icon-class"></div>ActiveInfo</a></li>
+<li><a href="../dart_web_gl/Buffer.html"><div class="icon-class"></div>Buffer</a></li>
+<li><a href="../dart_web_gl/CompressedTextureAtc.html"><div class="icon-class"></div>CompressedTextureAtc</a></li>
+<li><div class="icon-class"></div><strong>CompressedTexturePvrtc</strong></li>
+<li><a href="../dart_web_gl/CompressedTextureS3TC.html"><div class="icon-class"></div>CompressedTextureS3TC</a></li>
+<li><a href="../dart_web_gl/ContextAttributes.html"><div class="icon-class"></div>ContextAttributes</a></li>
+<li><a href="../dart_web_gl/ContextEvent.html"><div class="icon-class"></div>ContextEvent</a></li>
+<li><a href="../dart_web_gl/DebugRendererInfo.html"><div class="icon-class"></div>DebugRendererInfo</a></li>
+<li><a href="../dart_web_gl/DebugShaders.html"><div class="icon-class"></div>DebugShaders</a></li>
+<li><a href="../dart_web_gl/DepthTexture.html"><div class="icon-class"></div>DepthTexture</a></li>
+<li><a href="../dart_web_gl/ExtDrawBuffers.html"><div class="icon-class"></div>ExtDrawBuffers</a></li>
+<li><a href="../dart_web_gl/ExtFragDepth.html"><div class="icon-class"></div>ExtFragDepth</a></li>
+<li><a href="../dart_web_gl/ExtTextureFilterAnisotropic.html"><div class="icon-class"></div>ExtTextureFilterAnisotropic</a></li>
+<li><a href="../dart_web_gl/Framebuffer.html"><div class="icon-class"></div>Framebuffer</a></li>
+<li><a href="../dart_web_gl/LoseContext.html"><div class="icon-class"></div>LoseContext</a></li>
+<li><a href="../dart_web_gl/OesElementIndexUint.html"><div class="icon-class"></div>OesElementIndexUint</a></li>
+<li><a href="../dart_web_gl/OesStandardDerivatives.html"><div class="icon-class"></div>OesStandardDerivatives</a></li>
+<li><a href="../dart_web_gl/OesTextureFloat.html"><div class="icon-class"></div>OesTextureFloat</a></li>
+<li><a href="../dart_web_gl/OesTextureFloatLinear.html"><div class="icon-class"></div>OesTextureFloatLinear</a></li>
+<li><a href="../dart_web_gl/OesTextureHalfFloat.html"><div class="icon-class"></div>OesTextureHalfFloat</a></li>
+<li><a href="../dart_web_gl/OesTextureHalfFloatLinear.html"><div class="icon-class"></div>OesTextureHalfFloatLinear</a></li>
+<li><a href="../dart_web_gl/OesVertexArrayObject.html"><div class="icon-class"></div>OesVertexArrayObject</a></li>
+<li><a href="../dart_web_gl/Program.html"><div class="icon-class"></div>Program</a></li>
+<li><a href="../dart_web_gl/Renderbuffer.html"><div class="icon-class"></div>Renderbuffer</a></li>
+<li><a href="../dart_web_gl/RenderingContext.html"><div class="icon-class"></div>RenderingContext</a></li>
+<li><a href="../dart_web_gl/Shader.html"><div class="icon-class"></div>Shader</a></li>
+<li><a href="../dart_web_gl/ShaderPrecisionFormat.html"><div class="icon-class"></div>ShaderPrecisionFormat</a></li>
+<li><a href="../dart_web_gl/Texture.html"><div class="icon-class"></div>Texture</a></li>
+<li><a href="../dart_web_gl/UniformLocation.html"><div class="icon-class"></div>UniformLocation</a></li>
+<li><a href="../dart_web_gl/VertexArrayObject.html"><div class="icon-class"></div>VertexArrayObject</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../mdv_observe.html">mdv_observe</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../source_maps.html">source_maps</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>CompressedTexturePvrtc</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<pre class="source">
+@DocsEditable
+@DomName('WebGLCompressedTexturePVRTC')
+// http://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_pvrtc/
+@Experimental // experimental
+class CompressedTexturePvrtc native "WebGLCompressedTexturePVRTC" {
+
+ @DomName('WebGLCompressedTexturePVRTC.COMPRESSED_RGBA_PVRTC_2BPPV1_IMG')
+ @DocsEditable
+ static const int COMPRESSED_RGBA_PVRTC_2BPPV1_IMG = 0x8C03;
+
+ @DomName('WebGLCompressedTexturePVRTC.COMPRESSED_RGBA_PVRTC_4BPPV1_IMG')
+ @DocsEditable
+ static const int COMPRESSED_RGBA_PVRTC_4BPPV1_IMG = 0x8C02;
+
+ @DomName('WebGLCompressedTexturePVRTC.COMPRESSED_RGB_PVRTC_2BPPV1_IMG')
+ @DocsEditable
+ static const int COMPRESSED_RGB_PVRTC_2BPPV1_IMG = 0x8C01;
+
+ @DomName('WebGLCompressedTexturePVRTC.COMPRESSED_RGB_PVRTC_4BPPV1_IMG')
+ @DocsEditable
+ static const int COMPRESSED_RGB_PVRTC_4BPPV1_IMG = 0x8C00;
+}
+</pre>
+</div>
+<h3>Extends</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart__interceptors/Interceptor.html">Interceptor</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><strong>CompressedTexturePvrtc</strong></span></p>
+<div>
+<h3>Static Properties</h3>
+<div class="field"><h4 id="COMPRESSED_RGB_PVRTC_2BPPV1_IMG">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>COMPRESSED_RGB_PVRTC_2BPPV1_IMG</strong> <a class="anchor-link"
+            href="#COMPRESSED_RGB_PVRTC_2BPPV1_IMG"
+            title="Permalink to CompressedTexturePvrtc.COMPRESSED_RGB_PVRTC_2BPPV1_IMG">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+static const int COMPRESSED_RGB_PVRTC_2BPPV1_IMG = 0x8C01
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="COMPRESSED_RGB_PVRTC_4BPPV1_IMG">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>COMPRESSED_RGB_PVRTC_4BPPV1_IMG</strong> <a class="anchor-link"
+            href="#COMPRESSED_RGB_PVRTC_4BPPV1_IMG"
+            title="Permalink to CompressedTexturePvrtc.COMPRESSED_RGB_PVRTC_4BPPV1_IMG">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+static const int COMPRESSED_RGB_PVRTC_4BPPV1_IMG = 0x8C00
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="COMPRESSED_RGBA_PVRTC_2BPPV1_IMG">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>COMPRESSED_RGBA_PVRTC_2BPPV1_IMG</strong> <a class="anchor-link"
+            href="#COMPRESSED_RGBA_PVRTC_2BPPV1_IMG"
+            title="Permalink to CompressedTexturePvrtc.COMPRESSED_RGBA_PVRTC_2BPPV1_IMG">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+static const int COMPRESSED_RGBA_PVRTC_2BPPV1_IMG = 0x8C03
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="COMPRESSED_RGBA_PVRTC_4BPPV1_IMG">
+<button class="show-code">Code</button>
+const <a href="../dart_core/int.html">int</a>         <strong>COMPRESSED_RGBA_PVRTC_4BPPV1_IMG</strong> <a class="anchor-link"
+            href="#COMPRESSED_RGBA_PVRTC_4BPPV1_IMG"
+            title="Permalink to CompressedTexturePvrtc.COMPRESSED_RGBA_PVRTC_4BPPV1_IMG">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+static const int COMPRESSED_RGBA_PVRTC_4BPPV1_IMG = 0x8C02
+</pre>
+</div>
+</div>
+</div>
+<div class="inherited">
+<h3>Properties</h3>
+<div class="field inherited"><h4 id="hashCode">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>hashCode</strong> <a class="anchor-link"
+            href="#hashCode"
+            title="Permalink to CompressedTexturePvrtc.hashCode">#</a>
+        </h4>
+        <div class="inherited-from">inherited from Interceptor </div><div class="doc">
+<div class="inherited">
+<p>Get a hash code for this object.</p>
+<p>All objects have hash codes. Hash codes are guaranteed to be the
+same for objects that are equal when compared using the equality
+operator <code>==</code>. Other than that there are no guarantees about
+the hash codes. They will not be consistent between runs and
+there are no distribution guarantees.</p>
+<p>If a subclass overrides <code>hashCode</code> it should override the
+equality operator as well to maintain consistency.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+int get hashCode =&gt; Primitives.objectHashCode(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="runtimeType">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Type.html">Type</a>         <strong>runtimeType</strong> <a class="anchor-link"
+            href="#runtimeType"
+            title="Permalink to CompressedTexturePvrtc.runtimeType">#</a>
+        </h4>
+        <div class="inherited-from">inherited from Interceptor </div><div class="doc">
+<div class="inherited">
+<p>A representation of the runtime type of the object.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+Type get runtimeType =&gt; getRuntimeType(this);
+</pre>
+</div>
+</div>
+</div>
+<div class="inherited">
+<h3>Operators</h3>
+<div class="method inherited"><h4 id="==">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>operator ==</strong>(other) <a class="anchor-link" href="#=="
+              title="Permalink to CompressedTexturePvrtc.operator ==">#</a></h4>
+<div class="inherited-from">inherited from Interceptor </div><div class="doc">
+<div class="inherited">
+<p>The equality operator.</p>
+<p>The default behavior for all <code>Object</code>s is to return true if and
+only if <code>this</code> and 
+<span class="param">other</span> are the same object.</p>
+<p>If a subclass overrides the equality operator it should override
+the <code>hashCode</code> method as well to maintain consistency.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+bool operator ==(other) =&gt; identical(this, other);
+</pre>
+</div>
+</div>
+</div>
+<div class="inherited">
+<h3>Methods</h3>
+<div class="method inherited"><h4 id="noSuchMethod">
+<button class="show-code">Code</button>
+dynamic <strong>noSuchMethod</strong>(<a href="../dart_core/Invocation.html">Invocation</a> invocation) <a class="anchor-link" href="#noSuchMethod"
+              title="Permalink to CompressedTexturePvrtc.noSuchMethod">#</a></h4>
+<div class="inherited-from">inherited from Interceptor </div><div class="doc">
+<div class="inherited">
+<p><code>noSuchMethod</code> is invoked when users invoke a non-existant method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.</p>
+<p>The default behavior of <code>noSuchMethod</code> is to throw a
+<code>noSuchMethodError</code>.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+dynamic noSuchMethod(Invocation invocation) {
+ throw new NoSuchMethodError(
+     this,
+     _symbolToString(invocation.memberName),
+     invocation.positionalArguments,
+     _symbolMapToStringMap(invocation.namedArguments));
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="toString">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>toString</strong>() <a class="anchor-link" href="#toString"
+              title="Permalink to CompressedTexturePvrtc.toString">#</a></h4>
+<div class="inherited-from">inherited from Interceptor </div><div class="doc">
+<div class="inherited">
+<p>Returns a string representation of this object.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+String toString() =&gt; Primitives.objectToString(this);
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-06-21 06:35:30.694</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

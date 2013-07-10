@@ -1,0 +1,768 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Iterable&lt;E&gt; abstract class / dart:core Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:core" data-type="Iterable&amp;lt;E&amp;gt;">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_core.html">dart:core</a> &rsaquo; <a href="../dart_core/Iterable.html">Iterable&lt;E&gt;</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../crypto.html">crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><ul class="icon">
+<li><a href="../dart_core/BidirectionalIterator.html"><div class="icon-class"></div>BidirectionalIterator&lt;E&gt;</a></li>
+<li><a href="../dart_core/bool.html"><div class="icon-class"></div>bool</a></li>
+<li><a href="../dart_core/Comparable.html"><div class="icon-class"></div>Comparable&lt;T&gt;</a></li>
+<li><a href="../dart_core/Comparator.html"><div class="icon-interface"></div>Comparator&lt;T&gt;</a></li>
+<li><a href="../dart_core/DateTime.html"><div class="icon-class"></div>DateTime</a></li>
+<li><a href="../dart_core/double.html"><div class="icon-class"></div>double</a></li>
+<li><a href="../dart_core/Duration.html"><div class="icon-class"></div>Duration</a></li>
+<li><a href="../dart_core/Expando.html"><div class="icon-class"></div>Expando&lt;T&gt;</a></li>
+<li><a href="../dart_core/Function.html"><div class="icon-class"></div>Function</a></li>
+<li><a href="../dart_core/int.html"><div class="icon-class"></div>int</a></li>
+<li><a href="../dart_core/Invocation.html"><div class="icon-class"></div>Invocation</a></li>
+<li><div class="icon-class"></div><strong>Iterable&lt;E&gt;</strong></li>
+<li><a href="../dart_core/Iterator.html"><div class="icon-class"></div>Iterator&lt;E&gt;</a></li>
+<li><a href="../dart_core/List.html"><div class="icon-class"></div>List&lt;E&gt;</a></li>
+<li><a href="../dart_core/Map.html"><div class="icon-class"></div>Map&lt;K, V&gt;</a></li>
+<li><a href="../dart_core/Match.html"><div class="icon-class"></div>Match</a></li>
+<li><a href="../dart_core/num.html"><div class="icon-class"></div>num</a></li>
+<li><a href="../dart_core/Object.html"><div class="icon-class"></div>Object</a></li>
+<li><a href="../dart_core/Pattern.html"><div class="icon-class"></div>Pattern</a></li>
+<li><a href="../dart_core/RegExp.html"><div class="icon-class"></div>RegExp</a></li>
+<li><a href="../dart_core/RuneIterator.html"><div class="icon-class"></div>RuneIterator</a></li>
+<li><a href="../dart_core/Runes.html"><div class="icon-class"></div>Runes</a></li>
+<li><a href="../dart_core/Set.html"><div class="icon-class"></div>Set&lt;E&gt;</a></li>
+<li><a href="../dart_core/StackTrace.html"><div class="icon-class"></div>StackTrace</a></li>
+<li><a href="../dart_core/Stopwatch.html"><div class="icon-class"></div>Stopwatch</a></li>
+<li><a href="../dart_core/String.html"><div class="icon-class"></div>String</a></li>
+<li><a href="../dart_core/StringBuffer.html"><div class="icon-class"></div>StringBuffer</a></li>
+<li><a href="../dart_core/StringSink.html"><div class="icon-class"></div>StringSink</a></li>
+<li><a href="../dart_core/Symbol.html"><div class="icon-class"></div>Symbol</a></li>
+<li><a href="../dart_core/Type.html"><div class="icon-class"></div>Type</a></li>
+<li><a href="../dart_core/Uri.html"><div class="icon-class"></div>Uri</a></li>
+<li><a href="../dart_core/AbstractClassInstantiationError.html"><div class="icon-exception"></div>AbstractClassInstantiationError</a></li>
+<li><a href="../dart_core/ArgumentError.html"><div class="icon-exception"></div>ArgumentError</a></li>
+<li><a href="../dart_core/AssertionError.html"><div class="icon-exception"></div>AssertionError</a></li>
+<li><a href="../dart_core/CastError.html"><div class="icon-exception"></div>CastError</a></li>
+<li><a href="../dart_core/ConcurrentModificationError.html"><div class="icon-exception"></div>ConcurrentModificationError</a></li>
+<li><a href="../dart_core/CyclicInitializationError.html"><div class="icon-exception"></div>CyclicInitializationError</a></li>
+<li><a href="../dart_core/Error.html"><div class="icon-exception"></div>Error</a></li>
+<li><a href="../dart_core/Exception.html"><div class="icon-exception"></div>Exception</a></li>
+<li><a href="../dart_core/FallThroughError.html"><div class="icon-exception"></div>FallThroughError</a></li>
+<li><a href="../dart_core/FiftyThreeBitOverflowError.html"><div class="icon-exception"></div>FiftyThreeBitOverflowError</a></li>
+<li><a href="../dart_core/FormatException.html"><div class="icon-exception"></div>FormatException</a></li>
+<li><a href="../dart_core/IntegerDivisionByZeroException.html"><div class="icon-exception"></div>IntegerDivisionByZeroException</a></li>
+<li><a href="../dart_core/NoSuchMethodError.html"><div class="icon-exception"></div>NoSuchMethodError</a></li>
+<li><a href="../dart_core/NullThrownError.html"><div class="icon-exception"></div>NullThrownError</a></li>
+<li><a href="../dart_core/OutOfMemoryError.html"><div class="icon-exception"></div>OutOfMemoryError</a></li>
+<li><a href="../dart_core/RangeError.html"><div class="icon-exception"></div>RangeError</a></li>
+<li><a href="../dart_core/StackOverflowError.html"><div class="icon-exception"></div>StackOverflowError</a></li>
+<li><a href="../dart_core/StateError.html"><div class="icon-exception"></div>StateError</a></li>
+<li><a href="../dart_core/TypeError.html"><div class="icon-exception"></div>TypeError</a></li>
+<li><a href="../dart_core/UnimplementedError.html"><div class="icon-exception"></div>UnimplementedError</a></li>
+<li><a href="../dart_core/UnsupportedError.html"><div class="icon-exception"></div>UnsupportedError</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_typed_data.html">dart:typed_data</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_gl.html">dart:web_gl</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../mdv_observe.html">mdv_observe</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../source_maps.html">source_maps</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>Iterable&lt;E&gt;</strong>
+          abstract class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>The <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> interface allows to get an <a class="crossref" href="../dart_core/Iterator.html">Iterator</a> out of an
+<a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> object.</p>
+<p>This interface is used by the for-in construct to iterate over an
+<a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> object.
+The for-in construct takes an <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> object at the right-hand
+side, and calls its <a class="crossref" href="../dart_core/Iterable.html#iterator">iterator</a> method to get an <a class="crossref" href="../dart_core/Iterator.html">Iterator</a> on it.</p>
+<p>A user-defined class that implements the <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> interface can
+be used as the right-hand side of a for-in construct.</p>
+<pre class="source">
+abstract class Iterable&lt;E&gt; {
+ const Iterable();
+
+ /**
+  * Create an [Iterable] that generates its elements dynamically.
+  *
+  * The [Iterators] created by the [Iterable] will count from
+  * zero to [:count - 1:] while iterating, and call [generator]
+  * with that index to create the next value.
+  *
+  * As an [Iterable], [:new Iterable.generate(n, generator)):] is equivalent to
+  * [:const [0, ..., n - 1].map(generator):]
+  */
+ factory Iterable.generate(int count, E generator(int index)) {
+   return new _GeneratorIterable&lt;E&gt;(count, generator);
+ }
+
+ /**
+  * Returns an [Iterator] that iterates over this [Iterable] object.
+  */
+ Iterator&lt;E&gt; get iterator;
+
+ /**
+  * Returns a lazy [Iterable] where each element [:e:] of `this` is replaced
+  * by the result of [:f(e):].
+  *
+  * This method returns a view of the mapped elements. As long as the
+  * returned [Iterable] is not iterated over, the supplied function [f] will
+  * not be invoked. The transformed elements will not be cached. Iterating
+  * multiple times over the the returned [Iterable] will invoke the supplied
+  * function [f] multiple times on the same element.
+  */
+ Iterable map(f(E element));
+
+ /**
+  * Returns a lazy [Iterable] with all elements that satisfy the
+  * predicate [test].
+  *
+  * This method returns a view of the mapped elements. As long as the
+  * returned [Iterable] is not iterated over, the supplied function [test] will
+  * not be invoked. Iterating will not cache results, and thus iterating
+  * multiple times over the the returned [Iterable] will invoke the supplied
+  * function [test] multiple times on the same element.
+  */
+ Iterable&lt;E&gt; where(bool test(E element));
+
+ /**
+  * Expand each element of this [Iterable] into zero or more elements.
+  *
+  * The resulting Iterable will run through the elements returned
+  * by [f] for each element of this, in order.
+  *
+  * The returned [Iterable] is lazy, and will call [f] for each element
+  * of this every time it's iterated.
+  */
+ Iterable expand(Iterable f(E element));
+
+ /**
+  * Check whether the collection contains an element equal to [element].
+  */
+ bool contains(E element);
+
+ /**
+  * Applies the function [f] to each element of this collection.
+  */
+ void forEach(void f(E element));
+
+ /**
+  * Reduces a collection to a single value by iteratively combining elements
+  * of the collection using the provided function.
+  *
+  * Example of calculating the sum of an iterable:
+  *
+  *     iterable.reduce((value, element) =&gt; value + element);
+  *
+  */
+ E reduce(E combine(E value, E element));
+
+ /**
+  * Reduces a collection to a single value by iteratively combining each
+  * element of the collection with an existing value using the provided
+  * function.
+  *
+  * Use [initialValue] as the initial value, and the function [combine] to
+  * create a new value from the previous one and an element.
+  *
+  * Example of calculating the sum of an iterable:
+  *
+  *     iterable.fold(0, (prev, element) =&gt; prev + element);
+  *
+  */
+ dynamic fold(var initialValue,
+              dynamic combine(var previousValue, E element));
+
+ /**
+  * Returns true if every elements of this collection satisify the
+  * predicate [test]. Returns `false` otherwise.
+  */
+ bool every(bool test(E element));
+
+ /**
+  * Converts each element to a [String] and concatenates the strings.
+  *
+  * Converts each element to a [String] by calling [Object.toString] on it.
+  * Then concatenates the strings, optionally separated by the [separator]
+  * string.
+  */
+ String join([String separator = ""]) {
+   StringBuffer buffer = new StringBuffer();
+   buffer.writeAll(this, separator);
+   return buffer.toString();
+ }
+
+ /**
+  * Returns true if one element of this collection satisfies the
+  * predicate [test]. Returns false otherwise.
+  */
+ bool any(bool test(E element));
+
+ /**
+  * Creates a [List] containing the elements of this [Iterable].
+  *
+  * The elements will be in iteration order. The list is fixed-length
+  * if [growable] is false.
+  */
+ List&lt;E&gt; toList({ bool growable: true });
+
+ /**
+  * Creates a [Set] containing the elements of this [Iterable].
+  */
+ Set&lt;E&gt; toSet();
+
+ /**
+  * Returns the number of elements in [this].
+  *
+  * Counting all elements may be involve running through all elements and can
+  * therefore be slow.
+  */
+ int get length;
+
+ /**
+  * Returns true if there is no element in this collection.
+  */
+ bool get isEmpty;
+
+ /**
+  * Returns true if there is at least one element in this collection.
+  */
+ bool get isNotEmpty;
+
+ /**
+  * Returns an [Iterable] with at most [n] elements.
+  *
+  * The returned [Iterable] may contain fewer than [n] elements, if `this`
+  * contains fewer than [n] elements.
+  */
+ Iterable&lt;E&gt; take(int n);
+
+ /**
+  * Returns an [Iterable] that stops once [test] is not satisfied anymore.
+  *
+  * The filtering happens lazily. Every new [Iterator] of the returned
+  * [Iterable] will start iterating over the elements of `this`.
+  *
+  * When the iterator encounters an element `e` that does not satisfy [test],
+  * it discards `e` and moves into the finished state. That is, it will not
+  * ask or provide any more elements.
+  */
+ Iterable&lt;E&gt; takeWhile(bool test(E value));
+
+ /**
+  * Returns an [Iterable] that skips the first [n] elements.
+  *
+  * If `this` has fewer than [n] elements, then the resulting [Iterable] will
+  * be empty.
+  */
+ Iterable&lt;E&gt; skip(int n);
+
+ /**
+  * Returns an [Iterable] that skips elements while [test] is satisfied.
+  *
+  * The filtering happens lazily. Every new [Iterator] of the returned
+  * [Iterable] iterates over all elements of `this`.
+  *
+  * As long as the iterator's elements satisfy [test] they are
+  * discarded. Once an element does not satisfy the [test] the iterator stops
+  * testing and uses every later element unconditionally. That is, the elements
+  * of the returned [Iterable] are the elements of `this` starting from the
+  * first element that does not satisfy [test].
+  */
+ Iterable&lt;E&gt; skipWhile(bool test(E value));
+
+ /**
+  * Returns the first element.
+  *
+  * If `this` is empty throws a [StateError]. Otherwise this method is
+  * equivalent to [:this.elementAt(0):]
+  */
+ E get first;
+
+ /**
+  * Returns the last element.
+  *
+  * If `this` is empty throws a [StateError].
+  */
+ E get last;
+
+ /**
+  * Returns the single element in `this`.
+  *
+  * If `this` is empty or has more than one element throws a [StateError].
+  */
+ E get single;
+
+ /**
+  * Returns the first element that satisfies the given predicate [test].
+  *
+  * If none matches, the result of invoking the [orElse] function is
+  * returned. By default, when [orElse] is `null`, a [StateError] is
+  * thrown.
+  */
+ E firstWhere(bool test(E element), { E orElse() });
+
+ /**
+  * Returns the last element that satisfies the given predicate [test].
+  *
+  * If none matches, the result of invoking the [orElse] function is
+  * returned. By default, when [orElse] is `null`, a [StateError] is
+  * thrown.
+  */
+ E lastWhere(bool test(E element), {E orElse()});
+
+ /**
+  * Returns the single element that satisfies [test]. If no or more than one
+  * element match then a [StateError] is thrown.
+  */
+ E singleWhere(bool test(E element));
+
+ /**
+  * Returns the [index]th element.
+  *
+  * If `this` has fewer than [index] elements throws a [RangeError].
+  *
+  * Note: if `this` does not have a deterministic iteration order then the
+  * function may simply return any element without any iteration if there are
+  * at least [index] elements in `this`.
+  */
+ E elementAt(int index);
+}
+</pre>
+</div>
+<h3>Subclasses</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_collection/IterableBase.html">IterableBase&lt;E&gt;</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_collection/IterableMixin.html">IterableMixin&lt;E&gt;</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_core/List.html">List&lt;E&gt;</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_collection/Queue.html">Queue&lt;E&gt;</a></span></p>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="Iterable">
+<button class="show-code">Code</button>
+const <strong>Iterable</strong>() <a class="anchor-link" href="#Iterable"
+              title="Permalink to Iterable&lt;E&gt;.Iterable">#</a></h4>
+<div class="doc">
+<pre class="source">
+const Iterable();
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="Iterable.generate">
+<button class="show-code">Code</button>
+factory <strong>Iterable.generate</strong>(<a href="../dart_core/int.html">int</a> count, <a href="../dart_core/Iterable.html">E</a> generator(<a href="../dart_core/int.html">int</a> index)) <a class="anchor-link" href="#Iterable.generate"
+              title="Permalink to Iterable&lt;E&gt;.Iterable.generate">#</a></h4>
+<div class="doc">
+<p>Create an <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> that generates its elements dynamically.</p>
+<p>The <code>Iterators</code> created by the <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> will count from
+zero to <code>count - 1</code> while iterating, and call 
+<span class="param">generator</span>
+with that index to create the next value.</p>
+<p>As an <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a>, <code>new Iterable.generate(n, generator))</code> is equivalent to
+<code>const [0, ..., n - 1].map(generator)</code></p>
+<pre class="source">
+factory Iterable.generate(int count, E generator(int index)) {
+ return new _GeneratorIterable&lt;E&gt;(count, generator);
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="first">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Iterable.html">E</a>         <strong>first</strong> <a class="anchor-link"
+            href="#first"
+            title="Permalink to Iterable&lt;E&gt;.first">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the first element.</p>
+<p>If <code>this</code> is empty throws a <a class="crossref" href="../dart_core/StateError.html">StateError</a>. Otherwise this method is
+equivalent to <code>this.elementAt(0)</code></p>
+<pre class="source">
+E get first;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="isEmpty">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isEmpty</strong> <a class="anchor-link"
+            href="#isEmpty"
+            title="Permalink to Iterable&lt;E&gt;.isEmpty">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns true if there is no element in this collection.</p>
+<pre class="source">
+bool get isEmpty;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="isNotEmpty">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isNotEmpty</strong> <a class="anchor-link"
+            href="#isNotEmpty"
+            title="Permalink to Iterable&lt;E&gt;.isNotEmpty">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns true if there is at least one element in this collection.</p>
+<pre class="source">
+bool get isNotEmpty;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="iterator">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Iterator.html">Iterator</a>&lt;<a href="../dart_core/Iterable.html">E</a>&gt;         <strong>iterator</strong> <a class="anchor-link"
+            href="#iterator"
+            title="Permalink to Iterable&lt;E&gt;.iterator">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns an <a class="crossref" href="../dart_core/Iterator.html">Iterator</a> that iterates over this <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> object.</p>
+<pre class="source">
+Iterator&lt;E&gt; get iterator;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="last">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Iterable.html">E</a>         <strong>last</strong> <a class="anchor-link"
+            href="#last"
+            title="Permalink to Iterable&lt;E&gt;.last">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the last element.</p>
+<p>If <code>this</code> is empty throws a <a class="crossref" href="../dart_core/StateError.html">StateError</a>.</p>
+<pre class="source">
+E get last;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="length">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>length</strong> <a class="anchor-link"
+            href="#length"
+            title="Permalink to Iterable&lt;E&gt;.length">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the number of elements in <code>this</code>.</p>
+<p>Counting all elements may be involve running through all elements and can
+therefore be slow.</p>
+<pre class="source">
+int get length;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="single">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Iterable.html">E</a>         <strong>single</strong> <a class="anchor-link"
+            href="#single"
+            title="Permalink to Iterable&lt;E&gt;.single">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the single element in <code>this</code>.</p>
+<p>If <code>this</code> is empty or has more than one element throws a <a class="crossref" href="../dart_core/StateError.html">StateError</a>.</p>
+<pre class="source">
+E get single;
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="any">
+abstract <a href="../dart_core/bool.html">bool</a> <strong>any</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_core/Iterable.html">E</a> element)) <a class="anchor-link" href="#any"
+              title="Permalink to Iterable&lt;E&gt;.any">#</a></h4>
+<div class="doc">
+<p>Returns true if one element of this collection satisfies the
+predicate 
+<span class="param">test</span>. Returns false otherwise.</p>
+</div>
+</div>
+<div class="method"><h4 id="contains">
+abstract <a href="../dart_core/bool.html">bool</a> <strong>contains</strong>(<a href="../dart_core/Iterable.html">E</a> element) <a class="anchor-link" href="#contains"
+              title="Permalink to Iterable&lt;E&gt;.contains">#</a></h4>
+<div class="doc">
+<p>Check whether the collection contains an element equal to 
+<span class="param">element</span>.</p>
+</div>
+</div>
+<div class="method"><h4 id="elementAt">
+abstract <a href="../dart_core/Iterable.html">E</a> <strong>elementAt</strong>(<a href="../dart_core/int.html">int</a> index) <a class="anchor-link" href="#elementAt"
+              title="Permalink to Iterable&lt;E&gt;.elementAt">#</a></h4>
+<div class="doc">
+<p>Returns the 
+<span class="param">index</span>th element.</p>
+<p>If <code>this</code> has fewer than 
+<span class="param">index</span> elements throws a <a class="crossref" href="../dart_core/RangeError.html">RangeError</a>.</p>
+<p>Note: if <code>this</code> does not have a deterministic iteration order then the
+function may simply return any element without any iteration if there are
+at least 
+<span class="param">index</span> elements in <code>this</code>.</p>
+</div>
+</div>
+<div class="method"><h4 id="every">
+abstract <a href="../dart_core/bool.html">bool</a> <strong>every</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_core/Iterable.html">E</a> element)) <a class="anchor-link" href="#every"
+              title="Permalink to Iterable&lt;E&gt;.every">#</a></h4>
+<div class="doc">
+<p>Returns true if every elements of this collection satisify the
+predicate 
+<span class="param">test</span>. Returns <code>false</code> otherwise.</p>
+</div>
+</div>
+<div class="method"><h4 id="expand">
+abstract <a href="../dart_core/Iterable.html">Iterable</a> <strong>expand</strong>(<a href="../dart_core/Iterable.html">Iterable</a> f(<a href="../dart_core/Iterable.html">E</a> element)) <a class="anchor-link" href="#expand"
+              title="Permalink to Iterable&lt;E&gt;.expand">#</a></h4>
+<div class="doc">
+<p>Expand each element of this <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> into zero or more elements.</p>
+<p>The resulting Iterable will run through the elements returned
+by 
+<span class="param">f</span> for each element of this, in order.</p>
+<p>The returned <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> is lazy, and will call 
+<span class="param">f</span> for each element
+of this every time it's iterated.</p>
+</div>
+</div>
+<div class="method"><h4 id="firstWhere">
+abstract <a href="../dart_core/Iterable.html">E</a> <strong>firstWhere</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_core/Iterable.html">E</a> element), {<a href="../dart_core/Iterable.html">E</a> orElse()}) <a class="anchor-link" href="#firstWhere"
+              title="Permalink to Iterable&lt;E&gt;.firstWhere">#</a></h4>
+<div class="doc">
+<p>Returns the first element that satisfies the given predicate 
+<span class="param">test</span>.</p>
+<p>If none matches, the result of invoking the 
+<span class="param">orElse</span> function is
+returned. By default, when 
+<span class="param">orElse</span> is <code>null</code>, a <a class="crossref" href="../dart_core/StateError.html">StateError</a> is
+thrown.</p>
+</div>
+</div>
+<div class="method"><h4 id="fold">
+abstract dynamic <strong>fold</strong>(initialValue, combine(previousValue, <a href="../dart_core/Iterable.html">E</a> element)) <a class="anchor-link" href="#fold"
+              title="Permalink to Iterable&lt;E&gt;.fold">#</a></h4>
+<div class="doc">
+<p>Reduces a collection to a single value by iteratively combining each
+element of the collection with an existing value using the provided
+function.</p>
+<p>Use 
+<span class="param">initialValue</span> as the initial value, and the function 
+<span class="param">combine</span> to
+create a new value from the previous one and an element.</p>
+<p>Example of calculating the sum of an iterable:</p>
+<pre><code>iterable.fold(0, (prev, element) =&gt; prev + element);
+</code></pre>
+</div>
+</div>
+<div class="method"><h4 id="forEach">
+abstract void <strong>forEach</strong>(void f(<a href="../dart_core/Iterable.html">E</a> element)) <a class="anchor-link" href="#forEach"
+              title="Permalink to Iterable&lt;E&gt;.forEach">#</a></h4>
+<div class="doc">
+<p>Applies the function 
+<span class="param">f</span> to each element of this collection.</p>
+</div>
+</div>
+<div class="method"><h4 id="join">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>join</strong>([<a href="../dart_core/String.html">String</a> separator = ""]) <a class="anchor-link" href="#join"
+              title="Permalink to Iterable&lt;E&gt;.join">#</a></h4>
+<div class="doc">
+<p>Converts each element to a <a class="crossref" href="../dart_core/String.html">String</a> and concatenates the strings.</p>
+<p>Converts each element to a <a class="crossref" href="../dart_core/String.html">String</a> by calling <a class="crossref" href="../dart_core/Object.html#toString">Object.toString</a> on it.
+Then concatenates the strings, optionally separated by the 
+<span class="param">separator</span>
+string.</p>
+<pre class="source">
+String join([String separator = ""]) {
+ StringBuffer buffer = new StringBuffer();
+ buffer.writeAll(this, separator);
+ return buffer.toString();
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="lastWhere">
+abstract <a href="../dart_core/Iterable.html">E</a> <strong>lastWhere</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_core/Iterable.html">E</a> element), {<a href="../dart_core/Iterable.html">E</a> orElse()}) <a class="anchor-link" href="#lastWhere"
+              title="Permalink to Iterable&lt;E&gt;.lastWhere">#</a></h4>
+<div class="doc">
+<p>Returns the last element that satisfies the given predicate 
+<span class="param">test</span>.</p>
+<p>If none matches, the result of invoking the 
+<span class="param">orElse</span> function is
+returned. By default, when 
+<span class="param">orElse</span> is <code>null</code>, a <a class="crossref" href="../dart_core/StateError.html">StateError</a> is
+thrown.</p>
+</div>
+</div>
+<div class="method"><h4 id="map">
+abstract <a href="../dart_core/Iterable.html">Iterable</a> <strong>map</strong>(f(<a href="../dart_core/Iterable.html">E</a> element)) <a class="anchor-link" href="#map"
+              title="Permalink to Iterable&lt;E&gt;.map">#</a></h4>
+<div class="doc">
+<p>Returns a lazy <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> where each element <code>e</code> of <code>this</code> is replaced
+by the result of <code>f(e)</code>.</p>
+<p>This method returns a view of the mapped elements. As long as the
+returned <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> is not iterated over, the supplied function 
+<span class="param">f</span> will
+not be invoked. The transformed elements will not be cached. Iterating
+multiple times over the the returned <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> will invoke the supplied
+function 
+<span class="param">f</span> multiple times on the same element.</p>
+</div>
+</div>
+<div class="method"><h4 id="reduce">
+abstract <a href="../dart_core/Iterable.html">E</a> <strong>reduce</strong>(<a href="../dart_core/Iterable.html">E</a> combine(<a href="../dart_core/Iterable.html">E</a> value, <a href="../dart_core/Iterable.html">E</a> element)) <a class="anchor-link" href="#reduce"
+              title="Permalink to Iterable&lt;E&gt;.reduce">#</a></h4>
+<div class="doc">
+<p>Reduces a collection to a single value by iteratively combining elements
+of the collection using the provided function.</p>
+<p>Example of calculating the sum of an iterable:</p>
+<pre><code>iterable.reduce((value, element) =&gt; value + element);
+</code></pre>
+</div>
+</div>
+<div class="method"><h4 id="singleWhere">
+abstract <a href="../dart_core/Iterable.html">E</a> <strong>singleWhere</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_core/Iterable.html">E</a> element)) <a class="anchor-link" href="#singleWhere"
+              title="Permalink to Iterable&lt;E&gt;.singleWhere">#</a></h4>
+<div class="doc">
+<p>Returns the single element that satisfies 
+<span class="param">test</span>. If no or more than one
+element match then a <a class="crossref" href="../dart_core/StateError.html">StateError</a> is thrown.</p>
+</div>
+</div>
+<div class="method"><h4 id="skip">
+abstract <a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_core/Iterable.html">E</a>&gt; <strong>skip</strong>(<a href="../dart_core/int.html">int</a> n) <a class="anchor-link" href="#skip"
+              title="Permalink to Iterable&lt;E&gt;.skip">#</a></h4>
+<div class="doc">
+<p>Returns an <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> that skips the first 
+<span class="param">n</span> elements.</p>
+<p>If <code>this</code> has fewer than 
+<span class="param">n</span> elements, then the resulting <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> will
+be empty.</p>
+</div>
+</div>
+<div class="method"><h4 id="skipWhile">
+abstract <a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_core/Iterable.html">E</a>&gt; <strong>skipWhile</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_core/Iterable.html">E</a> value)) <a class="anchor-link" href="#skipWhile"
+              title="Permalink to Iterable&lt;E&gt;.skipWhile">#</a></h4>
+<div class="doc">
+<p>Returns an <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> that skips elements while 
+<span class="param">test</span> is satisfied.</p>
+<p>The filtering happens lazily. Every new <a class="crossref" href="../dart_core/Iterator.html">Iterator</a> of the returned
+<a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> iterates over all elements of <code>this</code>.</p>
+<p>As long as the iterator's elements satisfy 
+<span class="param">test</span> they are
+discarded. Once an element does not satisfy the 
+<span class="param">test</span> the iterator stops
+testing and uses every later element unconditionally. That is, the elements
+of the returned <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> are the elements of <code>this</code> starting from the
+first element that does not satisfy 
+<span class="param">test</span>.</p>
+</div>
+</div>
+<div class="method"><h4 id="take">
+abstract <a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_core/Iterable.html">E</a>&gt; <strong>take</strong>(<a href="../dart_core/int.html">int</a> n) <a class="anchor-link" href="#take"
+              title="Permalink to Iterable&lt;E&gt;.take">#</a></h4>
+<div class="doc">
+<p>Returns an <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> with at most 
+<span class="param">n</span> elements.</p>
+<p>The returned <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> may contain fewer than 
+<span class="param">n</span> elements, if <code>this</code>
+contains fewer than 
+<span class="param">n</span> elements.</p>
+</div>
+</div>
+<div class="method"><h4 id="takeWhile">
+abstract <a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_core/Iterable.html">E</a>&gt; <strong>takeWhile</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_core/Iterable.html">E</a> value)) <a class="anchor-link" href="#takeWhile"
+              title="Permalink to Iterable&lt;E&gt;.takeWhile">#</a></h4>
+<div class="doc">
+<p>Returns an <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> that stops once 
+<span class="param">test</span> is not satisfied anymore.</p>
+<p>The filtering happens lazily. Every new <a class="crossref" href="../dart_core/Iterator.html">Iterator</a> of the returned
+<a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> will start iterating over the elements of <code>this</code>.</p>
+<p>When the iterator encounters an element <code>e</code> that does not satisfy 
+<span class="param">test</span>,
+it discards <code>e</code> and moves into the finished state. That is, it will not
+ask or provide any more elements.</p>
+</div>
+</div>
+<div class="method"><h4 id="toList">
+abstract <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/Iterable.html">E</a>&gt; <strong>toList</strong>({<a href="../dart_core/bool.html">bool</a> growable: true}) <a class="anchor-link" href="#toList"
+              title="Permalink to Iterable&lt;E&gt;.toList">#</a></h4>
+<div class="doc">
+<p>Creates a <a class="crossref" href="../dart_core/List.html">List</a> containing the elements of this <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a>.</p>
+<p>The elements will be in iteration order. The list is fixed-length
+if 
+<span class="param">growable</span> is false.</p>
+</div>
+</div>
+<div class="method"><h4 id="toSet">
+abstract <a href="../dart_core/Set.html">Set</a>&lt;<a href="../dart_core/Iterable.html">E</a>&gt; <strong>toSet</strong>() <a class="anchor-link" href="#toSet"
+              title="Permalink to Iterable&lt;E&gt;.toSet">#</a></h4>
+<div class="doc">
+<p>Creates a <a class="crossref" href="../dart_core/Set.html">Set</a> containing the elements of this <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a>.</p>
+</div>
+</div>
+<div class="method"><h4 id="where">
+abstract <a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_core/Iterable.html">E</a>&gt; <strong>where</strong>(<a href="../dart_core/bool.html">bool</a> test(<a href="../dart_core/Iterable.html">E</a> element)) <a class="anchor-link" href="#where"
+              title="Permalink to Iterable&lt;E&gt;.where">#</a></h4>
+<div class="doc">
+<p>Returns a lazy <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> with all elements that satisfy the
+predicate 
+<span class="param">test</span>.</p>
+<p>This method returns a view of the mapped elements. As long as the
+returned <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> is not iterated over, the supplied function 
+<span class="param">test</span> will
+not be invoked. Iterating will not cache results, and thus iterating
+multiple times over the the returned <a class="crossref" href="../dart_core/Iterable.html#Iterable">Iterable</a> will invoke the supplied
+function 
+<span class="param">test</span> multiple times on the same element.</p>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-06-21 06:35:07.532</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

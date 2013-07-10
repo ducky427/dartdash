@@ -1,0 +1,864 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>dart:io Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="styles.css">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:io">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="index.html">Dart API Reference</a>
+         &rsaquo; <a href="dart_io.html">dart:io</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="args.html">args</a></h2><h2><div class="icon-library"></div><a href="crypto.html">crypto</a></h2><h2><div class="icon-library"></div><a href="dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><strong>dart:io</strong></h2><ul class="icon">
+<li><a href="dart_io/ContentType.html"><div class="icon-class"></div>ContentType</a></li>
+<li><a href="dart_io/Cookie.html"><div class="icon-class"></div>Cookie</a></li>
+<li><a href="dart_io/DetachedSocket.html"><div class="icon-class"></div>DetachedSocket</a></li>
+<li><a href="dart_io/Directory.html"><div class="icon-class"></div>Directory</a></li>
+<li><a href="dart_io/Encoding.html"><div class="icon-class"></div>Encoding</a></li>
+<li><a href="dart_io/File.html"><div class="icon-class"></div>File</a></li>
+<li><a href="dart_io/FileMode.html"><div class="icon-class"></div>FileMode</a></li>
+<li><a href="dart_io/FileStat.html"><div class="icon-class"></div>FileStat</a></li>
+<li><a href="dart_io/FileSystemEntity.html"><div class="icon-class"></div>FileSystemEntity</a></li>
+<li><a href="dart_io/FileSystemEntityType.html"><div class="icon-class"></div>FileSystemEntityType</a></li>
+<li><a href="dart_io/HeaderValue.html"><div class="icon-class"></div>HeaderValue</a></li>
+<li><a href="dart_io/HttpBody.html"><div class="icon-class"></div>HttpBody</a></li>
+<li><a href="dart_io/HttpBodyFileUpload.html"><div class="icon-class"></div>HttpBodyFileUpload</a></li>
+<li><a href="dart_io/HttpBodyHandler.html"><div class="icon-class"></div>HttpBodyHandler</a></li>
+<li><a href="dart_io/HttpClient.html"><div class="icon-class"></div>HttpClient</a></li>
+<li><a href="dart_io/HttpClientBasicCredentials.html"><div class="icon-class"></div>HttpClientBasicCredentials</a></li>
+<li><a href="dart_io/HttpClientCredentials.html"><div class="icon-class"></div>HttpClientCredentials</a></li>
+<li><a href="dart_io/HttpClientDigestCredentials.html"><div class="icon-class"></div>HttpClientDigestCredentials</a></li>
+<li><a href="dart_io/HttpClientRequest.html"><div class="icon-class"></div>HttpClientRequest</a></li>
+<li><a href="dart_io/HttpClientResponse.html"><div class="icon-class"></div>HttpClientResponse</a></li>
+<li><a href="dart_io/HttpClientResponseBody.html"><div class="icon-class"></div>HttpClientResponseBody</a></li>
+<li><a href="dart_io/HttpConnectionInfo.html"><div class="icon-class"></div>HttpConnectionInfo</a></li>
+<li><a href="dart_io/HttpConnectionsInfo.html"><div class="icon-class"></div>HttpConnectionsInfo</a></li>
+<li><a href="dart_io/HttpDate.html"><div class="icon-class"></div>HttpDate</a></li>
+<li><a href="dart_io/HttpHeaders.html"><div class="icon-class"></div>HttpHeaders</a></li>
+<li><a href="dart_io/HttpMultipartFormData.html"><div class="icon-class"></div>HttpMultipartFormData</a></li>
+<li><a href="dart_io/HttpRequest.html"><div class="icon-class"></div>HttpRequest</a></li>
+<li><a href="dart_io/HttpRequestBody.html"><div class="icon-class"></div>HttpRequestBody</a></li>
+<li><a href="dart_io/HttpResponse.html"><div class="icon-class"></div>HttpResponse</a></li>
+<li><a href="dart_io/HttpServer.html"><div class="icon-class"></div>HttpServer</a></li>
+<li><a href="dart_io/HttpSession.html"><div class="icon-class"></div>HttpSession</a></li>
+<li><a href="dart_io/HttpStatus.html"><div class="icon-class"></div>HttpStatus</a></li>
+<li><a href="dart_io/InternetAddress.html"><div class="icon-class"></div>InternetAddress</a></li>
+<li><a href="dart_io/InternetAddressType.html"><div class="icon-class"></div>InternetAddressType</a></li>
+<li><a href="dart_io/IOSink.html"><div class="icon-class"></div>IOSink</a></li>
+<li><a href="dart_io/LineTransformer.html"><div class="icon-class"></div>LineTransformer</a></li>
+<li><a href="dart_io/Link.html"><div class="icon-class"></div>Link</a></li>
+<li><a href="dart_io/MimeMultipart.html"><div class="icon-class"></div>MimeMultipart</a></li>
+<li><a href="dart_io/MimeMultipartTransformer.html"><div class="icon-class"></div>MimeMultipartTransformer</a></li>
+<li><a href="dart_io/Options.html"><div class="icon-class"></div>Options</a></li>
+<li><a href="dart_io/Path.html"><div class="icon-class"></div>Path</a></li>
+<li><a href="dart_io/Platform.html"><div class="icon-class"></div>Platform</a></li>
+<li><a href="dart_io/Process.html"><div class="icon-class"></div>Process</a></li>
+<li><a href="dart_io/ProcessResult.html"><div class="icon-class"></div>ProcessResult</a></li>
+<li><a href="dart_io/ProcessSignal.html"><div class="icon-class"></div>ProcessSignal</a></li>
+<li><a href="dart_io/RandomAccessFile.html"><div class="icon-class"></div>RandomAccessFile</a></li>
+<li><a href="dart_io/RawSecureServerSocket.html"><div class="icon-class"></div>RawSecureServerSocket</a></li>
+<li><a href="dart_io/RawSecureSocket.html"><div class="icon-class"></div>RawSecureSocket</a></li>
+<li><a href="dart_io/RawServerSocket.html"><div class="icon-class"></div>RawServerSocket</a></li>
+<li><a href="dart_io/RawSocket.html"><div class="icon-class"></div>RawSocket</a></li>
+<li><a href="dart_io/RawSocketEvent.html"><div class="icon-class"></div>RawSocketEvent</a></li>
+<li><a href="dart_io/RedirectInfo.html"><div class="icon-class"></div>RedirectInfo</a></li>
+<li><a href="dart_io/SecureServerSocket.html"><div class="icon-class"></div>SecureServerSocket</a></li>
+<li><a href="dart_io/SecureSocket.html"><div class="icon-class"></div>SecureSocket</a></li>
+<li><a href="dart_io/ServerSocket.html"><div class="icon-class"></div>ServerSocket</a></li>
+<li><a href="dart_io/Socket.html"><div class="icon-class"></div>Socket</a></li>
+<li><a href="dart_io/SocketDirection.html"><div class="icon-class"></div>SocketDirection</a></li>
+<li><a href="dart_io/SocketOption.html"><div class="icon-class"></div>SocketOption</a></li>
+<li><a href="dart_io/StdioType.html"><div class="icon-class"></div>StdioType</a></li>
+<li><a href="dart_io/StringDecoder.html"><div class="icon-class"></div>StringDecoder</a></li>
+<li><a href="dart_io/StringEncoder.html"><div class="icon-class"></div>StringEncoder</a></li>
+<li><a href="dart_io/WebSocket.html"><div class="icon-class"></div>WebSocket</a></li>
+<li><a href="dart_io/WebSocketStatus.html"><div class="icon-class"></div>WebSocketStatus</a></li>
+<li><a href="dart_io/WebSocketTransformer.html"><div class="icon-class"></div>WebSocketTransformer</a></li>
+<li><a href="dart_io/X509Certificate.html"><div class="icon-class"></div>X509Certificate</a></li>
+<li><a href="dart_io/ZLibDeflater.html"><div class="icon-class"></div>ZLibDeflater</a></li>
+<li><a href="dart_io/ZLibInflater.html"><div class="icon-class"></div>ZLibInflater</a></li>
+<li><a href="dart_io/DirectoryException.html"><div class="icon-exception"></div>DirectoryException</a></li>
+<li><a href="dart_io/FileException.html"><div class="icon-exception"></div>FileException</a></li>
+<li><a href="dart_io/HttpException.html"><div class="icon-exception"></div>HttpException</a></li>
+<li><a href="dart_io/IOException.html"><div class="icon-exception"></div>IOException</a></li>
+<li><a href="dart_io/LinkException.html"><div class="icon-exception"></div>LinkException</a></li>
+<li><a href="dart_io/MimeMultipartException.html"><div class="icon-exception"></div>MimeMultipartException</a></li>
+<li><a href="dart_io/OSError.html"><div class="icon-exception"></div>OSError</a></li>
+<li><a href="dart_io/ProcessException.html"><div class="icon-exception"></div>ProcessException</a></li>
+<li><a href="dart_io/RedirectException.html"><div class="icon-exception"></div>RedirectException</a></li>
+<li><a href="dart_io/SocketException.html"><div class="icon-exception"></div>SocketException</a></li>
+<li><a href="dart_io/WebSocketException.html"><div class="icon-exception"></div>WebSocketException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="dart_typed_data.html">dart:typed_data</a></h2><h2><div class="icon-library"></div><a href="dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="dart_web_gl.html">dart:web_gl</a></h2><h2><div class="icon-library"></div><a href="dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="mdv_observe.html">mdv_observe</a></h2><h2><div class="icon-library"></div><a href="meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="source_maps.html">source_maps</a></h2><h2><div class="icon-library"></div><a href="unittest.html">unittest</a></h2></div>
+<div class="content">
+<h2><strong>dart:io</strong> library</h2>
+<div class="doc"><p>The IO library is used for Dart server applications,
+which run on a stand-alone Dart VM from the command line.
+<em>This library does not work in browser based applications.</em></p>
+<p>This library allows you to work with files, directories,
+sockets, processes, HTTP servers and clients, and more.</p></div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="APPEND">
+<button class="show-code">Code</button>
+const         <strong>APPEND</strong> <a class="anchor-link"
+            href="#APPEND"
+            title="Permalink to APPEND">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+const APPEND = FileMode.APPEND
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="ASCII">
+<button class="show-code">Code</button>
+const         <strong>ASCII</strong> <a class="anchor-link"
+            href="#ASCII"
+            title="Permalink to ASCII">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+const ASCII = Encoding.ASCII
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="exitCode=">
+<button class="show-code">Code</button>
+dynamic <strong>set exitCode</strong>(<a href="dart_core/int.html">int</a> status) <a class="anchor-link" href="#exitCode="
+              title="Permalink to set exitCode">#</a></h4>
+<div class="doc">
+<p>Global exit code for the Dart VM.</p>
+<p>The exit code is global for the Dart VM and the last assignment to
+exitCode from any isolate determines the exit code of the Dart VM
+on normal termination.</p>
+<pre class="source">
+set exitCode(int status) {
+ if (status is !int) {
+   throw new ArgumentError("setExitCode: int status expected");
+ }
+ _ProcessUtils._setExitCode(status);
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="ISO_8859_1">
+<button class="show-code">Code</button>
+const         <strong>ISO_8859_1</strong> <a class="anchor-link"
+            href="#ISO_8859_1"
+            title="Permalink to ISO_8859_1">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+const ISO_8859_1 = Encoding.ISO_8859_1
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="pid">
+<button class="show-code">Code</button>
+final <a href="dart_core/int.html">int</a>         <strong>pid</strong> <a class="anchor-link"
+            href="#pid"
+            title="Permalink to pid">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the PID if the current process.</p>
+<pre class="source">
+int get pid =&gt; _ProcessUtils._pid(null);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="READ">
+<button class="show-code">Code</button>
+const         <strong>READ</strong> <a class="anchor-link"
+            href="#READ"
+            title="Permalink to READ">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+const READ = FileMode.READ
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="stderr">
+<button class="show-code">Code</button>
+final <a href="dart_io/IOSink.html">IOSink</a>         <strong>stderr</strong> <a class="anchor-link"
+            href="#stderr"
+            title="Permalink to stderr">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+IOSink get stderr {
+ if (_stderr == null) {
+   _stderr = _StdIOUtils._getStdioOutputStream(2);
+ }
+ return _stderr;
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="stdin">
+<button class="show-code">Code</button>
+final <a href="dart_async/Stream.html">Stream</a>&lt;<a href="dart_core/List.html">List</a>&lt;<a href="dart_core/int.html">int</a>&gt;&gt;         <strong>stdin</strong> <a class="anchor-link"
+            href="#stdin"
+            title="Permalink to stdin">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+Stream&lt;List&lt;int&gt;&gt; get stdin {
+ if (_stdin == null) {
+   _stdin = _StdIOUtils._getStdioInputStream();
+ }
+ return _stdin;
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="stdout">
+<button class="show-code">Code</button>
+final <a href="dart_io/IOSink.html">IOSink</a>         <strong>stdout</strong> <a class="anchor-link"
+            href="#stdout"
+            title="Permalink to stdout">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+IOSink get stdout {
+ if (_stdout == null) {
+   _stdout = _StdIOUtils._getStdioOutputStream(1);
+ }
+ return _stdout;
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="UTF_8">
+<button class="show-code">Code</button>
+const         <strong>UTF_8</strong> <a class="anchor-link"
+            href="#UTF_8"
+            title="Permalink to UTF_8">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+const UTF_8 = Encoding.UTF_8
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="WRITE">
+<button class="show-code">Code</button>
+const         <strong>WRITE</strong> <a class="anchor-link"
+            href="#WRITE"
+            title="Permalink to WRITE">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+const WRITE = FileMode.WRITE
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Functions</h3>
+<div class="method"><h4 id="stdioType">
+<button class="show-code">Code</button>
+<a href="dart_io/StdioType.html">StdioType</a> <strong>stdioType</strong>(object) <a class="anchor-link" href="#stdioType"
+              title="Permalink to stdioType">#</a></h4>
+<div class="doc">
+<pre class="source">
+StdioType stdioType(object) {
+ if (object is _StdStream) {
+   object = object._stream;
+ } else if (object is _StdSink) {
+   object = object._sink;
+ }
+ if (object is _FileStream) {
+   return StdioType.FILE;
+ }
+ if (object is Socket) {
+   switch (_StdIOUtils._socketType(object._nativeSocket)) {
+     case _STDIO_HANDLE_TYPE_TERMINAL: return StdioType.TERMINAL;
+     case _STDIO_HANDLE_TYPE_PIPE: return StdioType.PIPE;
+     case _STDIO_HANDLE_TYPE_FILE:  return StdioType.FILE;
+   }
+ }
+ if (object is IOSink) {
+   try {
+     if (object._target is _FileStreamConsumer) {
+       return StdioType.FILE;
+     }
+   } catch (e) {
+     // Only the interface implemented, _sink not available.
+   }
+ }
+ return StdioType.OTHER;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="sleep">
+<button class="show-code">Code</button>
+void <strong>sleep</strong>(<a href="dart_core/Duration.html">Duration</a> duration) <a class="anchor-link" href="#sleep"
+              title="Permalink to sleep">#</a></h4>
+<div class="doc">
+<p>Sleep for the duration specified in 
+<span class="param">duration</span>.</p>
+<p>Use this with care, as no asynchronous operations can be processed
+in a isolate while it is blocked in a <a class="crossref" href="dart.io.html#sleep">sleep</a> call.</p>
+<pre class="source">
+void sleep(Duration duration) {
+ int milliseconds = duration.inMilliseconds;
+ if (milliseconds &lt; 0) {
+   throw new ArgumentError("sleep: duration cannot be negative");
+ }
+ _ProcessUtils._sleep(milliseconds);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="exit">
+<button class="show-code">Code</button>
+void <strong>exit</strong>(<a href="dart_core/int.html">int</a> status) <a class="anchor-link" href="#exit"
+              title="Permalink to exit">#</a></h4>
+<div class="doc">
+<p>Exit the Dart VM process immediately with the given 
+<span class="param">status</span> code.</p>
+<p>This does not wait for any asynchronous operations to terminate. Using
+<a class="crossref" href="dart.io.html#exit">exit</a> is therefore very likely to lose data.</p>
+<pre class="source">
+void exit(int status) {
+ if (status is !int) {
+   throw new ArgumentError("exit: int status expected");
+ }
+ _ProcessUtils._exit(status);
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Abstract Classes</h3>
+          <div class="type">
+          <h4>
+            <a href="dart_io/ContentType.html"><strong>ContentType</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/Cookie.html"><strong>Cookie</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/DetachedSocket.html"><strong>DetachedSocket</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/Directory.html"><strong>Directory</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/File.html"><strong>File</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/FileSystemEntity.html"><strong>FileSystemEntity</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/HeaderValue.html"><strong>HeaderValue</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/HttpBody.html"><strong>HttpBody</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/HttpBodyFileUpload.html"><strong>HttpBodyFileUpload</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/HttpClient.html"><strong>HttpClient</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/HttpClientBasicCredentials.html"><strong>HttpClientBasicCredentials</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/HttpClientCredentials.html"><strong>HttpClientCredentials</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/HttpClientDigestCredentials.html"><strong>HttpClientDigestCredentials</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/HttpClientRequest.html"><strong>HttpClientRequest</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/HttpClientResponse.html"><strong>HttpClientResponse</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/HttpClientResponseBody.html"><strong>HttpClientResponseBody</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/HttpConnectionInfo.html"><strong>HttpConnectionInfo</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/HttpHeaders.html"><strong>HttpHeaders</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/HttpMultipartFormData.html"><strong>HttpMultipartFormData</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/HttpRequest.html"><strong>HttpRequest</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/HttpRequestBody.html"><strong>HttpRequestBody</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/HttpResponse.html"><strong>HttpResponse</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/HttpServer.html"><strong>HttpServer</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/HttpSession.html"><strong>HttpSession</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/HttpStatus.html"><strong>HttpStatus</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/InternetAddress.html"><strong>InternetAddress</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/IOSink.html"><strong>IOSink</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/Link.html"><strong>Link</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/MimeMultipart.html"><strong>MimeMultipart</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/Options.html"><strong>Options</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/Path.html"><strong>Path</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/Process.html"><strong>Process</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/ProcessResult.html"><strong>ProcessResult</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/RandomAccessFile.html"><strong>RandomAccessFile</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/RawSecureSocket.html"><strong>RawSecureSocket</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/RawServerSocket.html"><strong>RawServerSocket</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/RawSocket.html"><strong>RawSocket</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/RedirectInfo.html"><strong>RedirectInfo</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/SecureSocket.html"><strong>SecureSocket</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/ServerSocket.html"><strong>ServerSocket</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/Socket.html"><strong>Socket</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/WebSocket.html"><strong>WebSocket</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/WebSocketStatus.html"><strong>WebSocketStatus</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/WebSocketTransformer.html"><strong>WebSocketTransformer</strong></a>
+          </h4>
+          </div>
+          
+</div>
+<div>
+<h3>Classes</h3>
+          <div class="type">
+          <h4>
+            <a href="dart_io/Encoding.html"><strong>Encoding</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/FileMode.html"><strong>FileMode</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/FileStat.html"><strong>FileStat</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/FileSystemEntityType.html"><strong>FileSystemEntityType</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/HttpBodyHandler.html"><strong>HttpBodyHandler</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/HttpConnectionsInfo.html"><strong>HttpConnectionsInfo</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/HttpDate.html"><strong>HttpDate</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/InternetAddressType.html"><strong>InternetAddressType</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/LineTransformer.html"><strong>LineTransformer</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/MimeMultipartTransformer.html"><strong>MimeMultipartTransformer</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/Platform.html"><strong>Platform</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/ProcessSignal.html"><strong>ProcessSignal</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/RawSecureServerSocket.html"><strong>RawSecureServerSocket</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/RawSocketEvent.html"><strong>RawSocketEvent</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/SecureServerSocket.html"><strong>SecureServerSocket</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/SocketDirection.html"><strong>SocketDirection</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/SocketOption.html"><strong>SocketOption</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/StdioType.html"><strong>StdioType</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/StringDecoder.html"><strong>StringDecoder</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/StringEncoder.html"><strong>StringEncoder</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/X509Certificate.html"><strong>X509Certificate</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/ZLibDeflater.html"><strong>ZLibDeflater</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/ZLibInflater.html"><strong>ZLibInflater</strong></a>
+          </h4>
+          </div>
+          
+</div>
+<div>
+<h3>Exceptions</h3>
+          <div class="type">
+          <h4>
+            <a href="dart_io/DirectoryException.html"><strong>DirectoryException</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/FileException.html"><strong>FileException</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/HttpException.html"><strong>HttpException</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/IOException.html"><strong>IOException</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/LinkException.html"><strong>LinkException</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/MimeMultipartException.html"><strong>MimeMultipartException</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/OSError.html"><strong>OSError</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/ProcessException.html"><strong>ProcessException</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/RedirectException.html"><strong>RedirectException</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/SocketException.html"><strong>SocketException</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="dart_io/WebSocketException.html"><strong>WebSocketException</strong></a>
+          </h4>
+          </div>
+          
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-06-21 06:35:22.094</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="client-static.js"></script>
+        </body></html>
+        

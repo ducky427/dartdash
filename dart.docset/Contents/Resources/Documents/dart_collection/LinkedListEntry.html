@@ -1,0 +1,232 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>LinkedListEntry&lt;E&gt; abstract class / dart:collection Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:collection" data-type="LinkedListEntry&amp;lt;E&amp;gt;">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_collection.html">dart:collection</a> &rsaquo; <a href="../dart_collection/LinkedListEntry.html">LinkedListEntry&lt;E&gt;</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../crypto.html">crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><ul class="icon">
+<li><a href="../dart_collection/DoubleLinkedQueue.html"><div class="icon-class"></div>DoubleLinkedQueue&lt;E&gt;</a></li>
+<li><a href="../dart_collection/DoubleLinkedQueueEntry.html"><div class="icon-class"></div>DoubleLinkedQueueEntry&lt;E&gt;</a></li>
+<li><a href="../dart_collection/HashMap.html"><div class="icon-class"></div>HashMap&lt;K, V&gt;</a></li>
+<li><a href="../dart_collection/HashSet.html"><div class="icon-class"></div>HashSet&lt;E&gt;</a></li>
+<li><a href="../dart_collection/HasNextIterator.html"><div class="icon-class"></div>HasNextIterator&lt;E&gt;</a></li>
+<li><a href="../dart_collection/IterableBase.html"><div class="icon-class"></div>IterableBase&lt;E&gt;</a></li>
+<li><a href="../dart_collection/IterableMixin.html"><div class="icon-class"></div>IterableMixin&lt;E&gt;</a></li>
+<li><a href="../dart_collection/LinkedHashMap.html"><div class="icon-class"></div>LinkedHashMap&lt;K, V&gt;</a></li>
+<li><a href="../dart_collection/LinkedHashSet.html"><div class="icon-class"></div>LinkedHashSet&lt;E&gt;</a></li>
+<li><a href="../dart_collection/LinkedList.html"><div class="icon-class"></div>LinkedList&lt;E&gt;</a></li>
+<li><div class="icon-class"></div><strong>LinkedListEntry&lt;E&gt;</strong></li>
+<li><a href="../dart_collection/ListBase.html"><div class="icon-class"></div>ListBase&lt;E&gt;</a></li>
+<li><a href="../dart_collection/ListMixin.html"><div class="icon-class"></div>ListMixin&lt;E&gt;</a></li>
+<li><a href="../dart_collection/ListQueue.html"><div class="icon-class"></div>ListQueue&lt;E&gt;</a></li>
+<li><a href="../dart_collection/Maps.html"><div class="icon-class"></div>Maps</a></li>
+<li><a href="../dart_collection/Queue.html"><div class="icon-class"></div>Queue&lt;E&gt;</a></li>
+<li><a href="../dart_collection/SplayTreeMap.html"><div class="icon-class"></div>SplayTreeMap&lt;K, V&gt;</a></li>
+<li><a href="../dart_collection/UnmodifiableListView.html"><div class="icon-class"></div>UnmodifiableListView&lt;E&gt;</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_typed_data.html">dart:typed_data</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_gl.html">dart:web_gl</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../mdv_observe.html">mdv_observe</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../source_maps.html">source_maps</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>LinkedListEntry&lt;E&gt;</strong>
+          abstract class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>Entry element for a <a class="crossref" href="../dart_collection/LinkedList.html">LinkedList</a>. Any entry must extend this class.</p>
+<pre class="source">
+abstract class LinkedListEntry&lt;E&gt; implements _LinkedListLink {
+ LinkedList&lt;E&gt; _list;
+ _LinkedListLink _next;
+ _LinkedListLink _previous;
+
+ /**
+  * Get the list containing this element.
+  */
+ LinkedList&lt;E&gt; get list =&gt; _list;
+
+ /**
+  * Unlink the element from the list.
+  */
+ void unlink() {
+   _list._unlink(this);
+ }
+
+ /**
+  * Return the succeeding element in the list.
+  */
+ E get next {
+   if (identical(_next, _list)) return null;
+   return _next as E;
+ }
+
+ /**
+  * Return the preceeding element in the list.
+  */
+ E get previous {
+   if (identical(_previous, _list)) return null;
+   return _previous as E;
+ }
+
+ /**
+  * insert an element after this.
+  */
+ void insertAfter(E entry) {
+   _list._insertAfter(this, entry);
+ }
+
+ /**
+  * Insert an element before this.
+  */
+ void insertBefore(E entry) {
+   _list._insertAfter(_previous, entry);
+ }
+}
+</pre>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="list">
+<button class="show-code">Code</button>
+final <a href="../dart_collection/LinkedList.html">LinkedList</a>&lt;<a href="../dart_collection/LinkedListEntry.html">E</a>&gt;         <strong>list</strong> <a class="anchor-link"
+            href="#list"
+            title="Permalink to LinkedListEntry&lt;E&gt;.list">#</a>
+        </h4>
+        <div class="doc">
+<p>Get the list containing this element.</p>
+<pre class="source">
+LinkedList&lt;E&gt; get list =&gt; _list;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="next">
+<button class="show-code">Code</button>
+final <a href="../dart_collection/LinkedListEntry.html">E</a>         <strong>next</strong> <a class="anchor-link"
+            href="#next"
+            title="Permalink to LinkedListEntry&lt;E&gt;.next">#</a>
+        </h4>
+        <div class="doc">
+<p>Return the succeeding element in the list.</p>
+<pre class="source">
+E get next {
+ if (identical(_next, _list)) return null;
+ return _next as E;
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="previous">
+<button class="show-code">Code</button>
+final <a href="../dart_collection/LinkedListEntry.html">E</a>         <strong>previous</strong> <a class="anchor-link"
+            href="#previous"
+            title="Permalink to LinkedListEntry&lt;E&gt;.previous">#</a>
+        </h4>
+        <div class="doc">
+<p>Return the preceeding element in the list.</p>
+<pre class="source">
+E get previous {
+ if (identical(_previous, _list)) return null;
+ return _previous as E;
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="insertAfter">
+<button class="show-code">Code</button>
+void <strong>insertAfter</strong>(<a href="../dart_collection/LinkedListEntry.html">E</a> entry) <a class="anchor-link" href="#insertAfter"
+              title="Permalink to LinkedListEntry&lt;E&gt;.insertAfter">#</a></h4>
+<div class="doc">
+<p>insert an element after this.</p>
+<pre class="source">
+void insertAfter(E entry) {
+ _list._insertAfter(this, entry);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="insertBefore">
+<button class="show-code">Code</button>
+void <strong>insertBefore</strong>(<a href="../dart_collection/LinkedListEntry.html">E</a> entry) <a class="anchor-link" href="#insertBefore"
+              title="Permalink to LinkedListEntry&lt;E&gt;.insertBefore">#</a></h4>
+<div class="doc">
+<p>Insert an element before this.</p>
+<pre class="source">
+void insertBefore(E entry) {
+ _list._insertAfter(_previous, entry);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="unlink">
+<button class="show-code">Code</button>
+void <strong>unlink</strong>() <a class="anchor-link" href="#unlink"
+              title="Permalink to LinkedListEntry&lt;E&gt;.unlink">#</a></h4>
+<div class="doc">
+<p>Unlink the element from the list.</p>
+<pre class="source">
+void unlink() {
+ _list._unlink(this);
+}
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-06-21 06:35:06.804</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

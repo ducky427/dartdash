@@ -1,0 +1,1286 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>ObjectStore class / dart:indexed_db Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:indexed_db" data-type="ObjectStore">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_indexed_db.html">dart:indexed_db</a> &rsaquo; <a href="../dart_indexed_db/ObjectStore.html">ObjectStore</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../crypto.html">crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><ul class="icon">
+<li><a href="../dart_indexed_db/Cursor.html"><div class="icon-class"></div>Cursor</a></li>
+<li><a href="../dart_indexed_db/CursorWithValue.html"><div class="icon-class"></div>CursorWithValue</a></li>
+<li><a href="../dart_indexed_db/Database.html"><div class="icon-class"></div>Database</a></li>
+<li><a href="../dart_indexed_db/IdbFactory.html"><div class="icon-class"></div>IdbFactory</a></li>
+<li><a href="../dart_indexed_db/Index.html"><div class="icon-class"></div>Index</a></li>
+<li><a href="../dart_indexed_db/KeyRange.html"><div class="icon-class"></div>KeyRange</a></li>
+<li><div class="icon-class"></div><strong>ObjectStore</strong></li>
+<li><a href="../dart_indexed_db/OpenDBRequest.html"><div class="icon-class"></div>OpenDBRequest</a></li>
+<li><a href="../dart_indexed_db/Request.html"><div class="icon-class"></div>Request</a></li>
+<li><a href="../dart_indexed_db/Transaction.html"><div class="icon-class"></div>Transaction</a></li>
+<li><a href="../dart_indexed_db/VersionChangeEvent.html"><div class="icon-class"></div>VersionChangeEvent</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_typed_data.html">dart:typed_data</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_gl.html">dart:web_gl</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../mdv_observe.html">mdv_observe</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../source_maps.html">source_maps</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>ObjectStore</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+        <div class="mdn">
+        The <code>IDBObjectStore</code> interface of the <a title="en/IndexedDB" rel="internal" href="https://developer.mozilla.org/en/IndexedDB">IndexedDB API</a> represents an <a title="en/IndexedDB#gloss object store" rel="internal" href="https://developer.mozilla.org/en/IndexedDB#gloss_object_store">object store</a> in a database.&nbsp;Records within an object store are sorted according to their keys. This sorting enable fast insertion, look-up, and &nbsp;ordered retrieval.&nbsp;
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('IDBObjectStore')
+@Unstable
+class ObjectStore native "IDBObjectStore" {
+
+ @DomName('IDBObjectStore.add')
+ Future add(value, [key]) {
+   try {
+     var request;
+     if (key != null) {
+       request = $dom_add(value, key);
+     } else {
+       request = $dom_add(value);
+     }
+     return _completeRequest(request);
+   } catch (e, stacktrace) {
+     return new Future.error(e, stacktrace);
+   }
+ }
+
+ @DomName('IDBObjectStore.clear')
+ Future clear() {
+   try {
+     return _completeRequest($dom_clear());
+   } catch (e, stacktrace) {
+     return new Future.error(e, stacktrace);
+   }
+ }
+
+ @DomName('IDBObjectStore.delete')
+ Future delete(key_OR_keyRange){
+   try {
+     return _completeRequest($dom_delete(key_OR_keyRange));
+   } catch (e, stacktrace) {
+     return new Future.error(e, stacktrace);
+   }
+ }
+
+ @DomName('IDBObjectStore.count')
+ Future&lt;int&gt; count([key_OR_range]) {
+  try {
+     var request;
+     if (key_OR_range != null) {
+       request = $dom_count(key_OR_range);
+     } else {
+       request = $dom_count();
+     }
+     return _completeRequest(request);
+   } catch (e, stacktrace) {
+     return new Future.error(e, stacktrace);
+   }
+ }
+
+ @DomName('IDBObjectStore.put')
+ Future put(value, [key]) {
+   try {
+     var request;
+     if (key != null) {
+       request = $dom_put(value, key);
+     } else {
+       request = $dom_put(value);
+     }
+     return _completeRequest(request);
+   } catch (e, stacktrace) {
+     return new Future.error(e, stacktrace);
+   }
+ }
+
+ @DomName('IDBObjectStore.get')
+ Future getObject(key) {
+   try {
+     var request = $dom_get(key);
+
+     return _completeRequest(request);
+   } catch (e, stacktrace) {
+     return new Future.error(e, stacktrace);
+   }
+ }
+
+ /**
+  * Creates a stream of cursors over the records in this object store.
+  *
+  * **The stream must be manually advanced by calling [Cursor.next] after
+  * each item or by specifying autoAdvance to be true.**
+  *
+  *     var cursors = objectStore.openCursor().listen(
+  *       (cursor) {
+  *         // ...some processing with the cursor
+  *         cursor.next(); // advance onto the next cursor.
+  *       },
+  *       onDone: () {
+  *         // called when there are no more cursors.
+  *         print('all done!');
+  *       });
+  *
+  * Asynchronous operations which are not related to the current transaction
+  * will cause the transaction to automatically be committed-- all processing
+  * must be done synchronously unless they are additional async requests to
+  * the current transaction.
+  */
+ @DomName('IDBObjectStore.openCursor')
+ Stream&lt;CursorWithValue&gt; openCursor({key, KeyRange range, String direction,
+     bool autoAdvance}) {
+   var key_OR_range = null;
+   if (key != null) {
+     if (range != null) {
+       throw new ArgumentError('Cannot specify both key and range.');
+     }
+     key_OR_range = key;
+   } else {
+     key_OR_range = range;
+   }
+
+   // TODO: try/catch this and return a stream with an immediate error.
+   var request;
+   if (direction == null) {
+     request = $dom_openCursor(key_OR_range);
+   } else {
+     request = $dom_openCursor(key_OR_range, direction);
+   }
+   return _cursorStreamFromResult(request, autoAdvance);
+ }
+
+ @DomName('IDBObjectStore.createIndex')
+ Index createIndex(String name, keyPath, {bool unique, bool multiEntry}) {
+   var options = {};
+   if (unique != null) {
+     options['unique'] = unique;
+   }
+   if (multiEntry != null) {
+     options['multiEntry'] = multiEntry;
+   }
+
+   return $dom_createIndex(name, keyPath, options);
+ }
+
+
+ @DomName('IDBObjectStore.autoIncrement')
+ @DocsEditable
+ final bool autoIncrement;
+
+ @DomName('IDBObjectStore.indexNames')
+ @DocsEditable
+ @Returns('DomStringList')
+ @Creates('DomStringList')
+ final List&lt;String&gt; indexNames;
+
+ @DomName('IDBObjectStore.keyPath')
+ @DocsEditable
+ @annotation_Creates_SerializedScriptValue
+ final dynamic keyPath;
+
+ @DomName('IDBObjectStore.name')
+ @DocsEditable
+ final String name;
+
+ @DomName('IDBObjectStore.transaction')
+ @DocsEditable
+ final Transaction transaction;
+
+ @DomName('IDBObjectStore.add')
+ @DocsEditable
+ @Returns('Request')
+ @Creates('Request')
+ @_annotation_Creates_IDBKey
+ Request $dom_add(/*any*/ value, [/*any*/ key]) {
+   if (key != null) {
+     var value_1 = convertDartToNative_SerializedScriptValue(value);
+     var key_2 = convertDartToNative_SerializedScriptValue(key);
+     return _$dom_add_1(value_1, key_2);
+   }
+   var value_3 = convertDartToNative_SerializedScriptValue(value);
+   return _$dom_add_2(value_3);
+ }
+ @JSName('add')
+ @DomName('IDBObjectStore.add')
+ @DocsEditable
+ @Returns('Request')
+ @Creates('Request')
+ @_annotation_Creates_IDBKey
+ Request _$dom_add_1(value, key) native;
+ @JSName('add')
+ @DomName('IDBObjectStore.add')
+ @DocsEditable
+ @Returns('Request')
+ @Creates('Request')
+ @_annotation_Creates_IDBKey
+ Request _$dom_add_2(value) native;
+
+ @JSName('clear')
+ @DomName('IDBObjectStore.clear')
+ @DocsEditable
+ Request $dom_clear() native;
+
+ @JSName('count')
+ @DomName('IDBObjectStore.count')
+ @DocsEditable
+ Request $dom_count([key_OR_range]) native;
+
+ @DomName('IDBObjectStore.createIndex')
+ @DocsEditable
+ Index $dom_createIndex(String name, keyPath, [Map options]) {
+   if ((keyPath is List&lt;String&gt; || keyPath == null) &amp;&amp; options == null) {
+     List keyPath_1 = convertDartToNative_StringArray(keyPath);
+     return _$dom_createIndex_1(name, keyPath_1);
+   }
+   if (options != null &amp;&amp; (keyPath is List&lt;String&gt; || keyPath == null)) {
+     List keyPath_2 = convertDartToNative_StringArray(keyPath);
+     var options_3 = convertDartToNative_Dictionary(options);
+     return _$dom_createIndex_2(name, keyPath_2, options_3);
+   }
+   if ((keyPath is String || keyPath == null) &amp;&amp; options == null) {
+     return _$dom_createIndex_3(name, keyPath);
+   }
+   if (options != null &amp;&amp; (keyPath is String || keyPath == null)) {
+     var options_4 = convertDartToNative_Dictionary(options);
+     return _$dom_createIndex_4(name, keyPath, options_4);
+   }
+   throw new ArgumentError("Incorrect number or type of arguments");
+ }
+ @JSName('createIndex')
+ @DomName('IDBObjectStore.createIndex')
+ @DocsEditable
+ Index _$dom_createIndex_1(name, List keyPath) native;
+ @JSName('createIndex')
+ @DomName('IDBObjectStore.createIndex')
+ @DocsEditable
+ Index _$dom_createIndex_2(name, List keyPath, options) native;
+ @JSName('createIndex')
+ @DomName('IDBObjectStore.createIndex')
+ @DocsEditable
+ Index _$dom_createIndex_3(name, String keyPath) native;
+ @JSName('createIndex')
+ @DomName('IDBObjectStore.createIndex')
+ @DocsEditable
+ Index _$dom_createIndex_4(name, String keyPath, options) native;
+
+ @JSName('delete')
+ @DomName('IDBObjectStore.delete')
+ @DocsEditable
+ Request $dom_delete(key_OR_keyRange) native;
+
+ @DomName('IDBObjectStore.deleteIndex')
+ @DocsEditable
+ void deleteIndex(String name) native;
+
+ @JSName('get')
+ @DomName('IDBObjectStore.get')
+ @DocsEditable
+ @Returns('Request')
+ @Creates('Request')
+ @annotation_Creates_SerializedScriptValue
+ Request $dom_get(key) native;
+
+ @DomName('IDBObjectStore.index')
+ @DocsEditable
+ Index index(String name) native;
+
+ @JSName('openCursor')
+ @DomName('IDBObjectStore.openCursor')
+ @DocsEditable
+ @Returns('Request')
+ @Creates('Request')
+ @Creates('Cursor')
+ Request $dom_openCursor([key_OR_range, String direction]) native;
+
+ @DomName('IDBObjectStore.put')
+ @DocsEditable
+ @Returns('Request')
+ @Creates('Request')
+ @_annotation_Creates_IDBKey
+ Request $dom_put(/*any*/ value, [/*any*/ key]) {
+   if (key != null) {
+     var value_1 = convertDartToNative_SerializedScriptValue(value);
+     var key_2 = convertDartToNative_SerializedScriptValue(key);
+     return _$dom_put_1(value_1, key_2);
+   }
+   var value_3 = convertDartToNative_SerializedScriptValue(value);
+   return _$dom_put_2(value_3);
+ }
+ @JSName('put')
+ @DomName('IDBObjectStore.put')
+ @DocsEditable
+ @Returns('Request')
+ @Creates('Request')
+ @_annotation_Creates_IDBKey
+ Request _$dom_put_1(value, key) native;
+ @JSName('put')
+ @DomName('IDBObjectStore.put')
+ @DocsEditable
+ @Returns('Request')
+ @Creates('Request')
+ @_annotation_Creates_IDBKey
+ Request _$dom_put_2(value) native;
+
+
+ /**
+  * Helper for iterating over cursors in a request.
+  */
+ static Stream&lt;Cursor&gt; _cursorStreamFromResult(Request request,
+     bool autoAdvance) {
+   // TODO: need to guarantee that the controller provides the values
+   // immediately as waiting until the next tick will cause the transaction to
+   // close.
+   var controller = new StreamController(sync: true);
+
+   request.onError.listen((e) {
+     //TODO: Report stacktrace once issue 4061 is resolved.
+     controller.addError(e);
+   });
+
+   request.onSuccess.listen((e) {
+     Cursor cursor = request.result;
+     if (cursor == null) {
+       controller.close();
+     } else {
+       controller.add(cursor);
+       if (autoAdvance == true &amp;&amp; controller.hasListener) {
+         cursor.next();
+       }
+     }
+   });
+   return controller.stream;
+ }
+}
+</pre>
+</div>
+<h3>Extends</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart__interceptors/Interceptor.html">Interceptor</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><strong>ObjectStore</strong></span></p>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="autoIncrement">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>autoIncrement</strong> <a class="anchor-link"
+            href="#autoIncrement"
+            title="Permalink to ObjectStore.autoIncrement">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+final bool autoIncrement
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="hashCode">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>hashCode</strong> <a class="anchor-link"
+            href="#hashCode"
+            title="Permalink to ObjectStore.hashCode">#</a>
+        </h4>
+        <div class="inherited-from">inherited from Interceptor </div><div class="doc">
+<div class="inherited">
+<p>Get a hash code for this object.</p>
+<p>All objects have hash codes. Hash codes are guaranteed to be the
+same for objects that are equal when compared using the equality
+operator <code>==</code>. Other than that there are no guarantees about
+the hash codes. They will not be consistent between runs and
+there are no distribution guarantees.</p>
+<p>If a subclass overrides <code>hashCode</code> it should override the
+equality operator as well to maintain consistency.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+int get hashCode =&gt; Primitives.objectHashCode(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="indexNames">
+<button class="show-code">Code</button>
+final <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/String.html">String</a>&gt;         <strong>indexNames</strong> <a class="anchor-link"
+            href="#indexNames"
+            title="Permalink to ObjectStore.indexNames">#</a>
+        </h4>
+        <div class="doc">
+        <div class="mdn">
+        A list of the names of <a title="en/IndexedDB#gloss index" rel="internal" href="https://developer.mozilla.org/en/IndexedDB#gloss_index">indexes</a> on objects in this object store.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+final List&lt;String&gt; indexNames
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="keyPath">
+<button class="show-code">Code</button>
+final         <strong>keyPath</strong> <a class="anchor-link"
+            href="#keyPath"
+            title="Permalink to ObjectStore.keyPath">#</a>
+        </h4>
+        <div class="doc">
+        <div class="mdn">
+        The <a title="en/IndexedDB#gloss key path" rel="internal" href="https://developer.mozilla.org/en/IndexedDB#gloss_key_path">key path</a> of this object store. If this attribute is null, the application must provide a key for each modification operation.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+final dynamic keyPath
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="name">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>name</strong> <a class="anchor-link"
+            href="#name"
+            title="Permalink to ObjectStore.name">#</a>
+        </h4>
+        <div class="doc">
+        <div class="mdn">
+        The name of this object store.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+final String name
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="runtimeType">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Type.html">Type</a>         <strong>runtimeType</strong> <a class="anchor-link"
+            href="#runtimeType"
+            title="Permalink to ObjectStore.runtimeType">#</a>
+        </h4>
+        <div class="inherited-from">inherited from Interceptor </div><div class="doc">
+<div class="inherited">
+<p>A representation of the runtime type of the object.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+Type get runtimeType =&gt; getRuntimeType(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="transaction">
+<button class="show-code">Code</button>
+final <a href="../dart_indexed_db/Transaction.html">Transaction</a>         <strong>transaction</strong> <a class="anchor-link"
+            href="#transaction"
+            title="Permalink to ObjectStore.transaction">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+final Transaction transaction
+</pre>
+</div>
+</div>
+</div>
+<div class="inherited">
+<h3>Operators</h3>
+<div class="method inherited"><h4 id="==">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>operator ==</strong>(other) <a class="anchor-link" href="#=="
+              title="Permalink to ObjectStore.operator ==">#</a></h4>
+<div class="inherited-from">inherited from Interceptor </div><div class="doc">
+<div class="inherited">
+<p>The equality operator.</p>
+<p>The default behavior for all <code>Object</code>s is to return true if and
+only if <code>this</code> and 
+<span class="param">other</span> are the same object.</p>
+<p>If a subclass overrides the equality operator it should override
+the <code>hashCode</code> method as well to maintain consistency.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+bool operator ==(other) =&gt; identical(this, other);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="add">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a> <strong>add</strong>(value, [key]) <a class="anchor-link" href="#add"
+              title="Permalink to ObjectStore.add">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>Returns an <a title="en/IndexedDB/IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a> object, and, in a separate thread, creates a <a class="external" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#structured-clone" rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#structured-clone" target="_blank">structured clone</a> of the <code>value</code>, and stores the cloned value in the object store. If the record is successfully stored, then a success event is fired on the returned request object, using the <a title="en/IndexedDB/IDBTransactionEvent" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransactionEvent">IDBTransactionEvent</a> interface, with the <code><a title="en/IndexedDB/IDBSuccessEvent#attr result" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBSuccessEvent#attr_result">result</a></code> set to the key for the stored record, and <code><a title="en/IndexedDB/IDBTransactionEvent#attr transaction" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransactionEvent#attr_transaction">transaction</a></code> set to the transaction in which this object store is opened. If a record already exists in the object store with the <code>key</code> parameter as its key, then an error event is fired on the returned request object, with <a title="en/IndexedDB/IDBErrorEvent#attr code" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBErrorEvent#attr_code">code</a> set to <code><a title="en/IndexedDB/DatabaseException#CONSTRAINT ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#CONSTRAINT_ERR">CONSTRAINT_ERR</a></code>.</p>
+
+<div id="section_5"><span id="Parameters"></span><h5 class="editable">Parameters</h5>
+<dl> <dt>value</dt> <dd>The value to be stored.</dd> <dt>key</dt> <dd>The key to use to identify the record. If unspecified, it results to null.</dd>
+</dl>
+</div><div id="section_6"><span id="Returns"></span><h5 class="editable">Returns</h5>
+<dl> <dt><a title="en/IndexedDB/IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a></dt> <dd>A request object on which subsequent events related to this operation are fired.</dd>
+</dl>
+</div><div id="section_7"><span id="Exceptions"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an <a title="en/IndexedDB/IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with the following codes:</p>
+<dl> <dt><code><a title="en/IndexedDB/DatabaseException#DATA ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#DATA_ERR">DATA_ERR</a></code></dt> <dd>If the object store uses in-line keys or has a key generator, and a key parameter was provided.<br> If the object store uses out-of-line keys and has no key generator, and no key parameter was provided.<br> If the object store uses in-line keys but no key generator, and the object store's key path does not yield a valid key.<br> If the key parameter was provided but does not contain a valid key.<br> If there are indexed on this object store, and using their key path on the value parameter yields a value that is not a valid key.</dd> <dt><code><a title="en/IndexedDB/IDBDatabaseException#READ ONLY ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#READ_ONLY_ERR">READ_ONLY_ERR</a></code></dt> <dd>If the mode of the associated transaction is <code><a title="en/IndexedDB/IDBTransaction#READ ONLY" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransaction#READ_ONLY">READ_ONLY</a></code>.</dd> <dt><code><a title="en/IndexedDB/IDBDatabaseException#TRANSACTION INACTIVE ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#TRANSACTION_INACTIVE_ERR">TRANSACTION_INACTIVE_ERR</a></code></dt> <dd>If the associated transaction is not active.</dd>
+</dl>
+<p>This method can raise a <a title="en/DOM/DOMException" rel="internal" href="https://developer.mozilla.org/En/DOM/DOMException">DOMException</a> with the following code:</p>
+<dl> <dt><code>DATA_CLONE_ERR</code></dt> <dd>If the data being stored could not be cloned by the internal structured cloning algorithm.</dd>
+</dl>
+<dl>
+</dl>
+</div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('IDBObjectStore.add')
+Future add(value, [key]) {
+ try {
+   var request;
+   if (key != null) {
+     request = $dom_add(value, key);
+   } else {
+     request = $dom_add(value);
+   }
+   return _completeRequest(request);
+ } catch (e, stacktrace) {
+   return new Future.error(e, stacktrace);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="clear">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a> <strong>clear</strong>() <a class="anchor-link" href="#clear"
+              title="Permalink to ObjectStore.clear">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>If the mode of the transaction that this object store belongs to is <code><a title="en/IndexedDB/IDBTransaction#READ ONLY" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransaction#READ_ONLY">READ_ONLY</a></code>, this method raises an&nbsp;<a title="en/IndexedDB/IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with its code set to <code><a title="en/IndexedDB/IDBDatabaseException#READ ONLY ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#READ_ONLY_ERR">READ_ONLY_ERR</a></code>. Otherwise, this method creates and immediately returns an <a title="en/IndexedDB/IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a> object, and clears this object store in a separate thread. Clearing an object store consists of removing all records from the object store and removing all records in indexes that reference the object store.</p>
+
+<div id="section_9"><span id="Returns_2"></span><h5 class="editable">Returns</h5>
+<dl> <dt><a title="en/IndexedDB/IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a></dt> <dd>A request object on which subsequent events related to this operation are fired.</dd>
+</dl>
+</div><div id="section_10"><span id="Exceptions_2"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an <a title="en/IndexedDB/IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with the following codes:</p>
+<dl> <dt><a title="en/IndexedDB/IDBDatabaseException#READ ONLY ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#READ_ONLY_ERR"><code>READ_ONLY_ERR</code></a></dt> <dd>If the mode of the transaction that this object store belongs to is READ_ONLY.</dd> <dt><a title="en/IndexedDB/IDBDatabaseException#TRANSACTION INACTIVE ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#TRANSACTION_INACTIVE_ERR"><code>TRANSACTION_INACTIVE_ERR</code></a></dt> <dd>If the transaction that this object store belongs to is not active.</dd>
+</dl></div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('IDBObjectStore.clear')
+Future clear() {
+ try {
+   return _completeRequest($dom_clear());
+ } catch (e, stacktrace) {
+   return new Future.error(e, stacktrace);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="count">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/int.html">int</a>&gt; <strong>count</strong>([key_OR_range]) <a class="anchor-link" href="#count"
+              title="Permalink to ObjectStore.count">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>Immediately returns an <a title="IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a> object and asynchronously count the amount of objects in the object store that match the parameter, a key or a key range. If the parameter is not valid returns an exception.</p>
+
+<div id="section_12"><span id="Parameters_2"></span><h5 class="editable">Parameters</h5>
+<dl> <dt>key</dt> <dd>The key or key range that identifies the records to be counted.</dd>
+</dl>
+</div><div id="section_13"><span id="Returns_3"></span><h5 class="editable">Returns</h5>
+<dl> <dt><a title="en/IndexedDB/IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a></dt> <dd>A request object on which subsequent events related to this operation are fired.</dd>
+</dl>
+</div><div id="section_14"><span id="Exceptions_3"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an <a title="IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with the following codes:</p>
+<dl> <dt><code><a href="IDBDatabaseException#DATA_ERR" rel="internal" title="en/IndexedDB/DatabaseException#DATA ERR">DATA_ERR</a></code></dt> <dd>If the object store uses in-line keys or has a key generator, and a key parameter was provided.<br> If the object store uses out-of-line keys and has no key generator, and no key parameter was provided.<br> If the object store uses in-line keys but no key generator, and the object store's key path does not yield a valid key.<br> If the key parameter was provided but does not contain a valid key.<br> If there are indexed on this object store, and using their key path on the value parameter yields a value that is not a valid key.</dd> <dt><code><a href="IDBDatabaseException#NOT_ALLOWED_ERR" rel="internal" title="en/IndexedDB/IDBDatabaseException#NOT_ALLOWED_ERR">NOT_ALLOWED_ERR</a></code></dt> <dd>The request was made on a source object that has been deleted or removed.</dd>
+</dl></div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('IDBObjectStore.count')
+Future&lt;int&gt; count([key_OR_range]) {
+try {
+   var request;
+   if (key_OR_range != null) {
+     request = $dom_count(key_OR_range);
+   } else {
+     request = $dom_count();
+   }
+   return _completeRequest(request);
+ } catch (e, stacktrace) {
+   return new Future.error(e, stacktrace);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="createIndex">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Index.html">Index</a> <strong>createIndex</strong>(<a href="../dart_core/String.html">String</a> name, keyPath, {<a href="../dart_core/bool.html">bool</a> unique, <a href="../dart_core/bool.html">bool</a> multiEntry}) <a class="anchor-link" href="#createIndex"
+              title="Permalink to ObjectStore.createIndex">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>Creates and returns a new index in the connected database. Note that this method must be called only from a <a title="en/IndexedDB/IDBTransaction#VERSION CHANGE" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransaction#VERSION_CHANGE"><code>VERSION_CHANGE</code></a> transaction callback.</p>
+<pre>IDBIndex createIndex (
+&nbsp; in DOMString name, 
+&nbsp; in DOMString keyPath, 
+&nbsp; in Object optionalParameters
+) raises (IDBDatabaseException);
+
+</pre>
+<div id="section_16"><span id="Parameters_3"></span><h5 class="editable">Parameters</h5>
+<dl> <dt>name</dt> <dd>The name of the index to create.</dd> <dt>keyPath</dt> <dd>The key path for the index to use.</dd> <dt>optionalParameters</dt> <dd> <div class="warning"><strong>Warning:</strong> The latest draft of the specification changed this to <code>IDBIndexParameters</code>, which is not yet recognized by any browser</div> <p>Options object whose attributes are optional parameters to the method. It includes the following properties:</p> <table class="standard-table"> <thead> <tr> <th scope="col" width="131">Attribute</th> <th scope="col" width="698">Description</th> </tr> </thead> <tbody> <tr> <td><code>unique</code></td> <td>If true, the index will not allow duplicate values for a single key.</td> </tr> <tr> <td><code>multientry</code></td> <td>If true, the index will add an entry in the index for each array element when the <em>keypath</em> resolves to an Array. If false, it will add one single entry containing the Array.</td> </tr> </tbody> </table> <p>Unknown parameters are ignored.</p> </dd> <dd></dd>
+</dl>
+</div><div id="section_17"><span id="Returns_4"></span><h5 class="editable">Returns</h5>
+<dl> <dt><a title="en/IndexedDB/IDBIndex" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBIndex">IDBIndex</a></dt> <dd>The newly created index.</dd>
+</dl>
+</div><div id="section_18"><span id="Exceptions_4"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an <a title="en/IndexedDB/IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with the following codes:</p>
+<dl> <dt><code><a title="en/IndexedDB/DatabaseException#CONSTRAINT ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#CONSTRAINT_ERR">CONSTRAINT_ERR</a></code></dt> <dd>If an index with the same name (based on case-sensitive comparison) already exists in the connected database.</dd> <dt><code><a title="en/IndexedDB/DatabaseException#NOT ALLOWED ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#NOT_ALLOWED_ERR">NOT_ALLOWED_ERR</a></code></dt> <dd>If this method was not called from a <a title="en/IndexedDB/IDBTransaction#VERSION CHANGE" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransaction#VERSION_CHANGE"><code>VERSION_CHANGE</code></a> transaction callback.</dd>
+</dl></div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('IDBObjectStore.createIndex')
+Index createIndex(String name, keyPath, {bool unique, bool multiEntry}) {
+ var options = {};
+ if (unique != null) {
+   options['unique'] = unique;
+ }
+ if (multiEntry != null) {
+   options['multiEntry'] = multiEntry;
+ }
+
+ return $dom_createIndex(name, keyPath, options);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="delete">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a> <strong>delete</strong>(key_OR_keyRange) <a class="anchor-link" href="#delete"
+              title="Permalink to ObjectStore.delete">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>Immediately returns an <code><a title="en/IndexedDB/IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a></code> object, and removes the record specified by the given key from this object store, and any indexes that reference it, in a separate thread. If no record exists in this object store corresponding to the key, an error event is fired on the returned request object, with its <code><a title="en/IndexedDB/IDBErrorEvent#attr code" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBErrorEvent#attr_code">code</a></code> set to <code><a title="en/IndexedDB/IDBDatabaseException#NOT FOUND ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#NOT_FOUND_ERR">NOT_FOUND_ERR</a></code> and an appropriate <code><a title="en/IndexedDB/IDBErrorEvent#attr message" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBErrorEvent#attr_message">message</a></code>. If the record is successfully removed, then a success event is fired on the returned request object, using the <code><a title="en/IndexedDB/IDBTransactionEvent" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransactionEvent">IDBTransactionEvent</a></code> interface, with the <code><a title="en/IndexedDB/IDBSuccessEvent#attr result" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBSuccessEvent#attr_result">result</a></code> set to <code>undefined</code>, and <a title="en/IndexedDB/IDBTransactionEvent#attr transaction" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransactionEvent#attr_transaction">transaction</a> set to the transaction in which this object store is opened.</p>
+<pre>IDBRequest delete (
+  in any key
+) raises (IDBDatabaseException); 
+</pre>
+<div id="section_20"><span id="Parameters_4"></span><h5 class="editable">Parameters</h5>
+<dl> <dt>key</dt> <dd>The key to use to identify the record.</dd>
+</dl>
+</div><div id="section_21"><span id="Returns_5"></span><h5 class="editable">Returns</h5>
+<dl> <dt><a title="en/IndexedDB/IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a></dt> <dd>A request object on which subsequent events related to this operation are fired.</dd>
+</dl>
+</div><div id="section_22"><span id="Exceptions_5"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an <a title="en/IndexedDB/IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with the following codes:</p></div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('IDBObjectStore.delete')
+Future delete(key_OR_keyRange){
+ try {
+   return _completeRequest($dom_delete(key_OR_keyRange));
+ } catch (e, stacktrace) {
+   return new Future.error(e, stacktrace);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="deleteIndex">
+<button class="show-code">Code</button>
+void <strong>deleteIndex</strong>(<a href="../dart_core/String.html">String</a> name) <a class="anchor-link" href="#deleteIndex"
+              title="Permalink to ObjectStore.deleteIndex">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>Destroys the index with the specified name in the connected database. Note that this method must be called only from a <code><a title="en/IndexedDB/IDBTransaction#VERSION CHANGE" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransaction#VERSION_CHANGE">VERSION_CHANGE</a></code> transaction callback.</p>
+<pre>void removeIndex(
+  in DOMString indexName
+) raises (IDBDatabaseException); 
+</pre>
+<div id="section_24"><span id="Parameters_5"></span><h5 class="editable">Parameters</h5>
+<p>&nbsp;</p>
+<dl> <dt><code><a title="en/IndexedDB/DatabaseException#NOT ALLOWED ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#NOT_ALLOWED_ERR">NOT_ALLOWED_ERR</a></code></dt> <dd>If the object store is not in the <a title="en/IndexedDB#gloss scope" rel="internal" href="https://developer.mozilla.org/en/IndexedDB#gloss_scope">scope</a> of any existing <a title="en/IndexedDB#gloss transaction" rel="internal" href="https://developer.mozilla.org/en/IndexedDB#gloss_transaction">transaction</a>, or if the associated transaction's mode is <a title="en/IndexedDB/IDBTransaction#const read only" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransaction#const_read_only"><code>READ_ONLY</code></a>&nbsp;or <a title="en/IndexedDB/IDBTransaction#const snapshot read" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransaction#const_snapshot_read"><code>SNAPSHOT_READ</code></a>.</dd> <dt><code><a title="en/IndexedDB/IDBDatabaseException#TRANSACTION INACTIVE ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#TRANSACTION_INACTIVE_ERR">TRANSACTION_INACTIVE_ERR</a></code></dt> <dd>If the associated transaction is not active.</dd> <dt>indexName</dt> <dd>The name of the existing index to remove.</dd>
+</dl>
+</div><div id="section_25"><span id="Exceptions_6"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an <a title="en/IndexedDB/IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with the following codes:</p>
+<dl> <dt><code><a title="en/IndexedDB/DatabaseException#NOT ALLOWED ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#NOT_ALLOWED_ERR">NOT_ALLOWED_ERR</a></code></dt> <dd>If this method was not called from a <a title="en/IndexedDB/IDBTransaction#VERSION CHANGE" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransaction#VERSION_CHANGE">VERSION_CHANGE</a> transaction callback.</dd> <dt><code><a title="en/IndexedDB/IDBDatabaseException#NOT FOUND ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#NOT_FOUND_ERR">NOT_FOUND_ERR</a></code></dt> <dd>If no index exists with the specified name (based on case-sensitive comparison) in the connected database.</dd>
+</dl>
+</div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('IDBObjectStore.deleteIndex')
+@DocsEditable
+void deleteIndex(String name) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="getObject">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a> <strong>getObject</strong>(key) <a class="anchor-link" href="#getObject"
+              title="Permalink to ObjectStore.getObject">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>Immediately returns an <a title="en/IndexedDB/IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a> object, and retrieves the requested record from the object store in a separate thread. If the operation is successful, then a success event is fired on the returned object, using the <a title="en/IndexedDB/IDBTransactionEvent" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransactionEvent">IDBTransactionEvent</a> interface, with its <code><a title="en/IndexedDB/IDBSuccessEvent#attr result" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBSuccessEvent#attr_result">result</a></code> set to the retrieved value, and <code><a title="en/IndexedDB/IDBTransactionEvent#attr transaction" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransactionEvent#attr_transaction">transaction</a></code> set to the transaction in which this object store is opened. If a record does not exist in the object store for the key parameter, then an error event is fired on the returned object, with its <code><a title="en/IndexedDB/IDBErrorEvent#attr code" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBErrorEvent#attr_code">code</a></code> set to <code><a title="en/IndexedDB/IDBDatabaseException#NOT FOUND ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#NOT_FOUND_ERR">NOT_FOUND_ERR</a></code> and an appropriate <code><a title="en/IndexedDB/IDBErrorEvent#attr message" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBErrorEvent#attr_message">message</a></code>.</p>
+<p></p><div class="note"><strong>Note:</strong>&nbsp;This function produces the same result if no record with the given key exists in the database as when a record exists, but with an undefined value. To tell these situations apart, call the openCursor() method with the same key. That method provides a cursor if the record exists, and not if it does not.</div>
+<p></p>
+
+<div id="section_27"><span id="Parameters_6"></span><h5 class="editable">Parameters</h5>
+<dl> <dt>key</dt> <dd>The key identifying the record to retrieve.</dd>
+</dl>
+</div><div id="section_28"><span id="Returns_6"></span><h5 class="editable">Returns</h5>
+<dl> <dt><code><a title="en/IndexedDB/IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a></code></dt> <dd>A request object on which subsequent events related to this operation are fired.</dd>
+</dl>
+</div><div id="section_29"><span id="Exceptions_7"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an <a title="en/IndexedDB/IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with the following code:</p>
+<dl> <dt><code><a title="en/IndexedDB/IDBDatabaseException#DATA ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#DATA_ERR">DATA_ERR</a></code></dt> <dd>If the <code>key</code> parameter was not a valid value.</dd> <dt><code><a title="en/IndexedDB/IDBDatabaseException#TRANSACTION INACTIVE ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#TRANSACTION_INACTIVE_ERR">TRANSACTION_INACTIVE_ERR</a></code></dt> <dd>If the associated transaction is not active.</dd>
+</dl>
+</div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('IDBObjectStore.get')
+Future getObject(key) {
+ try {
+   var request = $dom_get(key);
+
+   return _completeRequest(request);
+ } catch (e, stacktrace) {
+   return new Future.error(e, stacktrace);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="index">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Index.html">Index</a> <strong>index</strong>(<a href="../dart_core/String.html">String</a> name) <a class="anchor-link" href="#index"
+              title="Permalink to ObjectStore.index">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>Opens the named index in this object store.</p>
+
+<div id="section_31"><span id="Parameters_7"></span><h5 class="editable">Parameters</h5>
+<dl> <dt>name</dt> <dd>The name of the index to open.</dd>
+</dl>
+</div><div id="section_32"><span id="Returns_7"></span><h5 class="editable">Returns</h5>
+<dl> <dt><code><a title="en/IndexedDB/IDBIndex" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBIndex">IDBIndex</a></code></dt> <dd>An object for accessing the index.</dd>
+</dl>
+</div><div id="section_33"><span id="Exceptions_8"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an <a title="en/IndexedDB/IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with the following code:</p>
+<dl> <dt><code><a title="en/IndexedDB/IDBDatabaseException#NOT FOUND ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#NOT_FOUND_ERR">NOT_FOUND_ERR</a></code></dt> <dd>If no index exists with the specified name (based on case-sensitive comparison) in the connected database.</dd>
+</dl>
+</div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('IDBObjectStore.index')
+@DocsEditable
+Index index(String name) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="noSuchMethod">
+<button class="show-code">Code</button>
+dynamic <strong>noSuchMethod</strong>(<a href="../dart_core/Invocation.html">Invocation</a> invocation) <a class="anchor-link" href="#noSuchMethod"
+              title="Permalink to ObjectStore.noSuchMethod">#</a></h4>
+<div class="inherited-from">inherited from Interceptor </div><div class="doc">
+<div class="inherited">
+<p><code>noSuchMethod</code> is invoked when users invoke a non-existant method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.</p>
+<p>The default behavior of <code>noSuchMethod</code> is to throw a
+<code>noSuchMethodError</code>.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+dynamic noSuchMethod(Invocation invocation) {
+ throw new NoSuchMethodError(
+     this,
+     _symbolToString(invocation.memberName),
+     invocation.positionalArguments,
+     _symbolMapToStringMap(invocation.namedArguments));
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="openCursor">
+<button class="show-code">Code</button>
+<a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_indexed_db/CursorWithValue.html">CursorWithValue</a>&gt; <strong>openCursor</strong>({key, <a href="../dart_indexed_db/KeyRange.html">KeyRange</a> range, <a href="../dart_core/String.html">String</a> direction, <a href="../dart_core/bool.html">bool</a> autoAdvance}) <a class="anchor-link" href="#openCursor"
+              title="Permalink to ObjectStore.openCursor">#</a></h4>
+<div class="doc">
+<p>Creates a stream of cursors over the records in this object store.</p>
+<p><strong>The stream must be manually advanced by calling <a class="crossref" href="../dart_indexed_db/Cursor.html#next">Cursor.next</a> after
+each item or by specifying autoAdvance to be true.</strong></p>
+<pre><code>var cursors = objectStore.openCursor().listen(
+  (cursor) {
+    // ...some processing with the cursor
+    cursor.next(); // advance onto the next cursor.
+  },
+  onDone: () {
+    // called when there are no more cursors.
+    print('all done!');
+  });
+</code></pre>
+<p>Asynchronous operations which are not related to the current transaction
+will cause the transaction to automatically be committed-- all processing
+must be done synchronously unless they are additional async requests to
+the current transaction.</p>
+<pre class="source">
+@DomName('IDBObjectStore.openCursor')
+Stream&lt;CursorWithValue&gt; openCursor({key, KeyRange range, String direction,
+   bool autoAdvance}) {
+ var key_OR_range = null;
+ if (key != null) {
+   if (range != null) {
+     throw new ArgumentError('Cannot specify both key and range.');
+   }
+   key_OR_range = key;
+ } else {
+   key_OR_range = range;
+ }
+
+ // TODO: try/catch this and return a stream with an immediate error.
+ var request;
+ if (direction == null) {
+   request = $dom_openCursor(key_OR_range);
+ } else {
+   request = $dom_openCursor(key_OR_range, direction);
+ }
+ return _cursorStreamFromResult(request, autoAdvance);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="put">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a> <strong>put</strong>(value, [key]) <a class="anchor-link" href="#put"
+              title="Permalink to ObjectStore.put">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>Returns an <a title="en/IndexedDB/IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a> object, and, in a separate thread, creates a <a class="external" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#structured-clone" rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#structured-clone" target="_blank">structured clone</a> of the <code>value</code>, and stores the cloned value in the object store. If the record is successfully stored, then a success event is fired on the returned request object, using the <a title="en/IndexedDB/IDBTransactionEvent" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransactionEvent">IDBTransactionEvent</a> interface, with the <code><a title="en/IndexedDB/IDBSuccessEvent#attr result" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBSuccessEvent#attr_result">result</a></code> set to the key for the stored record, and <code><a title="en/IndexedDB/IDBTransactionEvent#attr transaction" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransactionEvent#attr_transaction">transaction</a></code> set to the transaction in which this object store is opened.</p>
+
+<div id="section_39"><span id="Parameters_9"></span><h5 class="editable">Parameters</h5>
+<dl> <dt>value</dt> <dd>The value to be stored.</dd> <dt>key</dt> <dd>The key to use to identify the record. If unspecified, it results to null.</dd>
+</dl>
+</div><div id="section_40"><span id="Returns_9"></span><h5 class="editable">Returns</h5>
+<dl> <dt>IDBRequest</dt> <dd>A request object on which subsequent events related to this operation are fired.</dd>
+</dl>
+</div><div id="section_41"><span id="Exceptions_10"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an <a title="en/IndexedDB/IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with the following codes:</p>
+<dl> <li> <ul> <li>If this object store uses <a title="en/IndexedDB#gloss out-of-line key" rel="internal" href="https://developer.mozilla.org/en/IndexedDB#gloss_out-of-line_key">out-of-line keys</a> and does not use a <a title="en/IndexedDB#gloss key generator" rel="internal" href="https://developer.mozilla.org/en/IndexedDB#gloss_key_generator">key generator</a>, but the <code>key</code> parameter was not passed</li> <li>If the object store uses <a title="en/IndexedDB#gloss in-line key" rel="internal" href="https://developer.mozilla.org/en/IndexedDB#gloss_in-line_key">in-line keys</a>, but the <code>value</code> object does not have a property identified by the object store's key path.</li> </ul> </li> <dt><code><a title="en/IndexedDB/DatabaseException#NOT ALLOWED ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#NOT_ALLOWED_ERR">NOT_ALLOWED_ERR</a></code></dt> <dd>If the object store is not in the <a title="en/IndexedDB#gloss scope" rel="internal" href="https://developer.mozilla.org/en/IndexedDB#gloss_scope">scope</a> of any existing <a title="en/IndexedDB#gloss transaction" rel="internal" href="https://developer.mozilla.org/en/IndexedDB#gloss_transaction">transaction</a>, or if the associated transaction's mode is <a title="en/IndexedDB/IDBTransaction#const read only" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransaction#const_read_only"><code>READ_ONLY</code></a>&nbsp;or <a title="en/IndexedDB/IDBTransaction#const snapshot read" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransaction#const_snapshot_read"><code>SNAPSHOT_READ</code></a>.</dd> <dt><code><a title="en/IndexedDB/IDBDatabaseException#SERIAL ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#SERIAL_ERR">SERIAL_ERR</a></code></dt> <dd>If the data being stored could not be serialized by the internal structured cloning algorithm.</dd>
+</dl>
+<p>This method can raise a <a title="en/DOM/DOMException" rel="internal" href="https://developer.mozilla.org/En/DOM/DOMException">DOMException</a> with the following code:</p>
+<dl> <dt><code>DATA_CLONE_ERR</code></dt> <dd>If the data being stored could not be cloned by the internal structured cloning algorithm.</dd>
+</dl>
+</div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('IDBObjectStore.put')
+Future put(value, [key]) {
+ try {
+   var request;
+   if (key != null) {
+     request = $dom_put(value, key);
+   } else {
+     request = $dom_put(value);
+   }
+   return _completeRequest(request);
+ } catch (e, stacktrace) {
+   return new Future.error(e, stacktrace);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="toString">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>toString</strong>() <a class="anchor-link" href="#toString"
+              title="Permalink to ObjectStore.toString">#</a></h4>
+<div class="inherited-from">inherited from Interceptor </div><div class="doc">
+<div class="inherited">
+<p>Returns a string representation of this object.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+String toString() =&gt; Primitives.objectToString(this);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_add">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Request.html">Request</a> <strong>$dom_add</strong>(value, [key]) <a class="anchor-link" href="#$dom_add"
+              title="Permalink to ObjectStore.$dom_add">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>Returns an <a title="en/IndexedDB/IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a> object, and, in a separate thread, creates a <a class="external" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#structured-clone" rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#structured-clone" target="_blank">structured clone</a> of the <code>value</code>, and stores the cloned value in the object store. If the record is successfully stored, then a success event is fired on the returned request object, using the <a title="en/IndexedDB/IDBTransactionEvent" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransactionEvent">IDBTransactionEvent</a> interface, with the <code><a title="en/IndexedDB/IDBSuccessEvent#attr result" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBSuccessEvent#attr_result">result</a></code> set to the key for the stored record, and <code><a title="en/IndexedDB/IDBTransactionEvent#attr transaction" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransactionEvent#attr_transaction">transaction</a></code> set to the transaction in which this object store is opened. If a record already exists in the object store with the <code>key</code> parameter as its key, then an error event is fired on the returned request object, with <a title="en/IndexedDB/IDBErrorEvent#attr code" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBErrorEvent#attr_code">code</a> set to <code><a title="en/IndexedDB/DatabaseException#CONSTRAINT ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#CONSTRAINT_ERR">CONSTRAINT_ERR</a></code>.</p>
+
+<div id="section_5"><span id="Parameters"></span><h5 class="editable">Parameters</h5>
+<dl> <dt>value</dt> <dd>The value to be stored.</dd> <dt>key</dt> <dd>The key to use to identify the record. If unspecified, it results to null.</dd>
+</dl>
+</div><div id="section_6"><span id="Returns"></span><h5 class="editable">Returns</h5>
+<dl> <dt><a title="en/IndexedDB/IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a></dt> <dd>A request object on which subsequent events related to this operation are fired.</dd>
+</dl>
+</div><div id="section_7"><span id="Exceptions"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an <a title="en/IndexedDB/IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with the following codes:</p>
+<dl> <dt><code><a title="en/IndexedDB/DatabaseException#DATA ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#DATA_ERR">DATA_ERR</a></code></dt> <dd>If the object store uses in-line keys or has a key generator, and a key parameter was provided.<br> If the object store uses out-of-line keys and has no key generator, and no key parameter was provided.<br> If the object store uses in-line keys but no key generator, and the object store's key path does not yield a valid key.<br> If the key parameter was provided but does not contain a valid key.<br> If there are indexed on this object store, and using their key path on the value parameter yields a value that is not a valid key.</dd> <dt><code><a title="en/IndexedDB/IDBDatabaseException#READ ONLY ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#READ_ONLY_ERR">READ_ONLY_ERR</a></code></dt> <dd>If the mode of the associated transaction is <code><a title="en/IndexedDB/IDBTransaction#READ ONLY" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransaction#READ_ONLY">READ_ONLY</a></code>.</dd> <dt><code><a title="en/IndexedDB/IDBDatabaseException#TRANSACTION INACTIVE ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#TRANSACTION_INACTIVE_ERR">TRANSACTION_INACTIVE_ERR</a></code></dt> <dd>If the associated transaction is not active.</dd>
+</dl>
+<p>This method can raise a <a title="en/DOM/DOMException" rel="internal" href="https://developer.mozilla.org/En/DOM/DOMException">DOMException</a> with the following code:</p>
+<dl> <dt><code>DATA_CLONE_ERR</code></dt> <dd>If the data being stored could not be cloned by the internal structured cloning algorithm.</dd>
+</dl>
+<dl>
+</dl>
+</div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('IDBObjectStore.add')
+@DocsEditable
+@Returns('Request')
+@Creates('Request')
+@_annotation_Creates_IDBKey
+Request $dom_add(/*any*/ value, [/*any*/ key]) {
+ if (key != null) {
+   var value_1 = convertDartToNative_SerializedScriptValue(value);
+   var key_2 = convertDartToNative_SerializedScriptValue(key);
+   return _$dom_add_1(value_1, key_2);
+ }
+ var value_3 = convertDartToNative_SerializedScriptValue(value);
+ return _$dom_add_2(value_3);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_clear">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Request.html">Request</a> <strong>$dom_clear</strong>() <a class="anchor-link" href="#$dom_clear"
+              title="Permalink to ObjectStore.$dom_clear">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>If the mode of the transaction that this object store belongs to is <code><a title="en/IndexedDB/IDBTransaction#READ ONLY" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransaction#READ_ONLY">READ_ONLY</a></code>, this method raises an&nbsp;<a title="en/IndexedDB/IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with its code set to <code><a title="en/IndexedDB/IDBDatabaseException#READ ONLY ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#READ_ONLY_ERR">READ_ONLY_ERR</a></code>. Otherwise, this method creates and immediately returns an <a title="en/IndexedDB/IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a> object, and clears this object store in a separate thread. Clearing an object store consists of removing all records from the object store and removing all records in indexes that reference the object store.</p>
+
+<div id="section_9"><span id="Returns_2"></span><h5 class="editable">Returns</h5>
+<dl> <dt><a title="en/IndexedDB/IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a></dt> <dd>A request object on which subsequent events related to this operation are fired.</dd>
+</dl>
+</div><div id="section_10"><span id="Exceptions_2"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an <a title="en/IndexedDB/IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with the following codes:</p>
+<dl> <dt><a title="en/IndexedDB/IDBDatabaseException#READ ONLY ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#READ_ONLY_ERR"><code>READ_ONLY_ERR</code></a></dt> <dd>If the mode of the transaction that this object store belongs to is READ_ONLY.</dd> <dt><a title="en/IndexedDB/IDBDatabaseException#TRANSACTION INACTIVE ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#TRANSACTION_INACTIVE_ERR"><code>TRANSACTION_INACTIVE_ERR</code></a></dt> <dd>If the transaction that this object store belongs to is not active.</dd>
+</dl></div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@JSName('clear')
+@DomName('IDBObjectStore.clear')
+@DocsEditable
+Request $dom_clear() native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_count">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Request.html">Request</a> <strong>$dom_count</strong>([key_OR_range]) <a class="anchor-link" href="#$dom_count"
+              title="Permalink to ObjectStore.$dom_count">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>Immediately returns an <a title="IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a> object and asynchronously count the amount of objects in the object store that match the parameter, a key or a key range. If the parameter is not valid returns an exception.</p>
+
+<div id="section_12"><span id="Parameters_2"></span><h5 class="editable">Parameters</h5>
+<dl> <dt>key</dt> <dd>The key or key range that identifies the records to be counted.</dd>
+</dl>
+</div><div id="section_13"><span id="Returns_3"></span><h5 class="editable">Returns</h5>
+<dl> <dt><a title="en/IndexedDB/IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a></dt> <dd>A request object on which subsequent events related to this operation are fired.</dd>
+</dl>
+</div><div id="section_14"><span id="Exceptions_3"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an <a title="IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with the following codes:</p>
+<dl> <dt><code><a href="IDBDatabaseException#DATA_ERR" rel="internal" title="en/IndexedDB/DatabaseException#DATA ERR">DATA_ERR</a></code></dt> <dd>If the object store uses in-line keys or has a key generator, and a key parameter was provided.<br> If the object store uses out-of-line keys and has no key generator, and no key parameter was provided.<br> If the object store uses in-line keys but no key generator, and the object store's key path does not yield a valid key.<br> If the key parameter was provided but does not contain a valid key.<br> If there are indexed on this object store, and using their key path on the value parameter yields a value that is not a valid key.</dd> <dt><code><a href="IDBDatabaseException#NOT_ALLOWED_ERR" rel="internal" title="en/IndexedDB/IDBDatabaseException#NOT_ALLOWED_ERR">NOT_ALLOWED_ERR</a></code></dt> <dd>The request was made on a source object that has been deleted or removed.</dd>
+</dl></div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@JSName('count')
+@DomName('IDBObjectStore.count')
+@DocsEditable
+Request $dom_count([key_OR_range]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_createIndex">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Index.html">Index</a> <strong>$dom_createIndex</strong>(<a href="../dart_core/String.html">String</a> name, keyPath, [<a href="../dart_core/Map.html">Map</a> options]) <a class="anchor-link" href="#$dom_createIndex"
+              title="Permalink to ObjectStore.$dom_createIndex">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>Creates and returns a new index in the connected database. Note that this method must be called only from a <a title="en/IndexedDB/IDBTransaction#VERSION CHANGE" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransaction#VERSION_CHANGE"><code>VERSION_CHANGE</code></a> transaction callback.</p>
+<pre>IDBIndex createIndex (
+&nbsp; in DOMString name, 
+&nbsp; in DOMString keyPath, 
+&nbsp; in Object optionalParameters
+) raises (IDBDatabaseException);
+
+</pre>
+<div id="section_16"><span id="Parameters_3"></span><h5 class="editable">Parameters</h5>
+<dl> <dt>name</dt> <dd>The name of the index to create.</dd> <dt>keyPath</dt> <dd>The key path for the index to use.</dd> <dt>optionalParameters</dt> <dd> <div class="warning"><strong>Warning:</strong> The latest draft of the specification changed this to <code>IDBIndexParameters</code>, which is not yet recognized by any browser</div> <p>Options object whose attributes are optional parameters to the method. It includes the following properties:</p> <table class="standard-table"> <thead> <tr> <th scope="col" width="131">Attribute</th> <th scope="col" width="698">Description</th> </tr> </thead> <tbody> <tr> <td><code>unique</code></td> <td>If true, the index will not allow duplicate values for a single key.</td> </tr> <tr> <td><code>multientry</code></td> <td>If true, the index will add an entry in the index for each array element when the <em>keypath</em> resolves to an Array. If false, it will add one single entry containing the Array.</td> </tr> </tbody> </table> <p>Unknown parameters are ignored.</p> </dd> <dd></dd>
+</dl>
+</div><div id="section_17"><span id="Returns_4"></span><h5 class="editable">Returns</h5>
+<dl> <dt><a title="en/IndexedDB/IDBIndex" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBIndex">IDBIndex</a></dt> <dd>The newly created index.</dd>
+</dl>
+</div><div id="section_18"><span id="Exceptions_4"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an <a title="en/IndexedDB/IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with the following codes:</p>
+<dl> <dt><code><a title="en/IndexedDB/DatabaseException#CONSTRAINT ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#CONSTRAINT_ERR">CONSTRAINT_ERR</a></code></dt> <dd>If an index with the same name (based on case-sensitive comparison) already exists in the connected database.</dd> <dt><code><a title="en/IndexedDB/DatabaseException#NOT ALLOWED ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#NOT_ALLOWED_ERR">NOT_ALLOWED_ERR</a></code></dt> <dd>If this method was not called from a <a title="en/IndexedDB/IDBTransaction#VERSION CHANGE" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransaction#VERSION_CHANGE"><code>VERSION_CHANGE</code></a> transaction callback.</dd>
+</dl></div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('IDBObjectStore.createIndex')
+@DocsEditable
+Index $dom_createIndex(String name, keyPath, [Map options]) {
+ if ((keyPath is List&lt;String&gt; || keyPath == null) &amp;&amp; options == null) {
+   List keyPath_1 = convertDartToNative_StringArray(keyPath);
+   return _$dom_createIndex_1(name, keyPath_1);
+ }
+ if (options != null &amp;&amp; (keyPath is List&lt;String&gt; || keyPath == null)) {
+   List keyPath_2 = convertDartToNative_StringArray(keyPath);
+   var options_3 = convertDartToNative_Dictionary(options);
+   return _$dom_createIndex_2(name, keyPath_2, options_3);
+ }
+ if ((keyPath is String || keyPath == null) &amp;&amp; options == null) {
+   return _$dom_createIndex_3(name, keyPath);
+ }
+ if (options != null &amp;&amp; (keyPath is String || keyPath == null)) {
+   var options_4 = convertDartToNative_Dictionary(options);
+   return _$dom_createIndex_4(name, keyPath, options_4);
+ }
+ throw new ArgumentError("Incorrect number or type of arguments");
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_delete">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Request.html">Request</a> <strong>$dom_delete</strong>(key_OR_keyRange) <a class="anchor-link" href="#$dom_delete"
+              title="Permalink to ObjectStore.$dom_delete">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>Immediately returns an <code><a title="en/IndexedDB/IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a></code> object, and removes the record specified by the given key from this object store, and any indexes that reference it, in a separate thread. If no record exists in this object store corresponding to the key, an error event is fired on the returned request object, with its <code><a title="en/IndexedDB/IDBErrorEvent#attr code" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBErrorEvent#attr_code">code</a></code> set to <code><a title="en/IndexedDB/IDBDatabaseException#NOT FOUND ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#NOT_FOUND_ERR">NOT_FOUND_ERR</a></code> and an appropriate <code><a title="en/IndexedDB/IDBErrorEvent#attr message" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBErrorEvent#attr_message">message</a></code>. If the record is successfully removed, then a success event is fired on the returned request object, using the <code><a title="en/IndexedDB/IDBTransactionEvent" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransactionEvent">IDBTransactionEvent</a></code> interface, with the <code><a title="en/IndexedDB/IDBSuccessEvent#attr result" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBSuccessEvent#attr_result">result</a></code> set to <code>undefined</code>, and <a title="en/IndexedDB/IDBTransactionEvent#attr transaction" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransactionEvent#attr_transaction">transaction</a> set to the transaction in which this object store is opened.</p>
+<pre>IDBRequest delete (
+  in any key
+) raises (IDBDatabaseException); 
+</pre>
+<div id="section_20"><span id="Parameters_4"></span><h5 class="editable">Parameters</h5>
+<dl> <dt>key</dt> <dd>The key to use to identify the record.</dd>
+</dl>
+</div><div id="section_21"><span id="Returns_5"></span><h5 class="editable">Returns</h5>
+<dl> <dt><a title="en/IndexedDB/IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a></dt> <dd>A request object on which subsequent events related to this operation are fired.</dd>
+</dl>
+</div><div id="section_22"><span id="Exceptions_5"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an <a title="en/IndexedDB/IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with the following codes:</p></div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@JSName('delete')
+@DomName('IDBObjectStore.delete')
+@DocsEditable
+Request $dom_delete(key_OR_keyRange) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_get">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Request.html">Request</a> <strong>$dom_get</strong>(key) <a class="anchor-link" href="#$dom_get"
+              title="Permalink to ObjectStore.$dom_get">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>Immediately returns an <a title="en/IndexedDB/IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a> object, and retrieves the requested record from the object store in a separate thread. If the operation is successful, then a success event is fired on the returned object, using the <a title="en/IndexedDB/IDBTransactionEvent" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransactionEvent">IDBTransactionEvent</a> interface, with its <code><a title="en/IndexedDB/IDBSuccessEvent#attr result" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBSuccessEvent#attr_result">result</a></code> set to the retrieved value, and <code><a title="en/IndexedDB/IDBTransactionEvent#attr transaction" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransactionEvent#attr_transaction">transaction</a></code> set to the transaction in which this object store is opened. If a record does not exist in the object store for the key parameter, then an error event is fired on the returned object, with its <code><a title="en/IndexedDB/IDBErrorEvent#attr code" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBErrorEvent#attr_code">code</a></code> set to <code><a title="en/IndexedDB/IDBDatabaseException#NOT FOUND ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#NOT_FOUND_ERR">NOT_FOUND_ERR</a></code> and an appropriate <code><a title="en/IndexedDB/IDBErrorEvent#attr message" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBErrorEvent#attr_message">message</a></code>.</p>
+<p></p><div class="note"><strong>Note:</strong>&nbsp;This function produces the same result if no record with the given key exists in the database as when a record exists, but with an undefined value. To tell these situations apart, call the openCursor() method with the same key. That method provides a cursor if the record exists, and not if it does not.</div>
+<p></p>
+
+<div id="section_27"><span id="Parameters_6"></span><h5 class="editable">Parameters</h5>
+<dl> <dt>key</dt> <dd>The key identifying the record to retrieve.</dd>
+</dl>
+</div><div id="section_28"><span id="Returns_6"></span><h5 class="editable">Returns</h5>
+<dl> <dt><code><a title="en/IndexedDB/IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a></code></dt> <dd>A request object on which subsequent events related to this operation are fired.</dd>
+</dl>
+</div><div id="section_29"><span id="Exceptions_7"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an <a title="en/IndexedDB/IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with the following code:</p>
+<dl> <dt><code><a title="en/IndexedDB/IDBDatabaseException#DATA ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#DATA_ERR">DATA_ERR</a></code></dt> <dd>If the <code>key</code> parameter was not a valid value.</dd> <dt><code><a title="en/IndexedDB/IDBDatabaseException#TRANSACTION INACTIVE ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#TRANSACTION_INACTIVE_ERR">TRANSACTION_INACTIVE_ERR</a></code></dt> <dd>If the associated transaction is not active.</dd>
+</dl>
+</div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@JSName('get')
+@DomName('IDBObjectStore.get')
+@DocsEditable
+@Returns('Request')
+@Creates('Request')
+@annotation_Creates_SerializedScriptValue
+Request $dom_get(key) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_openCursor">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Request.html">Request</a> <strong>$dom_openCursor</strong>([key_OR_range, <a href="../dart_core/String.html">String</a> direction]) <a class="anchor-link" href="#$dom_openCursor"
+              title="Permalink to ObjectStore.$dom_openCursor">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>Immediately returns an <a title="en/IndexedDB/IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a> object, and creates a <a title="en/IndexedDB#gloss cursor" rel="internal" href="https://developer.mozilla.org/en/IndexedDB#gloss_cursor">cursor</a> over the records in this object store, in a separate thread. If there is even a single record that matches the <a title="en/IndexedDB#gloss key range" rel="internal" href="https://developer.mozilla.org/en/IndexedDB#gloss_key_range">key range</a>, then a success event is fired on the returned object, with its <code><a title="en/IndexedDB/IDBSuccessEvent#attr result" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBSuccessEvent#attr_result">result</a></code> set to the <a title="en/IndexedDB/IDBCursor" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBCursor">IDBCursor</a> object for the new cursor. If no records match the key range, then a success event is fired on the returned object, with its <code><a title="en/IndexedDB/IDBSuccessEvent#attr result" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBSuccessEvent#attr_result">result</a></code> set to null.</p>
+<pre>IDBRequest openCursor (
+&nbsp; in optional IDBKeyRange range, 
+&nbsp; in optional unsigned short direction
+) raises (IDBDatabaseException);
+</pre>
+<div id="section_35"><span id="Parameters_8"></span><h5 class="editable">Parameters</h5>
+<dl> <dt>range</dt> <dd>The key range to use as the cursor's range. If this parameter is unspecified or null, then the range includes all the records in the object store.</dd> <dt>direction</dt> <dd>The cursor's <a title="en/IndexedDB#gloss direction" rel="internal" href="https://developer.mozilla.org/en/IndexedDB#gloss_direction">direction</a>.</dd>
+</dl>
+</div><div id="section_36"><span id="Returns_8"></span><h5 class="editable">Returns</h5>
+<dl> <dt><code><a title="en/IndexedDB/IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a></code></dt> <dd>A request object on which subsequent events related to this operation are fired.</dd>
+</dl>
+</div><div id="section_37"><span id="Exceptions_9"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an IDBDatabaseException with the following code:</p>
+<dl> <dt><code><a title="en/IndexedDB/DatabaseException#NOT ALLOWED ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#NOT_ALLOWED_ERR">NOT_ALLOWED_ERR</a></code></dt> <dd>If this object store is not in the scope of any existing transaction on the connected database.</dd>
+</dl>
+</div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@JSName('openCursor')
+@DomName('IDBObjectStore.openCursor')
+@DocsEditable
+@Returns('Request')
+@Creates('Request')
+@Creates('Cursor')
+Request $dom_openCursor([key_OR_range, String direction]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_put">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/Request.html">Request</a> <strong>$dom_put</strong>(value, [key]) <a class="anchor-link" href="#$dom_put"
+              title="Permalink to ObjectStore.$dom_put">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>Returns an <a title="en/IndexedDB/IDBRequest" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBRequest">IDBRequest</a> object, and, in a separate thread, creates a <a class="external" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#structured-clone" rel="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/urls.html#structured-clone" target="_blank">structured clone</a> of the <code>value</code>, and stores the cloned value in the object store. If the record is successfully stored, then a success event is fired on the returned request object, using the <a title="en/IndexedDB/IDBTransactionEvent" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransactionEvent">IDBTransactionEvent</a> interface, with the <code><a title="en/IndexedDB/IDBSuccessEvent#attr result" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBSuccessEvent#attr_result">result</a></code> set to the key for the stored record, and <code><a title="en/IndexedDB/IDBTransactionEvent#attr transaction" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransactionEvent#attr_transaction">transaction</a></code> set to the transaction in which this object store is opened.</p>
+
+<div id="section_39"><span id="Parameters_9"></span><h5 class="editable">Parameters</h5>
+<dl> <dt>value</dt> <dd>The value to be stored.</dd> <dt>key</dt> <dd>The key to use to identify the record. If unspecified, it results to null.</dd>
+</dl>
+</div><div id="section_40"><span id="Returns_9"></span><h5 class="editable">Returns</h5>
+<dl> <dt>IDBRequest</dt> <dd>A request object on which subsequent events related to this operation are fired.</dd>
+</dl>
+</div><div id="section_41"><span id="Exceptions_10"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an <a title="en/IndexedDB/IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with the following codes:</p>
+<dl> <li> <ul> <li>If this object store uses <a title="en/IndexedDB#gloss out-of-line key" rel="internal" href="https://developer.mozilla.org/en/IndexedDB#gloss_out-of-line_key">out-of-line keys</a> and does not use a <a title="en/IndexedDB#gloss key generator" rel="internal" href="https://developer.mozilla.org/en/IndexedDB#gloss_key_generator">key generator</a>, but the <code>key</code> parameter was not passed</li> <li>If the object store uses <a title="en/IndexedDB#gloss in-line key" rel="internal" href="https://developer.mozilla.org/en/IndexedDB#gloss_in-line_key">in-line keys</a>, but the <code>value</code> object does not have a property identified by the object store's key path.</li> </ul> </li> <dt><code><a title="en/IndexedDB/DatabaseException#NOT ALLOWED ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#NOT_ALLOWED_ERR">NOT_ALLOWED_ERR</a></code></dt> <dd>If the object store is not in the <a title="en/IndexedDB#gloss scope" rel="internal" href="https://developer.mozilla.org/en/IndexedDB#gloss_scope">scope</a> of any existing <a title="en/IndexedDB#gloss transaction" rel="internal" href="https://developer.mozilla.org/en/IndexedDB#gloss_transaction">transaction</a>, or if the associated transaction's mode is <a title="en/IndexedDB/IDBTransaction#const read only" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransaction#const_read_only"><code>READ_ONLY</code></a>&nbsp;or <a title="en/IndexedDB/IDBTransaction#const snapshot read" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBTransaction#const_snapshot_read"><code>SNAPSHOT_READ</code></a>.</dd> <dt><code><a title="en/IndexedDB/IDBDatabaseException#SERIAL ERR" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#SERIAL_ERR">SERIAL_ERR</a></code></dt> <dd>If the data being stored could not be serialized by the internal structured cloning algorithm.</dd>
+</dl>
+<p>This method can raise a <a title="en/DOM/DOMException" rel="internal" href="https://developer.mozilla.org/En/DOM/DOMException">DOMException</a> with the following code:</p>
+<dl> <dt><code>DATA_CLONE_ERR</code></dt> <dd>If the data being stored could not be cloned by the internal structured cloning algorithm.</dd>
+</dl>
+</div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('IDBObjectStore.put')
+@DocsEditable
+@Returns('Request')
+@Creates('Request')
+@_annotation_Creates_IDBKey
+Request $dom_put(/*any*/ value, [/*any*/ key]) {
+ if (key != null) {
+   var value_1 = convertDartToNative_SerializedScriptValue(value);
+   var key_2 = convertDartToNative_SerializedScriptValue(key);
+   return _$dom_put_1(value_1, key_2);
+ }
+ var value_3 = convertDartToNative_SerializedScriptValue(value);
+ return _$dom_put_2(value_3);
+}
+</pre>
+</div>
+</div>
+</div>
+          <p class="mdn-attribution">
+          <a href="https://developer.mozilla.org">
+            <img src="../mdn-logo-tiny.png" class="mdn-logo" />
+          </a>
+          This page includes <a href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">content</a> from the
+          <a href="http://www.mozilla.org/">Mozilla Foundation</a> that is graciously
+          <a href="https://developer.mozilla.org/Project:Copyrights">licensed</a> under a
+          <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons: Attribution-Sharealike license</a>.
+          Mozilla has no other association with Dart or dartlang.org. We
+          encourage you to improve the web by
+          <a href="https://developer.mozilla.org/Project:en/How_to_Help">contributing</a> to
+          <a href="https://developer.mozilla.org">The Mozilla Developer Network</a>.
+          </p>
+          
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-06-21 06:35:22.026</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

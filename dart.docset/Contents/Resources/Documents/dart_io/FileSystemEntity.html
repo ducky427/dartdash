@@ -1,0 +1,630 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>FileSystemEntity abstract class / dart:io Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:io" data-type="FileSystemEntity">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_io.html">dart:io</a> &rsaquo; <a href="../dart_io/FileSystemEntity.html">FileSystemEntity</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../crypto.html">crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><ul class="icon">
+<li><a href="../dart_io/ContentType.html"><div class="icon-class"></div>ContentType</a></li>
+<li><a href="../dart_io/Cookie.html"><div class="icon-class"></div>Cookie</a></li>
+<li><a href="../dart_io/DetachedSocket.html"><div class="icon-class"></div>DetachedSocket</a></li>
+<li><a href="../dart_io/Directory.html"><div class="icon-class"></div>Directory</a></li>
+<li><a href="../dart_io/Encoding.html"><div class="icon-class"></div>Encoding</a></li>
+<li><a href="../dart_io/File.html"><div class="icon-class"></div>File</a></li>
+<li><a href="../dart_io/FileMode.html"><div class="icon-class"></div>FileMode</a></li>
+<li><a href="../dart_io/FileStat.html"><div class="icon-class"></div>FileStat</a></li>
+<li><div class="icon-class"></div><strong>FileSystemEntity</strong></li>
+<li><a href="../dart_io/FileSystemEntityType.html"><div class="icon-class"></div>FileSystemEntityType</a></li>
+<li><a href="../dart_io/HeaderValue.html"><div class="icon-class"></div>HeaderValue</a></li>
+<li><a href="../dart_io/HttpBody.html"><div class="icon-class"></div>HttpBody</a></li>
+<li><a href="../dart_io/HttpBodyFileUpload.html"><div class="icon-class"></div>HttpBodyFileUpload</a></li>
+<li><a href="../dart_io/HttpBodyHandler.html"><div class="icon-class"></div>HttpBodyHandler</a></li>
+<li><a href="../dart_io/HttpClient.html"><div class="icon-class"></div>HttpClient</a></li>
+<li><a href="../dart_io/HttpClientBasicCredentials.html"><div class="icon-class"></div>HttpClientBasicCredentials</a></li>
+<li><a href="../dart_io/HttpClientCredentials.html"><div class="icon-class"></div>HttpClientCredentials</a></li>
+<li><a href="../dart_io/HttpClientDigestCredentials.html"><div class="icon-class"></div>HttpClientDigestCredentials</a></li>
+<li><a href="../dart_io/HttpClientRequest.html"><div class="icon-class"></div>HttpClientRequest</a></li>
+<li><a href="../dart_io/HttpClientResponse.html"><div class="icon-class"></div>HttpClientResponse</a></li>
+<li><a href="../dart_io/HttpClientResponseBody.html"><div class="icon-class"></div>HttpClientResponseBody</a></li>
+<li><a href="../dart_io/HttpConnectionInfo.html"><div class="icon-class"></div>HttpConnectionInfo</a></li>
+<li><a href="../dart_io/HttpConnectionsInfo.html"><div class="icon-class"></div>HttpConnectionsInfo</a></li>
+<li><a href="../dart_io/HttpDate.html"><div class="icon-class"></div>HttpDate</a></li>
+<li><a href="../dart_io/HttpHeaders.html"><div class="icon-class"></div>HttpHeaders</a></li>
+<li><a href="../dart_io/HttpMultipartFormData.html"><div class="icon-class"></div>HttpMultipartFormData</a></li>
+<li><a href="../dart_io/HttpRequest.html"><div class="icon-class"></div>HttpRequest</a></li>
+<li><a href="../dart_io/HttpRequestBody.html"><div class="icon-class"></div>HttpRequestBody</a></li>
+<li><a href="../dart_io/HttpResponse.html"><div class="icon-class"></div>HttpResponse</a></li>
+<li><a href="../dart_io/HttpServer.html"><div class="icon-class"></div>HttpServer</a></li>
+<li><a href="../dart_io/HttpSession.html"><div class="icon-class"></div>HttpSession</a></li>
+<li><a href="../dart_io/HttpStatus.html"><div class="icon-class"></div>HttpStatus</a></li>
+<li><a href="../dart_io/InternetAddress.html"><div class="icon-class"></div>InternetAddress</a></li>
+<li><a href="../dart_io/InternetAddressType.html"><div class="icon-class"></div>InternetAddressType</a></li>
+<li><a href="../dart_io/IOSink.html"><div class="icon-class"></div>IOSink</a></li>
+<li><a href="../dart_io/LineTransformer.html"><div class="icon-class"></div>LineTransformer</a></li>
+<li><a href="../dart_io/Link.html"><div class="icon-class"></div>Link</a></li>
+<li><a href="../dart_io/MimeMultipart.html"><div class="icon-class"></div>MimeMultipart</a></li>
+<li><a href="../dart_io/MimeMultipartTransformer.html"><div class="icon-class"></div>MimeMultipartTransformer</a></li>
+<li><a href="../dart_io/Options.html"><div class="icon-class"></div>Options</a></li>
+<li><a href="../dart_io/Path.html"><div class="icon-class"></div>Path</a></li>
+<li><a href="../dart_io/Platform.html"><div class="icon-class"></div>Platform</a></li>
+<li><a href="../dart_io/Process.html"><div class="icon-class"></div>Process</a></li>
+<li><a href="../dart_io/ProcessResult.html"><div class="icon-class"></div>ProcessResult</a></li>
+<li><a href="../dart_io/ProcessSignal.html"><div class="icon-class"></div>ProcessSignal</a></li>
+<li><a href="../dart_io/RandomAccessFile.html"><div class="icon-class"></div>RandomAccessFile</a></li>
+<li><a href="../dart_io/RawSecureServerSocket.html"><div class="icon-class"></div>RawSecureServerSocket</a></li>
+<li><a href="../dart_io/RawSecureSocket.html"><div class="icon-class"></div>RawSecureSocket</a></li>
+<li><a href="../dart_io/RawServerSocket.html"><div class="icon-class"></div>RawServerSocket</a></li>
+<li><a href="../dart_io/RawSocket.html"><div class="icon-class"></div>RawSocket</a></li>
+<li><a href="../dart_io/RawSocketEvent.html"><div class="icon-class"></div>RawSocketEvent</a></li>
+<li><a href="../dart_io/RedirectInfo.html"><div class="icon-class"></div>RedirectInfo</a></li>
+<li><a href="../dart_io/SecureServerSocket.html"><div class="icon-class"></div>SecureServerSocket</a></li>
+<li><a href="../dart_io/SecureSocket.html"><div class="icon-class"></div>SecureSocket</a></li>
+<li><a href="../dart_io/ServerSocket.html"><div class="icon-class"></div>ServerSocket</a></li>
+<li><a href="../dart_io/Socket.html"><div class="icon-class"></div>Socket</a></li>
+<li><a href="../dart_io/SocketDirection.html"><div class="icon-class"></div>SocketDirection</a></li>
+<li><a href="../dart_io/SocketOption.html"><div class="icon-class"></div>SocketOption</a></li>
+<li><a href="../dart_io/StdioType.html"><div class="icon-class"></div>StdioType</a></li>
+<li><a href="../dart_io/StringDecoder.html"><div class="icon-class"></div>StringDecoder</a></li>
+<li><a href="../dart_io/StringEncoder.html"><div class="icon-class"></div>StringEncoder</a></li>
+<li><a href="../dart_io/WebSocket.html"><div class="icon-class"></div>WebSocket</a></li>
+<li><a href="../dart_io/WebSocketStatus.html"><div class="icon-class"></div>WebSocketStatus</a></li>
+<li><a href="../dart_io/WebSocketTransformer.html"><div class="icon-class"></div>WebSocketTransformer</a></li>
+<li><a href="../dart_io/X509Certificate.html"><div class="icon-class"></div>X509Certificate</a></li>
+<li><a href="../dart_io/ZLibDeflater.html"><div class="icon-class"></div>ZLibDeflater</a></li>
+<li><a href="../dart_io/ZLibInflater.html"><div class="icon-class"></div>ZLibInflater</a></li>
+<li><a href="../dart_io/DirectoryException.html"><div class="icon-exception"></div>DirectoryException</a></li>
+<li><a href="../dart_io/FileException.html"><div class="icon-exception"></div>FileException</a></li>
+<li><a href="../dart_io/HttpException.html"><div class="icon-exception"></div>HttpException</a></li>
+<li><a href="../dart_io/IOException.html"><div class="icon-exception"></div>IOException</a></li>
+<li><a href="../dart_io/LinkException.html"><div class="icon-exception"></div>LinkException</a></li>
+<li><a href="../dart_io/MimeMultipartException.html"><div class="icon-exception"></div>MimeMultipartException</a></li>
+<li><a href="../dart_io/OSError.html"><div class="icon-exception"></div>OSError</a></li>
+<li><a href="../dart_io/ProcessException.html"><div class="icon-exception"></div>ProcessException</a></li>
+<li><a href="../dart_io/RedirectException.html"><div class="icon-exception"></div>RedirectException</a></li>
+<li><a href="../dart_io/SocketException.html"><div class="icon-exception"></div>SocketException</a></li>
+<li><a href="../dart_io/WebSocketException.html"><div class="icon-exception"></div>WebSocketException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_typed_data.html">dart:typed_data</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_gl.html">dart:web_gl</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../mdv_observe.html">mdv_observe</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../source_maps.html">source_maps</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>FileSystemEntity</strong>
+          abstract class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>A <a class="crossref" href="../dart_io/FileSystemEntity.html">FileSystemEntity</a> is a common super class for <a class="crossref" href="../dart_io/File.html">File</a> and
+<a class="crossref" href="../dart_io/Directory.html">Directory</a> objects.</p>
+<p><a class="crossref" href="../dart_io/FileSystemEntity.html">FileSystemEntity</a> objects are returned from directory listing
+operations. To determine if a FileSystemEntity is a <a class="crossref" href="../dart_io/File.html">File</a> or a
+<a class="crossref" href="../dart_io/Directory.html">Directory</a>, perform a type check:</p>
+<pre><code>if (entity is File) (entity as File).readAsStringSync();
+</code></pre>
+<pre class="source">
+abstract class FileSystemEntity {
+ String get path;
+
+ external static _getType(String path, bool followLinks);
+ external static _identical(String path1, String path2);
+
+ static int _getTypeSync(String path, bool followLinks) {
+   var result = _getType(path, followLinks);
+   _throwIfError(result, 'Error getting type of FileSystemEntity');
+   return result;
+ }
+
+ static Future&lt;int&gt; _getTypeAsync(String path, bool followLinks) {
+   // Get a new file service port for each request.  We could also cache one.
+   var service = _FileUtils._newServicePort();
+   List request = new List(3);
+   request[0] = _TYPE_REQUEST;
+   request[1] = path;
+   request[2] = followLinks;
+   return service.call(request).then((response) {
+     if (_isErrorResponse(response)) {
+       throw _exceptionFromResponse(response,
+                                    "Error getting type of '$path'");
+     }
+     return response;
+   });
+ }
+
+ /**
+  * Synchronously checks whether two paths refer to the same object in the
+  * file system. Returns a [:Future&lt;bool&gt;:] that completes with the result.
+  *
+  * Comparing a link to its target returns false, as does comparing two links
+  * that point to the same target.  To check the target of a link, use
+  * Link.target explicitly to fetch it.  Directory links appearing
+  * inside a path are followed, though, to find the file system object.
+  *
+  * Completes the returned Future with an error if one of the paths points
+  * to an object that does not exist.
+  */
+ static Future&lt;bool&gt; identical(String path1, String path2) {
+   // Get a new file service port for each request.  We could also cache one.
+   var service = _FileUtils._newServicePort();
+   List request = new List(3);
+   request[0] = _IDENTICAL_REQUEST;
+   request[1] = path1;
+   request[2] = path2;
+   return service.call(request).then((response) {
+     if (_isErrorResponse(response)) {
+       throw _exceptionFromResponse(response,
+           "Error in FileSystemEntity.identical($path1, $path2)");
+     }
+     return response;
+   });
+ }
+
+
+ /**
+  * Synchronously checks whether two paths refer to the same object in the
+  * file system.
+  *
+  * Comparing a link to its target returns false, as does comparing two links
+  * that point to the same target.  To check the target of a link, use
+  * Link.target explicitly to fetch it.  Directory links appearing
+  * inside a path are followed, though, to find the file system object.
+  *
+  * Throws an error if one of the paths points to an object that does not
+  * exist.
+  */
+ static bool identicalSync(String path1, String path2) {
+   var result = _identical(path1, path2);
+   _throwIfError(result, 'Error in FileSystemEntity.identicalSync');
+   return result;
+ }
+
+ /**
+  * Checks whether the file system entity with this path exists. Returns
+  * a [:Future&lt;bool&gt;:] that completes with the result.
+  *
+  * Since FileSystemEntity is abstract, every FileSystemEntity object
+  * is actually an instance of one of the subclasses [File],
+  * [Directory], and [Link].  Calling [exists] on an instance of one
+  * of these subclasses checks whether the object exists in the file
+  * system object exists and is of the correct type (file, directory,
+  * or link).  To check whether a path points to an object on the
+  * file system, regardless of the object's type, use the [type]
+  * static method.
+  *
+  */
+ Future&lt;bool&gt; exists();
+
+ /**
+  * Synchronously checks whether the file system entity with this path
+  * exists.
+  *
+  * Since FileSystemEntity is abstract, every FileSystemEntity object
+  * is actually an instance of one of the subclasses [File],
+  * [Directory], and [Link].  Calling [existsSync] on an instance of
+  * one of these subclasses checks whether the object exists in the
+  * file system object exists and is of the correct type (file,
+  * directory, or link).  To check whether a path points to an object
+  * on the file system, regardless of the object's type, use the
+  * [typeSync] static method.
+  */
+ bool existsSync();
+
+ /**
+  * Calls the operating system's stat() function on the [path] of this
+  * [FileSystemEntity].  Identical to [:FileStat.stat(this.path):].
+  *
+  * Returns a [:Future&lt;FileStat&gt;:] object containing the data returned by
+  * stat().
+  *
+  * If the call fails, completes the future with a [FileStat] object
+  * with .type set to
+  * FileSystemEntityType.NOT_FOUND and the other fields invalid.
+  */
+ Future&lt;FileStat&gt; stat();
+
+ /**
+  * Synchronously calls the operating system's stat() function on the
+  * [path] of this [FileSystemEntity].
+  * Identical to [:FileStat.statSync(this.path):].
+  *
+  * Returns a [FileStat] object containing the data returned by stat().
+  *
+  * If the call fails, returns a [FileStat] object with .type set to
+  * FileSystemEntityType.NOT_FOUND and the other fields invalid.
+  */
+ FileStat statSync();
+
+
+ /**
+  * Finds the type of file system object that a path points to. Returns
+  * a [:Future&lt;FileSystemEntityType&gt;:] that completes with the result.
+  *
+  * [FileSystemEntityType] has the constant instances FILE, DIRECTORY,
+  * LINK, and NOT_FOUND.  [type] will return LINK only if the optional
+  * named argument [followLinks] is false, and [path] points to a link.
+  * If the path does not point to a file system object, or any other error
+  * occurs in looking up the path, NOT_FOUND is returned.  The only
+  * error or exception that may be put on the returned future is ArgumentError,
+  * caused by passing the wrong type of arguments to the function.
+  */
+ static Future&lt;FileSystemEntityType&gt; type(String path,
+                                          {bool followLinks: true})
+     =&gt; _getTypeAsync(path, followLinks).then(FileSystemEntityType._lookup);
+
+ /**
+  * Synchronously finds the type of file system object that a path points to.
+  * Returns a [FileSystemEntityType].
+  *
+  * [FileSystemEntityType] has the constant instances FILE, DIRECTORY,
+  * LINK, and NOT_FOUND.  [type] will return LINK only if the optional
+  * named argument [followLinks] is false, and [path] points to a link.
+  * If the path does not point to a file system object, or any other error
+  * occurs in looking up the path, NOT_FOUND is returned.  The only
+  * error or exception that may be thrown is ArgumentError,
+  * caused by passing the wrong type of arguments to the function.
+  */
+ static FileSystemEntityType typeSync(String path, {bool followLinks: true})
+     =&gt; FileSystemEntityType._lookup(_getTypeSync(path, followLinks));
+
+
+ /**
+  * Checks if type(path, followLinks: false) returns
+  * FileSystemEntityType.LINK.
+  */
+ static Future&lt;bool&gt; isLink(String path) =&gt; _getTypeAsync(path, false)
+     .then((type) =&gt; (type == FileSystemEntityType.LINK._type));
+
+ /**
+  * Checks if type(path) returns FileSystemEntityType.FILE.
+  */
+ static Future&lt;bool&gt; isFile(String path) =&gt; _getTypeAsync(path, true)
+     .then((type) =&gt; (type == FileSystemEntityType.FILE._type));
+
+ /**
+  * Checks if type(path) returns FileSystemEntityType.DIRECTORY.
+  */
+ static Future&lt;bool&gt; isDirectory(String path) =&gt; _getTypeAsync(path, true)
+     .then((type) =&gt; (type == FileSystemEntityType.DIRECTORY._type));
+
+ /**
+  * Synchronously checks if typeSync(path, followLinks: false) returns
+  * FileSystemEntityType.LINK.
+  */
+ static bool isLinkSync(String path) =&gt;
+     (_getTypeSync(path, false) == FileSystemEntityType.LINK._type);
+
+ /**
+  * Synchronously checks if typeSync(path) returns
+  * FileSystemEntityType.FILE.
+  */
+ static bool isFileSync(String path) =&gt;
+     (_getTypeSync(path, true) == FileSystemEntityType.FILE._type);
+
+ /**
+  * Synchronously checks if typeSync(path) returns
+  * FileSystemEntityType.DIRECTORY.
+  */
+ static bool isDirectorySync(String path) =&gt;
+     (_getTypeSync(path, true) == FileSystemEntityType.DIRECTORY._type);
+
+
+ static _throwIfError(Object result, String msg) {
+   if (result is OSError) {
+     throw new FileException(msg, result);
+   } else if (result is ArgumentError) {
+     throw result;
+   }
+ }
+}
+</pre>
+</div>
+<h3>Subclasses</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_io/Directory.html">Directory</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_io/File.html">File</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_io/Link.html">Link</a></span></p>
+<div>
+<h3>Static Methods</h3>
+<div class="method"><h4 id="identical">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/bool.html">bool</a>&gt; <strong>identical</strong>(<a href="../dart_core/String.html">String</a> path1, <a href="../dart_core/String.html">String</a> path2) <a class="anchor-link" href="#identical"
+              title="Permalink to FileSystemEntity.identical">#</a></h4>
+<div class="doc">
+<p>Synchronously checks whether two paths refer to the same object in the
+file system. Returns a <code>Future&lt;bool&gt;</code> that completes with the result.</p>
+<p>Comparing a link to its target returns false, as does comparing two links
+that point to the same target.  To check the target of a link, use
+Link.target explicitly to fetch it.  Directory links appearing
+inside a path are followed, though, to find the file system object.</p>
+<p>Completes the returned Future with an error if one of the paths points
+to an object that does not exist.</p>
+<pre class="source">
+static Future&lt;bool&gt; identical(String path1, String path2) {
+ // Get a new file service port for each request.  We could also cache one.
+ var service = _FileUtils._newServicePort();
+ List request = new List(3);
+ request[0] = _IDENTICAL_REQUEST;
+ request[1] = path1;
+ request[2] = path2;
+ return service.call(request).then((response) {
+   if (_isErrorResponse(response)) {
+     throw _exceptionFromResponse(response,
+         "Error in FileSystemEntity.identical($path1, $path2)");
+   }
+   return response;
+ });
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="identicalSync">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>identicalSync</strong>(<a href="../dart_core/String.html">String</a> path1, <a href="../dart_core/String.html">String</a> path2) <a class="anchor-link" href="#identicalSync"
+              title="Permalink to FileSystemEntity.identicalSync">#</a></h4>
+<div class="doc">
+<p>Synchronously checks whether two paths refer to the same object in the
+file system.</p>
+<p>Comparing a link to its target returns false, as does comparing two links
+that point to the same target.  To check the target of a link, use
+Link.target explicitly to fetch it.  Directory links appearing
+inside a path are followed, though, to find the file system object.</p>
+<p>Throws an error if one of the paths points to an object that does not
+exist.</p>
+<pre class="source">
+static bool identicalSync(String path1, String path2) {
+ var result = _identical(path1, path2);
+ _throwIfError(result, 'Error in FileSystemEntity.identicalSync');
+ return result;
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="type">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_io/FileSystemEntityType.html">FileSystemEntityType</a>&gt; <strong>type</strong>(<a href="../dart_core/String.html">String</a> path, {<a href="../dart_core/bool.html">bool</a> followLinks: true}) <a class="anchor-link" href="#type"
+              title="Permalink to FileSystemEntity.type">#</a></h4>
+<div class="doc">
+<p>Finds the type of file system object that a path points to. Returns
+a <code>Future&lt;FileSystemEntityType&gt;</code> that completes with the result.</p>
+<p><a class="crossref" href="../dart_io/FileSystemEntityType.html">FileSystemEntityType</a> has the constant instances FILE, DIRECTORY,
+LINK, and NOT<em>FOUND.  <a class="crossref" href="../dart_io/FileSystemEntity.html#type">type</a> will return LINK only if the optional
+named argument 
+<span class="param">followLinks</span> is false, and 
+<span class="param">path</span> points to a link.
+If the path does not point to a file system object, or any other error
+occurs in looking up the path, NOT</em>FOUND is returned.  The only
+error or exception that may be put on the returned future is ArgumentError,
+caused by passing the wrong type of arguments to the function.</p>
+<pre class="source">
+static Future&lt;FileSystemEntityType&gt; type(String path,
+                                        {bool followLinks: true})
+   =&gt; _getTypeAsync(path, followLinks).then(FileSystemEntityType._lookup);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="typeSync">
+<button class="show-code">Code</button>
+<a href="../dart_io/FileSystemEntityType.html">FileSystemEntityType</a> <strong>typeSync</strong>(<a href="../dart_core/String.html">String</a> path, {<a href="../dart_core/bool.html">bool</a> followLinks: true}) <a class="anchor-link" href="#typeSync"
+              title="Permalink to FileSystemEntity.typeSync">#</a></h4>
+<div class="doc">
+<p>Synchronously finds the type of file system object that a path points to.
+Returns a <a class="crossref" href="../dart_io/FileSystemEntityType.html">FileSystemEntityType</a>.</p>
+<p><a class="crossref" href="../dart_io/FileSystemEntityType.html">FileSystemEntityType</a> has the constant instances FILE, DIRECTORY,
+LINK, and NOT<em>FOUND.  <a class="crossref" href="../dart_io/FileSystemEntity.html#type">type</a> will return LINK only if the optional
+named argument 
+<span class="param">followLinks</span> is false, and 
+<span class="param">path</span> points to a link.
+If the path does not point to a file system object, or any other error
+occurs in looking up the path, NOT</em>FOUND is returned.  The only
+error or exception that may be thrown is ArgumentError,
+caused by passing the wrong type of arguments to the function.</p>
+<pre class="source">
+static FileSystemEntityType typeSync(String path, {bool followLinks: true})
+   =&gt; FileSystemEntityType._lookup(_getTypeSync(path, followLinks));
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="isLink">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/bool.html">bool</a>&gt; <strong>isLink</strong>(<a href="../dart_core/String.html">String</a> path) <a class="anchor-link" href="#isLink"
+              title="Permalink to FileSystemEntity.isLink">#</a></h4>
+<div class="doc">
+<p>Checks if type(path, followLinks: false) returns
+FileSystemEntityType.LINK.</p>
+<pre class="source">
+static Future&lt;bool&gt; isLink(String path) =&gt; _getTypeAsync(path, false)
+   .then((type) =&gt; (type == FileSystemEntityType.LINK._type));
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="isFile">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/bool.html">bool</a>&gt; <strong>isFile</strong>(<a href="../dart_core/String.html">String</a> path) <a class="anchor-link" href="#isFile"
+              title="Permalink to FileSystemEntity.isFile">#</a></h4>
+<div class="doc">
+<p>Checks if type(path) returns FileSystemEntityType.FILE.</p>
+<pre class="source">
+static Future&lt;bool&gt; isFile(String path) =&gt; _getTypeAsync(path, true)
+   .then((type) =&gt; (type == FileSystemEntityType.FILE._type));
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="isDirectory">
+<button class="show-code">Code</button>
+<a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/bool.html">bool</a>&gt; <strong>isDirectory</strong>(<a href="../dart_core/String.html">String</a> path) <a class="anchor-link" href="#isDirectory"
+              title="Permalink to FileSystemEntity.isDirectory">#</a></h4>
+<div class="doc">
+<p>Checks if type(path) returns FileSystemEntityType.DIRECTORY.</p>
+<pre class="source">
+static Future&lt;bool&gt; isDirectory(String path) =&gt; _getTypeAsync(path, true)
+   .then((type) =&gt; (type == FileSystemEntityType.DIRECTORY._type));
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="isLinkSync">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>isLinkSync</strong>(<a href="../dart_core/String.html">String</a> path) <a class="anchor-link" href="#isLinkSync"
+              title="Permalink to FileSystemEntity.isLinkSync">#</a></h4>
+<div class="doc">
+<p>Synchronously checks if typeSync(path, followLinks: false) returns
+FileSystemEntityType.LINK.</p>
+<pre class="source">
+static bool isLinkSync(String path) =&gt;
+   (_getTypeSync(path, false) == FileSystemEntityType.LINK._type);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="isFileSync">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>isFileSync</strong>(<a href="../dart_core/String.html">String</a> path) <a class="anchor-link" href="#isFileSync"
+              title="Permalink to FileSystemEntity.isFileSync">#</a></h4>
+<div class="doc">
+<p>Synchronously checks if typeSync(path) returns
+FileSystemEntityType.FILE.</p>
+<pre class="source">
+static bool isFileSync(String path) =&gt;
+   (_getTypeSync(path, true) == FileSystemEntityType.FILE._type);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="isDirectorySync">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>isDirectorySync</strong>(<a href="../dart_core/String.html">String</a> path) <a class="anchor-link" href="#isDirectorySync"
+              title="Permalink to FileSystemEntity.isDirectorySync">#</a></h4>
+<div class="doc">
+<p>Synchronously checks if typeSync(path) returns
+FileSystemEntityType.DIRECTORY.</p>
+<pre class="source">
+static bool isDirectorySync(String path) =&gt;
+   (_getTypeSync(path, true) == FileSystemEntityType.DIRECTORY._type);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="path">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>path</strong> <a class="anchor-link"
+            href="#path"
+            title="Permalink to FileSystemEntity.path">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+String get path;
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="exists">
+abstract <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_core/bool.html">bool</a>&gt; <strong>exists</strong>() <a class="anchor-link" href="#exists"
+              title="Permalink to FileSystemEntity.exists">#</a></h4>
+<div class="doc">
+<p>Checks whether the file system entity with this path exists. Returns
+a <code>Future&lt;bool&gt;</code> that completes with the result.</p>
+<p>Since FileSystemEntity is abstract, every FileSystemEntity object
+is actually an instance of one of the subclasses <a class="crossref" href="../dart_io/File.html">File</a>,
+<a class="crossref" href="../dart_io/Directory.html">Directory</a>, and <a class="crossref" href="../dart_io/Link.html">Link</a>.  Calling <a class="crossref" href="../dart_io/FileSystemEntity.html#exists">exists</a> on an instance of one
+of these subclasses checks whether the object exists in the file
+system object exists and is of the correct type (file, directory,
+or link).  To check whether a path points to an object on the
+file system, regardless of the object's type, use the <a class="crossref" href="../dart_io/FileSystemEntity.html#type">type</a>
+static method.</p>
+</div>
+</div>
+<div class="method"><h4 id="existsSync">
+abstract <a href="../dart_core/bool.html">bool</a> <strong>existsSync</strong>() <a class="anchor-link" href="#existsSync"
+              title="Permalink to FileSystemEntity.existsSync">#</a></h4>
+<div class="doc">
+<p>Synchronously checks whether the file system entity with this path
+exists.</p>
+<p>Since FileSystemEntity is abstract, every FileSystemEntity object
+is actually an instance of one of the subclasses <a class="crossref" href="../dart_io/File.html">File</a>,
+<a class="crossref" href="../dart_io/Directory.html">Directory</a>, and <a class="crossref" href="../dart_io/Link.html">Link</a>.  Calling <a class="crossref" href="../dart_io/FileSystemEntity.html#existsSync">existsSync</a> on an instance of
+one of these subclasses checks whether the object exists in the
+file system object exists and is of the correct type (file,
+directory, or link).  To check whether a path points to an object
+on the file system, regardless of the object's type, use the
+<a class="crossref" href="../dart_io/FileSystemEntity.html#typeSync">typeSync</a> static method.</p>
+</div>
+</div>
+<div class="method"><h4 id="stat">
+abstract <a href="../dart_async/Future.html">Future</a>&lt;<a href="../dart_io/FileStat.html">FileStat</a>&gt; <strong>stat</strong>() <a class="anchor-link" href="#stat"
+              title="Permalink to FileSystemEntity.stat">#</a></h4>
+<div class="doc">
+<p>Calls the operating system's stat() function on the <a class="crossref" href="../dart_io/FileSystemEntity.html#path">path</a> of this
+<a class="crossref" href="../dart_io/FileSystemEntity.html">FileSystemEntity</a>.  Identical to <code>FileStat.stat(this.path)</code>.</p>
+<p>Returns a <code>Future&lt;FileStat&gt;</code> object containing the data returned by
+stat().</p>
+<p>If the call fails, completes the future with a <a class="crossref" href="../dart_io/FileStat.html">FileStat</a> object
+with .type set to
+FileSystemEntityType.NOT_FOUND and the other fields invalid.</p>
+</div>
+</div>
+<div class="method"><h4 id="statSync">
+abstract <a href="../dart_io/FileStat.html">FileStat</a> <strong>statSync</strong>() <a class="anchor-link" href="#statSync"
+              title="Permalink to FileSystemEntity.statSync">#</a></h4>
+<div class="doc">
+<p>Synchronously calls the operating system's stat() function on the
+<a class="crossref" href="../dart_io/FileSystemEntity.html#path">path</a> of this <a class="crossref" href="../dart_io/FileSystemEntity.html">FileSystemEntity</a>.
+Identical to <code>FileStat.statSync(this.path)</code>.</p>
+<p>Returns a <a class="crossref" href="../dart_io/FileStat.html">FileStat</a> object containing the data returned by stat().</p>
+<p>If the call fails, returns a <a class="crossref" href="../dart_io/FileStat.html">FileStat</a> object with .type set to
+FileSystemEntityType.NOT_FOUND and the other fields invalid.</p>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-06-21 06:35:22.928</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

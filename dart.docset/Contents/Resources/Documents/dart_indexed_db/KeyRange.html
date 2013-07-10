@@ -1,0 +1,580 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>KeyRange class / dart:indexed_db Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:indexed_db" data-type="KeyRange">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_indexed_db.html">dart:indexed_db</a> &rsaquo; <a href="../dart_indexed_db/KeyRange.html">KeyRange</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../crypto.html">crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><ul class="icon">
+<li><a href="../dart_indexed_db/Cursor.html"><div class="icon-class"></div>Cursor</a></li>
+<li><a href="../dart_indexed_db/CursorWithValue.html"><div class="icon-class"></div>CursorWithValue</a></li>
+<li><a href="../dart_indexed_db/Database.html"><div class="icon-class"></div>Database</a></li>
+<li><a href="../dart_indexed_db/IdbFactory.html"><div class="icon-class"></div>IdbFactory</a></li>
+<li><a href="../dart_indexed_db/Index.html"><div class="icon-class"></div>Index</a></li>
+<li><div class="icon-class"></div><strong>KeyRange</strong></li>
+<li><a href="../dart_indexed_db/ObjectStore.html"><div class="icon-class"></div>ObjectStore</a></li>
+<li><a href="../dart_indexed_db/OpenDBRequest.html"><div class="icon-class"></div>OpenDBRequest</a></li>
+<li><a href="../dart_indexed_db/Request.html"><div class="icon-class"></div>Request</a></li>
+<li><a href="../dart_indexed_db/Transaction.html"><div class="icon-class"></div>Transaction</a></li>
+<li><a href="../dart_indexed_db/VersionChangeEvent.html"><div class="icon-class"></div>VersionChangeEvent</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_typed_data.html">dart:typed_data</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_gl.html">dart:web_gl</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../mdv_observe.html">mdv_observe</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../source_maps.html">source_maps</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>KeyRange</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+        <div class="mdn">
+        The <code>IDBKeyRange</code> interface of the <a title="en/IndexedDB" rel="internal" href="https://developer.mozilla.org/en/IndexedDB">IndexedDB API</a> represents a continuous interval over some data type that is used for keys. Records can be retrieved from object stores and indexes using keys or a range of keys. You can limit the range using lower and upper bounds. For example, you can iterate over all values of a key between x and y.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBKeyRange">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('IDBKeyRange')
+@Unstable
+class KeyRange native "IDBKeyRange" {
+ @DomName('IDBKeyRange.only')
+ factory KeyRange.only(/*Key*/ value) =&gt;
+     _KeyRangeFactoryProvider.createKeyRange_only(value);
+
+ @DomName('IDBKeyRange.lowerBound')
+ factory KeyRange.lowerBound(/*Key*/ bound, [bool open = false]) =&gt;
+     _KeyRangeFactoryProvider.createKeyRange_lowerBound(bound, open);
+
+ @DomName('IDBKeyRange.upperBound')
+ factory KeyRange.upperBound(/*Key*/ bound, [bool open = false]) =&gt;
+     _KeyRangeFactoryProvider.createKeyRange_upperBound(bound, open);
+
+ @DomName('KeyRange.bound')
+ factory KeyRange.bound(/*Key*/ lower, /*Key*/ upper,
+                           [bool lowerOpen = false, bool upperOpen = false]) =&gt;
+     _KeyRangeFactoryProvider.createKeyRange_bound(
+         lower, upper, lowerOpen, upperOpen);
+
+
+ @DomName('IDBKeyRange.lower')
+ @DocsEditable
+ @annotation_Creates_SerializedScriptValue
+ final Object lower;
+
+ @DomName('IDBKeyRange.lowerOpen')
+ @DocsEditable
+ final bool lowerOpen;
+
+ @DomName('IDBKeyRange.upper')
+ @DocsEditable
+ @annotation_Creates_SerializedScriptValue
+ final Object upper;
+
+ @DomName('IDBKeyRange.upperOpen')
+ @DocsEditable
+ final bool upperOpen;
+
+ @JSName('bound')
+ @DomName('IDBKeyRange.bound')
+ @DocsEditable
+ static KeyRange bound_(Object lower, Object upper, [bool lowerOpen, bool upperOpen]) native;
+
+ @JSName('lowerBound')
+ @DomName('IDBKeyRange.lowerBound')
+ @DocsEditable
+ static KeyRange lowerBound_(Object bound, [bool open]) native;
+
+ @JSName('only')
+ @DomName('IDBKeyRange.only')
+ @DocsEditable
+ static KeyRange only_(Object value) native;
+
+ @JSName('upperBound')
+ @DomName('IDBKeyRange.upperBound')
+ @DocsEditable
+ static KeyRange upperBound_(Object bound, [bool open]) native;
+
+}
+</pre>
+</div>
+<h3>Extends</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart__interceptors/Interceptor.html">Interceptor</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><strong>KeyRange</strong></span></p>
+<div>
+<h3>Static Methods</h3>
+<div class="method"><h4 id="bound_">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/KeyRange.html">KeyRange</a> <strong>bound_</strong>(<a href="../dart_core/Object.html">Object</a> lower, <a href="../dart_core/Object.html">Object</a> upper, [<a href="../dart_core/bool.html">bool</a> lowerOpen, <a href="../dart_core/bool.html">bool</a> upperOpen]) <a class="anchor-link" href="#bound_"
+              title="Permalink to KeyRange.bound_">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>Creates a key range with upper and lower bounds. The bounds can be open (that is, the bounds excludes the endpoint values) or closed (that is, the bounds includes the endpoint values). By default, the bounds include the endpoints and are closed.</p>
+<pre>IDBKeyRange bound (
+   in any lower,
+   in any upper, 
+   in optional boolean lowerOpen, 
+   in optional boolean upperOpen
+);
+</pre>
+<div id="section_9"><span id="Parameters"></span><h5 class="editable">Parameters</h5>
+<dl> <dt>lower</dt> <dd>The lower bound of the key range.</dd> <dt>upper</dt> <dd>The upper bound of the key range.</dd> <dt>lowerOpen</dt> <dd><em>Optional</em>. If false (default value), the range includes the lower bound value of the key range.</dd> <dt>upperOpen</dt> <dd><em>Optional</em>. If false (default value), the range includes the upper bound value of the key range.</dd>
+</dl>
+</div><div id="section_10"><span id="Returns"></span><h5 class="editable">Returns</h5>
+<dl> <dt><code>IDBKeyRange</code></dt> <dd>The newly created key range.</dd>
+</dl>
+</div><div id="section_11"><span id="Exceptions"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an <a title="en/IndexedDB/IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with the following code:</p>
+<dl> <dt><code><a title="en/IndexedDB/IDBObjectStore" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#DATA_ERR">DATA_ERR</a></code></dt> <dd>The following conditions raise an exception: <ul> <li>The lower or upper parameters were not passed a valid key.</li> <li>The lower key is greater than the upper key.</li> <li>The lower key and upper key match and either of the bounds are open.</li> </ul> </dd>
+</dl>
+</div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBKeyRange">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@JSName('bound')
+@DomName('IDBKeyRange.bound')
+@DocsEditable
+static KeyRange bound_(Object lower, Object upper, [bool lowerOpen, bool upperOpen]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="lowerBound_">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/KeyRange.html">KeyRange</a> <strong>lowerBound_</strong>(<a href="../dart_core/Object.html">Object</a> bound, [<a href="../dart_core/bool.html">bool</a> open]) <a class="anchor-link" href="#lowerBound_"
+              title="Permalink to KeyRange.lowerBound_">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>Creates a key range with only a lower bound. By default, it includes the lower endpoint value and is closed.</p>
+<pre>IDBKeyRange lowerBound (
+  in any bound, 
+  in optional boolean open
+);
+</pre>
+<div id="section_17"><span id="Parameters_3"></span><h5 class="editable">Parameters</h5>
+<dl> <dt>bound</dt> <dd>The value of the lower bound.</dd> <dt>open</dt> <dd><em>Optional</em>. If false (default value), the range includes the lower-bound value.</dd>
+</dl>
+</div><div id="section_18"><span id="Returns_3"></span><h5 class="editable">Returns</h5>
+<dl> <dt><code>IDBKeyRange</code></dt> <dd>The newly created key range.</dd>
+</dl>
+</div><div id="section_19"><span id="Exceptions_3"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an <a title="en/IndexedDB/IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with the following code:</p>
+<dl> <dt><code><a title="en/IndexedDB/IDBObjectStore" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">DATA_ERR</a></code></dt> <dd>The value parameter was not passed a valid key.</dd>
+</dl>
+</div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBKeyRange">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@JSName('lowerBound')
+@DomName('IDBKeyRange.lowerBound')
+@DocsEditable
+static KeyRange lowerBound_(Object bound, [bool open]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="only_">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/KeyRange.html">KeyRange</a> <strong>only_</strong>(<a href="../dart_core/Object.html">Object</a> value) <a class="anchor-link" href="#only_"
+              title="Permalink to KeyRange.only_">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>Creates a new key range containing a single value.</p>
+<pre>IDBKeyRange only (
+  in any value
+);
+</pre>
+<div id="section_13"><span id="Parameters_2"></span><h5 class="editable">Parameters</h5>
+<dl> <dt>value</dt> <dd>The single value in the key range.</dd>
+</dl>
+</div><div id="section_14"><span id="Returns_2"></span><h5 class="editable">Returns</h5>
+<dl> <dt><code>IDBKeyRange</code></dt> <dd>The newly created key range.</dd>
+</dl>
+</div><div id="section_15"><span id="Exceptions_2"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an <a title="en/IndexedDB/IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with the following code:</p>
+<dl> <dt><code><a title="en/IndexedDB/IDBObjectStore" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#DATA_ERR">DATA_ERR</a></code></dt> <dd>The value parameter was not passed a valid key.</dd>
+</dl>
+</div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBKeyRange">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@JSName('only')
+@DomName('IDBKeyRange.only')
+@DocsEditable
+static KeyRange only_(Object value) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="upperBound_">
+<button class="show-code">Code</button>
+<a href="../dart_indexed_db/KeyRange.html">KeyRange</a> <strong>upperBound_</strong>(<a href="../dart_core/Object.html">Object</a> bound, [<a href="../dart_core/bool.html">bool</a> open]) <a class="anchor-link" href="#upperBound_"
+              title="Permalink to KeyRange.upperBound_">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>Creates a new upper-bound key range. By default, it includes the upper endpoint value and is closed.</p>
+<pre>IDBKeyRange upperBound (
+  in any bound, 
+  in optional boolean open
+);
+</pre>
+<div id="section_21"><span id="Parameters_4"></span><h5 class="editable">Parameters</h5>
+<dl> <dt>bound</dt> <dd>The value of the upper bound of the range.</dd> <dt>open</dt> <dd><em>Optional</em>. If false (default value), the range includes the lower-bound value.</dd>
+</dl>
+</div><div id="section_22"><span id="Returns_4"></span><h5 class="editable">Returns</h5>
+<dl> <dt><code>IDBKeyRange</code></dt> <dd>The newly created key range.</dd>
+</dl>
+</div><div id="section_23"><span id="Exceptions_4"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an <a title="en/IndexedDB/IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with the following code:</p>
+<dl> <dt><code><a title="en/IndexedDB/IDBObjectStore" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#DATA_ERR">DATA_ERR</a></code></dt> <dd>The value parameter was not passed a valid key.</dd>
+</dl>
+</div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBKeyRange">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@JSName('upperBound')
+@DomName('IDBKeyRange.upperBound')
+@DocsEditable
+static KeyRange upperBound_(Object bound, [bool open]) native;
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="KeyRange.bound">
+<button class="show-code">Code</button>
+factory <strong>KeyRange.bound</strong>(lower, upper, [<a href="../dart_core/bool.html">bool</a> lowerOpen = false, <a href="../dart_core/bool.html">bool</a> upperOpen = false]) <a class="anchor-link" href="#KeyRange.bound"
+              title="Permalink to KeyRange.KeyRange.bound">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('KeyRange.bound')
+factory KeyRange.bound(/*Key*/ lower, /*Key*/ upper,
+                         [bool lowerOpen = false, bool upperOpen = false]) =&gt;
+   _KeyRangeFactoryProvider.createKeyRange_bound(
+       lower, upper, lowerOpen, upperOpen);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="KeyRange.lowerBound">
+<button class="show-code">Code</button>
+factory <strong>KeyRange.lowerBound</strong>(bound, [<a href="../dart_core/bool.html">bool</a> open = false]) <a class="anchor-link" href="#KeyRange.lowerBound"
+              title="Permalink to KeyRange.KeyRange.lowerBound">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>Creates a key range with only a lower bound. By default, it includes the lower endpoint value and is closed.</p>
+<pre>IDBKeyRange lowerBound (
+  in any bound, 
+  in optional boolean open
+);
+</pre>
+<div id="section_17"><span id="Parameters_3"></span><h5 class="editable">Parameters</h5>
+<dl> <dt>bound</dt> <dd>The value of the lower bound.</dd> <dt>open</dt> <dd><em>Optional</em>. If false (default value), the range includes the lower-bound value.</dd>
+</dl>
+</div><div id="section_18"><span id="Returns_3"></span><h5 class="editable">Returns</h5>
+<dl> <dt><code>IDBKeyRange</code></dt> <dd>The newly created key range.</dd>
+</dl>
+</div><div id="section_19"><span id="Exceptions_3"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an <a title="en/IndexedDB/IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with the following code:</p>
+<dl> <dt><code><a title="en/IndexedDB/IDBObjectStore" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBObjectStore">DATA_ERR</a></code></dt> <dd>The value parameter was not passed a valid key.</dd>
+</dl>
+</div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBKeyRange">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('IDBKeyRange.lowerBound')
+factory KeyRange.lowerBound(/*Key*/ bound, [bool open = false]) =&gt;
+   _KeyRangeFactoryProvider.createKeyRange_lowerBound(bound, open);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="KeyRange.only">
+<button class="show-code">Code</button>
+factory <strong>KeyRange.only</strong>(value) <a class="anchor-link" href="#KeyRange.only"
+              title="Permalink to KeyRange.KeyRange.only">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>Creates a new key range containing a single value.</p>
+<pre>IDBKeyRange only (
+  in any value
+);
+</pre>
+<div id="section_13"><span id="Parameters_2"></span><h5 class="editable">Parameters</h5>
+<dl> <dt>value</dt> <dd>The single value in the key range.</dd>
+</dl>
+</div><div id="section_14"><span id="Returns_2"></span><h5 class="editable">Returns</h5>
+<dl> <dt><code>IDBKeyRange</code></dt> <dd>The newly created key range.</dd>
+</dl>
+</div><div id="section_15"><span id="Exceptions_2"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an <a title="en/IndexedDB/IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with the following code:</p>
+<dl> <dt><code><a title="en/IndexedDB/IDBObjectStore" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#DATA_ERR">DATA_ERR</a></code></dt> <dd>The value parameter was not passed a valid key.</dd>
+</dl>
+</div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBKeyRange">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('IDBKeyRange.only')
+factory KeyRange.only(/*Key*/ value) =&gt;
+   _KeyRangeFactoryProvider.createKeyRange_only(value);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="KeyRange.upperBound">
+<button class="show-code">Code</button>
+factory <strong>KeyRange.upperBound</strong>(bound, [<a href="../dart_core/bool.html">bool</a> open = false]) <a class="anchor-link" href="#KeyRange.upperBound"
+              title="Permalink to KeyRange.KeyRange.upperBound">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        <p>Creates a new upper-bound key range. By default, it includes the upper endpoint value and is closed.</p>
+<pre>IDBKeyRange upperBound (
+  in any bound, 
+  in optional boolean open
+);
+</pre>
+<div id="section_21"><span id="Parameters_4"></span><h5 class="editable">Parameters</h5>
+<dl> <dt>bound</dt> <dd>The value of the upper bound of the range.</dd> <dt>open</dt> <dd><em>Optional</em>. If false (default value), the range includes the lower-bound value.</dd>
+</dl>
+</div><div id="section_22"><span id="Returns_4"></span><h5 class="editable">Returns</h5>
+<dl> <dt><code>IDBKeyRange</code></dt> <dd>The newly created key range.</dd>
+</dl>
+</div><div id="section_23"><span id="Exceptions_4"></span><h5 class="editable">Exceptions</h5>
+<p>This method can raise an <a title="en/IndexedDB/IDBDatabaseException" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException">IDBDatabaseException</a> with the following code:</p>
+<dl> <dt><code><a title="en/IndexedDB/IDBObjectStore" rel="internal" href="https://developer.mozilla.org/en/IndexedDB/IDBDatabaseException#DATA_ERR">DATA_ERR</a></code></dt> <dd>The value parameter was not passed a valid key.</dd>
+</dl>
+</div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBKeyRange">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('IDBKeyRange.upperBound')
+factory KeyRange.upperBound(/*Key*/ bound, [bool open = false]) =&gt;
+   _KeyRangeFactoryProvider.createKeyRange_upperBound(bound, open);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field inherited"><h4 id="hashCode">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>hashCode</strong> <a class="anchor-link"
+            href="#hashCode"
+            title="Permalink to KeyRange.hashCode">#</a>
+        </h4>
+        <div class="inherited-from">inherited from Interceptor </div><div class="doc">
+<div class="inherited">
+<p>Get a hash code for this object.</p>
+<p>All objects have hash codes. Hash codes are guaranteed to be the
+same for objects that are equal when compared using the equality
+operator <code>==</code>. Other than that there are no guarantees about
+the hash codes. They will not be consistent between runs and
+there are no distribution guarantees.</p>
+<p>If a subclass overrides <code>hashCode</code> it should override the
+equality operator as well to maintain consistency.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+int get hashCode =&gt; Primitives.objectHashCode(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="lower">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Object.html">Object</a>         <strong>lower</strong> <a class="anchor-link"
+            href="#lower"
+            title="Permalink to KeyRange.lower">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+final Object lower
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="lowerOpen">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>lowerOpen</strong> <a class="anchor-link"
+            href="#lowerOpen"
+            title="Permalink to KeyRange.lowerOpen">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+final bool lowerOpen
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="runtimeType">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Type.html">Type</a>         <strong>runtimeType</strong> <a class="anchor-link"
+            href="#runtimeType"
+            title="Permalink to KeyRange.runtimeType">#</a>
+        </h4>
+        <div class="inherited-from">inherited from Interceptor </div><div class="doc">
+<div class="inherited">
+<p>A representation of the runtime type of the object.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+Type get runtimeType =&gt; getRuntimeType(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="upper">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Object.html">Object</a>         <strong>upper</strong> <a class="anchor-link"
+            href="#upper"
+            title="Permalink to KeyRange.upper">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+final Object upper
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="upperOpen">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>upperOpen</strong> <a class="anchor-link"
+            href="#upperOpen"
+            title="Permalink to KeyRange.upperOpen">#</a>
+        </h4>
+        <div class="doc">
+        <div class="mdn">
+        Returns false if the upper-bound value is included in the key range.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/IndexedDB/IDBKeyRange">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+final bool upperOpen
+</pre>
+</div>
+</div>
+</div>
+<div class="inherited">
+<h3>Operators</h3>
+<div class="method inherited"><h4 id="==">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>operator ==</strong>(other) <a class="anchor-link" href="#=="
+              title="Permalink to KeyRange.operator ==">#</a></h4>
+<div class="inherited-from">inherited from Interceptor </div><div class="doc">
+<div class="inherited">
+<p>The equality operator.</p>
+<p>The default behavior for all <code>Object</code>s is to return true if and
+only if <code>this</code> and 
+<span class="param">other</span> are the same object.</p>
+<p>If a subclass overrides the equality operator it should override
+the <code>hashCode</code> method as well to maintain consistency.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+bool operator ==(other) =&gt; identical(this, other);
+</pre>
+</div>
+</div>
+</div>
+<div class="inherited">
+<h3>Methods</h3>
+<div class="method inherited"><h4 id="noSuchMethod">
+<button class="show-code">Code</button>
+dynamic <strong>noSuchMethod</strong>(<a href="../dart_core/Invocation.html">Invocation</a> invocation) <a class="anchor-link" href="#noSuchMethod"
+              title="Permalink to KeyRange.noSuchMethod">#</a></h4>
+<div class="inherited-from">inherited from Interceptor </div><div class="doc">
+<div class="inherited">
+<p><code>noSuchMethod</code> is invoked when users invoke a non-existant method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.</p>
+<p>The default behavior of <code>noSuchMethod</code> is to throw a
+<code>noSuchMethodError</code>.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+dynamic noSuchMethod(Invocation invocation) {
+ throw new NoSuchMethodError(
+     this,
+     _symbolToString(invocation.memberName),
+     invocation.positionalArguments,
+     _symbolMapToStringMap(invocation.namedArguments));
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="toString">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>toString</strong>() <a class="anchor-link" href="#toString"
+              title="Permalink to KeyRange.toString">#</a></h4>
+<div class="inherited-from">inherited from Interceptor </div><div class="doc">
+<div class="inherited">
+<p>Returns a string representation of this object.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+String toString() =&gt; Primitives.objectToString(this);
+</pre>
+</div>
+</div>
+</div>
+          <p class="mdn-attribution">
+          <a href="https://developer.mozilla.org">
+            <img src="../mdn-logo-tiny.png" class="mdn-logo" />
+          </a>
+          This page includes <a href="https://developer.mozilla.org/en/IndexedDB/IDBKeyRange">content</a> from the
+          <a href="http://www.mozilla.org/">Mozilla Foundation</a> that is graciously
+          <a href="https://developer.mozilla.org/Project:Copyrights">licensed</a> under a
+          <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons: Attribution-Sharealike license</a>.
+          Mozilla has no other association with Dart or dartlang.org. We
+          encourage you to improve the web by
+          <a href="https://developer.mozilla.org/Project:en/How_to_Help">contributing</a> to
+          <a href="https://developer.mozilla.org">The Mozilla Developer Network</a>.
+          </p>
+          
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-06-21 06:35:22.037</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

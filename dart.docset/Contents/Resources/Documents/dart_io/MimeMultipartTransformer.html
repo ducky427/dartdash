@@ -1,0 +1,590 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>MimeMultipartTransformer class / dart:io Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:io" data-type="MimeMultipartTransformer">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_io.html">dart:io</a> &rsaquo; <a href="../dart_io/MimeMultipartTransformer.html">MimeMultipartTransformer</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../crypto.html">crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><ul class="icon">
+<li><a href="../dart_io/ContentType.html"><div class="icon-class"></div>ContentType</a></li>
+<li><a href="../dart_io/Cookie.html"><div class="icon-class"></div>Cookie</a></li>
+<li><a href="../dart_io/DetachedSocket.html"><div class="icon-class"></div>DetachedSocket</a></li>
+<li><a href="../dart_io/Directory.html"><div class="icon-class"></div>Directory</a></li>
+<li><a href="../dart_io/Encoding.html"><div class="icon-class"></div>Encoding</a></li>
+<li><a href="../dart_io/File.html"><div class="icon-class"></div>File</a></li>
+<li><a href="../dart_io/FileMode.html"><div class="icon-class"></div>FileMode</a></li>
+<li><a href="../dart_io/FileStat.html"><div class="icon-class"></div>FileStat</a></li>
+<li><a href="../dart_io/FileSystemEntity.html"><div class="icon-class"></div>FileSystemEntity</a></li>
+<li><a href="../dart_io/FileSystemEntityType.html"><div class="icon-class"></div>FileSystemEntityType</a></li>
+<li><a href="../dart_io/HeaderValue.html"><div class="icon-class"></div>HeaderValue</a></li>
+<li><a href="../dart_io/HttpBody.html"><div class="icon-class"></div>HttpBody</a></li>
+<li><a href="../dart_io/HttpBodyFileUpload.html"><div class="icon-class"></div>HttpBodyFileUpload</a></li>
+<li><a href="../dart_io/HttpBodyHandler.html"><div class="icon-class"></div>HttpBodyHandler</a></li>
+<li><a href="../dart_io/HttpClient.html"><div class="icon-class"></div>HttpClient</a></li>
+<li><a href="../dart_io/HttpClientBasicCredentials.html"><div class="icon-class"></div>HttpClientBasicCredentials</a></li>
+<li><a href="../dart_io/HttpClientCredentials.html"><div class="icon-class"></div>HttpClientCredentials</a></li>
+<li><a href="../dart_io/HttpClientDigestCredentials.html"><div class="icon-class"></div>HttpClientDigestCredentials</a></li>
+<li><a href="../dart_io/HttpClientRequest.html"><div class="icon-class"></div>HttpClientRequest</a></li>
+<li><a href="../dart_io/HttpClientResponse.html"><div class="icon-class"></div>HttpClientResponse</a></li>
+<li><a href="../dart_io/HttpClientResponseBody.html"><div class="icon-class"></div>HttpClientResponseBody</a></li>
+<li><a href="../dart_io/HttpConnectionInfo.html"><div class="icon-class"></div>HttpConnectionInfo</a></li>
+<li><a href="../dart_io/HttpConnectionsInfo.html"><div class="icon-class"></div>HttpConnectionsInfo</a></li>
+<li><a href="../dart_io/HttpDate.html"><div class="icon-class"></div>HttpDate</a></li>
+<li><a href="../dart_io/HttpHeaders.html"><div class="icon-class"></div>HttpHeaders</a></li>
+<li><a href="../dart_io/HttpMultipartFormData.html"><div class="icon-class"></div>HttpMultipartFormData</a></li>
+<li><a href="../dart_io/HttpRequest.html"><div class="icon-class"></div>HttpRequest</a></li>
+<li><a href="../dart_io/HttpRequestBody.html"><div class="icon-class"></div>HttpRequestBody</a></li>
+<li><a href="../dart_io/HttpResponse.html"><div class="icon-class"></div>HttpResponse</a></li>
+<li><a href="../dart_io/HttpServer.html"><div class="icon-class"></div>HttpServer</a></li>
+<li><a href="../dart_io/HttpSession.html"><div class="icon-class"></div>HttpSession</a></li>
+<li><a href="../dart_io/HttpStatus.html"><div class="icon-class"></div>HttpStatus</a></li>
+<li><a href="../dart_io/InternetAddress.html"><div class="icon-class"></div>InternetAddress</a></li>
+<li><a href="../dart_io/InternetAddressType.html"><div class="icon-class"></div>InternetAddressType</a></li>
+<li><a href="../dart_io/IOSink.html"><div class="icon-class"></div>IOSink</a></li>
+<li><a href="../dart_io/LineTransformer.html"><div class="icon-class"></div>LineTransformer</a></li>
+<li><a href="../dart_io/Link.html"><div class="icon-class"></div>Link</a></li>
+<li><a href="../dart_io/MimeMultipart.html"><div class="icon-class"></div>MimeMultipart</a></li>
+<li><div class="icon-class"></div><strong>MimeMultipartTransformer</strong></li>
+<li><a href="../dart_io/Options.html"><div class="icon-class"></div>Options</a></li>
+<li><a href="../dart_io/Path.html"><div class="icon-class"></div>Path</a></li>
+<li><a href="../dart_io/Platform.html"><div class="icon-class"></div>Platform</a></li>
+<li><a href="../dart_io/Process.html"><div class="icon-class"></div>Process</a></li>
+<li><a href="../dart_io/ProcessResult.html"><div class="icon-class"></div>ProcessResult</a></li>
+<li><a href="../dart_io/ProcessSignal.html"><div class="icon-class"></div>ProcessSignal</a></li>
+<li><a href="../dart_io/RandomAccessFile.html"><div class="icon-class"></div>RandomAccessFile</a></li>
+<li><a href="../dart_io/RawSecureServerSocket.html"><div class="icon-class"></div>RawSecureServerSocket</a></li>
+<li><a href="../dart_io/RawSecureSocket.html"><div class="icon-class"></div>RawSecureSocket</a></li>
+<li><a href="../dart_io/RawServerSocket.html"><div class="icon-class"></div>RawServerSocket</a></li>
+<li><a href="../dart_io/RawSocket.html"><div class="icon-class"></div>RawSocket</a></li>
+<li><a href="../dart_io/RawSocketEvent.html"><div class="icon-class"></div>RawSocketEvent</a></li>
+<li><a href="../dart_io/RedirectInfo.html"><div class="icon-class"></div>RedirectInfo</a></li>
+<li><a href="../dart_io/SecureServerSocket.html"><div class="icon-class"></div>SecureServerSocket</a></li>
+<li><a href="../dart_io/SecureSocket.html"><div class="icon-class"></div>SecureSocket</a></li>
+<li><a href="../dart_io/ServerSocket.html"><div class="icon-class"></div>ServerSocket</a></li>
+<li><a href="../dart_io/Socket.html"><div class="icon-class"></div>Socket</a></li>
+<li><a href="../dart_io/SocketDirection.html"><div class="icon-class"></div>SocketDirection</a></li>
+<li><a href="../dart_io/SocketOption.html"><div class="icon-class"></div>SocketOption</a></li>
+<li><a href="../dart_io/StdioType.html"><div class="icon-class"></div>StdioType</a></li>
+<li><a href="../dart_io/StringDecoder.html"><div class="icon-class"></div>StringDecoder</a></li>
+<li><a href="../dart_io/StringEncoder.html"><div class="icon-class"></div>StringEncoder</a></li>
+<li><a href="../dart_io/WebSocket.html"><div class="icon-class"></div>WebSocket</a></li>
+<li><a href="../dart_io/WebSocketStatus.html"><div class="icon-class"></div>WebSocketStatus</a></li>
+<li><a href="../dart_io/WebSocketTransformer.html"><div class="icon-class"></div>WebSocketTransformer</a></li>
+<li><a href="../dart_io/X509Certificate.html"><div class="icon-class"></div>X509Certificate</a></li>
+<li><a href="../dart_io/ZLibDeflater.html"><div class="icon-class"></div>ZLibDeflater</a></li>
+<li><a href="../dart_io/ZLibInflater.html"><div class="icon-class"></div>ZLibInflater</a></li>
+<li><a href="../dart_io/DirectoryException.html"><div class="icon-exception"></div>DirectoryException</a></li>
+<li><a href="../dart_io/FileException.html"><div class="icon-exception"></div>FileException</a></li>
+<li><a href="../dart_io/HttpException.html"><div class="icon-exception"></div>HttpException</a></li>
+<li><a href="../dart_io/IOException.html"><div class="icon-exception"></div>IOException</a></li>
+<li><a href="../dart_io/LinkException.html"><div class="icon-exception"></div>LinkException</a></li>
+<li><a href="../dart_io/MimeMultipartException.html"><div class="icon-exception"></div>MimeMultipartException</a></li>
+<li><a href="../dart_io/OSError.html"><div class="icon-exception"></div>OSError</a></li>
+<li><a href="../dart_io/ProcessException.html"><div class="icon-exception"></div>ProcessException</a></li>
+<li><a href="../dart_io/RedirectException.html"><div class="icon-exception"></div>RedirectException</a></li>
+<li><a href="../dart_io/SocketException.html"><div class="icon-exception"></div>SocketException</a></li>
+<li><a href="../dart_io/WebSocketException.html"><div class="icon-exception"></div>WebSocketException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_typed_data.html">dart:typed_data</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_gl.html">dart:web_gl</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../mdv_observe.html">mdv_observe</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../source_maps.html">source_maps</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>MimeMultipartTransformer</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>Parser for MIME multipart types of data as described in RFC 2046
+section 5.1.1. The data is transformed into <a class="crossref" href="../dart_io/MimeMultipart.html">MimeMultipart</a> objects, each
+of them streaming the multipart data.</p>
+<pre class="source">
+class MimeMultipartTransformer
+   implements StreamTransformer&lt;List&lt;int&gt;, MimeMultipart&gt; {
+ static const int _START = 0;
+ static const int _FIRST_BOUNDARY_ENDING = 111;
+ static const int _FIRST_BOUNDARY_END = 112;
+ static const int _BOUNDARY_ENDING = 1;
+ static const int _BOUNDARY_END = 2;
+ static const int _HEADER_START = 3;
+ static const int _HEADER_FIELD = 4;
+ static const int _HEADER_VALUE_START = 5;
+ static const int _HEADER_VALUE = 6;
+ static const int _HEADER_VALUE_FOLDING_OR_ENDING = 7;
+ static const int _HEADER_VALUE_FOLD_OR_END = 8;
+ static const int _HEADER_ENDING = 9;
+ static const int _CONTENT = 10;
+ static const int _LAST_BOUNDARY_DASH2 = 11;
+ static const int _LAST_BOUNDARY_ENDING = 12;
+ static const int _LAST_BOUNDARY_END = 13;
+ static const int _DONE = 14;
+ static const int _FAILURE = 15;
+
+ StreamController _controller;
+ StreamSubscription _subscription;
+
+ StreamController _multipartController;
+ Map&lt;String, String&gt; _headers;
+
+ List&lt;int&gt; _boundary;
+ int _state = _START;
+ int _boundaryIndex = 2;
+
+ // Current index in the data buffer. If index is negative then it
+ // is the index into the artificial prefix of the boundary string.
+ int _index;
+ List&lt;int&gt; _buffer;
+
+ StringBuffer _headerField = new StringBuffer();
+ StringBuffer _headerValue = new StringBuffer();
+
+ /**
+  * Construct a new MIME multipart parser with the boundary
+  * [boundary]. The boundary should be as specified in the content
+  * type parameter, that is without the -- prefix.
+  */
+ MimeMultipartTransformer(String boundary) {
+   List&lt;int&gt; charCodes = boundary.codeUnits;
+   _boundary = new Uint8List(4 + charCodes.length);
+   // Set-up the matching boundary preceding it with CRLF and two
+   // dashes.
+   _boundary[0] = _CharCode.CR;
+   _boundary[1] = _CharCode.LF;
+   _boundary[2] = _CharCode.DASH;
+   _boundary[3] = _CharCode.DASH;
+   _boundary.setRange(4, 4 + charCodes.length, charCodes);
+ }
+
+ void _resumeStream() {
+   _subscription.resume();
+ }
+
+ void _pauseStream() {
+   _subscription.pause();
+ }
+
+ Stream&lt;MimeMultipart&gt; bind(Stream&lt;List&lt;int&gt;&gt; stream) {
+   _controller = new StreamController(
+       sync: true,
+       onPause: _pauseStream,
+       onResume:_resumeStream,
+       onCancel: () {
+         _subscription.cancel();
+       },
+       onListen: () {
+         _subscription = stream.listen(
+             (data) {
+               assert(_buffer == null);
+               _pauseStream();
+               _buffer = data;
+               _index = 0;
+               _parse();
+             },
+             onDone: () {
+               if (_state != _DONE) {
+                 _controller.addError(
+                     new MimeMultipartException("Bad multipart ending"));
+               }
+               _controller.close();
+             },
+             onError: (error) {
+               _controller.addError(error);
+             });
+       });
+   return _controller.stream;
+ }
+
+ void _parse() {
+   // Number of boundary bytes to artificially place before the supplied data.
+   int boundaryPrefix = 0;
+   // Position where content starts. Will be null if no known content
+   // start exists. Will be negative of the content starts in the
+   // boundary prefix. Will be zero or position if the content starts
+   // in the current buffer.
+   int contentStartIndex;
+
+   // Function to report content data for the current part. The data
+   // reported is from the current content start index up til the
+   // current index. As the data can be artificially prefixed with a
+   // prefix of the boundary both the content start index and index
+   // can be negative.
+   void reportData() {
+     if (contentStartIndex &lt; 0) {
+       var contentLength = boundaryPrefix + _index - _boundaryIndex;
+       if (contentLength &lt;= boundaryPrefix) {
+         _multipartController.add(
+             _boundary.sublist(0, contentLength));
+       } else {
+         _multipartController.add(
+             _boundary.sublist(0, boundaryPrefix));
+         _multipartController.add(
+             _buffer.sublist(0, contentLength - boundaryPrefix));
+       }
+     } else {
+       var contentEndIndex = _index - _boundaryIndex;
+       _multipartController.add(
+           _buffer.sublist(contentStartIndex, contentEndIndex));
+     }
+   }
+
+   if (_state == _CONTENT &amp;&amp; _boundaryIndex == 0) {
+     contentStartIndex = 0;
+   } else {
+     contentStartIndex = null;
+   }
+   // The data to parse might be "artificially" prefixed with a
+   // partial match of the boundary.
+   boundaryPrefix = _boundaryIndex;
+
+   while ((_index &lt; _buffer.length) &amp;&amp; _state != _FAILURE &amp;&amp; _state != _DONE) {
+     if (_multipartController != null &amp;&amp; _multipartController.isPaused) {
+       return;
+     }
+     int byte;
+     if (_index &lt; 0) {
+       byte = _boundary[boundaryPrefix + _index];
+     } else {
+       byte = _buffer[_index];
+     }
+     switch (_state) {
+       case _START:
+         if (byte == _boundary[_boundaryIndex]) {
+           _boundaryIndex++;
+           if (_boundaryIndex == _boundary.length) {
+             _state = _FIRST_BOUNDARY_ENDING;
+             _boundaryIndex = 0;
+           }
+         } else {
+           // Restart matching of the boundary.
+           _index = _index - _boundaryIndex;
+           _boundaryIndex = 0;
+         }
+         break;
+
+       case _FIRST_BOUNDARY_ENDING:
+         if (byte == _CharCode.CR) {
+           _state = _FIRST_BOUNDARY_END;
+         } else {
+           _expectWS(byte);
+         }
+         break;
+
+       case _FIRST_BOUNDARY_END:
+         _expect(byte, _CharCode.LF);
+         _state = _HEADER_START;
+         break;
+
+       case _BOUNDARY_ENDING:
+         if (byte == _CharCode.CR) {
+           _state = _BOUNDARY_END;
+         } else if (byte == _CharCode.DASH) {
+           _state = _LAST_BOUNDARY_DASH2;
+         } else {
+           _expectWS(byte);
+         }
+         break;
+
+       case _BOUNDARY_END:
+         _expect(byte, _CharCode.LF);
+         _multipartController.close();
+         _multipartController = null;
+         _state = _HEADER_START;
+         break;
+
+       case _HEADER_START:
+         _headers = new Map&lt;String, String&gt;();
+         if (byte == _CharCode.CR) {
+           _state = _HEADER_ENDING;
+         } else {
+           // Start of new header field.
+           _headerField.writeCharCode(_toLowerCase(byte));
+           _state = _HEADER_FIELD;
+         }
+         break;
+
+       case _HEADER_FIELD:
+         if (byte == _CharCode.COLON) {
+           _state = _HEADER_VALUE_START;
+         } else {
+           if (!_isTokenChar(byte)) {
+             throw new MimeMultipartException("Invalid header field name");
+           }
+           _headerField.writeCharCode(_toLowerCase(byte));
+         }
+         break;
+
+       case _HEADER_VALUE_START:
+         if (byte == _CharCode.CR) {
+           _state = _HEADER_VALUE_FOLDING_OR_ENDING;
+         } else if (byte != _CharCode.SP &amp;&amp; byte != _CharCode.HT) {
+           // Start of new header value.
+           _headerValue.writeCharCode(byte);
+           _state = _HEADER_VALUE;
+         }
+         break;
+
+       case _HEADER_VALUE:
+         if (byte == _CharCode.CR) {
+           _state = _HEADER_VALUE_FOLDING_OR_ENDING;
+         } else {
+           _headerValue.writeCharCode(byte);
+         }
+         break;
+
+       case _HEADER_VALUE_FOLDING_OR_ENDING:
+         _expect(byte, _CharCode.LF);
+         _state = _HEADER_VALUE_FOLD_OR_END;
+         break;
+
+       case _HEADER_VALUE_FOLD_OR_END:
+         if (byte == _CharCode.SP || byte == _CharCode.HT) {
+           _state = _HEADER_VALUE_START;
+         } else {
+           String headerField = _headerField.toString();
+           String headerValue =_headerValue.toString();
+           _headers[headerField.toLowerCase()] = headerValue;
+           _headerField = new StringBuffer();
+           _headerValue = new StringBuffer();
+           if (byte == _CharCode.CR) {
+             _state = _HEADER_ENDING;
+           } else {
+             // Start of new header field.
+             _headerField.writeCharCode(_toLowerCase(byte));
+             _state = _HEADER_FIELD;
+           }
+         }
+         break;
+
+       case _HEADER_ENDING:
+         _expect(byte, _CharCode.LF);
+         _multipartController = new StreamController(
+             sync: true,
+             onPause: () {
+               _pauseStream();
+             },
+             onResume: () {
+               _resumeStream();
+               _parse();
+             });
+         _controller.add(
+             new _MimeMultipart(_headers, _multipartController.stream));
+         _headers = null;
+         _state = _CONTENT;
+         contentStartIndex = _index + 1;
+         break;
+
+       case _CONTENT:
+         if (byte == _boundary[_boundaryIndex]) {
+           _boundaryIndex++;
+           if (_boundaryIndex == _boundary.length) {
+             if (contentStartIndex != null) {
+               _index++;
+               reportData();
+               _index--;
+             }
+             _multipartController.close();
+             _boundaryIndex = 0;
+             _state = _BOUNDARY_ENDING;
+           }
+         } else {
+           // Restart matching of the boundary.
+           _index = _index - _boundaryIndex;
+           if (contentStartIndex == null) contentStartIndex = _index;
+           _boundaryIndex = 0;
+         }
+         break;
+
+       case _LAST_BOUNDARY_DASH2:
+         _expect(byte, _CharCode.DASH);
+         _state = _LAST_BOUNDARY_ENDING;
+         break;
+
+       case _LAST_BOUNDARY_ENDING:
+         if (byte == _CharCode.CR) {
+           _state = _LAST_BOUNDARY_END;
+         } else {
+           _expectWS(byte);
+         }
+         break;
+
+       case _LAST_BOUNDARY_END:
+         _expect(byte, _CharCode.LF);
+         _multipartController.close();
+         _multipartController = null;
+         _state = _DONE;
+         break;
+
+       default:
+         // Should be unreachable.
+         assert(false);
+         break;
+     }
+
+     // Move to the next byte.
+     _index++;
+   }
+
+   // Report any known content.
+   if (_state == _CONTENT &amp;&amp; contentStartIndex != null) {
+     reportData();
+   }
+
+   // Resume if at end.
+   if (_index == _buffer.length) {
+     _buffer = null;
+     _index = null;
+     _resumeStream();
+   }
+ }
+
+ bool _isTokenChar(int byte) {
+   return byte &gt; 31 &amp;&amp; byte &lt; 128 &amp;&amp; _Const.SEPARATORS.indexOf(byte) == -1;
+ }
+
+ int _toLowerCase(int byte) {
+   final int aCode = "A".codeUnitAt(0);
+   final int zCode = "Z".codeUnitAt(0);
+   final int delta = "a".codeUnitAt(0) - aCode;
+   return (aCode &lt;= byte &amp;&amp; byte &lt;= zCode) ? byte + delta : byte;
+ }
+
+ void _expect(int val1, int val2) {
+   if (val1 != val2) {
+     throw new MimeMultipartException("Failed to parse multipart mime 1");
+   }
+ }
+
+ void _expectWS(int byte) {
+   if (byte != _CharCode.SP &amp;&amp; byte != _CharCode.HT) {
+     throw new MimeMultipartException("Failed to parse multipart mime 2");
+   }
+ }
+}
+</pre>
+</div>
+<h3>Implements</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_async/StreamTransformer.html">StreamTransformer&lt;List&lt;int&gt;, MimeMultipart&gt;</a></span></p>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="MimeMultipartTransformer">
+<button class="show-code">Code</button>
+new <strong>MimeMultipartTransformer</strong>(<a href="../dart_core/String.html">String</a> boundary) <a class="anchor-link" href="#MimeMultipartTransformer"
+              title="Permalink to MimeMultipartTransformer.MimeMultipartTransformer">#</a></h4>
+<div class="doc">
+<p>Construct a new MIME multipart parser with the boundary
+
+<span class="param">boundary</span>. The boundary should be as specified in the content
+type parameter, that is without the -- prefix.</p>
+<pre class="source">
+MimeMultipartTransformer(String boundary) {
+ List&lt;int&gt; charCodes = boundary.codeUnits;
+ _boundary = new Uint8List(4 + charCodes.length);
+ // Set-up the matching boundary preceding it with CRLF and two
+ // dashes.
+ _boundary[0] = _CharCode.CR;
+ _boundary[1] = _CharCode.LF;
+ _boundary[2] = _CharCode.DASH;
+ _boundary[3] = _CharCode.DASH;
+ _boundary.setRange(4, 4 + charCodes.length, charCodes);
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="bind">
+<button class="show-code">Code</button>
+<a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_io/MimeMultipart.html">MimeMultipart</a>&gt; <strong>bind</strong>(<a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/int.html">int</a>&gt;&gt; stream) <a class="anchor-link" href="#bind"
+              title="Permalink to MimeMultipartTransformer.bind">#</a></h4>
+<div class="doc">
+<pre class="source">
+Stream&lt;MimeMultipart&gt; bind(Stream&lt;List&lt;int&gt;&gt; stream) {
+ _controller = new StreamController(
+     sync: true,
+     onPause: _pauseStream,
+     onResume:_resumeStream,
+     onCancel: () {
+       _subscription.cancel();
+     },
+     onListen: () {
+       _subscription = stream.listen(
+           (data) {
+             assert(_buffer == null);
+             _pauseStream();
+             _buffer = data;
+             _index = 0;
+             _parse();
+           },
+           onDone: () {
+             if (_state != _DONE) {
+               _controller.addError(
+                   new MimeMultipartException("Bad multipart ending"));
+             }
+             _controller.close();
+           },
+           onError: (error) {
+             _controller.addError(error);
+           });
+     });
+ return _controller.stream;
+}
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-06-21 06:35:22.540</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

@@ -1,0 +1,1787 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Uri class / dart:core Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:core" data-type="Uri">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_core.html">dart:core</a> &rsaquo; <a href="../dart_core/Uri.html">Uri</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../crypto.html">crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><ul class="icon">
+<li><a href="../dart_core/BidirectionalIterator.html"><div class="icon-class"></div>BidirectionalIterator&lt;E&gt;</a></li>
+<li><a href="../dart_core/bool.html"><div class="icon-class"></div>bool</a></li>
+<li><a href="../dart_core/Comparable.html"><div class="icon-class"></div>Comparable&lt;T&gt;</a></li>
+<li><a href="../dart_core/Comparator.html"><div class="icon-interface"></div>Comparator&lt;T&gt;</a></li>
+<li><a href="../dart_core/DateTime.html"><div class="icon-class"></div>DateTime</a></li>
+<li><a href="../dart_core/double.html"><div class="icon-class"></div>double</a></li>
+<li><a href="../dart_core/Duration.html"><div class="icon-class"></div>Duration</a></li>
+<li><a href="../dart_core/Expando.html"><div class="icon-class"></div>Expando&lt;T&gt;</a></li>
+<li><a href="../dart_core/Function.html"><div class="icon-class"></div>Function</a></li>
+<li><a href="../dart_core/int.html"><div class="icon-class"></div>int</a></li>
+<li><a href="../dart_core/Invocation.html"><div class="icon-class"></div>Invocation</a></li>
+<li><a href="../dart_core/Iterable.html"><div class="icon-class"></div>Iterable&lt;E&gt;</a></li>
+<li><a href="../dart_core/Iterator.html"><div class="icon-class"></div>Iterator&lt;E&gt;</a></li>
+<li><a href="../dart_core/List.html"><div class="icon-class"></div>List&lt;E&gt;</a></li>
+<li><a href="../dart_core/Map.html"><div class="icon-class"></div>Map&lt;K, V&gt;</a></li>
+<li><a href="../dart_core/Match.html"><div class="icon-class"></div>Match</a></li>
+<li><a href="../dart_core/num.html"><div class="icon-class"></div>num</a></li>
+<li><a href="../dart_core/Object.html"><div class="icon-class"></div>Object</a></li>
+<li><a href="../dart_core/Pattern.html"><div class="icon-class"></div>Pattern</a></li>
+<li><a href="../dart_core/RegExp.html"><div class="icon-class"></div>RegExp</a></li>
+<li><a href="../dart_core/RuneIterator.html"><div class="icon-class"></div>RuneIterator</a></li>
+<li><a href="../dart_core/Runes.html"><div class="icon-class"></div>Runes</a></li>
+<li><a href="../dart_core/Set.html"><div class="icon-class"></div>Set&lt;E&gt;</a></li>
+<li><a href="../dart_core/StackTrace.html"><div class="icon-class"></div>StackTrace</a></li>
+<li><a href="../dart_core/Stopwatch.html"><div class="icon-class"></div>Stopwatch</a></li>
+<li><a href="../dart_core/String.html"><div class="icon-class"></div>String</a></li>
+<li><a href="../dart_core/StringBuffer.html"><div class="icon-class"></div>StringBuffer</a></li>
+<li><a href="../dart_core/StringSink.html"><div class="icon-class"></div>StringSink</a></li>
+<li><a href="../dart_core/Symbol.html"><div class="icon-class"></div>Symbol</a></li>
+<li><a href="../dart_core/Type.html"><div class="icon-class"></div>Type</a></li>
+<li><div class="icon-class"></div><strong>Uri</strong></li>
+<li><a href="../dart_core/AbstractClassInstantiationError.html"><div class="icon-exception"></div>AbstractClassInstantiationError</a></li>
+<li><a href="../dart_core/ArgumentError.html"><div class="icon-exception"></div>ArgumentError</a></li>
+<li><a href="../dart_core/AssertionError.html"><div class="icon-exception"></div>AssertionError</a></li>
+<li><a href="../dart_core/CastError.html"><div class="icon-exception"></div>CastError</a></li>
+<li><a href="../dart_core/ConcurrentModificationError.html"><div class="icon-exception"></div>ConcurrentModificationError</a></li>
+<li><a href="../dart_core/CyclicInitializationError.html"><div class="icon-exception"></div>CyclicInitializationError</a></li>
+<li><a href="../dart_core/Error.html"><div class="icon-exception"></div>Error</a></li>
+<li><a href="../dart_core/Exception.html"><div class="icon-exception"></div>Exception</a></li>
+<li><a href="../dart_core/FallThroughError.html"><div class="icon-exception"></div>FallThroughError</a></li>
+<li><a href="../dart_core/FiftyThreeBitOverflowError.html"><div class="icon-exception"></div>FiftyThreeBitOverflowError</a></li>
+<li><a href="../dart_core/FormatException.html"><div class="icon-exception"></div>FormatException</a></li>
+<li><a href="../dart_core/IntegerDivisionByZeroException.html"><div class="icon-exception"></div>IntegerDivisionByZeroException</a></li>
+<li><a href="../dart_core/NoSuchMethodError.html"><div class="icon-exception"></div>NoSuchMethodError</a></li>
+<li><a href="../dart_core/NullThrownError.html"><div class="icon-exception"></div>NullThrownError</a></li>
+<li><a href="../dart_core/OutOfMemoryError.html"><div class="icon-exception"></div>OutOfMemoryError</a></li>
+<li><a href="../dart_core/RangeError.html"><div class="icon-exception"></div>RangeError</a></li>
+<li><a href="../dart_core/StackOverflowError.html"><div class="icon-exception"></div>StackOverflowError</a></li>
+<li><a href="../dart_core/StateError.html"><div class="icon-exception"></div>StateError</a></li>
+<li><a href="../dart_core/TypeError.html"><div class="icon-exception"></div>TypeError</a></li>
+<li><a href="../dart_core/UnimplementedError.html"><div class="icon-exception"></div>UnimplementedError</a></li>
+<li><a href="../dart_core/UnsupportedError.html"><div class="icon-exception"></div>UnsupportedError</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_typed_data.html">dart:typed_data</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_gl.html">dart:web_gl</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../mdv_observe.html">mdv_observe</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../source_maps.html">source_maps</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>Uri</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>A parsed URI, as specified by RFC-3986, http://tools.ietf.org/html/rfc3986.</p>
+<pre class="source">
+class Uri {
+ int _port;
+ String _path;
+
+ /**
+  * Returns the scheme component.
+  *
+  * Returns the empty string if there is no scheme component.
+  */
+ final String scheme;
+
+ /**
+  * Returns the authority component.
+  *
+  * The authority is formatted from the [userInfo], [host] and [port]
+  * parts.
+  *
+  * Returns the empty string if there is no authority component.
+  */
+ String get authority {
+   if (!hasAuthority) return "";
+   var sb = new StringBuffer();
+   _writeAuthority(sb);
+   return sb.toString();
+ }
+
+ /**
+  * Returns the user info part of the authority component.
+  *
+  * Returns the empty string if there is no user info in the
+  * authority component.
+  */
+ final String userInfo;
+
+ /**
+  * Returns the host part of the authority component.
+  *
+  * Returns the empty string if there is no authority component and
+  * hence no host.
+  */
+ final String host;
+
+ /**
+  * Returns the port part of the authority component.
+  *
+  * Returns 0 if there is no port in the authority component.
+  */
+ int get port =&gt; _port;
+
+ /**
+  * Returns the path component.
+  *
+  * The returned path is encoded. To get direct access to the decoded
+  * path use [pathSegments].
+  *
+  * Returns the empty string if there is no path component.
+  */
+ String get path =&gt; _path;
+
+ /**
+  * Returns the query component. The returned query is encoded. To get
+  * direct access to the decoded query use [queryParameters].
+  *
+  * Returns the empty string if there is no query component.
+  */
+ final String query;
+
+ /**
+  * Returns the fragment identifier component.
+  *
+  * Returns the empty string if there is no fragment identifier
+  * component.
+  */
+ final String fragment;
+
+ /**
+  * Cache the computed return value of [pathSegements].
+  */
+ List&lt;String&gt; _pathSegments;
+
+ /**
+  * Cache the computed return value of [queryParameters].
+  */
+ Map&lt;String, String&gt; _queryParameters;
+
+ /**
+  * Creates a new URI object by parsing a URI string.
+  */
+ static Uri parse(String uri) =&gt; new Uri._fromMatch(_splitRe.firstMatch(uri));
+
+ Uri._fromMatch(Match m) :
+   this(scheme: _emptyIfNull(m[_COMPONENT_SCHEME]),
+        userInfo: _emptyIfNull(m[_COMPONENT_USER_INFO]),
+        host: _eitherOf(
+        m[_COMPONENT_HOST], m[_COMPONENT_HOST_IPV6]),
+        port: _parseIntOrZero(m[_COMPONENT_PORT]),
+        path: _emptyIfNull(m[_COMPONENT_PATH]),
+        query: _emptyIfNull(m[_COMPONENT_QUERY_DATA]),
+        fragment: _emptyIfNull(m[_COMPONENT_FRAGMENT]));
+
+ /**
+  * Create a new URI from its components.
+  *
+  * Each component is set through a named argument. Any number of
+  * components can be provided. The default value for the components
+  * not provided is the empry string, except for [port] which has a
+  * default value of 0. The [path] and [query] components can be set
+  * using two different named arguments.
+  *
+  * The scheme component is set through [scheme]. The scheme is
+  * normalized to all lowercase letters.
+  *
+  * The user info part of the authority component is set through
+  * [userInfo].
+  *
+  * The host part of the authority component is set through
+  * [host]. The host can either be a hostname, a IPv4 address or an
+  * IPv6 address, contained in '[' and ']'. If the host contains a
+  * ':' character, the '[' and ']' are added if not already provided.
+  *
+  * The port part of the authority component is set through
+  * [port]. The port is normalized for scheme http and https where
+  * port 80 and port 443 respectively is set.
+  *
+  * The path component is set through either [path] or
+  * [pathSegments]. When [path] is used, the provided string is
+  * expected to be fully percent-encoded, and is used in its literal
+  * form. When [pathSegments] is used, each of the provided segments
+  * is percent-encoded and joined using the forward slash
+  * separator. The percent-encoding of the path segments encodes all
+  * characters except for the unreserved characters and the following
+  * list of characters: `!$&amp;'()*+,;=:@`. If the other components
+  * calls for an absolute path a leading slash `/` is prepended if
+  * not already there.
+  *
+  * The query component is set through either [query] or
+  * [queryParameters]. When [query] is used the provided string is
+  * expected to be fully percent-encoded and is used in its literal
+  * form. When [queryParameters] is used the query is built from the
+  * provided map. Each key and value in the map is percent-encoded
+  * and joined using equal and ampersand characters. The
+  * percent-encoding of the keys and values encodes all characters
+  * except for the unreserved characters.
+  *
+  * The fragment component is set through [fragment].
+  */
+ Uri({scheme,
+      this.userInfo: "",
+      this.host: "",
+      port: 0,
+      String path,
+      List&lt;String&gt; pathSegments,
+      String query,
+      Map&lt;String, String&gt; queryParameters,
+      fragment: ""}) :
+     scheme = _makeScheme(scheme),
+     query = _makeQuery(query, queryParameters),
+     fragment = _makeFragment(fragment) {
+   // Perform scheme specific normalization.
+   if (scheme == "http" &amp;&amp; port == 80) {
+     _port = 0;
+   } else if (scheme == "https" &amp;&amp; port == 443) {
+     _port = 0;
+   } else {
+     _port = port;
+   }
+   // Fill the path.
+   _path = _makePath(path, pathSegments);
+ }
+
+ /**
+  * Returns the URI path split into its segments. Each of the
+  * segments in the returned list have been decoded. If the path is
+  * empty the empty list will be returned. A leading slash `/` does
+  * not affect the segments returned.
+  *
+  * The returned list is unmodifiable and will throw [UnsupportedError] on any
+  * calls that would mutate it.
+  */
+ List&lt;String&gt; get pathSegments {
+   if (_pathSegments == null) {
+     var pathToSplit = !path.isEmpty &amp;&amp; path.codeUnitAt(0) == _SLASH
+                       ? path.substring(1)
+                       : path;
+     _pathSegments = new UnmodifiableListView(
+       pathToSplit == "" ? const&lt;String&gt;[]
+                         : pathToSplit.split("/")
+                                      .map(Uri.decodeComponent)
+                                      .toList(growable: false));
+   }
+   return _pathSegments;
+ }
+
+ /**
+  * Returns the URI query split into a map according to the rules
+  * specified for FORM post in the [HTML 4.01 specification section 17.13.4]
+  * (http://www.w3.org/TR/REC-html40/interact/forms.html#h-17.13.4
+  * "HTML 4.01 section 17.13.4"). Each key and value in the returned map
+  * has been decoded. If there is no query the empty map is returned.
+  *
+  * Keys in the query string that have no value are mapped to the
+  * empty string.
+  *
+  * The returned map is unmodifiable and will throw [UnsupportedError] on any
+  * calls that would mutate it.
+  */
+ Map&lt;String, String&gt; get queryParameters {
+   if (_queryParameters == null) {
+     _queryParameters = new _UnmodifiableMap(splitQueryString(query));
+   }
+   return _queryParameters;
+ }
+
+ static String _makeScheme(String scheme) {
+   bool isSchemeLowerCharacter(int ch) {
+     return ch &lt; 128 &amp;&amp;
+            ((_schemeLowerTable[ch &gt;&gt; 4] &amp; (1 &lt;&lt; (ch &amp; 0x0f))) != 0);
+   }
+
+   bool isSchemeCharacter(int ch) {
+     return ch &lt; 128 &amp;&amp; ((_schemeTable[ch &gt;&gt; 4] &amp; (1 &lt;&lt; (ch &amp; 0x0f))) != 0);
+   }
+
+   if (scheme == null) return "";
+   bool allLowercase = true;
+   int length = scheme.length;
+   for (int i = 0; i &lt; length; i++) {
+     int codeUnit = scheme.codeUnitAt(i);
+     if (!isSchemeLowerCharacter(codeUnit)) {
+       if (isSchemeCharacter(codeUnit)) {
+         allLowercase = false;
+       } else {
+         throw new ArgumentError('Illegal scheme: $scheme');
+       }
+     }
+   }
+
+   return allLowercase ? scheme : scheme.toLowerCase();
+ }
+
+ String _makePath(String path, List&lt;String&gt; pathSegments) {
+   if (path == null &amp;&amp; pathSegments == null) return "";
+   if (path != null &amp;&amp; pathSegments != null) {
+     throw new ArgumentError('Both path and pathSegments specified');
+   }
+   var result;
+   if (path != null) {
+     result = _normalize(path);
+   } else {
+     result = pathSegments.map((s) =&gt; _uriEncode(_pathCharTable, s)).join("/");
+   }
+   if ((hasAuthority || (scheme == "file")) &amp;&amp;
+       result.isNotEmpty &amp;&amp; !result.startsWith("/")) {
+     return "/$result";
+   }
+   return result;
+ }
+
+ static String _makeQuery(String query, Map&lt;String, String&gt; queryParameters) {
+   if (query == null &amp;&amp; queryParameters == null) return "";
+   if (query != null &amp;&amp; queryParameters != null) {
+     throw new ArgumentError('Both query and queryParameters specified');
+   }
+   if (query != null) return _normalize(query);
+
+   var result = new StringBuffer();
+   var first = true;
+   queryParameters.forEach((key, value) {
+     if (!first) {
+       result.write("&amp;");
+     }
+     first = false;
+     result.write(Uri.encodeQueryComponent(key));
+     if (value != null &amp;&amp; !value.isEmpty) {
+       result.write("=");
+       result.write(Uri.encodeQueryComponent(value));
+     }
+   });
+   return result.toString();
+ }
+
+ static String _makeFragment(String fragment) {
+   if (fragment == null) return "";
+   return _normalize(fragment);
+ }
+
+ static String _normalize(String component) {
+   bool isNormalizedHexDigit(int digit) {
+     return (_ZERO &lt;= digit &amp;&amp; digit &lt;= _NINE) ||
+         (_UPPER_CASE_A &lt;= digit &amp;&amp; digit &lt;= _UPPER_CASE_F);
+   }
+
+   bool isLowerCaseHexDigit(int digit) {
+     return _LOWER_CASE_A &lt;= digit &amp;&amp; digit &lt;= _LOWER_CASE_F;
+   }
+
+   bool isUnreserved(int ch) {
+     return ch &lt; 128 &amp;&amp;
+            ((_unreservedTable[ch &gt;&gt; 4] &amp; (1 &lt;&lt; (ch &amp; 0x0f))) != 0);
+   }
+
+   int normalizeHexDigit(int index) {
+     var codeUnit = component.codeUnitAt(index);
+     if (isLowerCaseHexDigit(codeUnit)) {
+       return codeUnit - 0x20;
+     } else if (!isNormalizedHexDigit(codeUnit)) {
+       throw new ArgumentError("Invalid URI component: $component");
+     } else {
+       return codeUnit;
+     }
+   }
+
+   int decodeHexDigitPair(int index) {
+     int byte = 0;
+     for (int i = 0; i &lt; 2; i++) {
+       var codeUnit = component.codeUnitAt(index + i);
+       if (_ZERO &lt;= codeUnit &amp;&amp; codeUnit &lt;= _NINE) {
+         byte = byte * 16 + codeUnit - _ZERO;
+       } else {
+         // Check ranges A-F (0x41-0x46) and a-f (0x61-0x66).
+         codeUnit |= 0x20;
+         if (_LOWER_CASE_A &lt;= codeUnit &amp;&amp;
+             codeUnit &lt;= _LOWER_CASE_F) {
+           byte = byte * 16 + codeUnit - _LOWER_CASE_A + 10;
+         } else {
+           throw new ArgumentError(
+               "Invalid percent-encoding in URI component: $component");
+         }
+       }
+     }
+     return byte;
+   }
+
+   // Start building the normalized component string.
+   StringBuffer result;
+   int length = component.length;
+   int index = 0;
+   int prevIndex = 0;
+
+   // Copy a part of the component string to the result.
+   void fillResult() {
+     if (result == null) {
+       assert(prevIndex == 0);
+       result = new StringBuffer(component.substring(prevIndex, index));
+     } else {
+       result.write(component.substring(prevIndex, index));
+     }
+   }
+
+   while (index &lt; length) {
+
+     // Normalize percent encoding to uppercase and don't encode
+     // unreserved characters.
+     if (component.codeUnitAt(index) == _PERCENT) {
+       if (length &lt; index + 2) {
+           throw new ArgumentError(
+               "Invalid percent-encoding in URI component: $component");
+       }
+
+       var codeUnit1 = component.codeUnitAt(index + 1);
+       var codeUnit2 = component.codeUnitAt(index + 2);
+       var decodedCodeUnit = decodeHexDigitPair(index + 1);
+       if (isNormalizedHexDigit(codeUnit1) &amp;&amp;
+           isNormalizedHexDigit(codeUnit2) &amp;&amp;
+           !isUnreserved(decodedCodeUnit)) {
+         index += 3;
+       } else {
+         fillResult();
+         if (isUnreserved(decodedCodeUnit)) {
+           result.writeCharCode(decodedCodeUnit);
+         } else {
+           result.write("%");
+           result.writeCharCode(normalizeHexDigit(index + 1));
+           result.writeCharCode(normalizeHexDigit(index + 2));
+         }
+         index += 3;
+         prevIndex = index;
+       }
+     } else {
+       index++;
+     }
+   }
+   if (result != null &amp;&amp; prevIndex != index) fillResult();
+   assert(index == length);
+
+   if (result == null) return component;
+   return result.toString();
+ }
+
+ static String _emptyIfNull(String val) =&gt; val != null ? val : '';
+
+ static int _parseIntOrZero(String val) {
+   if (val != null &amp;&amp; val != '') {
+     return int.parse(val);
+   } else {
+     return 0;
+   }
+ }
+
+ static String _eitherOf(String val1, String val2) {
+   if (val1 != null) return val1;
+   if (val2 != null) return val2;
+   return '';
+ }
+
+ // NOTE: This code was ported from: closure-library/closure/goog/uri/utils.js
+ static final RegExp _splitRe = new RegExp(
+     '^'
+     '(?:'
+       '([^:/?#.]+)'                   // scheme - ignore special characters
+                                       // used by other URL parts such as :,
+                                       // ?, /, #, and .
+     ':)?'
+     '(?://'
+       '(?:([^/?#]*)@)?'               // userInfo
+       '(?:'
+         r'([\w\d\-\u0100-\uffff.%]*)'
+                                       // host - restrict to letters,
+                                       // digits, dashes, dots, percent
+                                       // escapes, and unicode characters.
+         '|'
+         // TODO(ajohnsen): Only allow a max number of parts?
+         r'\[([A-Fa-f0-9:.]*)\])'
+                                       // IPv6 host - restrict to hex,
+                                       // dot and colon.
+       '(?::([0-9]+))?'                // port
+     ')?'
+     r'([^?#[]+)?'                     // path
+     r'(?:\?([^#]*))?'                 // query
+     '(?:#(.*))?'                      // fragment
+     r'$');
+
+ static const _COMPONENT_SCHEME = 1;
+ static const _COMPONENT_USER_INFO = 2;
+ static const _COMPONENT_HOST = 3;
+ static const _COMPONENT_HOST_IPV6 = 4;
+ static const _COMPONENT_PORT = 5;
+ static const _COMPONENT_PATH = 6;
+ static const _COMPONENT_QUERY_DATA = 7;
+ static const _COMPONENT_FRAGMENT = 8;
+
+ /**
+  * Returns whether the URI is absolute.
+  */
+ bool get isAbsolute =&gt; scheme != "" &amp;&amp; fragment == "";
+
+ String _merge(String base, String reference) {
+   if (base == "") return "/$reference";
+   return "${base.substring(0, base.lastIndexOf("/") + 1)}$reference";
+ }
+
+ bool _hasDotSegments(String path) {
+   if (path.length &gt; 0 &amp;&amp; path.codeUnitAt(0) == _COLON) return true;
+   int index = path.indexOf("/.");
+   return index != -1;
+ }
+
+ String _removeDotSegments(String path) {
+   if (!_hasDotSegments(path)) return path;
+   List&lt;String&gt; output = [];
+   bool appendSlash = false;
+   for (String segment in path.split("/")) {
+     appendSlash = false;
+     if (segment == "..") {
+       if (!output.isEmpty &amp;&amp;
+           ((output.length != 1) || (output[0] != ""))) output.removeLast();
+       appendSlash = true;
+     } else if ("." == segment) {
+       appendSlash = true;
+     } else {
+       output.add(segment);
+     }
+   }
+   if (appendSlash) output.add("");
+   return output.join("/");
+ }
+
+ Uri resolve(String uri) {
+   return resolveUri(Uri.parse(uri));
+ }
+
+ Uri resolveUri(Uri reference) {
+   // From RFC 3986.
+   String targetScheme;
+   String targetUserInfo;
+   String targetHost;
+   int targetPort;
+   String targetPath;
+   String targetQuery;
+   if (reference.scheme != "") {
+     targetScheme = reference.scheme;
+     targetUserInfo = reference.userInfo;
+     targetHost = reference.host;
+     targetPort = reference.port;
+     targetPath = _removeDotSegments(reference.path);
+     targetQuery = reference.query;
+   } else {
+     if (reference.hasAuthority) {
+       targetUserInfo = reference.userInfo;
+       targetHost = reference.host;
+       targetPort = reference.port;
+       targetPath = _removeDotSegments(reference.path);
+       targetQuery = reference.query;
+     } else {
+       if (reference.path == "") {
+         targetPath = this.path;
+         if (reference.query != "") {
+           targetQuery = reference.query;
+         } else {
+           targetQuery = this.query;
+         }
+       } else {
+         if (reference.path.startsWith("/")) {
+           targetPath = _removeDotSegments(reference.path);
+         } else {
+           targetPath = _removeDotSegments(_merge(this.path, reference.path));
+         }
+         targetQuery = reference.query;
+       }
+       targetUserInfo = this.userInfo;
+       targetHost = this.host;
+       targetPort = this.port;
+     }
+     targetScheme = this.scheme;
+   }
+   return new Uri(scheme: targetScheme,
+                  userInfo: targetUserInfo,
+                  host: targetHost,
+                  port: targetPort,
+                  path: targetPath,
+                  query: targetQuery,
+                  fragment: reference.fragment);
+ }
+
+ /**
+  * Returns whether the URI has an [authority] component.
+  */
+ bool get hasAuthority =&gt; host != "";
+
+ /**
+  * Returns the origin of the URI in the form scheme://host:port for the
+  * schemes http and https.
+  *
+  * It is an error if the scheme is not "http" or "https".
+  *
+  * See: http://www.w3.org/TR/2011/WD-html5-20110405/origin-0.html#origin
+  */
+ String get origin {
+   if (scheme == "" || host == null || host == "") {
+     throw new StateError("Cannot use origin without a scheme: $this");
+   }
+   if (scheme != "http" &amp;&amp; scheme != "https") {
+     throw new StateError(
+       "Origin is only applicable schemes http and https: $this");
+   }
+   if (port == 0) return "$scheme://$host";
+   return "$scheme://$host:$port";
+ }
+
+ void _writeAuthority(StringSink ss) {
+   _addIfNonEmpty(ss, userInfo, userInfo, "@");
+   ss.write(host == null ? "null" :
+            host.contains(':') ? '[$host]' : host);
+   if (port != 0) {
+     ss.write(":");
+     ss.write(port.toString());
+   }
+ }
+
+ String toString() {
+   StringBuffer sb = new StringBuffer();
+   _addIfNonEmpty(sb, scheme, scheme, ':');
+   if (hasAuthority || (scheme == "file")) {
+     sb.write("//");
+     _writeAuthority(sb);
+   }
+   sb.write(path);
+   _addIfNonEmpty(sb, query, "?", query);
+   _addIfNonEmpty(sb, fragment, "#", fragment);
+   return sb.toString();
+ }
+
+ bool operator==(other) {
+   if (other is! Uri) return false;
+   Uri uri = other;
+   return scheme == uri.scheme &amp;&amp;
+       userInfo == uri.userInfo &amp;&amp;
+       host == uri.host &amp;&amp;
+       port == uri.port &amp;&amp;
+       path == uri.path &amp;&amp;
+       query == uri.query &amp;&amp;
+       fragment == uri.fragment;
+ }
+
+ int get hashCode {
+   int combine(part, current) {
+     // The sum is truncated to 30 bits to make sure it fits into a Smi.
+     return (current * 31 + part.hashCode) &amp; 0x3FFFFFFF;
+   }
+   return combine(scheme, combine(userInfo, combine(host, combine(port,
+       combine(path, combine(query, combine(fragment, 1)))))));
+ }
+
+ static void _addIfNonEmpty(StringBuffer sb, String test,
+                            String first, String second) {
+   if ("" != test) {
+     sb.write(first);
+     sb.write(second);
+   }
+ }
+
+ /**
+  * Encode the string [component] using percent-encoding to make it
+  * safe for literal use as a URI component.
+  *
+  * All characters except uppercase and lowercase letters, digits and
+  * the characters `!$&amp;'()*+,;=:@` are percent-encoded. This is the
+  * set of characters specified in RFC 2396 and the which is
+  * specified for the encodeUriComponent in ECMA-262 version 5.1.
+  *
+  * When manually encoding path segments or query components remember
+  * to encode each part separately before building the path or query
+  * string.
+  *
+  * For encoding the query part consider using
+  * [encodeQueryComponent].
+  *
+  * To avoid the need for explicitly encoding use the [pathSegments]
+  * and [queryParameters] optional named arguments when constructing
+  * a [Uri].
+  */
+ static String encodeComponent(String component) {
+   return _uriEncode(_unreserved2396Table, component);
+ }
+
+ /**
+  * Encode the string [component] according to the HTML 4.01 rules
+  * for encoding the posting of a HTML form as a query string
+  * component.
+  *
+  * Spaces will be replaced with plus and all characters except for
+  * uppercase and lowercase letters, decimal digits and the
+  * characters `-._~`. Note that the set of characters encoded is a
+  * superset of what HTML 4.01 says as it refers to RFC 1738 for
+  * reserved characters.
+  *
+  * When manually encoding query components remember to encode each
+  * part separately before building the query string.
+  *
+  * To avoid the need for explicitly encoding the query use the
+  * [queryParameters] optional named arguments when constructing a
+  * [Uri].
+  *
+  * See http://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.2 for more
+  * details.
+  */
+ static String encodeQueryComponent(String component) {
+   return _uriEncode(_unreservedTable, component, spaceToPlus: true);
+ }
+
+ /**
+  * Decodes the percent-encoding in [encodedComponent].
+  *
+  * Note that decoding a URI component might change its meaning as
+  * some of the decoded characters could be characters with are
+  * delimiters for a given URI componene type. Always split a URI
+  * component using the delimiters for the component before decoding
+  * the individual parts.
+  *
+  * For handling the [path] and [query] components consider using
+  * [pathSegments] and [queryParameters] to get the separated and
+  * decoded component.
+  */
+ static String decodeComponent(String encodedComponent) {
+   return _uriDecode(encodedComponent);
+ }
+
+ static String decodeQueryComponent(String encodedComponent) {
+   return _uriDecode(encodedComponent, plusToSpace: true);
+ }
+
+ /**
+  * Encode the string [uri] using percent-encoding to make it
+  * safe for literal use as a full URI.
+  *
+  * All characters except uppercase and lowercase letters, digits and
+  * the characters `!#$&amp;'()*+,-./:;=?@_~` are percent-encoded. This
+  * is the set of characters specified in in ECMA-262 version 5.1 for
+  * the encodeURI function .
+  */
+ static String encodeFull(String uri) {
+   return _uriEncode(_encodeFullTable, uri);
+ }
+
+ /**
+  * Decodes the percent-encoding in [uri].
+  *
+  * Note that decoding a full URI might change its meaning as some of
+  * the decoded characters could be reserved characters. In most
+  * cases an encoded URI should be parsed into components using
+  * [Uri.parse] before decoding the separate components.
+  */
+ static String decodeFull(String uri) {
+   return _uriDecode(uri);
+ }
+
+ /**
+  * Returns the [query] split into a map according to the rules
+  * specified for FORM post in the
+  * [HTML 4.01 specification section 17.13.4]
+  * (http://www.w3.org/TR/REC-html40/interact/forms.html#h-17.13.4
+  * "HTML 4.01 section 17.13.4"). Each key and value in the returned
+  * map has been decoded. If the [query]
+  * is the empty string an empty map is returned.
+  *
+  * Keys in the query string that have no value are mapped to the
+  * empty string.
+  */
+ static Map&lt;String, String&gt; splitQueryString(String query) {
+   return query.split("&amp;").fold({}, (map, element) {
+     int index = element.indexOf("=");
+     if (index == -1) {
+       if (element != "") map[decodeQueryComponent(element)] = "";
+     } else if (index != 0) {
+       var key = element.substring(0, index);
+       var value = element.substring(index + 1);
+       map[Uri.decodeQueryComponent(key)] = decodeQueryComponent(value);
+     }
+     return map;
+   });
+ }
+
+ // Frequently used character codes.
+ static const int _PERCENT = 0x25;
+ static const int _PLUS = 0x2B;
+ static const int _SLASH = 0x2F;
+ static const int _ZERO = 0x30;
+ static const int _NINE = 0x39;
+ static const int _COLON = 0x3A;
+ static const int _UPPER_CASE_A = 0x41;
+ static const int _UPPER_CASE_F = 0x46;
+ static const int _LOWER_CASE_A = 0x61;
+ static const int _LOWER_CASE_F = 0x66;
+
+ /**
+  * This is the internal implementation of JavaScript's encodeURI function.
+  * It encodes all characters in the string [text] except for those
+  * that appear in [canonicalTable], and returns the escaped string.
+  */
+ static String _uriEncode(List&lt;int&gt; canonicalTable,
+                   String text,
+                   {bool spaceToPlus: false}) {
+   byteToHex(int v) {
+     final String hex = '0123456789ABCDEF';
+     return '%${hex[v &gt;&gt; 4]}${hex[v &amp; 0x0f]}';
+   }
+
+   StringBuffer result = new StringBuffer();
+   for (int i = 0; i &lt; text.length; i++) {
+     int ch = text.codeUnitAt(i);
+     if (ch &lt; 128 &amp;&amp; ((canonicalTable[ch &gt;&gt; 4] &amp; (1 &lt;&lt; (ch &amp; 0x0f))) != 0)) {
+       result.write(text[i]);
+     } else if (spaceToPlus &amp;&amp; text[i] == " ") {
+       result.write("+");
+     } else {
+       if (ch &gt;= 0xD800 &amp;&amp; ch &lt; 0xDC00) {
+         // Low surrogate. We expect a next char high surrogate.
+         ++i;
+         int nextCh = text.length == i ? 0 : text.codeUnitAt(i);
+         if (nextCh &gt;= 0xDC00 &amp;&amp; nextCh &lt; 0xE000) {
+           // convert the pair to a U+10000 codepoint
+           ch = 0x10000 + ((ch - 0xD800) &lt;&lt; 10) + (nextCh - 0xDC00);
+         } else {
+           throw new ArgumentError('Malformed URI');
+         }
+       }
+       for (int codepoint in codepointsToUtf8([ch])) {
+         result.write(byteToHex(codepoint));
+       }
+     }
+   }
+   return result.toString();
+ }
+
+ /**
+  * Convert a byte (2 character hex sequence) in string [s] starting
+  * at position [pos] to its ordinal value
+  */
+ static int _hexCharPairToByte(String s, int pos) {
+   int byte = 0;
+   for (int i = 0; i &lt; 2; i++) {
+     var charCode = s.codeUnitAt(pos + i);
+     if (0x30 &lt;= charCode &amp;&amp; charCode &lt;= 0x39) {
+       byte = byte * 16 + charCode - 0x30;
+     } else {
+       // Check ranges A-F (0x41-0x46) and a-f (0x61-0x66).
+       charCode |= 0x20;
+       if (0x61 &lt;= charCode &amp;&amp; charCode &lt;= 0x66) {
+         byte = byte * 16 + charCode - 0x57;
+       } else {
+         throw new ArgumentError("Invalid URL encoding");
+       }
+     }
+   }
+   return byte;
+ }
+
+ /**
+  * A JavaScript-like decodeURI function. It unescapes the string [text] and
+  * returns the unescaped string.
+  */
+ static String _uriDecode(String text, {bool plusToSpace: false}) {
+   StringBuffer result = new StringBuffer();
+   List&lt;int&gt; codepoints = new List&lt;int&gt;();
+   for (int i = 0; i &lt; text.length;) {
+     int ch = text.codeUnitAt(i);
+     if (ch != _PERCENT) {
+       if (plusToSpace &amp;&amp; ch == _PLUS) {
+         result.write(" ");
+       } else {
+         result.writeCharCode(ch);
+       }
+       i++;
+     } else {
+       codepoints.clear();
+       while (ch == _PERCENT) {
+         if (++i &gt; text.length - 2) {
+           throw new ArgumentError('Truncated URI');
+         }
+         codepoints.add(_hexCharPairToByte(text, i));
+         i += 2;
+         if (i == text.length) break;
+         ch = text.codeUnitAt(i);
+       }
+       result.write(decodeUtf8(codepoints));
+     }
+   }
+   return result.toString();
+ }
+
+ // Tables of char-codes organized as a bit vector of 128 bits where
+ // each bit indicate whether a character code on the 0-127 needs to
+ // be escaped or not.
+
+ // The unreserved characters of RFC 3986.
+ static const _unreservedTable = const [
+               //             LSB            MSB
+               //              |              |
+     0x0000,   // 0x00 - 0x0f  0000000000000000
+     0x0000,   // 0x10 - 0x1f  0000000000000000
+               //                           -.
+     0x6000,   // 0x20 - 0x2f  0000000000000110
+               //              0123456789
+     0x03ff,   // 0x30 - 0x3f  1111111111000000
+               //               ABCDEFGHIJKLMNO
+     0xfffe,   // 0x40 - 0x4f  0111111111111111
+               //              PQRSTUVWXYZ    _
+     0x87ff,   // 0x50 - 0x5f  1111111111100001
+               //               abcdefghijklmno
+     0xfffe,   // 0x60 - 0x6f  0111111111111111
+               //              pqrstuvwxyz   ~
+     0x47ff];  // 0x70 - 0x7f  1111111111100010
+
+ // The unreserved characters of RFC 2396.
+ static const _unreserved2396Table = const [
+               //             LSB            MSB
+               //              |              |
+     0x0000,   // 0x00 - 0x0f  0000000000000000
+     0x0000,   // 0x10 - 0x1f  0000000000000000
+               //               !     '()*  -.
+     0x6782,   // 0x20 - 0x2f  0100000111100110
+               //              0123456789
+     0x03ff,   // 0x30 - 0x3f  1111111111000000
+               //               ABCDEFGHIJKLMNO
+     0xfffe,   // 0x40 - 0x4f  0111111111111111
+               //              PQRSTUVWXYZ    _
+     0x87ff,   // 0x50 - 0x5f  1111111111100001
+               //               abcdefghijklmno
+     0xfffe,   // 0x60 - 0x6f  0111111111111111
+               //              pqrstuvwxyz   ~
+     0x47ff];  // 0x70 - 0x7f  1111111111100010
+
+ // Table of reserved characters specified by ECMAScript 5.
+ static const _encodeFullTable = const [
+               //             LSB            MSB
+               //              |              |
+     0x0000,   // 0x00 - 0x0f  0000000000000000
+     0x0000,   // 0x10 - 0x1f  0000000000000000
+               //               ! #$ &amp;'()*+,-./
+     0xf7da,   // 0x20 - 0x2f  0101101111101111
+               //              0123456789:; = ?
+     0xafff,   // 0x30 - 0x3f  1111111111110101
+               //              @ABCDEFGHIJKLMNO
+     0xffff,   // 0x40 - 0x4f  1111111111111111
+               //              PQRSTUVWXYZ    _
+     0x87ff,   // 0x50 - 0x5f  1111111111100001
+               //               abcdefghijklmno
+     0xfffe,   // 0x60 - 0x6f  0111111111111111
+               //              pqrstuvwxyz   ~
+     0x47ff];  // 0x70 - 0x7f  1111111111100010
+
+ // Characters allowed in the scheme.
+ static const _schemeTable = const [
+               //             LSB            MSB
+               //              |              |
+     0x0000,   // 0x00 - 0x0f  0000000000000000
+     0x0000,   // 0x10 - 0x1f  0000000000000000
+               //                         + -.
+     0x6800,   // 0x20 - 0x2f  0000000000010110
+               //              0123456789
+     0x03ff,   // 0x30 - 0x3f  1111111111000000
+               //               ABCDEFGHIJKLMNO
+     0xfffe,   // 0x40 - 0x4f  0111111111111111
+               //              PQRSTUVWXYZ
+     0x07ff,   // 0x50 - 0x5f  1111111111100001
+               //               abcdefghijklmno
+     0xfffe,   // 0x60 - 0x6f  0111111111111111
+               //              pqrstuvwxyz
+     0x07ff];  // 0x70 - 0x7f  1111111111100010
+
+ // Characters allowed in scheme except for upper case letters.
+ static const _schemeLowerTable = const [
+               //             LSB            MSB
+               //              |              |
+     0x0000,   // 0x00 - 0x0f  0000000000000000
+     0x0000,   // 0x10 - 0x1f  0000000000000000
+               //                         + -.
+     0x6800,   // 0x20 - 0x2f  0000000000010110
+               //              0123456789
+     0x03ff,   // 0x30 - 0x3f  1111111111000000
+               //
+     0x0000,   // 0x40 - 0x4f  0111111111111111
+               //
+     0x0000,   // 0x50 - 0x5f  1111111111100001
+               //               abcdefghijklmno
+     0xfffe,   // 0x60 - 0x6f  0111111111111111
+               //              pqrstuvwxyz
+     0x07ff];  // 0x70 - 0x7f  1111111111100010
+
+ // Sub delimiter characters combined with unreserved as of 3986.
+ // sub-delims  = "!" / "$" / "&amp;" / "'" / "(" / ")"
+ //             / "*" / "+" / "," / ";" / "="
+ // RFC 3986 section 2.3.
+ // unreserved  = ALPHA / DIGIT / "-" / "." / "_" / "~"
+ static const _subDelimitersTable = const [
+               //             LSB            MSB
+               //              |              |
+     0x0000,   // 0x00 - 0x0f  0000000000000000
+     0x0000,   // 0x10 - 0x1f  0000000000000000
+               //               !  $ &amp;'()*+,-.
+     0x7fd2,   // 0x20 - 0x2f  0100101111111110
+               //              0123456789 ; =
+     0x2bff,   // 0x30 - 0x3f  1111111111010100
+               //               ABCDEFGHIJKLMNO
+     0xfffe,   // 0x40 - 0x4f  0111111111111111
+               //              PQRSTUVWXYZ    _
+     0x87ff,   // 0x50 - 0x5f  1111111111100001
+               //               abcdefghijklmno
+     0xfffe,   // 0x60 - 0x6f  0111111111111111
+               //              pqrstuvwxyz   ~
+     0x47ff];  // 0x70 - 0x7f  1111111111100010
+
+ // Characters allowed in the path as of RFC 3986.
+ // RFC 3986 section 3.3.
+ // pchar = unreserved / pct-encoded / sub-delims / ":" / "@"
+ static const _pathCharTable = const [
+               //             LSB            MSB
+               //              |              |
+     0x0000,   // 0x00 - 0x0f  0000000000000000
+     0x0000,   // 0x10 - 0x1f  0000000000000000
+               //               !  $ &amp;'()*+,-.
+     0x7fd2,   // 0x20 - 0x2f  0100101111111110
+               //              0123456789:; =
+     0x2fff,   // 0x30 - 0x3f  1111111111110100
+               //              @ABCDEFGHIJKLMNO
+     0xffff,   // 0x40 - 0x4f  1111111111111111
+               //              PQRSTUVWXYZ    _
+     0x87ff,   // 0x50 - 0x5f  1111111111100001
+               //               abcdefghijklmno
+     0xfffe,   // 0x60 - 0x6f  0111111111111111
+               //              pqrstuvwxyz   ~
+     0x47ff];  // 0x70 - 0x7f  1111111111100010
+
+ // Characters allowed in the query as of RFC 3986.
+ // RFC 3986 section 3.4.
+ // query = *( pchar / "/" / "?" )
+ static const _queryCharTable = const [
+               //             LSB            MSB
+               //              |              |
+     0x0000,   // 0x00 - 0x0f  0000000000000000
+     0x0000,   // 0x10 - 0x1f  0000000000000000
+               //               !  $ &amp;'()*+,-./
+     0xffd2,   // 0x20 - 0x2f  0100101111111111
+               //              0123456789:; = ?
+     0xafff,   // 0x30 - 0x3f  1111111111110101
+               //              @ABCDEFGHIJKLMNO
+     0xffff,   // 0x40 - 0x4f  1111111111111111
+               //              PQRSTUVWXYZ    _
+     0x87ff,   // 0x50 - 0x5f  1111111111100001
+               //               abcdefghijklmno
+     0xfffe,   // 0x60 - 0x6f  0111111111111111
+               //              pqrstuvwxyz   ~
+     0x47ff];  // 0x70 - 0x7f  1111111111100010
+}
+</pre>
+</div>
+<div>
+<h3>Static Methods</h3>
+<div class="method"><h4 id="parse">
+<button class="show-code">Code</button>
+<a href="../dart_core/Uri.html">Uri</a> <strong>parse</strong>(<a href="../dart_core/String.html">String</a> uri) <a class="anchor-link" href="#parse"
+              title="Permalink to Uri.parse">#</a></h4>
+<div class="doc">
+<p>Creates a new URI object by parsing a URI string.</p>
+<pre class="source">
+static Uri parse(String uri) =&gt; new Uri._fromMatch(_splitRe.firstMatch(uri));
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="encodeComponent">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>encodeComponent</strong>(<a href="../dart_core/String.html">String</a> component) <a class="anchor-link" href="#encodeComponent"
+              title="Permalink to Uri.encodeComponent">#</a></h4>
+<div class="doc">
+<p>Encode the string 
+<span class="param">component</span> using percent-encoding to make it
+safe for literal use as a URI component.</p>
+<p>All characters except uppercase and lowercase letters, digits and
+the characters <code>!$&amp;'()*+,;=:@</code> are percent-encoded. This is the
+set of characters specified in RFC 2396 and the which is
+specified for the encodeUriComponent in ECMA-262 version 5.1.</p>
+<p>When manually encoding path segments or query components remember
+to encode each part separately before building the path or query
+string.</p>
+<p>For encoding the query part consider using
+<a class="crossref" href="../dart_core/Uri.html#encodeQueryComponent">encodeQueryComponent</a>.</p>
+<p>To avoid the need for explicitly encoding use the <a class="crossref" href="../dart_core/Uri.html#pathSegments">pathSegments</a>
+and <a class="crossref" href="../dart_core/Uri.html#queryParameters">queryParameters</a> optional named arguments when constructing
+a <a class="crossref" href="../dart_core/Uri.html#Uri">Uri</a>.</p>
+<pre class="source">
+static String encodeComponent(String component) {
+ return _uriEncode(_unreserved2396Table, component);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="encodeQueryComponent">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>encodeQueryComponent</strong>(<a href="../dart_core/String.html">String</a> component) <a class="anchor-link" href="#encodeQueryComponent"
+              title="Permalink to Uri.encodeQueryComponent">#</a></h4>
+<div class="doc">
+<p>Encode the string 
+<span class="param">component</span> according to the HTML 4.01 rules
+for encoding the posting of a HTML form as a query string
+component.</p>
+<p>Spaces will be replaced with plus and all characters except for
+uppercase and lowercase letters, decimal digits and the
+characters <code>-._~</code>. Note that the set of characters encoded is a
+superset of what HTML 4.01 says as it refers to RFC 1738 for
+reserved characters.</p>
+<p>When manually encoding query components remember to encode each
+part separately before building the query string.</p>
+<p>To avoid the need for explicitly encoding the query use the
+<a class="crossref" href="../dart_core/Uri.html#queryParameters">queryParameters</a> optional named arguments when constructing a
+<a class="crossref" href="../dart_core/Uri.html#Uri">Uri</a>.</p>
+<p>See http://www.w3.org/TR/html401/interact/forms.html#h-17.13.4.2 for more
+details.</p>
+<pre class="source">
+static String encodeQueryComponent(String component) {
+ return _uriEncode(_unreservedTable, component, spaceToPlus: true);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="decodeComponent">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>decodeComponent</strong>(<a href="../dart_core/String.html">String</a> encodedComponent) <a class="anchor-link" href="#decodeComponent"
+              title="Permalink to Uri.decodeComponent">#</a></h4>
+<div class="doc">
+<p>Decodes the percent-encoding in 
+<span class="param">encodedComponent</span>.</p>
+<p>Note that decoding a URI component might change its meaning as
+some of the decoded characters could be characters with are
+delimiters for a given URI componene type. Always split a URI
+component using the delimiters for the component before decoding
+the individual parts.</p>
+<p>For handling the <a class="crossref" href="../dart_core/Uri.html#path">path</a> and <a class="crossref" href="../dart_core/Uri.html#query">query</a> components consider using
+<a class="crossref" href="../dart_core/Uri.html#pathSegments">pathSegments</a> and <a class="crossref" href="../dart_core/Uri.html#queryParameters">queryParameters</a> to get the separated and
+decoded component.</p>
+<pre class="source">
+static String decodeComponent(String encodedComponent) {
+ return _uriDecode(encodedComponent);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="decodeQueryComponent">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>decodeQueryComponent</strong>(<a href="../dart_core/String.html">String</a> encodedComponent) <a class="anchor-link" href="#decodeQueryComponent"
+              title="Permalink to Uri.decodeQueryComponent">#</a></h4>
+<div class="doc">
+<pre class="source">
+static String decodeQueryComponent(String encodedComponent) {
+ return _uriDecode(encodedComponent, plusToSpace: true);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="encodeFull">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>encodeFull</strong>(<a href="../dart_core/String.html">String</a> uri) <a class="anchor-link" href="#encodeFull"
+              title="Permalink to Uri.encodeFull">#</a></h4>
+<div class="doc">
+<p>Encode the string 
+<span class="param">uri</span> using percent-encoding to make it
+safe for literal use as a full URI.</p>
+<p>All characters except uppercase and lowercase letters, digits and
+the characters <code>!#$&amp;'()*+,-./:;=?@_~</code> are percent-encoded. This
+is the set of characters specified in in ECMA-262 version 5.1 for
+the encodeURI function .</p>
+<pre class="source">
+static String encodeFull(String uri) {
+ return _uriEncode(_encodeFullTable, uri);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="decodeFull">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>decodeFull</strong>(<a href="../dart_core/String.html">String</a> uri) <a class="anchor-link" href="#decodeFull"
+              title="Permalink to Uri.decodeFull">#</a></h4>
+<div class="doc">
+<p>Decodes the percent-encoding in 
+<span class="param">uri</span>.</p>
+<p>Note that decoding a full URI might change its meaning as some of
+the decoded characters could be reserved characters. In most
+cases an encoded URI should be parsed into components using
+<a class="crossref" href="../dart_core/Uri.html#parse">Uri.parse</a> before decoding the separate components.</p>
+<pre class="source">
+static String decodeFull(String uri) {
+ return _uriDecode(uri);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="splitQueryString">
+<button class="show-code">Code</button>
+<a href="../dart_core/Map.html">Map</a>&lt;<a href="../dart_core/String.html">String</a>, <a href="../dart_core/String.html">String</a>&gt; <strong>splitQueryString</strong>(<a href="../dart_core/String.html">String</a> query) <a class="anchor-link" href="#splitQueryString"
+              title="Permalink to Uri.splitQueryString">#</a></h4>
+<div class="doc">
+<p>Returns the 
+<span class="param">query</span> split into a map according to the rules
+specified for FORM post in the
+<a href="http://www.w3.org/TR/REC-html40/interact/forms.html#h-17.13.4
+" title="HTML 4.01 section 17.13.4">HTML 4.01 specification section 17.13.4</a>. Each key and value in the returned
+map has been decoded. If the 
+<span class="param">query</span>
+is the empty string an empty map is returned.</p>
+<p>Keys in the query string that have no value are mapped to the
+empty string.</p>
+<pre class="source">
+static Map&lt;String, String&gt; splitQueryString(String query) {
+ return query.split("&amp;").fold({}, (map, element) {
+   int index = element.indexOf("=");
+   if (index == -1) {
+     if (element != "") map[decodeQueryComponent(element)] = "";
+   } else if (index != 0) {
+     var key = element.substring(0, index);
+     var value = element.substring(index + 1);
+     map[Uri.decodeQueryComponent(key)] = decodeQueryComponent(value);
+   }
+   return map;
+ });
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="Uri">
+<button class="show-code">Code</button>
+new <strong>Uri</strong>({scheme, <a href="../dart_core/String.html">String</a> userInfo: "", <a href="../dart_core/String.html">String</a> host: "", port: 0, <a href="../dart_core/String.html">String</a> path, <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/String.html">String</a>&gt; pathSegments, <a href="../dart_core/String.html">String</a> query, <a href="../dart_core/Map.html">Map</a>&lt;<a href="../dart_core/String.html">String</a>, <a href="../dart_core/String.html">String</a>&gt; queryParameters, fragment: ""}) <a class="anchor-link" href="#Uri"
+              title="Permalink to Uri.Uri">#</a></h4>
+<div class="doc">
+<p>Create a new URI from its components.</p>
+<p>Each component is set through a named argument. Any number of
+components can be provided. The default value for the components
+not provided is the empry string, except for 
+<span class="param">port</span> which has a
+default value of 0. The 
+<span class="param">path</span> and 
+<span class="param">query</span> components can be set
+using two different named arguments.</p>
+<p>The scheme component is set through 
+<span class="param">scheme</span>. The scheme is
+normalized to all lowercase letters.</p>
+<p>The user info part of the authority component is set through
+
+<span class="param">userInfo</span>.</p>
+<p>The host part of the authority component is set through
+
+<span class="param">host</span>. The host can either be a hostname, a IPv4 address or an
+IPv6 address, contained in '<code>' and '</code>'. If the host contains a
+':' character, the '<code>' and '</code>' are added if not already provided.</p>
+<p>The port part of the authority component is set through
+
+<span class="param">port</span>. The port is normalized for scheme http and https where
+port 80 and port 443 respectively is set.</p>
+<p>The path component is set through either 
+<span class="param">path</span> or
+
+<span class="param">pathSegments</span>. When 
+<span class="param">path</span> is used, the provided string is
+expected to be fully percent-encoded, and is used in its literal
+form. When 
+<span class="param">pathSegments</span> is used, each of the provided segments
+is percent-encoded and joined using the forward slash
+separator. The percent-encoding of the path segments encodes all
+characters except for the unreserved characters and the following
+list of characters: <code>!$&amp;'()*+,;=:@</code>. If the other components
+calls for an absolute path a leading slash <code>/</code> is prepended if
+not already there.</p>
+<p>The query component is set through either 
+<span class="param">query</span> or
+
+<span class="param">queryParameters</span>. When 
+<span class="param">query</span> is used the provided string is
+expected to be fully percent-encoded and is used in its literal
+form. When 
+<span class="param">queryParameters</span> is used the query is built from the
+provided map. Each key and value in the map is percent-encoded
+and joined using equal and ampersand characters. The
+percent-encoding of the keys and values encodes all characters
+except for the unreserved characters.</p>
+<p>The fragment component is set through 
+<span class="param">fragment</span>.</p>
+<pre class="source">
+Uri({scheme,
+    this.userInfo: "",
+    this.host: "",
+    port: 0,
+    String path,
+    List&lt;String&gt; pathSegments,
+    String query,
+    Map&lt;String, String&gt; queryParameters,
+    fragment: ""}) :
+   scheme = _makeScheme(scheme),
+   query = _makeQuery(query, queryParameters),
+   fragment = _makeFragment(fragment) {
+ // Perform scheme specific normalization.
+ if (scheme == "http" &amp;&amp; port == 80) {
+   _port = 0;
+ } else if (scheme == "https" &amp;&amp; port == 443) {
+   _port = 0;
+ } else {
+   _port = port;
+ }
+ // Fill the path.
+ _path = _makePath(path, pathSegments);
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="authority">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>authority</strong> <a class="anchor-link"
+            href="#authority"
+            title="Permalink to Uri.authority">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the authority component.</p>
+<p>The authority is formatted from the <a class="crossref" href="../dart_core/Uri.html#userInfo">userInfo</a>, <a class="crossref" href="../dart_core/Uri.html#host">host</a> and <a class="crossref" href="../dart_core/Uri.html#port">port</a>
+parts.</p>
+<p>Returns the empty string if there is no authority component.</p>
+<pre class="source">
+String get authority {
+ if (!hasAuthority) return "";
+ var sb = new StringBuffer();
+ _writeAuthority(sb);
+ return sb.toString();
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="fragment">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>fragment</strong> <a class="anchor-link"
+            href="#fragment"
+            title="Permalink to Uri.fragment">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the fragment identifier component.</p>
+<p>Returns the empty string if there is no fragment identifier
+component.</p>
+<pre class="source">
+final String fragment
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="hasAuthority">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>hasAuthority</strong> <a class="anchor-link"
+            href="#hasAuthority"
+            title="Permalink to Uri.hasAuthority">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns whether the URI has an <a class="crossref" href="../dart_core/Uri.html#authority">authority</a> component.</p>
+<pre class="source">
+bool get hasAuthority =&gt; host != "";
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="hashCode">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>hashCode</strong> <a class="anchor-link"
+            href="#hashCode"
+            title="Permalink to Uri.hashCode">#</a>
+        </h4>
+        <div class="doc">
+<div class="inherited">
+<p>Get a hash code for this object.</p>
+<p>All objects have hash codes. Hash codes are guaranteed to be the
+same for objects that are equal when compared using the equality
+operator <code>==</code>. Other than that there are no guarantees about
+the hash codes. They will not be consistent between runs and
+there are no distribution guarantees.</p>
+<p>If a subclass overrides <a class="crossref" href="../dart_core/Uri.html#hashCode">hashCode</a> it should override the
+equality operator as well to maintain consistency.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+int get hashCode {
+ int combine(part, current) {
+   // The sum is truncated to 30 bits to make sure it fits into a Smi.
+   return (current * 31 + part.hashCode) &amp; 0x3FFFFFFF;
+ }
+ return combine(scheme, combine(userInfo, combine(host, combine(port,
+     combine(path, combine(query, combine(fragment, 1)))))));
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="host">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>host</strong> <a class="anchor-link"
+            href="#host"
+            title="Permalink to Uri.host">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the host part of the authority component.</p>
+<p>Returns the empty string if there is no authority component and
+hence no host.</p>
+<pre class="source">
+final String host
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="isAbsolute">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isAbsolute</strong> <a class="anchor-link"
+            href="#isAbsolute"
+            title="Permalink to Uri.isAbsolute">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns whether the URI is absolute.</p>
+<pre class="source">
+bool get isAbsolute =&gt; scheme != "" &amp;&amp; fragment == "";
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="origin">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>origin</strong> <a class="anchor-link"
+            href="#origin"
+            title="Permalink to Uri.origin">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the origin of the URI in the form scheme://host:port for the
+schemes http and https.</p>
+<p>It is an error if the scheme is not "http" or "https".</p>
+<p>See: http://www.w3.org/TR/2011/WD-html5-20110405/origin-0.html#origin</p>
+<pre class="source">
+String get origin {
+ if (scheme == "" || host == null || host == "") {
+   throw new StateError("Cannot use origin without a scheme: $this");
+ }
+ if (scheme != "http" &amp;&amp; scheme != "https") {
+   throw new StateError(
+     "Origin is only applicable schemes http and https: $this");
+ }
+ if (port == 0) return "$scheme://$host";
+ return "$scheme://$host:$port";
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="path">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>path</strong> <a class="anchor-link"
+            href="#path"
+            title="Permalink to Uri.path">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the path component.</p>
+<p>The returned path is encoded. To get direct access to the decoded
+path use <a class="crossref" href="../dart_core/Uri.html#pathSegments">pathSegments</a>.</p>
+<p>Returns the empty string if there is no path component.</p>
+<pre class="source">
+String get path =&gt; _path;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="pathSegments">
+<button class="show-code">Code</button>
+final <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_core/String.html">String</a>&gt;         <strong>pathSegments</strong> <a class="anchor-link"
+            href="#pathSegments"
+            title="Permalink to Uri.pathSegments">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the URI path split into its segments. Each of the
+segments in the returned list have been decoded. If the path is
+empty the empty list will be returned. A leading slash <code>/</code> does
+not affect the segments returned.</p>
+<p>The returned list is unmodifiable and will throw <a class="crossref" href="../dart_core/UnsupportedError.html">UnsupportedError</a> on any
+calls that would mutate it.</p>
+<pre class="source">
+List&lt;String&gt; get pathSegments {
+ if (_pathSegments == null) {
+   var pathToSplit = !path.isEmpty &amp;&amp; path.codeUnitAt(0) == _SLASH
+                     ? path.substring(1)
+                     : path;
+   _pathSegments = new UnmodifiableListView(
+     pathToSplit == "" ? const&lt;String&gt;[]
+                       : pathToSplit.split("/")
+                                    .map(Uri.decodeComponent)
+                                    .toList(growable: false));
+ }
+ return _pathSegments;
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="port">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>port</strong> <a class="anchor-link"
+            href="#port"
+            title="Permalink to Uri.port">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the port part of the authority component.</p>
+<p>Returns 0 if there is no port in the authority component.</p>
+<pre class="source">
+int get port =&gt; _port;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="query">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>query</strong> <a class="anchor-link"
+            href="#query"
+            title="Permalink to Uri.query">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the query component. The returned query is encoded. To get
+direct access to the decoded query use <a class="crossref" href="../dart_core/Uri.html#queryParameters">queryParameters</a>.</p>
+<p>Returns the empty string if there is no query component.</p>
+<pre class="source">
+final String query
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="queryParameters">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Map.html">Map</a>&lt;<a href="../dart_core/String.html">String</a>, <a href="../dart_core/String.html">String</a>&gt;         <strong>queryParameters</strong> <a class="anchor-link"
+            href="#queryParameters"
+            title="Permalink to Uri.queryParameters">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the URI query split into a map according to the rules
+specified for FORM post in the <a href="http://www.w3.org/TR/REC-html40/interact/forms.html#h-17.13.4
+" title="HTML 4.01 section 17.13.4">HTML 4.01 specification section 17.13.4</a>. Each key and value in the returned map
+has been decoded. If there is no query the empty map is returned.</p>
+<p>Keys in the query string that have no value are mapped to the
+empty string.</p>
+<p>The returned map is unmodifiable and will throw <a class="crossref" href="../dart_core/UnsupportedError.html">UnsupportedError</a> on any
+calls that would mutate it.</p>
+<pre class="source">
+Map&lt;String, String&gt; get queryParameters {
+ if (_queryParameters == null) {
+   _queryParameters = new _UnmodifiableMap(splitQueryString(query));
+ }
+ return _queryParameters;
+}
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="scheme">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>scheme</strong> <a class="anchor-link"
+            href="#scheme"
+            title="Permalink to Uri.scheme">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the scheme component.</p>
+<p>Returns the empty string if there is no scheme component.</p>
+<pre class="source">
+final String scheme
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="userInfo">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>userInfo</strong> <a class="anchor-link"
+            href="#userInfo"
+            title="Permalink to Uri.userInfo">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns the user info part of the authority component.</p>
+<p>Returns the empty string if there is no user info in the
+authority component.</p>
+<pre class="source">
+final String userInfo
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Operators</h3>
+<div class="method"><h4 id="==">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>operator ==</strong>(other) <a class="anchor-link" href="#=="
+              title="Permalink to Uri.operator ==">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>The equality operator.</p>
+<p>The default behavior for all <a class="crossref" href="../dart_core/Object.html">Object</a>s is to return true if and
+only if <code>this</code> and 
+<span class="param">other</span> are the same object.</p>
+<p>If a subclass overrides the equality operator it should override
+the <a class="crossref" href="../dart_core/Uri.html#hashCode">hashCode</a> method as well to maintain consistency.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+bool operator==(other) {
+ if (other is! Uri) return false;
+ Uri uri = other;
+ return scheme == uri.scheme &amp;&amp;
+     userInfo == uri.userInfo &amp;&amp;
+     host == uri.host &amp;&amp;
+     port == uri.port &amp;&amp;
+     path == uri.path &amp;&amp;
+     query == uri.query &amp;&amp;
+     fragment == uri.fragment;
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method"><h4 id="resolve">
+<button class="show-code">Code</button>
+<a href="../dart_core/Uri.html">Uri</a> <strong>resolve</strong>(<a href="../dart_core/String.html">String</a> uri) <a class="anchor-link" href="#resolve"
+              title="Permalink to Uri.resolve">#</a></h4>
+<div class="doc">
+<pre class="source">
+Uri resolve(String uri) {
+ return resolveUri(Uri.parse(uri));
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="resolveUri">
+<button class="show-code">Code</button>
+<a href="../dart_core/Uri.html">Uri</a> <strong>resolveUri</strong>(<a href="../dart_core/Uri.html">Uri</a> reference) <a class="anchor-link" href="#resolveUri"
+              title="Permalink to Uri.resolveUri">#</a></h4>
+<div class="doc">
+<pre class="source">
+Uri resolveUri(Uri reference) {
+ // From RFC 3986.
+ String targetScheme;
+ String targetUserInfo;
+ String targetHost;
+ int targetPort;
+ String targetPath;
+ String targetQuery;
+ if (reference.scheme != "") {
+   targetScheme = reference.scheme;
+   targetUserInfo = reference.userInfo;
+   targetHost = reference.host;
+   targetPort = reference.port;
+   targetPath = _removeDotSegments(reference.path);
+   targetQuery = reference.query;
+ } else {
+   if (reference.hasAuthority) {
+     targetUserInfo = reference.userInfo;
+     targetHost = reference.host;
+     targetPort = reference.port;
+     targetPath = _removeDotSegments(reference.path);
+     targetQuery = reference.query;
+   } else {
+     if (reference.path == "") {
+       targetPath = this.path;
+       if (reference.query != "") {
+         targetQuery = reference.query;
+       } else {
+         targetQuery = this.query;
+       }
+     } else {
+       if (reference.path.startsWith("/")) {
+         targetPath = _removeDotSegments(reference.path);
+       } else {
+         targetPath = _removeDotSegments(_merge(this.path, reference.path));
+       }
+       targetQuery = reference.query;
+     }
+     targetUserInfo = this.userInfo;
+     targetHost = this.host;
+     targetPort = this.port;
+   }
+   targetScheme = this.scheme;
+ }
+ return new Uri(scheme: targetScheme,
+                userInfo: targetUserInfo,
+                host: targetHost,
+                port: targetPort,
+                path: targetPath,
+                query: targetQuery,
+                fragment: reference.fragment);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="toString">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>toString</strong>() <a class="anchor-link" href="#toString"
+              title="Permalink to Uri.toString">#</a></h4>
+<div class="doc">
+<div class="inherited">
+<p>Returns a string representation of this object.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+String toString() {
+ StringBuffer sb = new StringBuffer();
+ _addIfNonEmpty(sb, scheme, scheme, ':');
+ if (hasAuthority || (scheme == "file")) {
+   sb.write("//");
+   _writeAuthority(sb);
+ }
+ sb.write(path);
+ _addIfNonEmpty(sb, query, "?", query);
+ _addIfNonEmpty(sb, fragment, "#", fragment);
+ return sb.toString();
+}
+</pre>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-06-21 06:35:07.068</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

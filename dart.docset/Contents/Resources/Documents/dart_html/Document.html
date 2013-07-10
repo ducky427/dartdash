@@ -1,0 +1,3449 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>Document class / dart:html Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:html" data-type="Document">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_html.html">dart:html</a> &rsaquo; <a href="../dart_html/Document.html">Document</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../crypto.html">crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><ul class="icon">
+<li><a href="../dart_html/AbstractWorker.html"><div class="icon-class"></div>AbstractWorker</a></li>
+<li><a href="../dart_html/AnchorElement.html"><div class="icon-class"></div>AnchorElement</a></li>
+<li><a href="../dart_html/AnimationEvent.html"><div class="icon-class"></div>AnimationEvent</a></li>
+<li><a href="../dart_html/ApplicationCache.html"><div class="icon-class"></div>ApplicationCache</a></li>
+<li><a href="../dart_html/AreaElement.html"><div class="icon-class"></div>AreaElement</a></li>
+<li><a href="../dart_html/AudioElement.html"><div class="icon-class"></div>AudioElement</a></li>
+<li><a href="../dart_html/AutocompleteErrorEvent.html"><div class="icon-class"></div>AutocompleteErrorEvent</a></li>
+<li><a href="../dart_html/BarProp.html"><div class="icon-class"></div>BarProp</a></li>
+<li><a href="../dart_html/BaseElement.html"><div class="icon-class"></div>BaseElement</a></li>
+<li><a href="../dart_html/BeforeLoadEvent.html"><div class="icon-class"></div>BeforeLoadEvent</a></li>
+<li><a href="../dart_html/BeforeUnloadEvent.html"><div class="icon-class"></div>BeforeUnloadEvent</a></li>
+<li><a href="../dart_html/Blob.html"><div class="icon-class"></div>Blob</a></li>
+<li><a href="../dart_html/BodyElement.html"><div class="icon-class"></div>BodyElement</a></li>
+<li><a href="../dart_html/BRElement.html"><div class="icon-class"></div>BRElement</a></li>
+<li><a href="../dart_html/ButtonElement.html"><div class="icon-class"></div>ButtonElement</a></li>
+<li><a href="../dart_html/ButtonInputElement.html"><div class="icon-class"></div>ButtonInputElement</a></li>
+<li><a href="../dart_html/Canvas2DContextAttributes.html"><div class="icon-class"></div>Canvas2DContextAttributes</a></li>
+<li><a href="../dart_html/CanvasElement.html"><div class="icon-class"></div>CanvasElement</a></li>
+<li><a href="../dart_html/CanvasGradient.html"><div class="icon-class"></div>CanvasGradient</a></li>
+<li><a href="../dart_html/CanvasImageSource.html"><div class="icon-class"></div>CanvasImageSource</a></li>
+<li><a href="../dart_html/CanvasPattern.html"><div class="icon-class"></div>CanvasPattern</a></li>
+<li><a href="../dart_html/CanvasRenderingContext.html"><div class="icon-class"></div>CanvasRenderingContext</a></li>
+<li><a href="../dart_html/CanvasRenderingContext2D.html"><div class="icon-class"></div>CanvasRenderingContext2D</a></li>
+<li><a href="../dart_html/CDataSection.html"><div class="icon-class"></div>CDataSection</a></li>
+<li><a href="../dart_html/CharacterData.html"><div class="icon-class"></div>CharacterData</a></li>
+<li><a href="../dart_html/CheckboxInputElement.html"><div class="icon-class"></div>CheckboxInputElement</a></li>
+<li><a href="../dart_html/CloseEvent.html"><div class="icon-class"></div>CloseEvent</a></li>
+<li><a href="../dart_html/Comment.html"><div class="icon-class"></div>Comment</a></li>
+<li><a href="../dart_html/Composition.html"><div class="icon-class"></div>Composition</a></li>
+<li><a href="../dart_html/CompositionEvent.html"><div class="icon-class"></div>CompositionEvent</a></li>
+<li><a href="../dart_html/CompoundBinding.html"><div class="icon-class"></div>CompoundBinding</a></li>
+<li><a href="../dart_html/CompoundBindingCombinator.html"><div class="icon-interface"></div>CompoundBindingCombinator</a></li>
+<li><a href="../dart_html/Console.html"><div class="icon-class"></div>Console</a></li>
+<li><a href="../dart_html/ContentElement.html"><div class="icon-class"></div>ContentElement</a></li>
+<li><a href="../dart_html/Coordinates.html"><div class="icon-class"></div>Coordinates</a></li>
+<li><a href="../dart_html/Crypto.html"><div class="icon-class"></div>Crypto</a></li>
+<li><a href="../dart_html/Css.html"><div class="icon-class"></div>Css</a></li>
+<li><a href="../dart_html/CssCharsetRule.html"><div class="icon-class"></div>CssCharsetRule</a></li>
+<li><a href="../dart_html/CssClassSet.html"><div class="icon-class"></div>CssClassSet</a></li>
+<li><a href="../dart_html/CssFilterRule.html"><div class="icon-class"></div>CssFilterRule</a></li>
+<li><a href="../dart_html/CssFilterValue.html"><div class="icon-class"></div>CssFilterValue</a></li>
+<li><a href="../dart_html/CssFontFaceLoadEvent.html"><div class="icon-class"></div>CssFontFaceLoadEvent</a></li>
+<li><a href="../dart_html/CssFontFaceRule.html"><div class="icon-class"></div>CssFontFaceRule</a></li>
+<li><a href="../dart_html/CssHostRule.html"><div class="icon-class"></div>CssHostRule</a></li>
+<li><a href="../dart_html/CssImportRule.html"><div class="icon-class"></div>CssImportRule</a></li>
+<li><a href="../dart_html/CssKeyframeRule.html"><div class="icon-class"></div>CssKeyframeRule</a></li>
+<li><a href="../dart_html/CssKeyframesRule.html"><div class="icon-class"></div>CssKeyframesRule</a></li>
+<li><a href="../dart_html/CssMatrix.html"><div class="icon-class"></div>CssMatrix</a></li>
+<li><a href="../dart_html/CssMediaRule.html"><div class="icon-class"></div>CssMediaRule</a></li>
+<li><a href="../dart_html/CssMixFunctionValue.html"><div class="icon-class"></div>CssMixFunctionValue</a></li>
+<li><a href="../dart_html/CssPageRule.html"><div class="icon-class"></div>CssPageRule</a></li>
+<li><a href="../dart_html/CssRegionRule.html"><div class="icon-class"></div>CssRegionRule</a></li>
+<li><a href="../dart_html/CssRule.html"><div class="icon-class"></div>CssRule</a></li>
+<li><a href="../dart_html/CssStyleDeclaration.html"><div class="icon-class"></div>CssStyleDeclaration</a></li>
+<li><a href="../dart_html/CssStyleRule.html"><div class="icon-class"></div>CssStyleRule</a></li>
+<li><a href="../dart_html/CssStyleSheet.html"><div class="icon-class"></div>CssStyleSheet</a></li>
+<li><a href="../dart_html/CssSupportsRule.html"><div class="icon-class"></div>CssSupportsRule</a></li>
+<li><a href="../dart_html/CssTransformValue.html"><div class="icon-class"></div>CssTransformValue</a></li>
+<li><a href="../dart_html/CssUnknownRule.html"><div class="icon-class"></div>CssUnknownRule</a></li>
+<li><a href="../dart_html/CustomBindingSyntax.html"><div class="icon-class"></div>CustomBindingSyntax</a></li>
+<li><a href="../dart_html/CustomElementConstructor.html"><div class="icon-class"></div>CustomElementConstructor</a></li>
+<li><a href="../dart_html/CustomEvent.html"><div class="icon-class"></div>CustomEvent</a></li>
+<li><a href="../dart_html/DatabaseCallback.html"><div class="icon-interface"></div>DatabaseCallback</a></li>
+<li><a href="../dart_html/DataListElement.html"><div class="icon-class"></div>DataListElement</a></li>
+<li><a href="../dart_html/DataTransfer.html"><div class="icon-class"></div>DataTransfer</a></li>
+<li><a href="../dart_html/DataTransferItem.html"><div class="icon-class"></div>DataTransferItem</a></li>
+<li><a href="../dart_html/DataTransferItemList.html"><div class="icon-class"></div>DataTransferItemList</a></li>
+<li><a href="../dart_html/DateInputElement.html"><div class="icon-class"></div>DateInputElement</a></li>
+<li><a href="../dart_html/DetailsElement.html"><div class="icon-class"></div>DetailsElement</a></li>
+<li><a href="../dart_html/DeviceAcceleration.html"><div class="icon-class"></div>DeviceAcceleration</a></li>
+<li><a href="../dart_html/DeviceMotionEvent.html"><div class="icon-class"></div>DeviceMotionEvent</a></li>
+<li><a href="../dart_html/DeviceOrientationEvent.html"><div class="icon-class"></div>DeviceOrientationEvent</a></li>
+<li><a href="../dart_html/DeviceRotationRate.html"><div class="icon-class"></div>DeviceRotationRate</a></li>
+<li><a href="../dart_html/DialogElement.html"><div class="icon-class"></div>DialogElement</a></li>
+<li><a href="../dart_html/DirectoryEntry.html"><div class="icon-class"></div>DirectoryEntry</a></li>
+<li><a href="../dart_html/DirectoryReader.html"><div class="icon-class"></div>DirectoryReader</a></li>
+<li><a href="../dart_html/DivElement.html"><div class="icon-class"></div>DivElement</a></li>
+<li><a href="../dart_html/DListElement.html"><div class="icon-class"></div>DListElement</a></li>
+<li><div class="icon-class"></div><strong>Document</strong></li>
+<li><a href="../dart_html/DocumentFragment.html"><div class="icon-class"></div>DocumentFragment</a></li>
+<li><a href="../dart_html/DocumentType.html"><div class="icon-class"></div>DocumentType</a></li>
+<li><a href="../dart_html/DomImplementation.html"><div class="icon-class"></div>DomImplementation</a></li>
+<li><a href="../dart_html/DomParser.html"><div class="icon-class"></div>DomParser</a></li>
+<li><a href="../dart_html/DomSettableTokenList.html"><div class="icon-class"></div>DomSettableTokenList</a></li>
+<li><a href="../dart_html/DomStringList.html"><div class="icon-class"></div>DomStringList</a></li>
+<li><a href="../dart_html/DomStringMap.html"><div class="icon-class"></div>DomStringMap</a></li>
+<li><a href="../dart_html/DomTokenList.html"><div class="icon-class"></div>DomTokenList</a></li>
+<li><a href="../dart_html/Element.html"><div class="icon-class"></div>Element</a></li>
+<li><a href="../dart_html/ElementList.html"><div class="icon-class"></div>ElementList&lt;T&gt;</a></li>
+<li><a href="../dart_html/ElementTimeControl.html"><div class="icon-class"></div>ElementTimeControl</a></li>
+<li><a href="../dart_html/ElementTraversal.html"><div class="icon-class"></div>ElementTraversal</a></li>
+<li><a href="../dart_html/EmailInputElement.html"><div class="icon-class"></div>EmailInputElement</a></li>
+<li><a href="../dart_html/EmbedElement.html"><div class="icon-class"></div>EmbedElement</a></li>
+<li><a href="../dart_html/Entry.html"><div class="icon-class"></div>Entry</a></li>
+<li><a href="../dart_html/ErrorEvent.html"><div class="icon-class"></div>ErrorEvent</a></li>
+<li><a href="../dart_html/Event.html"><div class="icon-class"></div>Event</a></li>
+<li><a href="../dart_html/EventListener.html"><div class="icon-interface"></div>EventListener</a></li>
+<li><a href="../dart_html/Events.html"><div class="icon-class"></div>Events</a></li>
+<li><a href="../dart_html/EventSource.html"><div class="icon-class"></div>EventSource</a></li>
+<li><a href="../dart_html/EventStreamProvider.html"><div class="icon-class"></div>EventStreamProvider&lt;T&gt;</a></li>
+<li><a href="../dart_html/EventTarget.html"><div class="icon-class"></div>EventTarget</a></li>
+<li><a href="../dart_html/FieldSetElement.html"><div class="icon-class"></div>FieldSetElement</a></li>
+<li><a href="../dart_html/File.html"><div class="icon-class"></div>File</a></li>
+<li><a href="../dart_html/FileEntry.html"><div class="icon-class"></div>FileEntry</a></li>
+<li><a href="../dart_html/FileList.html"><div class="icon-class"></div>FileList</a></li>
+<li><a href="../dart_html/FileReader.html"><div class="icon-class"></div>FileReader</a></li>
+<li><a href="../dart_html/FileSystem.html"><div class="icon-class"></div>FileSystem</a></li>
+<li><a href="../dart_html/FileUploadInputElement.html"><div class="icon-class"></div>FileUploadInputElement</a></li>
+<li><a href="../dart_html/FileWriter.html"><div class="icon-class"></div>FileWriter</a></li>
+<li><a href="../dart_html/FixedSizeListIterator.html"><div class="icon-class"></div>FixedSizeListIterator&lt;T&gt;</a></li>
+<li><a href="../dart_html/FocusEvent.html"><div class="icon-class"></div>FocusEvent</a></li>
+<li><a href="../dart_html/FontLoader.html"><div class="icon-class"></div>FontLoader</a></li>
+<li><a href="../dart_html/FormData.html"><div class="icon-class"></div>FormData</a></li>
+<li><a href="../dart_html/FormElement.html"><div class="icon-class"></div>FormElement</a></li>
+<li><a href="../dart_html/Gamepad.html"><div class="icon-class"></div>Gamepad</a></li>
+<li><a href="../dart_html/Geolocation.html"><div class="icon-class"></div>Geolocation</a></li>
+<li><a href="../dart_html/Geoposition.html"><div class="icon-class"></div>Geoposition</a></li>
+<li><a href="../dart_html/HashChangeEvent.html"><div class="icon-class"></div>HashChangeEvent</a></li>
+<li><a href="../dart_html/HeadElement.html"><div class="icon-class"></div>HeadElement</a></li>
+<li><a href="../dart_html/HeadingElement.html"><div class="icon-class"></div>HeadingElement</a></li>
+<li><a href="../dart_html/HiddenInputElement.html"><div class="icon-class"></div>HiddenInputElement</a></li>
+<li><a href="../dart_html/History.html"><div class="icon-class"></div>History</a></li>
+<li><a href="../dart_html/HistoryBase.html"><div class="icon-class"></div>HistoryBase</a></li>
+<li><a href="../dart_html/HRElement.html"><div class="icon-class"></div>HRElement</a></li>
+<li><a href="../dart_html/HtmlAllCollection.html"><div class="icon-class"></div>HtmlAllCollection</a></li>
+<li><a href="../dart_html/HtmlCollection.html"><div class="icon-class"></div>HtmlCollection</a></li>
+<li><a href="../dart_html/HtmlDocument.html"><div class="icon-class"></div>HtmlDocument</a></li>
+<li><a href="../dart_html/HtmlElement.html"><div class="icon-class"></div>HtmlElement</a></li>
+<li><a href="../dart_html/HtmlFormControlsCollection.html"><div class="icon-class"></div>HtmlFormControlsCollection</a></li>
+<li><a href="../dart_html/HtmlOptionsCollection.html"><div class="icon-class"></div>HtmlOptionsCollection</a></li>
+<li><a href="../dart_html/HttpRequest.html"><div class="icon-class"></div>HttpRequest</a></li>
+<li><a href="../dart_html/HttpRequestProgressEvent.html"><div class="icon-class"></div>HttpRequestProgressEvent</a></li>
+<li><a href="../dart_html/HttpRequestUpload.html"><div class="icon-class"></div>HttpRequestUpload</a></li>
+<li><a href="../dart_html/IFrameElement.html"><div class="icon-class"></div>IFrameElement</a></li>
+<li><a href="../dart_html/ImageButtonInputElement.html"><div class="icon-class"></div>ImageButtonInputElement</a></li>
+<li><a href="../dart_html/ImageData.html"><div class="icon-class"></div>ImageData</a></li>
+<li><a href="../dart_html/ImageElement.html"><div class="icon-class"></div>ImageElement</a></li>
+<li><a href="../dart_html/ImmutableListMixin.html"><div class="icon-class"></div>ImmutableListMixin&lt;E&gt;</a></li>
+<li><a href="../dart_html/InputElement.html"><div class="icon-class"></div>InputElement</a></li>
+<li><a href="../dart_html/InputElementBase.html"><div class="icon-class"></div>InputElementBase</a></li>
+<li><a href="../dart_html/InputMethodContext.html"><div class="icon-class"></div>InputMethodContext</a></li>
+<li><a href="../dart_html/KeyboardEvent.html"><div class="icon-class"></div>KeyboardEvent</a></li>
+<li><a href="../dart_html/KeyboardEventStream.html"><div class="icon-class"></div>KeyboardEventStream</a></li>
+<li><a href="../dart_html/KeyCode.html"><div class="icon-class"></div>KeyCode</a></li>
+<li><a href="../dart_html/KeyEvent.html"><div class="icon-class"></div>KeyEvent</a></li>
+<li><a href="../dart_html/KeygenElement.html"><div class="icon-class"></div>KeygenElement</a></li>
+<li><a href="../dart_html/KeyLocation.html"><div class="icon-class"></div>KeyLocation</a></li>
+<li><a href="../dart_html/KeyName.html"><div class="icon-class"></div>KeyName</a></li>
+<li><a href="../dart_html/LabelElement.html"><div class="icon-class"></div>LabelElement</a></li>
+<li><a href="../dart_html/LegendElement.html"><div class="icon-class"></div>LegendElement</a></li>
+<li><a href="../dart_html/LIElement.html"><div class="icon-class"></div>LIElement</a></li>
+<li><a href="../dart_html/LinkElement.html"><div class="icon-class"></div>LinkElement</a></li>
+<li><a href="../dart_html/LocalDateTimeInputElement.html"><div class="icon-class"></div>LocalDateTimeInputElement</a></li>
+<li><a href="../dart_html/Location.html"><div class="icon-class"></div>Location</a></li>
+<li><a href="../dart_html/LocationBase.html"><div class="icon-class"></div>LocationBase</a></li>
+<li><a href="../dart_html/MapElement.html"><div class="icon-class"></div>MapElement</a></li>
+<li><a href="../dart_html/MediaController.html"><div class="icon-class"></div>MediaController</a></li>
+<li><a href="../dart_html/MediaElement.html"><div class="icon-class"></div>MediaElement</a></li>
+<li><a href="../dart_html/MediaKeyEvent.html"><div class="icon-class"></div>MediaKeyEvent</a></li>
+<li><a href="../dart_html/MediaKeyMessageEvent.html"><div class="icon-class"></div>MediaKeyMessageEvent</a></li>
+<li><a href="../dart_html/MediaKeyNeededEvent.html"><div class="icon-class"></div>MediaKeyNeededEvent</a></li>
+<li><a href="../dart_html/MediaKeys.html"><div class="icon-class"></div>MediaKeys</a></li>
+<li><a href="../dart_html/MediaKeySession.html"><div class="icon-class"></div>MediaKeySession</a></li>
+<li><a href="../dart_html/MediaList.html"><div class="icon-class"></div>MediaList</a></li>
+<li><a href="../dart_html/MediaQueryList.html"><div class="icon-class"></div>MediaQueryList</a></li>
+<li><a href="../dart_html/MediaQueryListListener.html"><div class="icon-class"></div>MediaQueryListListener</a></li>
+<li><a href="../dart_html/MediaSource.html"><div class="icon-class"></div>MediaSource</a></li>
+<li><a href="../dart_html/MediaStream.html"><div class="icon-class"></div>MediaStream</a></li>
+<li><a href="../dart_html/MediaStreamEvent.html"><div class="icon-class"></div>MediaStreamEvent</a></li>
+<li><a href="../dart_html/MediaStreamTrack.html"><div class="icon-class"></div>MediaStreamTrack</a></li>
+<li><a href="../dart_html/MediaStreamTrackEvent.html"><div class="icon-class"></div>MediaStreamTrackEvent</a></li>
+<li><a href="../dart_html/MemoryInfo.html"><div class="icon-class"></div>MemoryInfo</a></li>
+<li><a href="../dart_html/MenuElement.html"><div class="icon-class"></div>MenuElement</a></li>
+<li><a href="../dart_html/MessageChannel.html"><div class="icon-class"></div>MessageChannel</a></li>
+<li><a href="../dart_html/MessageEvent.html"><div class="icon-class"></div>MessageEvent</a></li>
+<li><a href="../dart_html/MessagePort.html"><div class="icon-class"></div>MessagePort</a></li>
+<li><a href="../dart_html/Metadata.html"><div class="icon-class"></div>Metadata</a></li>
+<li><a href="../dart_html/MetadataCallback.html"><div class="icon-interface"></div>MetadataCallback</a></li>
+<li><a href="../dart_html/MetaElement.html"><div class="icon-class"></div>MetaElement</a></li>
+<li><a href="../dart_html/MeterElement.html"><div class="icon-class"></div>MeterElement</a></li>
+<li><a href="../dart_html/MidiAccess.html"><div class="icon-class"></div>MidiAccess</a></li>
+<li><a href="../dart_html/MidiConnectionEvent.html"><div class="icon-class"></div>MidiConnectionEvent</a></li>
+<li><a href="../dart_html/MidiErrorCallback.html"><div class="icon-interface"></div>MidiErrorCallback</a></li>
+<li><a href="../dart_html/MidiInput.html"><div class="icon-class"></div>MidiInput</a></li>
+<li><a href="../dart_html/MidiMessageEvent.html"><div class="icon-class"></div>MidiMessageEvent</a></li>
+<li><a href="../dart_html/MidiOutput.html"><div class="icon-class"></div>MidiOutput</a></li>
+<li><a href="../dart_html/MidiPort.html"><div class="icon-class"></div>MidiPort</a></li>
+<li><a href="../dart_html/MimeType.html"><div class="icon-class"></div>MimeType</a></li>
+<li><a href="../dart_html/MimeTypeArray.html"><div class="icon-class"></div>MimeTypeArray</a></li>
+<li><a href="../dart_html/ModElement.html"><div class="icon-class"></div>ModElement</a></li>
+<li><a href="../dart_html/MonthInputElement.html"><div class="icon-class"></div>MonthInputElement</a></li>
+<li><a href="../dart_html/MouseEvent.html"><div class="icon-class"></div>MouseEvent</a></li>
+<li><a href="../dart_html/MutationCallback.html"><div class="icon-interface"></div>MutationCallback</a></li>
+<li><a href="../dart_html/MutationEvent.html"><div class="icon-class"></div>MutationEvent</a></li>
+<li><a href="../dart_html/MutationObserver.html"><div class="icon-class"></div>MutationObserver</a></li>
+<li><a href="../dart_html/MutationRecord.html"><div class="icon-class"></div>MutationRecord</a></li>
+<li><a href="../dart_html/NamedFlow.html"><div class="icon-class"></div>NamedFlow</a></li>
+<li><a href="../dart_html/NamedFlowCollection.html"><div class="icon-class"></div>NamedFlowCollection</a></li>
+<li><a href="../dart_html/Navigator.html"><div class="icon-class"></div>Navigator</a></li>
+<li><a href="../dart_html/Node.html"><div class="icon-class"></div>Node</a></li>
+<li><a href="../dart_html/NodeFilter.html"><div class="icon-class"></div>NodeFilter</a></li>
+<li><a href="../dart_html/NodeIterator.html"><div class="icon-class"></div>NodeIterator</a></li>
+<li><a href="../dart_html/NodeList.html"><div class="icon-class"></div>NodeList</a></li>
+<li><a href="../dart_html/Notation.html"><div class="icon-class"></div>Notation</a></li>
+<li><a href="../dart_html/Notification.html"><div class="icon-class"></div>Notification</a></li>
+<li><a href="../dart_html/NotificationCenter.html"><div class="icon-class"></div>NotificationCenter</a></li>
+<li><a href="../dart_html/NumberInputElement.html"><div class="icon-class"></div>NumberInputElement</a></li>
+<li><a href="../dart_html/ObjectElement.html"><div class="icon-class"></div>ObjectElement</a></li>
+<li><a href="../dart_html/OListElement.html"><div class="icon-class"></div>OListElement</a></li>
+<li><a href="../dart_html/OptGroupElement.html"><div class="icon-class"></div>OptGroupElement</a></li>
+<li><a href="../dart_html/OptionElement.html"><div class="icon-class"></div>OptionElement</a></li>
+<li><a href="../dart_html/OutputElement.html"><div class="icon-class"></div>OutputElement</a></li>
+<li><a href="../dart_html/OverflowEvent.html"><div class="icon-class"></div>OverflowEvent</a></li>
+<li><a href="../dart_html/PageTransitionEvent.html"><div class="icon-class"></div>PageTransitionEvent</a></li>
+<li><a href="../dart_html/ParagraphElement.html"><div class="icon-class"></div>ParagraphElement</a></li>
+<li><a href="../dart_html/ParamElement.html"><div class="icon-class"></div>ParamElement</a></li>
+<li><a href="../dart_html/PasswordInputElement.html"><div class="icon-class"></div>PasswordInputElement</a></li>
+<li><a href="../dart_html/Path.html"><div class="icon-class"></div>Path</a></li>
+<li><a href="../dart_html/PathObserver.html"><div class="icon-class"></div>PathObserver</a></li>
+<li><a href="../dart_html/Performance.html"><div class="icon-class"></div>Performance</a></li>
+<li><a href="../dart_html/PerformanceEntry.html"><div class="icon-class"></div>PerformanceEntry</a></li>
+<li><a href="../dart_html/PerformanceMark.html"><div class="icon-class"></div>PerformanceMark</a></li>
+<li><a href="../dart_html/PerformanceMeasure.html"><div class="icon-class"></div>PerformanceMeasure</a></li>
+<li><a href="../dart_html/PerformanceNavigation.html"><div class="icon-class"></div>PerformanceNavigation</a></li>
+<li><a href="../dart_html/PerformanceResourceTiming.html"><div class="icon-class"></div>PerformanceResourceTiming</a></li>
+<li><a href="../dart_html/PerformanceTiming.html"><div class="icon-class"></div>PerformanceTiming</a></li>
+<li><a href="../dart_html/Platform.html"><div class="icon-class"></div>Platform</a></li>
+<li><a href="../dart_html/Plugin.html"><div class="icon-class"></div>Plugin</a></li>
+<li><a href="../dart_html/PluginArray.html"><div class="icon-class"></div>PluginArray</a></li>
+<li><a href="../dart_html/Point.html"><div class="icon-class"></div>Point</a></li>
+<li><a href="../dart_html/PopStateEvent.html"><div class="icon-class"></div>PopStateEvent</a></li>
+<li><a href="../dart_html/PreElement.html"><div class="icon-class"></div>PreElement</a></li>
+<li><a href="../dart_html/ProcessingInstruction.html"><div class="icon-class"></div>ProcessingInstruction</a></li>
+<li><a href="../dart_html/ProgressElement.html"><div class="icon-class"></div>ProgressElement</a></li>
+<li><a href="../dart_html/ProgressEvent.html"><div class="icon-class"></div>ProgressEvent</a></li>
+<li><a href="../dart_html/QuoteElement.html"><div class="icon-class"></div>QuoteElement</a></li>
+<li><a href="../dart_html/RadioButtonInputElement.html"><div class="icon-class"></div>RadioButtonInputElement</a></li>
+<li><a href="../dart_html/Range.html"><div class="icon-class"></div>Range</a></li>
+<li><a href="../dart_html/RangeInputElement.html"><div class="icon-class"></div>RangeInputElement</a></li>
+<li><a href="../dart_html/RangeInputElementBase.html"><div class="icon-class"></div>RangeInputElementBase</a></li>
+<li><a href="../dart_html/ReadyState.html"><div class="icon-class"></div>ReadyState</a></li>
+<li><a href="../dart_html/ReceivePortSync.html"><div class="icon-class"></div>ReceivePortSync</a></li>
+<li><a href="../dart_html/Rect.html"><div class="icon-class"></div>Rect</a></li>
+<li><a href="../dart_html/RequestAnimationFrameCallback.html"><div class="icon-interface"></div>RequestAnimationFrameCallback</a></li>
+<li><a href="../dart_html/ResetButtonInputElement.html"><div class="icon-class"></div>ResetButtonInputElement</a></li>
+<li><a href="../dart_html/ResourceProgressEvent.html"><div class="icon-class"></div>ResourceProgressEvent</a></li>
+<li><a href="../dart_html/RtcDataChannel.html"><div class="icon-class"></div>RtcDataChannel</a></li>
+<li><a href="../dart_html/RtcDataChannelEvent.html"><div class="icon-class"></div>RtcDataChannelEvent</a></li>
+<li><a href="../dart_html/RtcDtmfSender.html"><div class="icon-class"></div>RtcDtmfSender</a></li>
+<li><a href="../dart_html/RtcDtmfToneChangeEvent.html"><div class="icon-class"></div>RtcDtmfToneChangeEvent</a></li>
+<li><a href="../dart_html/RtcIceCandidate.html"><div class="icon-class"></div>RtcIceCandidate</a></li>
+<li><a href="../dart_html/RtcIceCandidateEvent.html"><div class="icon-class"></div>RtcIceCandidateEvent</a></li>
+<li><a href="../dart_html/RtcPeerConnection.html"><div class="icon-class"></div>RtcPeerConnection</a></li>
+<li><a href="../dart_html/RtcSessionDescription.html"><div class="icon-class"></div>RtcSessionDescription</a></li>
+<li><a href="../dart_html/RtcStatsCallback.html"><div class="icon-interface"></div>RtcStatsCallback</a></li>
+<li><a href="../dart_html/RtcStatsReport.html"><div class="icon-class"></div>RtcStatsReport</a></li>
+<li><a href="../dart_html/RtcStatsResponse.html"><div class="icon-class"></div>RtcStatsResponse</a></li>
+<li><a href="../dart_html/Screen.html"><div class="icon-class"></div>Screen</a></li>
+<li><a href="../dart_html/ScriptElement.html"><div class="icon-class"></div>ScriptElement</a></li>
+<li><a href="../dart_html/ScrollAlignment.html"><div class="icon-class"></div>ScrollAlignment</a></li>
+<li><a href="../dart_html/SearchInputElement.html"><div class="icon-class"></div>SearchInputElement</a></li>
+<li><a href="../dart_html/SecurityPolicy.html"><div class="icon-class"></div>SecurityPolicy</a></li>
+<li><a href="../dart_html/SecurityPolicyViolationEvent.html"><div class="icon-class"></div>SecurityPolicyViolationEvent</a></li>
+<li><a href="../dart_html/SelectElement.html"><div class="icon-class"></div>SelectElement</a></li>
+<li><a href="../dart_html/Selection.html"><div class="icon-class"></div>Selection</a></li>
+<li><a href="../dart_html/ShadowElement.html"><div class="icon-class"></div>ShadowElement</a></li>
+<li><a href="../dart_html/ShadowRoot.html"><div class="icon-class"></div>ShadowRoot</a></li>
+<li><a href="../dart_html/SourceBuffer.html"><div class="icon-class"></div>SourceBuffer</a></li>
+<li><a href="../dart_html/SourceBufferList.html"><div class="icon-class"></div>SourceBufferList</a></li>
+<li><a href="../dart_html/SourceElement.html"><div class="icon-class"></div>SourceElement</a></li>
+<li><a href="../dart_html/SpanElement.html"><div class="icon-class"></div>SpanElement</a></li>
+<li><a href="../dart_html/SpeechGrammar.html"><div class="icon-class"></div>SpeechGrammar</a></li>
+<li><a href="../dart_html/SpeechGrammarList.html"><div class="icon-class"></div>SpeechGrammarList</a></li>
+<li><a href="../dart_html/SpeechInputEvent.html"><div class="icon-class"></div>SpeechInputEvent</a></li>
+<li><a href="../dart_html/SpeechInputResult.html"><div class="icon-class"></div>SpeechInputResult</a></li>
+<li><a href="../dart_html/SpeechRecognition.html"><div class="icon-class"></div>SpeechRecognition</a></li>
+<li><a href="../dart_html/SpeechRecognitionAlternative.html"><div class="icon-class"></div>SpeechRecognitionAlternative</a></li>
+<li><a href="../dart_html/SpeechRecognitionEvent.html"><div class="icon-class"></div>SpeechRecognitionEvent</a></li>
+<li><a href="../dart_html/SpeechRecognitionResult.html"><div class="icon-class"></div>SpeechRecognitionResult</a></li>
+<li><a href="../dart_html/SpeechSynthesis.html"><div class="icon-class"></div>SpeechSynthesis</a></li>
+<li><a href="../dart_html/SpeechSynthesisEvent.html"><div class="icon-class"></div>SpeechSynthesisEvent</a></li>
+<li><a href="../dart_html/SpeechSynthesisUtterance.html"><div class="icon-class"></div>SpeechSynthesisUtterance</a></li>
+<li><a href="../dart_html/SpeechSynthesisVoice.html"><div class="icon-class"></div>SpeechSynthesisVoice</a></li>
+<li><a href="../dart_html/Storage.html"><div class="icon-class"></div>Storage</a></li>
+<li><a href="../dart_html/StorageErrorCallback.html"><div class="icon-interface"></div>StorageErrorCallback</a></li>
+<li><a href="../dart_html/StorageEvent.html"><div class="icon-class"></div>StorageEvent</a></li>
+<li><a href="../dart_html/StorageInfo.html"><div class="icon-class"></div>StorageInfo</a></li>
+<li><a href="../dart_html/StorageInfoUsage.html"><div class="icon-class"></div>StorageInfoUsage</a></li>
+<li><a href="../dart_html/StorageQuota.html"><div class="icon-class"></div>StorageQuota</a></li>
+<li><a href="../dart_html/StorageQuotaCallback.html"><div class="icon-interface"></div>StorageQuotaCallback</a></li>
+<li><a href="../dart_html/StorageUsageCallback.html"><div class="icon-interface"></div>StorageUsageCallback</a></li>
+<li><a href="../dart_html/StyleElement.html"><div class="icon-class"></div>StyleElement</a></li>
+<li><a href="../dart_html/StyleMedia.html"><div class="icon-class"></div>StyleMedia</a></li>
+<li><a href="../dart_html/StyleSheet.html"><div class="icon-class"></div>StyleSheet</a></li>
+<li><a href="../dart_html/SubmitButtonInputElement.html"><div class="icon-class"></div>SubmitButtonInputElement</a></li>
+<li><a href="../dart_html/TableCaptionElement.html"><div class="icon-class"></div>TableCaptionElement</a></li>
+<li><a href="../dart_html/TableCellElement.html"><div class="icon-class"></div>TableCellElement</a></li>
+<li><a href="../dart_html/TableColElement.html"><div class="icon-class"></div>TableColElement</a></li>
+<li><a href="../dart_html/TableElement.html"><div class="icon-class"></div>TableElement</a></li>
+<li><a href="../dart_html/TableRowElement.html"><div class="icon-class"></div>TableRowElement</a></li>
+<li><a href="../dart_html/TableSectionElement.html"><div class="icon-class"></div>TableSectionElement</a></li>
+<li><a href="../dart_html/TelephoneInputElement.html"><div class="icon-class"></div>TelephoneInputElement</a></li>
+<li><a href="../dart_html/TemplateElement.html"><div class="icon-class"></div>TemplateElement</a></li>
+<li><a href="../dart_html/TemplateInstance.html"><div class="icon-class"></div>TemplateInstance</a></li>
+<li><a href="../dart_html/Text.html"><div class="icon-class"></div>Text</a></li>
+<li><a href="../dart_html/TextAreaElement.html"><div class="icon-class"></div>TextAreaElement</a></li>
+<li><a href="../dart_html/TextEvent.html"><div class="icon-class"></div>TextEvent</a></li>
+<li><a href="../dart_html/TextInputElement.html"><div class="icon-class"></div>TextInputElement</a></li>
+<li><a href="../dart_html/TextInputElementBase.html"><div class="icon-class"></div>TextInputElementBase</a></li>
+<li><a href="../dart_html/TextMetrics.html"><div class="icon-class"></div>TextMetrics</a></li>
+<li><a href="../dart_html/TextTrack.html"><div class="icon-class"></div>TextTrack</a></li>
+<li><a href="../dart_html/TextTrackCue.html"><div class="icon-class"></div>TextTrackCue</a></li>
+<li><a href="../dart_html/TextTrackCueList.html"><div class="icon-class"></div>TextTrackCueList</a></li>
+<li><a href="../dart_html/TextTrackList.html"><div class="icon-class"></div>TextTrackList</a></li>
+<li><a href="../dart_html/TimeInputElement.html"><div class="icon-class"></div>TimeInputElement</a></li>
+<li><a href="../dart_html/TimeoutHandler.html"><div class="icon-interface"></div>TimeoutHandler</a></li>
+<li><a href="../dart_html/TimeRanges.html"><div class="icon-class"></div>TimeRanges</a></li>
+<li><a href="../dart_html/TitleElement.html"><div class="icon-class"></div>TitleElement</a></li>
+<li><a href="../dart_html/Touch.html"><div class="icon-class"></div>Touch</a></li>
+<li><a href="../dart_html/TouchEvent.html"><div class="icon-class"></div>TouchEvent</a></li>
+<li><a href="../dart_html/TouchList.html"><div class="icon-class"></div>TouchList</a></li>
+<li><a href="../dart_html/TrackElement.html"><div class="icon-class"></div>TrackElement</a></li>
+<li><a href="../dart_html/TrackEvent.html"><div class="icon-class"></div>TrackEvent</a></li>
+<li><a href="../dart_html/TransitionEvent.html"><div class="icon-class"></div>TransitionEvent</a></li>
+<li><a href="../dart_html/TreeWalker.html"><div class="icon-class"></div>TreeWalker</a></li>
+<li><a href="../dart_html/UIEvent.html"><div class="icon-class"></div>UIEvent</a></li>
+<li><a href="../dart_html/UListElement.html"><div class="icon-class"></div>UListElement</a></li>
+<li><a href="../dart_html/UnknownElement.html"><div class="icon-class"></div>UnknownElement</a></li>
+<li><a href="../dart_html/Url.html"><div class="icon-class"></div>Url</a></li>
+<li><a href="../dart_html/UrlInputElement.html"><div class="icon-class"></div>UrlInputElement</a></li>
+<li><a href="../dart_html/ValidityState.html"><div class="icon-class"></div>ValidityState</a></li>
+<li><a href="../dart_html/VideoElement.html"><div class="icon-class"></div>VideoElement</a></li>
+<li><a href="../dart_html/VoidCallback.html"><div class="icon-interface"></div>VoidCallback</a></li>
+<li><a href="../dart_html/WebSocket.html"><div class="icon-class"></div>WebSocket</a></li>
+<li><a href="../dart_html/WeekInputElement.html"><div class="icon-class"></div>WeekInputElement</a></li>
+<li><a href="../dart_html/WheelEvent.html"><div class="icon-class"></div>WheelEvent</a></li>
+<li><a href="../dart_html/Window.html"><div class="icon-class"></div>Window</a></li>
+<li><a href="../dart_html/WindowBase.html"><div class="icon-class"></div>WindowBase</a></li>
+<li><a href="../dart_html/Worker.html"><div class="icon-class"></div>Worker</a></li>
+<li><a href="../dart_html/XmlSerializer.html"><div class="icon-class"></div>XmlSerializer</a></li>
+<li><a href="../dart_html/XPathEvaluator.html"><div class="icon-class"></div>XPathEvaluator</a></li>
+<li><a href="../dart_html/XPathExpression.html"><div class="icon-class"></div>XPathExpression</a></li>
+<li><a href="../dart_html/XPathNSResolver.html"><div class="icon-class"></div>XPathNSResolver</a></li>
+<li><a href="../dart_html/XPathResult.html"><div class="icon-class"></div>XPathResult</a></li>
+<li><a href="../dart_html/XsltProcessor.html"><div class="icon-class"></div>XsltProcessor</a></li>
+<li><a href="../dart_html/DomError.html"><div class="icon-exception"></div>DomError</a></li>
+<li><a href="../dart_html/DomException.html"><div class="icon-exception"></div>DomException</a></li>
+<li><a href="../dart_html/EventException.html"><div class="icon-exception"></div>EventException</a></li>
+<li><a href="../dart_html/FileError.html"><div class="icon-exception"></div>FileError</a></li>
+<li><a href="../dart_html/FileException.html"><div class="icon-exception"></div>FileException</a></li>
+<li><a href="../dart_html/MediaError.html"><div class="icon-exception"></div>MediaError</a></li>
+<li><a href="../dart_html/MediaKeyError.html"><div class="icon-exception"></div>MediaKeyError</a></li>
+<li><a href="../dart_html/NavigatorUserMediaError.html"><div class="icon-exception"></div>NavigatorUserMediaError</a></li>
+<li><a href="../dart_html/PositionError.html"><div class="icon-exception"></div>PositionError</a></li>
+<li><a href="../dart_html/SpeechRecognitionError.html"><div class="icon-exception"></div>SpeechRecognitionError</a></li>
+<li><a href="../dart_html/XPathException.html"><div class="icon-exception"></div>XPathException</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_typed_data.html">dart:typed_data</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_gl.html">dart:web_gl</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../mdv_observe.html">mdv_observe</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../source_maps.html">source_maps</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>Document</strong>
+          class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>The base class for all documents.</p>
+<p>Each web page loaded in the browser has its own <a class="crossref" href="../dart_html/Document.html">Document</a> object, which is
+typically an <a class="crossref" href="../dart_html/HtmlDocument.html">HtmlDocument</a>.</p>
+<p>If you aren't comfortable with DOM concepts, see the Dart tutorial
+<a href="http://www.dartlang.org/docs/tutorials/connect-dart-html/">Target 2: Connect Dart &amp; HTML</a>.</p>
+<pre class="source">
+@DomName('Document')
+class Document extends Node  native "Document"
+{
+
+
+ @DomName('Document.readystatechangeEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; readyStateChangeEvent = const EventStreamProvider&lt;Event&gt;('readystatechange');
+
+ @DomName('Document.securitypolicyviolationEvent')
+ @DocsEditable
+ // https://dvcs.w3.org/hg/content-security-policy/raw-file/tip/csp-specification.dev.html#widl-Document-onsecuritypolicyviolation
+ @Experimental
+ static const EventStreamProvider&lt;SecurityPolicyViolationEvent&gt; securityPolicyViolationEvent = const EventStreamProvider&lt;SecurityPolicyViolationEvent&gt;('securitypolicyviolation');
+
+ @DomName('Document.selectionchangeEvent')
+ @DocsEditable
+ static const EventStreamProvider&lt;Event&gt; selectionChangeEvent = const EventStreamProvider&lt;Event&gt;('selectionchange');
+
+ @DomName('Document.webkitpointerlockchangeEvent')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ // https://dvcs.w3.org/hg/pointerlock/raw-file/default/index.html#widl-Document-onpointerlockchange
+ static const EventStreamProvider&lt;Event&gt; pointerLockChangeEvent = const EventStreamProvider&lt;Event&gt;('webkitpointerlockchange');
+
+ @DomName('Document.webkitpointerlockerrorEvent')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ // https://dvcs.w3.org/hg/pointerlock/raw-file/default/index.html#widl-Document-onpointerlockerror
+ static const EventStreamProvider&lt;Event&gt; pointerLockErrorEvent = const EventStreamProvider&lt;Event&gt;('webkitpointerlockerror');
+
+ @JSName('body')
+ /// Moved to [HtmlDocument].
+ @DomName('Document.body')
+ @DocsEditable
+ Element $dom_body;
+
+ @DomName('Document.charset')
+ @DocsEditable
+ @deprecated // nonstandard
+ String charset;
+
+ @DomName('Document.childElementCount')
+ @DocsEditable
+ final int childElementCount;
+
+ @DomName('Document.children')
+ @DocsEditable
+ final HtmlCollection children;
+
+ @DomName('Document.cookie')
+ @DocsEditable
+ String cookie;
+
+ WindowBase get window =&gt; _convertNativeToDart_Window(this._get_window);
+ @JSName('defaultView')
+ @DomName('Document.window')
+ @DocsEditable
+ @Experimental // untriaged
+ @Creates('Window|=Object')
+ @Returns('Window|=Object')
+ @Creates('Window|=Object|Null')
+ @Returns('Window|=Object|Null')
+ final dynamic _get_window;
+
+ @DomName('Document.documentElement')
+ @DocsEditable
+ final Element documentElement;
+
+ @DomName('Document.domain')
+ @DocsEditable
+ final String domain;
+
+ @DomName('Document.firstElementChild')
+ @DocsEditable
+ final Element firstElementChild;
+
+ @DomName('Document.fontloader')
+ @DocsEditable
+ // http://www.w3.org/TR/css3-fonts/#document-fontloader
+ @Experimental
+ final FontLoader fontloader;
+
+ @JSName('head')
+ /// Moved to [HtmlDocument].
+ @DomName('Document.head')
+ @DocsEditable
+ final HeadElement $dom_head;
+
+ @DomName('Document.implementation')
+ @DocsEditable
+ final DomImplementation implementation;
+
+ @DomName('Document.lastElementChild')
+ @DocsEditable
+ final Element lastElementChild;
+
+ @JSName('lastModified')
+ /// Moved to [HtmlDocument].
+ @DomName('Document.lastModified')
+ @DocsEditable
+ final String $dom_lastModified;
+
+ @JSName('preferredStylesheetSet')
+ @DomName('Document.preferredStylesheetSet')
+ @DocsEditable
+ final String $dom_preferredStylesheetSet;
+
+ @DomName('Document.readyState')
+ @DocsEditable
+ final String readyState;
+
+ @JSName('referrer')
+ /// Moved to [HtmlDocument].
+ @DomName('Document.referrer')
+ @DocsEditable
+ final String $dom_referrer;
+
+ @DomName('Document.securityPolicy')
+ @DocsEditable
+ // https://dvcs.w3.org/hg/content-security-policy/raw-file/tip/csp-specification.dev.html#idl-def-SecurityPolicy
+ @Experimental
+ final SecurityPolicy securityPolicy;
+
+ @JSName('selectedStylesheetSet')
+ @DomName('Document.selectedStylesheetSet')
+ @DocsEditable
+ String $dom_selectedStylesheetSet;
+
+ @JSName('styleSheets')
+ /// Moved to [HtmlDocument]
+ @DomName('Document.styleSheets')
+ @DocsEditable
+ @Returns('_StyleSheetList')
+ @Creates('_StyleSheetList')
+ final List&lt;StyleSheet&gt; $dom_styleSheets;
+
+ @JSName('title')
+ /// Moved to [HtmlDocument].
+ @DomName('Document.title')
+ @DocsEditable
+ String $dom_title;
+
+ @JSName('webkitFullscreenElement')
+ /// Moved to [HtmlDocument].
+ @DomName('Document.webkitFullscreenElement')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ // https://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html#dom-document-fullscreenelement
+ final Element $dom_webkitFullscreenElement;
+
+ @JSName('webkitFullscreenEnabled')
+ /// Moved to [HtmlDocument].
+ @DomName('Document.webkitFullscreenEnabled')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ // https://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html#dom-document-fullscreenenabled
+ final bool $dom_webkitFullscreenEnabled;
+
+ @JSName('webkitHidden')
+ /// Moved to [HtmlDocument].
+ @DomName('Document.webkitHidden')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ // https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/PageVisibility/Overview.html#document
+ final bool $dom_webkitHidden;
+
+ @JSName('webkitIsFullScreen')
+ /// Moved to [HtmlDocument].
+ @DomName('Document.webkitIsFullScreen')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ // https://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html
+ @deprecated // deprecated
+ final bool $dom_webkitIsFullScreen;
+
+ @JSName('webkitPointerLockElement')
+ /// Moved to [HtmlDocument].
+ @DomName('Document.webkitPointerLockElement')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ // https://dvcs.w3.org/hg/pointerlock/raw-file/default/index.html#widl-Document-pointerLockElement
+ final Element $dom_webkitPointerLockElement;
+
+ @JSName('webkitVisibilityState')
+ @DomName('Document.webkitVisibilityState')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ // https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/PageVisibility/Overview.html#dom-document-visibilitystate
+ final String $dom_webkitVisibilityState;
+
+ @JSName('caretRangeFromPoint')
+ /// Use the [Range] constructor instead.
+ @DomName('Document.caretRangeFromPoint')
+ @DocsEditable
+ // http://www.w3.org/TR/2009/WD-cssom-view-20090804/#dom-documentview-caretrangefrompoint
+ @Experimental
+ Range $dom_caretRangeFromPoint(int x, int y) native;
+
+ @JSName('createCDATASection')
+ @DomName('Document.createCDATASection')
+ @DocsEditable
+ // http://dom.spec.whatwg.org/#dom-document-createcdatasection
+ @deprecated // deprecated
+ CDataSection createCDataSection(String data) native;
+
+ @DomName('Document.createDocumentFragment')
+ @DocsEditable
+ DocumentFragment createDocumentFragment() native;
+
+ @JSName('createElement')
+ /// Deprecated: use new Element.tag(tagName) instead.
+ @DomName('Document.createElement')
+ @DocsEditable
+ Element $dom_createElement(String localName_OR_tagName, [String typeExtension]) native;
+
+ @JSName('createElementNS')
+ @DomName('Document.createElementNS')
+ @DocsEditable
+ Element $dom_createElementNS(String namespaceURI, String qualifiedName, [String typeExtension]) native;
+
+ @JSName('createEvent')
+ @DomName('Document.createEvent')
+ @DocsEditable
+ Event $dom_createEvent(String eventType) native;
+
+ @JSName('createNodeIterator')
+ @DomName('Document.createNodeIterator')
+ @DocsEditable
+ @Unstable
+ NodeIterator $dom_createNodeIterator(Node root, int whatToShow, NodeFilter filter, bool expandEntityReferences) native;
+
+ @JSName('createRange')
+ @DomName('Document.createRange')
+ @DocsEditable
+ Range $dom_createRange() native;
+
+ @JSName('createTextNode')
+ @DomName('Document.createTextNode')
+ @DocsEditable
+ Text $dom_createTextNode(String data) native;
+
+ @DomName('Document.createTouch')
+ @DocsEditable
+ // http://www.w3.org/TR/touch-events/, http://www.chromestatus.com/features
+ @Experimental
+ Touch $dom_createTouch(Window window, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int webkitRadiusX, int webkitRadiusY, num webkitRotationAngle, num webkitForce) {
+   var target_1 = _convertDartToNative_EventTarget(target);
+   return _$dom_createTouch_1(window, target_1, identifier, pageX, pageY, screenX, screenY, webkitRadiusX, webkitRadiusY, webkitRotationAngle, webkitForce);
+ }
+ @JSName('createTouch')
+ @DomName('Document.createTouch')
+ @DocsEditable
+ // http://www.w3.org/TR/touch-events/, http://www.chromestatus.com/features
+ @Experimental
+ Touch _$dom_createTouch_1(Window window, target, identifier, pageX, pageY, screenX, screenY, webkitRadiusX, webkitRadiusY, webkitRotationAngle, webkitForce) native;
+
+ @JSName('createTouchList')
+ /// Use the [TouchList] constructor instead.
+ @DomName('Document.createTouchList')
+ @DocsEditable
+ // http://www.w3.org/TR/touch-events/, http://www.chromestatus.com/features
+ @Experimental
+ TouchList $dom_createTouchList() native;
+
+ @JSName('createTreeWalker')
+ @DomName('Document.createTreeWalker')
+ @DocsEditable
+ TreeWalker $dom_createTreeWalker(Node root, int whatToShow, NodeFilter filter, bool expandEntityReferences) native;
+
+ @JSName('elementFromPoint')
+ @DomName('Document.elementFromPoint')
+ @DocsEditable
+ Element $dom_elementFromPoint(int x, int y) native;
+
+ @DomName('Document.execCommand')
+ @DocsEditable
+ bool execCommand(String command, bool userInterface, String value) native;
+
+ @JSName('getCSSCanvasContext')
+ /// Moved to [HtmlDocument].
+ @DomName('Document.getCSSCanvasContext')
+ @DocsEditable
+ // https://developer.apple.com/library/safari/#documentation/AppleApplications/Reference/SafariCSSRef/Articles/Functions.html
+ @Experimental // non-standard
+ CanvasRenderingContext $dom_getCssCanvasContext(String contextId, String name, int width, int height) native;
+
+ @DomName('Document.getElementById')
+ @DocsEditable
+ Element getElementById(String elementId) native;
+
+ @DomName('Document.getElementsByClassName')
+ @DocsEditable
+ @Returns('NodeList')
+ @Creates('NodeList')
+ List&lt;Node&gt; getElementsByClassName(String tagname) native;
+
+ @DomName('Document.getElementsByName')
+ @DocsEditable
+ @Returns('NodeList')
+ @Creates('NodeList')
+ List&lt;Node&gt; getElementsByName(String elementName) native;
+
+ @DomName('Document.getElementsByTagName')
+ @DocsEditable
+ @Returns('NodeList')
+ @Creates('NodeList')
+ List&lt;Node&gt; getElementsByTagName(String tagname) native;
+
+ @DomName('Document.queryCommandEnabled')
+ @DocsEditable
+ bool queryCommandEnabled(String command) native;
+
+ @DomName('Document.queryCommandIndeterm')
+ @DocsEditable
+ bool queryCommandIndeterm(String command) native;
+
+ @DomName('Document.queryCommandState')
+ @DocsEditable
+ bool queryCommandState(String command) native;
+
+ @DomName('Document.queryCommandSupported')
+ @DocsEditable
+ bool queryCommandSupported(String command) native;
+
+ @DomName('Document.queryCommandValue')
+ @DocsEditable
+ String queryCommandValue(String command) native;
+
+ @JSName('querySelector')
+ /**
+* Finds the first descendant element of this document that matches the
+* specified group of selectors.
+*
+* Unless your webpage contains multiple documents, the top-level query
+* method behaves the same as this method, so you should use it instead to
+* save typing a few characters.
+*
+* [selectors] should be a string using CSS selector syntax.
+*     var element1 = document.query('.className');
+*     var element2 = document.query('#id');
+*
+* For details about CSS selector syntax, see the
+* [CSS selector specification](http://www.w3.org/TR/css3-selectors/).
+*/
+ @DomName('Document.querySelector')
+ @DocsEditable
+ Element query(String selectors) native;
+
+ @JSName('querySelectorAll')
+ /// Deprecated: use query("#$elementId") instead.
+ @DomName('Document.querySelectorAll')
+ @DocsEditable
+ @Returns('NodeList')
+ @Creates('NodeList')
+ List&lt;Node&gt; $dom_querySelectorAll(String selectors) native;
+
+ @JSName('webkitCancelFullScreen')
+ /// Moved to [HtmlDocument].
+ @DomName('Document.webkitCancelFullScreen')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ // https://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html
+ @deprecated // deprecated
+ void $dom_webkitCancelFullScreen() native;
+
+ @JSName('webkitExitFullscreen')
+ /// Moved to [HtmlDocument].
+ @DomName('Document.webkitExitFullscreen')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ // https://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html#dom-document-exitfullscreen
+ void $dom_webkitExitFullscreen() native;
+
+ @JSName('webkitExitPointerLock')
+ /// Moved to [HtmlDocument].
+ @DomName('Document.webkitExitPointerLock')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ // https://dvcs.w3.org/hg/pointerlock/raw-file/default/index.html#widl-Document-exitPointerLock-void
+ void $dom_webkitExitPointerLock() native;
+
+ @JSName('webkitGetNamedFlows')
+ @DomName('Document.webkitGetNamedFlows')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ // http://www.w3.org/TR/css3-regions/#dom-named-flow-collection
+ NamedFlowCollection getNamedFlows() native;
+
+ @DomName('Document.webkitRegister')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ // https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html#dfn-document-register
+ CustomElementConstructor register(String name, [Map options]) {
+   if (options != null) {
+     var options_1 = convertDartToNative_Dictionary(options);
+     return _register_1(name, options_1);
+   }
+   return _register_2(name);
+ }
+ @JSName('webkitRegister')
+ @DomName('Document.webkitRegister')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ // https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html#dfn-document-register
+ CustomElementConstructor _register_1(name, options) native;
+ @JSName('webkitRegister')
+ @DomName('Document.webkitRegister')
+ @DocsEditable
+ @SupportedBrowser(SupportedBrowser.CHROME)
+ @SupportedBrowser(SupportedBrowser.SAFARI)
+ @Experimental
+ // https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html#dfn-document-register
+ CustomElementConstructor _register_2(name) native;
+
+ @DomName('Document.onabort')
+ @DocsEditable
+ Stream&lt;Event&gt; get onAbort =&gt; Element.abortEvent.forTarget(this);
+
+ @DomName('Document.onbeforecopy')
+ @DocsEditable
+ Stream&lt;Event&gt; get onBeforeCopy =&gt; Element.beforeCopyEvent.forTarget(this);
+
+ @DomName('Document.onbeforecut')
+ @DocsEditable
+ Stream&lt;Event&gt; get onBeforeCut =&gt; Element.beforeCutEvent.forTarget(this);
+
+ @DomName('Document.onbeforepaste')
+ @DocsEditable
+ Stream&lt;Event&gt; get onBeforePaste =&gt; Element.beforePasteEvent.forTarget(this);
+
+ @DomName('Document.onblur')
+ @DocsEditable
+ Stream&lt;Event&gt; get onBlur =&gt; Element.blurEvent.forTarget(this);
+
+ @DomName('Document.onchange')
+ @DocsEditable
+ Stream&lt;Event&gt; get onChange =&gt; Element.changeEvent.forTarget(this);
+
+ @DomName('Document.onclick')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onClick =&gt; Element.clickEvent.forTarget(this);
+
+ @DomName('Document.oncontextmenu')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onContextMenu =&gt; Element.contextMenuEvent.forTarget(this);
+
+ @DomName('Document.oncopy')
+ @DocsEditable
+ Stream&lt;Event&gt; get onCopy =&gt; Element.copyEvent.forTarget(this);
+
+ @DomName('Document.oncut')
+ @DocsEditable
+ Stream&lt;Event&gt; get onCut =&gt; Element.cutEvent.forTarget(this);
+
+ @DomName('Document.ondblclick')
+ @DocsEditable
+ Stream&lt;Event&gt; get onDoubleClick =&gt; Element.doubleClickEvent.forTarget(this);
+
+ @DomName('Document.ondrag')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onDrag =&gt; Element.dragEvent.forTarget(this);
+
+ @DomName('Document.ondragend')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onDragEnd =&gt; Element.dragEndEvent.forTarget(this);
+
+ @DomName('Document.ondragenter')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onDragEnter =&gt; Element.dragEnterEvent.forTarget(this);
+
+ @DomName('Document.ondragleave')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onDragLeave =&gt; Element.dragLeaveEvent.forTarget(this);
+
+ @DomName('Document.ondragover')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onDragOver =&gt; Element.dragOverEvent.forTarget(this);
+
+ @DomName('Document.ondragstart')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onDragStart =&gt; Element.dragStartEvent.forTarget(this);
+
+ @DomName('Document.ondrop')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onDrop =&gt; Element.dropEvent.forTarget(this);
+
+ @DomName('Document.onerror')
+ @DocsEditable
+ Stream&lt;Event&gt; get onError =&gt; Element.errorEvent.forTarget(this);
+
+ @DomName('Document.onfocus')
+ @DocsEditable
+ Stream&lt;Event&gt; get onFocus =&gt; Element.focusEvent.forTarget(this);
+
+ @DomName('Document.oninput')
+ @DocsEditable
+ Stream&lt;Event&gt; get onInput =&gt; Element.inputEvent.forTarget(this);
+
+ @DomName('Document.oninvalid')
+ @DocsEditable
+ Stream&lt;Event&gt; get onInvalid =&gt; Element.invalidEvent.forTarget(this);
+
+ @DomName('Document.onkeydown')
+ @DocsEditable
+ Stream&lt;KeyboardEvent&gt; get onKeyDown =&gt; Element.keyDownEvent.forTarget(this);
+
+ @DomName('Document.onkeypress')
+ @DocsEditable
+ Stream&lt;KeyboardEvent&gt; get onKeyPress =&gt; Element.keyPressEvent.forTarget(this);
+
+ @DomName('Document.onkeyup')
+ @DocsEditable
+ Stream&lt;KeyboardEvent&gt; get onKeyUp =&gt; Element.keyUpEvent.forTarget(this);
+
+ @DomName('Document.onload')
+ @DocsEditable
+ Stream&lt;Event&gt; get onLoad =&gt; Element.loadEvent.forTarget(this);
+
+ @DomName('Document.onmousedown')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onMouseDown =&gt; Element.mouseDownEvent.forTarget(this);
+
+ @DomName('Document.onmousemove')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onMouseMove =&gt; Element.mouseMoveEvent.forTarget(this);
+
+ @DomName('Document.onmouseout')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onMouseOut =&gt; Element.mouseOutEvent.forTarget(this);
+
+ @DomName('Document.onmouseover')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onMouseOver =&gt; Element.mouseOverEvent.forTarget(this);
+
+ @DomName('Document.onmouseup')
+ @DocsEditable
+ Stream&lt;MouseEvent&gt; get onMouseUp =&gt; Element.mouseUpEvent.forTarget(this);
+
+ @DomName('Document.onmousewheel')
+ @DocsEditable
+ Stream&lt;WheelEvent&gt; get onMouseWheel =&gt; Element.mouseWheelEvent.forTarget(this);
+
+ @DomName('Document.onpaste')
+ @DocsEditable
+ Stream&lt;Event&gt; get onPaste =&gt; Element.pasteEvent.forTarget(this);
+
+ @DomName('Document.onreadystatechange')
+ @DocsEditable
+ Stream&lt;Event&gt; get onReadyStateChange =&gt; readyStateChangeEvent.forTarget(this);
+
+ @DomName('Document.onreset')
+ @DocsEditable
+ Stream&lt;Event&gt; get onReset =&gt; Element.resetEvent.forTarget(this);
+
+ @DomName('Document.onscroll')
+ @DocsEditable
+ Stream&lt;Event&gt; get onScroll =&gt; Element.scrollEvent.forTarget(this);
+
+ @DomName('Document.onsearch')
+ @DocsEditable
+ // http://www.w3.org/TR/html-markup/input.search.html
+ @Experimental
+ Stream&lt;Event&gt; get onSearch =&gt; Element.searchEvent.forTarget(this);
+
+ @DomName('Document.onsecuritypolicyviolation')
+ @DocsEditable
+ // https://dvcs.w3.org/hg/content-security-policy/raw-file/tip/csp-specification.dev.html#widl-Document-onsecuritypolicyviolation
+ @Experimental
+ Stream&lt;SecurityPolicyViolationEvent&gt; get onSecurityPolicyViolation =&gt; securityPolicyViolationEvent.forTarget(this);
+
+ @DomName('Document.onselect')
+ @DocsEditable
+ Stream&lt;Event&gt; get onSelect =&gt; Element.selectEvent.forTarget(this);
+
+ @DomName('Document.onselectionchange')
+ @DocsEditable
+ Stream&lt;Event&gt; get onSelectionChange =&gt; selectionChangeEvent.forTarget(this);
+
+ @DomName('Document.onselectstart')
+ @DocsEditable
+ Stream&lt;Event&gt; get onSelectStart =&gt; Element.selectStartEvent.forTarget(this);
+
+ @DomName('Document.onsubmit')
+ @DocsEditable
+ Stream&lt;Event&gt; get onSubmit =&gt; Element.submitEvent.forTarget(this);
+
+ @DomName('Document.ontouchcancel')
+ @DocsEditable
+ // http://www.w3.org/TR/touch-events/, http://www.chromestatus.com/features
+ @Experimental
+ Stream&lt;TouchEvent&gt; get onTouchCancel =&gt; Element.touchCancelEvent.forTarget(this);
+
+ @DomName('Document.ontouchend')
+ @DocsEditable
+ // http://www.w3.org/TR/touch-events/, http://www.chromestatus.com/features
+ @Experimental
+ Stream&lt;TouchEvent&gt; get onTouchEnd =&gt; Element.touchEndEvent.forTarget(this);
+
+ @DomName('Document.ontouchmove')
+ @DocsEditable
+ // http://www.w3.org/TR/touch-events/, http://www.chromestatus.com/features
+ @Experimental
+ Stream&lt;TouchEvent&gt; get onTouchMove =&gt; Element.touchMoveEvent.forTarget(this);
+
+ @DomName('Document.ontouchstart')
+ @DocsEditable
+ // http://www.w3.org/TR/touch-events/, http://www.chromestatus.com/features
+ @Experimental
+ Stream&lt;TouchEvent&gt; get onTouchStart =&gt; Element.touchStartEvent.forTarget(this);
+
+ @DomName('Document.onwebkitfullscreenchange')
+ @DocsEditable
+ // https://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html
+ @Experimental
+ Stream&lt;Event&gt; get onFullscreenChange =&gt; Element.fullscreenChangeEvent.forTarget(this);
+
+ @DomName('Document.onwebkitfullscreenerror')
+ @DocsEditable
+ // https://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html
+ @Experimental
+ Stream&lt;Event&gt; get onFullscreenError =&gt; Element.fullscreenErrorEvent.forTarget(this);
+
+ @DomName('Document.onwebkitpointerlockchange')
+ @DocsEditable
+ // https://dvcs.w3.org/hg/pointerlock/raw-file/default/index.html#widl-Document-onpointerlockchange
+ @Experimental
+ Stream&lt;Event&gt; get onPointerLockChange =&gt; pointerLockChangeEvent.forTarget(this);
+
+ @DomName('Document.onwebkitpointerlockerror')
+ @DocsEditable
+ // https://dvcs.w3.org/hg/pointerlock/raw-file/default/index.html#widl-Document-onpointerlockerror
+ @Experimental
+ Stream&lt;Event&gt; get onPointerLockError =&gt; pointerLockErrorEvent.forTarget(this);
+
+
+ /**
+  * Finds all descendant elements of this document that match the specified
+  * group of selectors.
+  *
+  * Unless your webpage contains multiple documents, the top-level queryAll
+  * method behaves the same as this method, so you should use it instead to
+  * save typing a few characters.
+  *
+  * [selectors] should be a string using CSS selector syntax.
+  *     var items = document.queryAll('.itemClassName');
+  *
+  * For details about CSS selector syntax, see the
+  * [CSS selector specification](http://www.w3.org/TR/css3-selectors/).
+  */
+ ElementList queryAll(String selectors) {
+   return new _FrozenElementList._wrap($dom_querySelectorAll(selectors));
+ }
+}
+</pre>
+</div>
+<h3>Extends</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart__interceptors/Interceptor.html">Interceptor</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><a href="../dart_html/EventTarget.html">EventTarget</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><a href="../dart_html/Node.html">Node</a></span>&nbsp;&gt;&nbsp;<span class="type-box"><span class="icon-class"></span><strong>Document</strong></span></p>
+<h3>Subclasses</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_html/HtmlDocument.html">HtmlDocument</a></span>, <span class="type-box"><span class="icon-class"></span><a href="../dart_svg/SvgDocument.html">SvgDocument</a></span></p>
+<div>
+<h3>Static Properties</h3>
+<div class="field"><h4 id="pointerLockChangeEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>pointerLockChangeEvent</strong> <a class="anchor-link"
+            href="#pointerLockChangeEvent"
+            title="Permalink to Document.pointerLockChangeEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+static const EventStreamProvider&lt;Event&gt; pointerLockChangeEvent = const EventStreamProvider&lt;Event&gt;('webkitpointerlockchange')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="pointerLockErrorEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>pointerLockErrorEvent</strong> <a class="anchor-link"
+            href="#pointerLockErrorEvent"
+            title="Permalink to Document.pointerLockErrorEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+static const EventStreamProvider&lt;Event&gt; pointerLockErrorEvent = const EventStreamProvider&lt;Event&gt;('webkitpointerlockerror')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="readyStateChangeEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>readyStateChangeEvent</strong> <a class="anchor-link"
+            href="#readyStateChangeEvent"
+            title="Permalink to Document.readyStateChangeEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+static const EventStreamProvider&lt;Event&gt; readyStateChangeEvent = const EventStreamProvider&lt;Event&gt;('readystatechange')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="securityPolicyViolationEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/SecurityPolicyViolationEvent.html">SecurityPolicyViolationEvent</a>&gt;         <strong>securityPolicyViolationEvent</strong> <a class="anchor-link"
+            href="#securityPolicyViolationEvent"
+            title="Permalink to Document.securityPolicyViolationEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+static const EventStreamProvider&lt;SecurityPolicyViolationEvent&gt; securityPolicyViolationEvent = const EventStreamProvider&lt;SecurityPolicyViolationEvent&gt;('securitypolicyviolation')
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="selectionChangeEvent">
+<button class="show-code">Code</button>
+const <a href="../dart_html/EventStreamProvider.html">EventStreamProvider</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>selectionChangeEvent</strong> <a class="anchor-link"
+            href="#selectionChangeEvent"
+            title="Permalink to Document.selectionChangeEvent">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+static const EventStreamProvider&lt;Event&gt; selectionChangeEvent = const EventStreamProvider&lt;Event&gt;('selectionchange')
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="$dom_body">
+<button class="show-code">Code</button>
+<a href="../dart_html/Element.html">Element</a>         <strong>$dom_body</strong> <a class="anchor-link"
+            href="#$dom_body"
+            title="Permalink to Document.$dom_body">#</a>
+        </h4>
+        <div class="doc">
+<p>Moved to <a class="crossref" href="../dart_html/HtmlDocument.html">HtmlDocument</a>.</p>
+<pre class="source">
+Element $dom_body
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="$dom_childNodes">
+<button class="show-code">Code</button>
+final <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_html/Node.html">Node</a>&gt;         <strong>$dom_childNodes</strong> <a class="anchor-link"
+            href="#$dom_childNodes"
+            title="Permalink to Document.$dom_childNodes">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+final List&lt;Node&gt; $dom_childNodes
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="$dom_firstChild">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Node.html">Node</a>         <strong>$dom_firstChild</strong> <a class="anchor-link"
+            href="#$dom_firstChild"
+            title="Permalink to Document.$dom_firstChild">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+final Node $dom_firstChild
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="$dom_head">
+<button class="show-code">Code</button>
+final <a href="../dart_html/HeadElement.html">HeadElement</a>         <strong>$dom_head</strong> <a class="anchor-link"
+            href="#$dom_head"
+            title="Permalink to Document.$dom_head">#</a>
+        </h4>
+        <div class="doc">
+<p>Moved to <a class="crossref" href="../dart_html/HtmlDocument.html">HtmlDocument</a>.</p>
+<pre class="source">
+final HeadElement $dom_head
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="$dom_lastChild">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Node.html">Node</a>         <strong>$dom_lastChild</strong> <a class="anchor-link"
+            href="#$dom_lastChild"
+            title="Permalink to Document.$dom_lastChild">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+final Node $dom_lastChild
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="$dom_lastModified">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>$dom_lastModified</strong> <a class="anchor-link"
+            href="#$dom_lastModified"
+            title="Permalink to Document.$dom_lastModified">#</a>
+        </h4>
+        <div class="doc">
+<p>Moved to <a class="crossref" href="../dart_html/HtmlDocument.html">HtmlDocument</a>.</p>
+<pre class="source">
+final String $dom_lastModified
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="$dom_localName">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>$dom_localName</strong> <a class="anchor-link"
+            href="#$dom_localName"
+            title="Permalink to Document.$dom_localName">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+final String $dom_localName
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="$dom_namespaceUri">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>$dom_namespaceUri</strong> <a class="anchor-link"
+            href="#$dom_namespaceUri"
+            title="Permalink to Document.$dom_namespaceUri">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+final String $dom_namespaceUri
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="$dom_preferredStylesheetSet">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>$dom_preferredStylesheetSet</strong> <a class="anchor-link"
+            href="#$dom_preferredStylesheetSet"
+            title="Permalink to Document.$dom_preferredStylesheetSet">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+final String $dom_preferredStylesheetSet
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="$dom_referrer">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>$dom_referrer</strong> <a class="anchor-link"
+            href="#$dom_referrer"
+            title="Permalink to Document.$dom_referrer">#</a>
+        </h4>
+        <div class="doc">
+<p>Moved to <a class="crossref" href="../dart_html/HtmlDocument.html">HtmlDocument</a>.</p>
+<pre class="source">
+final String $dom_referrer
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="$dom_selectedStylesheetSet">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>$dom_selectedStylesheetSet</strong> <a class="anchor-link"
+            href="#$dom_selectedStylesheetSet"
+            title="Permalink to Document.$dom_selectedStylesheetSet">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+String $dom_selectedStylesheetSet
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="$dom_styleSheets">
+<button class="show-code">Code</button>
+final <a href="../dart_core/List.html">List</a>&lt;<a href="../dart_html/StyleSheet.html">StyleSheet</a>&gt;         <strong>$dom_styleSheets</strong> <a class="anchor-link"
+            href="#$dom_styleSheets"
+            title="Permalink to Document.$dom_styleSheets">#</a>
+        </h4>
+        <div class="doc">
+<p>Moved to <a class="crossref" href="../dart_html/HtmlDocument.html">HtmlDocument</a></p>
+<pre class="source">
+final List&lt;StyleSheet&gt; $dom_styleSheets
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="$dom_title">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>$dom_title</strong> <a class="anchor-link"
+            href="#$dom_title"
+            title="Permalink to Document.$dom_title">#</a>
+        </h4>
+        <div class="doc">
+<p>Moved to <a class="crossref" href="../dart_html/HtmlDocument.html">HtmlDocument</a>.</p>
+<pre class="source">
+String $dom_title
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="$dom_webkitFullscreenElement">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Element.html">Element</a>         <strong>$dom_webkitFullscreenElement</strong> <a class="anchor-link"
+            href="#$dom_webkitFullscreenElement"
+            title="Permalink to Document.$dom_webkitFullscreenElement">#</a>
+        </h4>
+        <div class="doc">
+<p>Moved to <a class="crossref" href="../dart_html/HtmlDocument.html">HtmlDocument</a>.</p>
+<pre class="source">
+final Element $dom_webkitFullscreenElement
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="$dom_webkitFullscreenEnabled">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>$dom_webkitFullscreenEnabled</strong> <a class="anchor-link"
+            href="#$dom_webkitFullscreenEnabled"
+            title="Permalink to Document.$dom_webkitFullscreenEnabled">#</a>
+        </h4>
+        <div class="doc">
+<p>Moved to <a class="crossref" href="../dart_html/HtmlDocument.html">HtmlDocument</a>.</p>
+<pre class="source">
+final bool $dom_webkitFullscreenEnabled
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="$dom_webkitHidden">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>$dom_webkitHidden</strong> <a class="anchor-link"
+            href="#$dom_webkitHidden"
+            title="Permalink to Document.$dom_webkitHidden">#</a>
+        </h4>
+        <div class="doc">
+<p>Moved to <a class="crossref" href="../dart_html/HtmlDocument.html">HtmlDocument</a>.</p>
+<pre class="source">
+final bool $dom_webkitHidden
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="$dom_webkitIsFullScreen">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>$dom_webkitIsFullScreen</strong> <a class="anchor-link"
+            href="#$dom_webkitIsFullScreen"
+            title="Permalink to Document.$dom_webkitIsFullScreen">#</a>
+        </h4>
+        <div class="doc">
+<p>Moved to <a class="crossref" href="../dart_html/HtmlDocument.html">HtmlDocument</a>.</p>
+<pre class="source">
+final bool $dom_webkitIsFullScreen
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="$dom_webkitPointerLockElement">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Element.html">Element</a>         <strong>$dom_webkitPointerLockElement</strong> <a class="anchor-link"
+            href="#$dom_webkitPointerLockElement"
+            title="Permalink to Document.$dom_webkitPointerLockElement">#</a>
+        </h4>
+        <div class="doc">
+<p>Moved to <a class="crossref" href="../dart_html/HtmlDocument.html">HtmlDocument</a>.</p>
+<pre class="source">
+final Element $dom_webkitPointerLockElement
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="$dom_webkitVisibilityState">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>$dom_webkitVisibilityState</strong> <a class="anchor-link"
+            href="#$dom_webkitVisibilityState"
+            title="Permalink to Document.$dom_webkitVisibilityState">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+final String $dom_webkitVisibilityState
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="charset">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>charset</strong> <a class="anchor-link"
+            href="#charset"
+            title="Permalink to Document.charset">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+String charset
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="childElementCount">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>childElementCount</strong> <a class="anchor-link"
+            href="#childElementCount"
+            title="Permalink to Document.childElementCount">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+final int childElementCount
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="children">
+<button class="show-code">Code</button>
+final <a href="../dart_html/HtmlCollection.html">HtmlCollection</a>         <strong>children</strong> <a class="anchor-link"
+            href="#children"
+            title="Permalink to Document.children">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+final HtmlCollection children
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="cookie">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>cookie</strong> <a class="anchor-link"
+            href="#cookie"
+            title="Permalink to Document.cookie">#</a>
+        </h4>
+        <div class="doc">
+        <div class="mdn">
+        Returns a semicolon-separated list of the cookies for that document or sets a single cookie.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/DOM/document">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+String cookie
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="document">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Document.html">Document</a>         <strong>document</strong> <a class="anchor-link"
+            href="#document"
+            title="Permalink to Document.document">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+final Document document
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="documentElement">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Element.html">Element</a>         <strong>documentElement</strong> <a class="anchor-link"
+            href="#documentElement"
+            title="Permalink to Document.documentElement">#</a>
+        </h4>
+        <div class="doc">
+        <div class="mdn">
+        Returns the Element that is a direct child of document. For HTML documents, this is normally the HTML element.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/DOM/document">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+final Element documentElement
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="domain">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>domain</strong> <a class="anchor-link"
+            href="#domain"
+            title="Permalink to Document.domain">#</a>
+        </h4>
+        <div class="doc">
+        <div class="mdn">
+        Returns the domain of the current document.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/DOM/document">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+final String domain
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="firstElementChild">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Element.html">Element</a>         <strong>firstElementChild</strong> <a class="anchor-link"
+            href="#firstElementChild"
+            title="Permalink to Document.firstElementChild">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+final Element firstElementChild
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="fontloader">
+<button class="show-code">Code</button>
+final <a href="../dart_html/FontLoader.html">FontLoader</a>         <strong>fontloader</strong> <a class="anchor-link"
+            href="#fontloader"
+            title="Permalink to Document.fontloader">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+final FontLoader fontloader
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="hashCode">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>hashCode</strong> <a class="anchor-link"
+            href="#hashCode"
+            title="Permalink to Document.hashCode">#</a>
+        </h4>
+        <div class="inherited-from">inherited from Interceptor </div><div class="doc">
+<div class="inherited">
+<p>Get a hash code for this object.</p>
+<p>All objects have hash codes. Hash codes are guaranteed to be the
+same for objects that are equal when compared using the equality
+operator <code>==</code>. Other than that there are no guarantees about
+the hash codes. They will not be consistent between runs and
+there are no distribution guarantees.</p>
+<p>If a subclass overrides <code>hashCode</code> it should override the
+equality operator as well to maintain consistency.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+int get hashCode =&gt; Primitives.objectHashCode(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="implementation">
+<button class="show-code">Code</button>
+final <a href="../dart_html/DomImplementation.html">DomImplementation</a>         <strong>implementation</strong> <a class="anchor-link"
+            href="#implementation"
+            title="Permalink to Document.implementation">#</a>
+        </h4>
+        <div class="doc">
+        <div class="mdn">
+        Returns the DOM implementation associated with the current document.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/DOM/document">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+final DomImplementation implementation
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="lastElementChild">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Element.html">Element</a>         <strong>lastElementChild</strong> <a class="anchor-link"
+            href="#lastElementChild"
+            title="Permalink to Document.lastElementChild">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+final Element lastElementChild
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="nextNode">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Node.html">Node</a>         <strong>nextNode</strong> <a class="anchor-link"
+            href="#nextNode"
+            title="Permalink to Document.nextNode">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+final Node nextNode
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="nodes">
+<button class="show-code">Code</button>
+<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_html/Node.html">Node</a>&gt;         <strong>nodes</strong> <a class="anchor-link"
+            href="#nodes"
+            title="Permalink to Document.nodes">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+List&lt;Node&gt; get nodes {
+ return new _ChildNodeListLazy(this);
+}
+</pre>
+<pre class="source">
+void set nodes(Iterable&lt;Node&gt; value) {
+ // Copy list first since we don't want liveness during iteration.
+ // TODO(jacobr): there is a better way to do this.
+ List copy = new List.from(value);
+ text = '';
+ for (Node node in copy) {
+   append(node);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="nodeType">
+<button class="show-code">Code</button>
+final <a href="../dart_core/int.html">int</a>         <strong>nodeType</strong> <a class="anchor-link"
+            href="#nodeType"
+            title="Permalink to Document.nodeType">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+final int nodeType
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="nodeValue">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>nodeValue</strong> <a class="anchor-link"
+            href="#nodeValue"
+            title="Permalink to Document.nodeValue">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+final String nodeValue
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="on">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Events.html">Events</a>         <strong>on</strong> <a class="anchor-link"
+            href="#on"
+            title="Permalink to Document.on">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/EventTarget.html">EventTarget</a> </div><div class="doc">
+<p>This is an ease-of-use accessor for event streams which should only be
+used when an explicit accessor is not available.</p>
+<pre class="source">
+Events get on =&gt; new Events(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onAbort">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onAbort</strong> <a class="anchor-link"
+            href="#onAbort"
+            title="Permalink to Document.onAbort">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onabort')
+@DocsEditable
+Stream&lt;Event&gt; get onAbort =&gt; Element.abortEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onBeforeCopy">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onBeforeCopy</strong> <a class="anchor-link"
+            href="#onBeforeCopy"
+            title="Permalink to Document.onBeforeCopy">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onbeforecopy')
+@DocsEditable
+Stream&lt;Event&gt; get onBeforeCopy =&gt; Element.beforeCopyEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onBeforeCut">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onBeforeCut</strong> <a class="anchor-link"
+            href="#onBeforeCut"
+            title="Permalink to Document.onBeforeCut">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onbeforecut')
+@DocsEditable
+Stream&lt;Event&gt; get onBeforeCut =&gt; Element.beforeCutEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onBeforePaste">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onBeforePaste</strong> <a class="anchor-link"
+            href="#onBeforePaste"
+            title="Permalink to Document.onBeforePaste">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onbeforepaste')
+@DocsEditable
+Stream&lt;Event&gt; get onBeforePaste =&gt; Element.beforePasteEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onBlur">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onBlur</strong> <a class="anchor-link"
+            href="#onBlur"
+            title="Permalink to Document.onBlur">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onblur')
+@DocsEditable
+Stream&lt;Event&gt; get onBlur =&gt; Element.blurEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onChange">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onChange</strong> <a class="anchor-link"
+            href="#onChange"
+            title="Permalink to Document.onChange">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onchange')
+@DocsEditable
+Stream&lt;Event&gt; get onChange =&gt; Element.changeEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onClick">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onClick</strong> <a class="anchor-link"
+            href="#onClick"
+            title="Permalink to Document.onClick">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onclick')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onClick =&gt; Element.clickEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onContextMenu">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onContextMenu</strong> <a class="anchor-link"
+            href="#onContextMenu"
+            title="Permalink to Document.onContextMenu">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.oncontextmenu')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onContextMenu =&gt; Element.contextMenuEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onCopy">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onCopy</strong> <a class="anchor-link"
+            href="#onCopy"
+            title="Permalink to Document.onCopy">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.oncopy')
+@DocsEditable
+Stream&lt;Event&gt; get onCopy =&gt; Element.copyEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onCut">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onCut</strong> <a class="anchor-link"
+            href="#onCut"
+            title="Permalink to Document.onCut">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.oncut')
+@DocsEditable
+Stream&lt;Event&gt; get onCut =&gt; Element.cutEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDoubleClick">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onDoubleClick</strong> <a class="anchor-link"
+            href="#onDoubleClick"
+            title="Permalink to Document.onDoubleClick">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.ondblclick')
+@DocsEditable
+Stream&lt;Event&gt; get onDoubleClick =&gt; Element.doubleClickEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDrag">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDrag</strong> <a class="anchor-link"
+            href="#onDrag"
+            title="Permalink to Document.onDrag">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.ondrag')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDrag =&gt; Element.dragEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDragEnd">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDragEnd</strong> <a class="anchor-link"
+            href="#onDragEnd"
+            title="Permalink to Document.onDragEnd">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.ondragend')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDragEnd =&gt; Element.dragEndEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDragEnter">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDragEnter</strong> <a class="anchor-link"
+            href="#onDragEnter"
+            title="Permalink to Document.onDragEnter">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.ondragenter')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDragEnter =&gt; Element.dragEnterEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDragLeave">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDragLeave</strong> <a class="anchor-link"
+            href="#onDragLeave"
+            title="Permalink to Document.onDragLeave">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.ondragleave')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDragLeave =&gt; Element.dragLeaveEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDragOver">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDragOver</strong> <a class="anchor-link"
+            href="#onDragOver"
+            title="Permalink to Document.onDragOver">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.ondragover')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDragOver =&gt; Element.dragOverEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDragStart">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDragStart</strong> <a class="anchor-link"
+            href="#onDragStart"
+            title="Permalink to Document.onDragStart">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.ondragstart')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDragStart =&gt; Element.dragStartEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onDrop">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onDrop</strong> <a class="anchor-link"
+            href="#onDrop"
+            title="Permalink to Document.onDrop">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.ondrop')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onDrop =&gt; Element.dropEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onError">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onError</strong> <a class="anchor-link"
+            href="#onError"
+            title="Permalink to Document.onError">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onerror')
+@DocsEditable
+Stream&lt;Event&gt; get onError =&gt; Element.errorEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onFocus">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onFocus</strong> <a class="anchor-link"
+            href="#onFocus"
+            title="Permalink to Document.onFocus">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onfocus')
+@DocsEditable
+Stream&lt;Event&gt; get onFocus =&gt; Element.focusEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onFullscreenChange">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onFullscreenChange</strong> <a class="anchor-link"
+            href="#onFullscreenChange"
+            title="Permalink to Document.onFullscreenChange">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onwebkitfullscreenchange')
+@DocsEditable
+// https://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html
+@Experimental
+Stream&lt;Event&gt; get onFullscreenChange =&gt; Element.fullscreenChangeEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onFullscreenError">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onFullscreenError</strong> <a class="anchor-link"
+            href="#onFullscreenError"
+            title="Permalink to Document.onFullscreenError">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onwebkitfullscreenerror')
+@DocsEditable
+// https://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html
+@Experimental
+Stream&lt;Event&gt; get onFullscreenError =&gt; Element.fullscreenErrorEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onInput">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onInput</strong> <a class="anchor-link"
+            href="#onInput"
+            title="Permalink to Document.onInput">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.oninput')
+@DocsEditable
+Stream&lt;Event&gt; get onInput =&gt; Element.inputEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onInvalid">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onInvalid</strong> <a class="anchor-link"
+            href="#onInvalid"
+            title="Permalink to Document.onInvalid">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.oninvalid')
+@DocsEditable
+Stream&lt;Event&gt; get onInvalid =&gt; Element.invalidEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onKeyDown">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/KeyboardEvent.html">KeyboardEvent</a>&gt;         <strong>onKeyDown</strong> <a class="anchor-link"
+            href="#onKeyDown"
+            title="Permalink to Document.onKeyDown">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onkeydown')
+@DocsEditable
+Stream&lt;KeyboardEvent&gt; get onKeyDown =&gt; Element.keyDownEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onKeyPress">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/KeyboardEvent.html">KeyboardEvent</a>&gt;         <strong>onKeyPress</strong> <a class="anchor-link"
+            href="#onKeyPress"
+            title="Permalink to Document.onKeyPress">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onkeypress')
+@DocsEditable
+Stream&lt;KeyboardEvent&gt; get onKeyPress =&gt; Element.keyPressEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onKeyUp">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/KeyboardEvent.html">KeyboardEvent</a>&gt;         <strong>onKeyUp</strong> <a class="anchor-link"
+            href="#onKeyUp"
+            title="Permalink to Document.onKeyUp">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onkeyup')
+@DocsEditable
+Stream&lt;KeyboardEvent&gt; get onKeyUp =&gt; Element.keyUpEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onLoad">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onLoad</strong> <a class="anchor-link"
+            href="#onLoad"
+            title="Permalink to Document.onLoad">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onload')
+@DocsEditable
+Stream&lt;Event&gt; get onLoad =&gt; Element.loadEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onMouseDown">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onMouseDown</strong> <a class="anchor-link"
+            href="#onMouseDown"
+            title="Permalink to Document.onMouseDown">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onmousedown')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onMouseDown =&gt; Element.mouseDownEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onMouseMove">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onMouseMove</strong> <a class="anchor-link"
+            href="#onMouseMove"
+            title="Permalink to Document.onMouseMove">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onmousemove')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onMouseMove =&gt; Element.mouseMoveEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onMouseOut">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onMouseOut</strong> <a class="anchor-link"
+            href="#onMouseOut"
+            title="Permalink to Document.onMouseOut">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onmouseout')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onMouseOut =&gt; Element.mouseOutEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onMouseOver">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onMouseOver</strong> <a class="anchor-link"
+            href="#onMouseOver"
+            title="Permalink to Document.onMouseOver">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onmouseover')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onMouseOver =&gt; Element.mouseOverEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onMouseUp">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/MouseEvent.html">MouseEvent</a>&gt;         <strong>onMouseUp</strong> <a class="anchor-link"
+            href="#onMouseUp"
+            title="Permalink to Document.onMouseUp">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onmouseup')
+@DocsEditable
+Stream&lt;MouseEvent&gt; get onMouseUp =&gt; Element.mouseUpEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onMouseWheel">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/WheelEvent.html">WheelEvent</a>&gt;         <strong>onMouseWheel</strong> <a class="anchor-link"
+            href="#onMouseWheel"
+            title="Permalink to Document.onMouseWheel">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onmousewheel')
+@DocsEditable
+Stream&lt;WheelEvent&gt; get onMouseWheel =&gt; Element.mouseWheelEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onPaste">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onPaste</strong> <a class="anchor-link"
+            href="#onPaste"
+            title="Permalink to Document.onPaste">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onpaste')
+@DocsEditable
+Stream&lt;Event&gt; get onPaste =&gt; Element.pasteEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onPointerLockChange">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onPointerLockChange</strong> <a class="anchor-link"
+            href="#onPointerLockChange"
+            title="Permalink to Document.onPointerLockChange">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onwebkitpointerlockchange')
+@DocsEditable
+// https://dvcs.w3.org/hg/pointerlock/raw-file/default/index.html#widl-Document-onpointerlockchange
+@Experimental
+Stream&lt;Event&gt; get onPointerLockChange =&gt; pointerLockChangeEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onPointerLockError">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onPointerLockError</strong> <a class="anchor-link"
+            href="#onPointerLockError"
+            title="Permalink to Document.onPointerLockError">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onwebkitpointerlockerror')
+@DocsEditable
+// https://dvcs.w3.org/hg/pointerlock/raw-file/default/index.html#widl-Document-onpointerlockerror
+@Experimental
+Stream&lt;Event&gt; get onPointerLockError =&gt; pointerLockErrorEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onReadyStateChange">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onReadyStateChange</strong> <a class="anchor-link"
+            href="#onReadyStateChange"
+            title="Permalink to Document.onReadyStateChange">#</a>
+        </h4>
+        <div class="doc">
+        <div class="mdn">
+        <dl><dd>Returns the event handling code for the <code>readystatechange</code> event.</dd>
+</dl>
+<div class="geckoVersionNote"> <p>
+</p><div class="geckoVersionHeading">Gecko 9.0 note<div>(Firefox 9.0 / Thunderbird 9.0 / SeaMonkey 2.6)
+</div></div>
+<p></p> <p>Starting in Gecko 9.0 (Firefox 9.0 / Thunderbird 9.0 / SeaMonkey 2.6)
+, you can now use the syntax <code>if ("onabort" in document)</code> to determine whether or not a given event handler property exists. This is because event handler interfaces have been updated to be proper web IDL interfaces. See <a title="en/DOM/DOM event handlers" rel="internal" href="https://developer.mozilla.org/en/DOM/DOM_event_handlers">DOM event handlers</a> for details.</p>
+</div>
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/DOM/document">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('Document.onreadystatechange')
+@DocsEditable
+Stream&lt;Event&gt; get onReadyStateChange =&gt; readyStateChangeEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onReset">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onReset</strong> <a class="anchor-link"
+            href="#onReset"
+            title="Permalink to Document.onReset">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onreset')
+@DocsEditable
+Stream&lt;Event&gt; get onReset =&gt; Element.resetEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onScroll">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onScroll</strong> <a class="anchor-link"
+            href="#onScroll"
+            title="Permalink to Document.onScroll">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onscroll')
+@DocsEditable
+Stream&lt;Event&gt; get onScroll =&gt; Element.scrollEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onSearch">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onSearch</strong> <a class="anchor-link"
+            href="#onSearch"
+            title="Permalink to Document.onSearch">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onsearch')
+@DocsEditable
+// http://www.w3.org/TR/html-markup/input.search.html
+@Experimental
+Stream&lt;Event&gt; get onSearch =&gt; Element.searchEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onSecurityPolicyViolation">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/SecurityPolicyViolationEvent.html">SecurityPolicyViolationEvent</a>&gt;         <strong>onSecurityPolicyViolation</strong> <a class="anchor-link"
+            href="#onSecurityPolicyViolation"
+            title="Permalink to Document.onSecurityPolicyViolation">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onsecuritypolicyviolation')
+@DocsEditable
+// https://dvcs.w3.org/hg/content-security-policy/raw-file/tip/csp-specification.dev.html#widl-Document-onsecuritypolicyviolation
+@Experimental
+Stream&lt;SecurityPolicyViolationEvent&gt; get onSecurityPolicyViolation =&gt; securityPolicyViolationEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onSelect">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onSelect</strong> <a class="anchor-link"
+            href="#onSelect"
+            title="Permalink to Document.onSelect">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onselect')
+@DocsEditable
+Stream&lt;Event&gt; get onSelect =&gt; Element.selectEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onSelectionChange">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onSelectionChange</strong> <a class="anchor-link"
+            href="#onSelectionChange"
+            title="Permalink to Document.onSelectionChange">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onselectionchange')
+@DocsEditable
+Stream&lt;Event&gt; get onSelectionChange =&gt; selectionChangeEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onSelectStart">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onSelectStart</strong> <a class="anchor-link"
+            href="#onSelectStart"
+            title="Permalink to Document.onSelectStart">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onselectstart')
+@DocsEditable
+Stream&lt;Event&gt; get onSelectStart =&gt; Element.selectStartEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onSubmit">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/Event.html">Event</a>&gt;         <strong>onSubmit</strong> <a class="anchor-link"
+            href="#onSubmit"
+            title="Permalink to Document.onSubmit">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.onsubmit')
+@DocsEditable
+Stream&lt;Event&gt; get onSubmit =&gt; Element.submitEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onTouchCancel">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/TouchEvent.html">TouchEvent</a>&gt;         <strong>onTouchCancel</strong> <a class="anchor-link"
+            href="#onTouchCancel"
+            title="Permalink to Document.onTouchCancel">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.ontouchcancel')
+@DocsEditable
+// http://www.w3.org/TR/touch-events/, http://www.chromestatus.com/features
+@Experimental
+Stream&lt;TouchEvent&gt; get onTouchCancel =&gt; Element.touchCancelEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onTouchEnd">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/TouchEvent.html">TouchEvent</a>&gt;         <strong>onTouchEnd</strong> <a class="anchor-link"
+            href="#onTouchEnd"
+            title="Permalink to Document.onTouchEnd">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.ontouchend')
+@DocsEditable
+// http://www.w3.org/TR/touch-events/, http://www.chromestatus.com/features
+@Experimental
+Stream&lt;TouchEvent&gt; get onTouchEnd =&gt; Element.touchEndEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onTouchMove">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/TouchEvent.html">TouchEvent</a>&gt;         <strong>onTouchMove</strong> <a class="anchor-link"
+            href="#onTouchMove"
+            title="Permalink to Document.onTouchMove">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.ontouchmove')
+@DocsEditable
+// http://www.w3.org/TR/touch-events/, http://www.chromestatus.com/features
+@Experimental
+Stream&lt;TouchEvent&gt; get onTouchMove =&gt; Element.touchMoveEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="onTouchStart">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_html/TouchEvent.html">TouchEvent</a>&gt;         <strong>onTouchStart</strong> <a class="anchor-link"
+            href="#onTouchStart"
+            title="Permalink to Document.onTouchStart">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+@DomName('Document.ontouchstart')
+@DocsEditable
+// http://www.w3.org/TR/touch-events/, http://www.chromestatus.com/features
+@Experimental
+Stream&lt;TouchEvent&gt; get onTouchStart =&gt; Element.touchStartEvent.forTarget(this);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="parent">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Element.html">Element</a>         <strong>parent</strong> <a class="anchor-link"
+            href="#parent"
+            title="Permalink to Document.parent">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+final Element parent
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="parentNode">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Node.html">Node</a>         <strong>parentNode</strong> <a class="anchor-link"
+            href="#parentNode"
+            title="Permalink to Document.parentNode">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+final Node parentNode
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="previousNode">
+<button class="show-code">Code</button>
+final <a href="../dart_html/Node.html">Node</a>         <strong>previousNode</strong> <a class="anchor-link"
+            href="#previousNode"
+            title="Permalink to Document.previousNode">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+final Node previousNode
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="readyState">
+<button class="show-code">Code</button>
+final <a href="../dart_core/String.html">String</a>         <strong>readyState</strong> <a class="anchor-link"
+            href="#readyState"
+            title="Permalink to Document.readyState">#</a>
+        </h4>
+        <div class="doc">
+        <div class="mdn">
+        Returns loading status of the document
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/DOM/document">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+final String readyState
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="runtimeType">
+<button class="show-code">Code</button>
+final <a href="../dart_core/Type.html">Type</a>         <strong>runtimeType</strong> <a class="anchor-link"
+            href="#runtimeType"
+            title="Permalink to Document.runtimeType">#</a>
+        </h4>
+        <div class="inherited-from">inherited from Interceptor </div><div class="doc">
+<div class="inherited">
+<p>A representation of the runtime type of the object.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+Type get runtimeType =&gt; getRuntimeType(this);
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="securityPolicy">
+<button class="show-code">Code</button>
+final <a href="../dart_html/SecurityPolicy.html">SecurityPolicy</a>         <strong>securityPolicy</strong> <a class="anchor-link"
+            href="#securityPolicy"
+            title="Permalink to Document.securityPolicy">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+final SecurityPolicy securityPolicy
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="templateInstance">
+<button class="show-code">Code</button>
+final <a href="../dart_html/TemplateInstance.html">TemplateInstance</a>         <strong>templateInstance</strong> <a class="anchor-link"
+            href="#templateInstance"
+            title="Permalink to Document.templateInstance">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<p>Gets the template instance that instantiated this node, if any. </p>
+<pre class="source">
+@Experimental
+TemplateInstance get templateInstance =&gt;
+   _templateInstance != null ? _templateInstance :
+   (parent != null ? parent.templateInstance : null);
+</pre>
+</div>
+</div>
+<div class="field inherited"><h4 id="text">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a>         <strong>text</strong> <a class="anchor-link"
+            href="#text"
+            title="Permalink to Document.text">#</a>
+        </h4>
+        <div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+String text
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="window">
+<button class="show-code">Code</button>
+final <a href="../dart_html/WindowBase.html">WindowBase</a>         <strong>window</strong> <a class="anchor-link"
+            href="#window"
+            title="Permalink to Document.window">#</a>
+        </h4>
+        <div class="doc">
+<pre class="source">
+WindowBase get window =&gt; _convertNativeToDart_Window(this._get_window);
+</pre>
+</div>
+</div>
+</div>
+<div class="inherited">
+<h3>Operators</h3>
+<div class="method inherited"><h4 id="==">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>operator ==</strong>(other) <a class="anchor-link" href="#=="
+              title="Permalink to Document.operator ==">#</a></h4>
+<div class="inherited-from">inherited from Interceptor </div><div class="doc">
+<div class="inherited">
+<p>The equality operator.</p>
+<p>The default behavior for all <code>Object</code>s is to return true if and
+only if <code>this</code> and 
+<span class="param">other</span> are the same object.</p>
+<p>If a subclass overrides the equality operator it should override
+the <code>hashCode</code> method as well to maintain consistency.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+bool operator ==(other) =&gt; identical(this, other);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method inherited"><h4 id="append">
+<button class="show-code">Code</button>
+<a href="../dart_html/Node.html">Node</a> <strong>append</strong>(<a href="../dart_html/Node.html">Node</a> newChild) <a class="anchor-link" href="#append"
+              title="Permalink to Document.append">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<p>Adds a node to the end of the child <code>nodes</code> list of this node.</p>
+<p>If the node already exists in this document, it will be removed from its
+current parent node, then added to this node.</p>
+<p>This method is more efficient than <code>nodes.add</code>, and is the preferred
+way of appending a child node.</p>
+<pre class="source">
+@JSName('appendChild')
+/**
+* Adds a node to the end of the child [nodes] list of this node.
+*
+* If the node already exists in this document, it will be removed from its
+* current parent node, then added to this node.
+*
+* This method is more efficient than `nodes.add`, and is the preferred
+* way of appending a child node.
+*/
+@DomName('Node.appendChild')
+@DocsEditable
+Node append(Node newChild) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="bind">
+<button class="show-code">Code</button>
+void <strong>bind</strong>(<a href="../dart_core/String.html">String</a> name, model, <a href="../dart_core/String.html">String</a> path) <a class="anchor-link" href="#bind"
+              title="Permalink to Document.bind">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<p>Binds the attribute 
+<span class="param">name</span> to the 
+<span class="param">path</span> of the 
+<span class="param">model</span>.
+Path is a String of accessors such as <code>foo.bar.baz</code>.</p>
+<pre class="source">
+@Experimental
+void bind(String name, model, String path) {
+ // TODO(jmesserly): should we throw instead?
+ window.console.error('Unhandled binding to Node: '
+     '$this $name $model $path');
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="clone">
+<button class="show-code">Code</button>
+<a href="../dart_html/Node.html">Node</a> <strong>clone</strong>(<a href="../dart_core/bool.html">bool</a> deep) <a class="anchor-link" href="#clone"
+              title="Permalink to Document.clone">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@JSName('cloneNode')
+@DomName('Node.cloneNode')
+@DocsEditable
+Node clone(bool deep) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="contains">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>contains</strong>(<a href="../dart_html/Node.html">Node</a> other) <a class="anchor-link" href="#contains"
+              title="Permalink to Document.contains">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@DomName('Node.contains')
+@DocsEditable
+bool contains(Node other) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="createCDataSection">
+<button class="show-code">Code</button>
+<a href="../dart_html/CDataSection.html">CDataSection</a> <strong>createCDataSection</strong>(<a href="../dart_core/String.html">String</a> data) <a class="anchor-link" href="#createCDataSection"
+              title="Permalink to Document.createCDataSection">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        Creates a new CDATA node and returns it.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/DOM/document">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@JSName('createCDATASection')
+@DomName('Document.createCDATASection')
+@DocsEditable
+// http://dom.spec.whatwg.org/#dom-document-createcdatasection
+@deprecated // deprecated
+CDataSection createCDataSection(String data) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="createDocumentFragment">
+<button class="show-code">Code</button>
+<a href="../dart_html/DocumentFragment.html">DocumentFragment</a> <strong>createDocumentFragment</strong>() <a class="anchor-link" href="#createDocumentFragment"
+              title="Permalink to Document.createDocumentFragment">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        Creates a new document fragment.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/DOM/document">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('Document.createDocumentFragment')
+@DocsEditable
+DocumentFragment createDocumentFragment() native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="dispatchEvent">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>dispatchEvent</strong>(<a href="../dart_html/Event.html">Event</a> event) <a class="anchor-link" href="#dispatchEvent"
+              title="Permalink to Document.dispatchEvent">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@DomName('Node.dispatchEvent')
+@DocsEditable
+bool dispatchEvent(Event event) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="execCommand">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>execCommand</strong>(<a href="../dart_core/String.html">String</a> command, <a href="../dart_core/bool.html">bool</a> userInterface, <a href="../dart_core/String.html">String</a> value) <a class="anchor-link" href="#execCommand"
+              title="Permalink to Document.execCommand">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        Executes a <a title="en/Midas" rel="internal" href="https://developer.mozilla.org/en/Midas">Midas</a> command.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/DOM/document">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('Document.execCommand')
+@DocsEditable
+bool execCommand(String command, bool userInterface, String value) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="getElementById">
+<button class="show-code">Code</button>
+<a href="../dart_html/Element.html">Element</a> <strong>getElementById</strong>(<a href="../dart_core/String.html">String</a> elementId) <a class="anchor-link" href="#getElementById"
+              title="Permalink to Document.getElementById">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        Returns an object reference to the identified element.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/DOM/document">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('Document.getElementById')
+@DocsEditable
+Element getElementById(String elementId) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="getElementsByClassName">
+<button class="show-code">Code</button>
+<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_html/Node.html">Node</a>&gt; <strong>getElementsByClassName</strong>(<a href="../dart_core/String.html">String</a> tagname) <a class="anchor-link" href="#getElementsByClassName"
+              title="Permalink to Document.getElementsByClassName">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        Returns a list of elements with the given class name.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/DOM/document">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('Document.getElementsByClassName')
+@DocsEditable
+@Returns('NodeList')
+@Creates('NodeList')
+List&lt;Node&gt; getElementsByClassName(String tagname) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="getElementsByName">
+<button class="show-code">Code</button>
+<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_html/Node.html">Node</a>&gt; <strong>getElementsByName</strong>(<a href="../dart_core/String.html">String</a> elementName) <a class="anchor-link" href="#getElementsByName"
+              title="Permalink to Document.getElementsByName">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        Returns a list of elements with the given name.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/DOM/document">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('Document.getElementsByName')
+@DocsEditable
+@Returns('NodeList')
+@Creates('NodeList')
+List&lt;Node&gt; getElementsByName(String elementName) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="getElementsByTagName">
+<button class="show-code">Code</button>
+<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_html/Node.html">Node</a>&gt; <strong>getElementsByTagName</strong>(<a href="../dart_core/String.html">String</a> tagname) <a class="anchor-link" href="#getElementsByTagName"
+              title="Permalink to Document.getElementsByTagName">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        Returns a list of elements with the given tag name.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/DOM/document">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('Document.getElementsByTagName')
+@DocsEditable
+@Returns('NodeList')
+@Creates('NodeList')
+List&lt;Node&gt; getElementsByTagName(String tagname) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="getNamedFlows">
+<button class="show-code">Code</button>
+<a href="../dart_html/NamedFlowCollection.html">NamedFlowCollection</a> <strong>getNamedFlows</strong>() <a class="anchor-link" href="#getNamedFlows"
+              title="Permalink to Document.getNamedFlows">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('webkitGetNamedFlows')
+@DomName('Document.webkitGetNamedFlows')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+// http://www.w3.org/TR/css3-regions/#dom-named-flow-collection
+NamedFlowCollection getNamedFlows() native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="hasChildNodes">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>hasChildNodes</strong>() <a class="anchor-link" href="#hasChildNodes"
+              title="Permalink to Document.hasChildNodes">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@DomName('Node.hasChildNodes')
+@DocsEditable
+bool hasChildNodes() native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="insertAllBefore">
+<button class="show-code">Code</button>
+<a href="../dart_html/Node.html">Node</a> <strong>insertAllBefore</strong>(<a href="../dart_core/Iterable.html">Iterable</a>&lt;<a href="../dart_html/Node.html">Node</a>&gt; newNodes, <a href="../dart_html/Node.html">Node</a> refChild) <a class="anchor-link" href="#insertAllBefore"
+              title="Permalink to Document.insertAllBefore">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<p>Inserts all of the nodes into this node directly before refChild.</p>
+<p>See also:</p><ul><li><code>insertBefore</code></li></ul>
+<pre class="source">
+Node insertAllBefore(Iterable&lt;Node&gt; newNodes, Node refChild) {
+ if (newNodes is _ChildNodeListLazy) {
+   _ChildNodeListLazy otherList = newNodes;
+   if (identical(otherList._this, this)) {
+     throw new ArgumentError(newNodes);
+   }
+
+   // Optimized route for copying between nodes.
+   for (var i = 0, len = otherList.length; i &lt; len; ++i) {
+     // Should use $dom_firstChild, Bug 8886.
+     this.insertBefore(otherList[0], refChild);
+   }
+ } else {
+   for (var node in newNodes) {
+     this.insertBefore(node, refChild);
+   }
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="insertBefore">
+<button class="show-code">Code</button>
+<a href="../dart_html/Node.html">Node</a> <strong>insertBefore</strong>(<a href="../dart_html/Node.html">Node</a> newChild, <a href="../dart_html/Node.html">Node</a> refChild) <a class="anchor-link" href="#insertBefore"
+              title="Permalink to Document.insertBefore">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@DomName('Node.insertBefore')
+@DocsEditable
+Node insertBefore(Node newChild, Node refChild) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="noSuchMethod">
+<button class="show-code">Code</button>
+dynamic <strong>noSuchMethod</strong>(<a href="../dart_core/Invocation.html">Invocation</a> invocation) <a class="anchor-link" href="#noSuchMethod"
+              title="Permalink to Document.noSuchMethod">#</a></h4>
+<div class="inherited-from">inherited from Interceptor </div><div class="doc">
+<div class="inherited">
+<p><code>noSuchMethod</code> is invoked when users invoke a non-existant method
+on an object. The name of the method and the arguments of the
+invocation are passed to <code>noSuchMethod</code> in an <code>Invocation</code>.
+If <code>noSuchMethod</code> returns a value, that value becomes the result of
+the original invocation.</p>
+<p>The default behavior of <code>noSuchMethod</code> is to throw a
+<code>noSuchMethodError</code>.</p>
+<div class="docs-inherited-from">docs inherited from <a href="../dart_core/Object.html">Object</a> </div></div>
+<pre class="source">
+dynamic noSuchMethod(Invocation invocation) {
+ throw new NoSuchMethodError(
+     this,
+     _symbolToString(invocation.memberName),
+     invocation.positionalArguments,
+     _symbolMapToStringMap(invocation.namedArguments));
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="query">
+<button class="show-code">Code</button>
+<a href="../dart_html/Element.html">Element</a> <strong>query</strong>(<a href="../dart_core/String.html">String</a> selectors) <a class="anchor-link" href="#query"
+              title="Permalink to Document.query">#</a></h4>
+<div class="doc">
+<p>Finds the first descendant element of this document that matches the
+specified group of selectors.</p>
+<p>Unless your webpage contains multiple documents, the top-level query
+method behaves the same as this method, so you should use it instead to
+save typing a few characters.</p>
+<p>
+<span class="param">selectors</span> should be a string using CSS selector syntax.</p>
+<pre><code>var element1 = document.query('.className');
+var element2 = document.query('#id');
+</code></pre>
+<p>For details about CSS selector syntax, see the
+<a href="http://www.w3.org/TR/css3-selectors/">CSS selector specification</a>.</p>
+<pre class="source">
+@JSName('querySelector')
+/**
+* Finds the first descendant element of this document that matches the
+* specified group of selectors.
+*
+* Unless your webpage contains multiple documents, the top-level query
+* method behaves the same as this method, so you should use it instead to
+* save typing a few characters.
+*
+* [selectors] should be a string using CSS selector syntax.
+*     var element1 = document.query('.className');
+*     var element2 = document.query('#id');
+*
+* For details about CSS selector syntax, see the
+* [CSS selector specification](http://www.w3.org/TR/css3-selectors/).
+*/
+@DomName('Document.querySelector')
+@DocsEditable
+Element query(String selectors) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="queryAll">
+<button class="show-code">Code</button>
+<a href="../dart_html/ElementList.html">ElementList</a> <strong>queryAll</strong>(<a href="../dart_core/String.html">String</a> selectors) <a class="anchor-link" href="#queryAll"
+              title="Permalink to Document.queryAll">#</a></h4>
+<div class="doc">
+<p>Finds all descendant elements of this document that match the specified
+group of selectors.</p>
+<p>Unless your webpage contains multiple documents, the top-level queryAll
+method behaves the same as this method, so you should use it instead to
+save typing a few characters.</p>
+<p>
+<span class="param">selectors</span> should be a string using CSS selector syntax.</p>
+<pre><code>var items = document.queryAll('.itemClassName');
+</code></pre>
+<p>For details about CSS selector syntax, see the
+<a href="http://www.w3.org/TR/css3-selectors/">CSS selector specification</a>.</p>
+<pre class="source">
+ElementList queryAll(String selectors) {
+ return new _FrozenElementList._wrap($dom_querySelectorAll(selectors));
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="queryCommandEnabled">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>queryCommandEnabled</strong>(<a href="../dart_core/String.html">String</a> command) <a class="anchor-link" href="#queryCommandEnabled"
+              title="Permalink to Document.queryCommandEnabled">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        Returns true if the <a title="en/Midas" rel="internal" href="https://developer.mozilla.org/en/Midas">Midas</a> command can be executed on the current range.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/DOM/document">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('Document.queryCommandEnabled')
+@DocsEditable
+bool queryCommandEnabled(String command) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="queryCommandIndeterm">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>queryCommandIndeterm</strong>(<a href="../dart_core/String.html">String</a> command) <a class="anchor-link" href="#queryCommandIndeterm"
+              title="Permalink to Document.queryCommandIndeterm">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        Returns true if the <a title="en/Midas" rel="internal" href="https://developer.mozilla.org/en/Midas">Midas</a> command is in a indeterminate state on the current range.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/DOM/document">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('Document.queryCommandIndeterm')
+@DocsEditable
+bool queryCommandIndeterm(String command) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="queryCommandState">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>queryCommandState</strong>(<a href="../dart_core/String.html">String</a> command) <a class="anchor-link" href="#queryCommandState"
+              title="Permalink to Document.queryCommandState">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        Returns true if the <a title="en/Midas" rel="internal" href="https://developer.mozilla.org/en/Midas">Midas</a> command has been executed on the current range.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/DOM/document">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('Document.queryCommandState')
+@DocsEditable
+bool queryCommandState(String command) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="queryCommandSupported">
+<button class="show-code">Code</button>
+<a href="../dart_core/bool.html">bool</a> <strong>queryCommandSupported</strong>(<a href="../dart_core/String.html">String</a> command) <a class="anchor-link" href="#queryCommandSupported"
+              title="Permalink to Document.queryCommandSupported">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('Document.queryCommandSupported')
+@DocsEditable
+bool queryCommandSupported(String command) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="queryCommandValue">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>queryCommandValue</strong>(<a href="../dart_core/String.html">String</a> command) <a class="anchor-link" href="#queryCommandValue"
+              title="Permalink to Document.queryCommandValue">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        Returns the current value of the current range for <a title="en/Midas" rel="internal" href="https://developer.mozilla.org/en/Midas">Midas</a> command. As of Firefox 2.0.0.2, queryCommandValue will return an empty string when a command value has not been explicitly set.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/DOM/document">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@DomName('Document.queryCommandValue')
+@DocsEditable
+String queryCommandValue(String command) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="register">
+<button class="show-code">Code</button>
+<a href="../dart_html/CustomElementConstructor.html">CustomElementConstructor</a> <strong>register</strong>(<a href="../dart_core/String.html">String</a> name, [<a href="../dart_core/Map.html">Map</a> options]) <a class="anchor-link" href="#register"
+              title="Permalink to Document.register">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('Document.webkitRegister')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+// https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/custom/index.html#dfn-document-register
+CustomElementConstructor register(String name, [Map options]) {
+ if (options != null) {
+   var options_1 = convertDartToNative_Dictionary(options);
+   return _register_1(name, options_1);
+ }
+ return _register_2(name);
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="remove">
+<button class="show-code">Code</button>
+void <strong>remove</strong>() <a class="anchor-link" href="#remove"
+              title="Permalink to Document.remove">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<p>Removes this node from the DOM.</p>
+<pre class="source">
+@DomName('Node.removeChild')
+void remove() {
+ // TODO(jacobr): should we throw an exception if parent is already null?
+ // TODO(vsm): Use the native remove when available.
+ if (this.parentNode != null) {
+   final Node parent = this.parentNode;
+   parentNode.$dom_removeChild(this);
+ }
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="replaceWith">
+<button class="show-code">Code</button>
+<a href="../dart_html/Node.html">Node</a> <strong>replaceWith</strong>(<a href="../dart_html/Node.html">Node</a> otherNode) <a class="anchor-link" href="#replaceWith"
+              title="Permalink to Document.replaceWith">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<p>Replaces this node with another node.</p>
+<pre class="source">
+@DomName('Node.replaceChild')
+Node replaceWith(Node otherNode) {
+ try {
+   final Node parent = this.parentNode;
+   parent.$dom_replaceChild(otherNode, this);
+ } catch (e) {
+
+ };
+ return this;
+}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="toString">
+<button class="show-code">Code</button>
+<a href="../dart_core/String.html">String</a> <strong>toString</strong>() <a class="anchor-link" href="#toString"
+              title="Permalink to Document.toString">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<p>Print out a String representation of this Node.</p>
+<pre class="source">
+String toString() =&gt; nodeValue == null ? super.toString() : nodeValue;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="unbind">
+<button class="show-code">Code</button>
+void <strong>unbind</strong>(<a href="../dart_core/String.html">String</a> name) <a class="anchor-link" href="#unbind"
+              title="Permalink to Document.unbind">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<p>Unbinds the attribute 
+<span class="param">name</span>. </p>
+<pre class="source">
+@Experimental
+void unbind(String name) {}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="unbindAll">
+<button class="show-code">Code</button>
+void <strong>unbindAll</strong>() <a class="anchor-link" href="#unbindAll"
+              title="Permalink to Document.unbindAll">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<p>Unbinds all bound attributes. </p>
+<pre class="source">
+@Experimental
+void unbindAll() {}
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_addEventListener">
+<button class="show-code">Code</button>
+void <strong>$dom_addEventListener</strong>(<a href="../dart_core/String.html">String</a> type, <a href="../dart_html/EventListener.html">EventListener</a> listener, [<a href="../dart_core/bool.html">bool</a> useCapture]) <a class="anchor-link" href="#$dom_addEventListener"
+              title="Permalink to Document.$dom_addEventListener">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@JSName('addEventListener')
+@DomName('Node.addEventListener')
+@DocsEditable
+void $dom_addEventListener(String type, EventListener listener, [bool useCapture]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_caretRangeFromPoint">
+<button class="show-code">Code</button>
+<a href="../dart_html/Range.html">Range</a> <strong>$dom_caretRangeFromPoint</strong>(<a href="../dart_core/int.html">int</a> x, <a href="../dart_core/int.html">int</a> y) <a class="anchor-link" href="#$dom_caretRangeFromPoint"
+              title="Permalink to Document.$dom_caretRangeFromPoint">#</a></h4>
+<div class="doc">
+<p>Use the <a class="crossref" href="../dart_html/Range.html">Range</a> constructor instead.</p>
+<pre class="source">
+@JSName('caretRangeFromPoint')
+/// Use the [Range] constructor instead.
+@DomName('Document.caretRangeFromPoint')
+@DocsEditable
+// http://www.w3.org/TR/2009/WD-cssom-view-20090804/#dom-documentview-caretrangefrompoint
+@Experimental
+Range $dom_caretRangeFromPoint(int x, int y) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_createElement">
+<button class="show-code">Code</button>
+<a href="../dart_html/Element.html">Element</a> <strong>$dom_createElement</strong>(<a href="../dart_core/String.html">String</a> localName_OR_tagName, [<a href="../dart_core/String.html">String</a> typeExtension]) <a class="anchor-link" href="#$dom_createElement"
+              title="Permalink to Document.$dom_createElement">#</a></h4>
+<div class="doc">
+<p>Deprecated: use new Element.tag(tagName) instead.</p>
+<pre class="source">
+@JSName('createElement')
+/// Deprecated: use new Element.tag(tagName) instead.
+@DomName('Document.createElement')
+@DocsEditable
+Element $dom_createElement(String localName_OR_tagName, [String typeExtension]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_createElementNS">
+<button class="show-code">Code</button>
+<a href="../dart_html/Element.html">Element</a> <strong>$dom_createElementNS</strong>(<a href="../dart_core/String.html">String</a> namespaceURI, <a href="../dart_core/String.html">String</a> qualifiedName, [<a href="../dart_core/String.html">String</a> typeExtension]) <a class="anchor-link" href="#$dom_createElementNS"
+              title="Permalink to Document.$dom_createElementNS">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        Creates a new element with the given tag name and namespace URI.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/DOM/document">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@JSName('createElementNS')
+@DomName('Document.createElementNS')
+@DocsEditable
+Element $dom_createElementNS(String namespaceURI, String qualifiedName, [String typeExtension]) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_createEvent">
+<button class="show-code">Code</button>
+<a href="../dart_html/Event.html">Event</a> <strong>$dom_createEvent</strong>(<a href="../dart_core/String.html">String</a> eventType) <a class="anchor-link" href="#$dom_createEvent"
+              title="Permalink to Document.$dom_createEvent">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        Creates an event.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/DOM/document">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@JSName('createEvent')
+@DomName('Document.createEvent')
+@DocsEditable
+Event $dom_createEvent(String eventType) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_createNodeIterator">
+<button class="show-code">Code</button>
+<a href="../dart_html/NodeIterator.html">NodeIterator</a> <strong>$dom_createNodeIterator</strong>(<a href="../dart_html/Node.html">Node</a> root, <a href="../dart_core/int.html">int</a> whatToShow, <a href="../dart_html/NodeFilter.html">NodeFilter</a> filter, <a href="../dart_core/bool.html">bool</a> expandEntityReferences) <a class="anchor-link" href="#$dom_createNodeIterator"
+              title="Permalink to Document.$dom_createNodeIterator">#</a></h4>
+<div class="doc">
+<pre class="source">
+@JSName('createNodeIterator')
+@DomName('Document.createNodeIterator')
+@DocsEditable
+@Unstable
+NodeIterator $dom_createNodeIterator(Node root, int whatToShow, NodeFilter filter, bool expandEntityReferences) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_createRange">
+<button class="show-code">Code</button>
+<a href="../dart_html/Range.html">Range</a> <strong>$dom_createRange</strong>() <a class="anchor-link" href="#$dom_createRange"
+              title="Permalink to Document.$dom_createRange">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        Creates a Range object.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/DOM/document">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@JSName('createRange')
+@DomName('Document.createRange')
+@DocsEditable
+Range $dom_createRange() native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_createTextNode">
+<button class="show-code">Code</button>
+<a href="../dart_html/Text.html">Text</a> <strong>$dom_createTextNode</strong>(<a href="../dart_core/String.html">String</a> data) <a class="anchor-link" href="#$dom_createTextNode"
+              title="Permalink to Document.$dom_createTextNode">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        Creates a text node.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/DOM/document">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@JSName('createTextNode')
+@DomName('Document.createTextNode')
+@DocsEditable
+Text $dom_createTextNode(String data) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_createTouch">
+<button class="show-code">Code</button>
+<a href="../dart_html/Touch.html">Touch</a> <strong>$dom_createTouch</strong>(<a href="../dart_html/Window.html">Window</a> window, <a href="../dart_html/EventTarget.html">EventTarget</a> target, <a href="../dart_core/int.html">int</a> identifier, <a href="../dart_core/int.html">int</a> pageX, <a href="../dart_core/int.html">int</a> pageY, <a href="../dart_core/int.html">int</a> screenX, <a href="../dart_core/int.html">int</a> screenY, <a href="../dart_core/int.html">int</a> webkitRadiusX, <a href="../dart_core/int.html">int</a> webkitRadiusY, <a href="../dart_core/num.html">num</a> webkitRotationAngle, <a href="../dart_core/num.html">num</a> webkitForce) <a class="anchor-link" href="#$dom_createTouch"
+              title="Permalink to Document.$dom_createTouch">#</a></h4>
+<div class="doc">
+<pre class="source">
+@DomName('Document.createTouch')
+@DocsEditable
+// http://www.w3.org/TR/touch-events/, http://www.chromestatus.com/features
+@Experimental
+Touch $dom_createTouch(Window window, EventTarget target, int identifier, int pageX, int pageY, int screenX, int screenY, int webkitRadiusX, int webkitRadiusY, num webkitRotationAngle, num webkitForce) {
+ var target_1 = _convertDartToNative_EventTarget(target);
+ return _$dom_createTouch_1(window, target_1, identifier, pageX, pageY, screenX, screenY, webkitRadiusX, webkitRadiusY, webkitRotationAngle, webkitForce);
+}
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_createTouchList">
+<button class="show-code">Code</button>
+<a href="../dart_html/TouchList.html">TouchList</a> <strong>$dom_createTouchList</strong>() <a class="anchor-link" href="#$dom_createTouchList"
+              title="Permalink to Document.$dom_createTouchList">#</a></h4>
+<div class="doc">
+<p>Use the <a class="crossref" href="../dart_html/TouchList.html">TouchList</a> constructor instead.</p>
+<pre class="source">
+@JSName('createTouchList')
+/// Use the [TouchList] constructor instead.
+@DomName('Document.createTouchList')
+@DocsEditable
+// http://www.w3.org/TR/touch-events/, http://www.chromestatus.com/features
+@Experimental
+TouchList $dom_createTouchList() native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_createTreeWalker">
+<button class="show-code">Code</button>
+<a href="../dart_html/TreeWalker.html">TreeWalker</a> <strong>$dom_createTreeWalker</strong>(<a href="../dart_html/Node.html">Node</a> root, <a href="../dart_core/int.html">int</a> whatToShow, <a href="../dart_html/NodeFilter.html">NodeFilter</a> filter, <a href="../dart_core/bool.html">bool</a> expandEntityReferences) <a class="anchor-link" href="#$dom_createTreeWalker"
+              title="Permalink to Document.$dom_createTreeWalker">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        Creates a <code><a rel="custom" href="https://developer.mozilla.org/en/DOM/treeWalker">treeWalker</a></code>
+ object.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/DOM/document">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@JSName('createTreeWalker')
+@DomName('Document.createTreeWalker')
+@DocsEditable
+TreeWalker $dom_createTreeWalker(Node root, int whatToShow, NodeFilter filter, bool expandEntityReferences) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_elementFromPoint">
+<button class="show-code">Code</button>
+<a href="../dart_html/Element.html">Element</a> <strong>$dom_elementFromPoint</strong>(<a href="../dart_core/int.html">int</a> x, <a href="../dart_core/int.html">int</a> y) <a class="anchor-link" href="#$dom_elementFromPoint"
+              title="Permalink to Document.$dom_elementFromPoint">#</a></h4>
+<div class="doc">
+        <div class="mdn">
+        Returns the element visible at the specified coordinates.
+        <div class="mdn-note"><a href="https://developer.mozilla.org/en/DOM/document">from MDN</a></div>
+        </div>
+        
+<pre class="source">
+@JSName('elementFromPoint')
+@DomName('Document.elementFromPoint')
+@DocsEditable
+Element $dom_elementFromPoint(int x, int y) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_getCssCanvasContext">
+<button class="show-code">Code</button>
+<a href="../dart_html/CanvasRenderingContext.html">CanvasRenderingContext</a> <strong>$dom_getCssCanvasContext</strong>(<a href="../dart_core/String.html">String</a> contextId, <a href="../dart_core/String.html">String</a> name, <a href="../dart_core/int.html">int</a> width, <a href="../dart_core/int.html">int</a> height) <a class="anchor-link" href="#$dom_getCssCanvasContext"
+              title="Permalink to Document.$dom_getCssCanvasContext">#</a></h4>
+<div class="doc">
+<p>Moved to <a class="crossref" href="../dart_html/HtmlDocument.html">HtmlDocument</a>.</p>
+<pre class="source">
+@JSName('getCSSCanvasContext')
+/// Moved to [HtmlDocument].
+@DomName('Document.getCSSCanvasContext')
+@DocsEditable
+// https://developer.apple.com/library/safari/#documentation/AppleApplications/Reference/SafariCSSRef/Articles/Functions.html
+@Experimental // non-standard
+CanvasRenderingContext $dom_getCssCanvasContext(String contextId, String name, int width, int height) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_querySelectorAll">
+<button class="show-code">Code</button>
+<a href="../dart_core/List.html">List</a>&lt;<a href="../dart_html/Node.html">Node</a>&gt; <strong>$dom_querySelectorAll</strong>(<a href="../dart_core/String.html">String</a> selectors) <a class="anchor-link" href="#$dom_querySelectorAll"
+              title="Permalink to Document.$dom_querySelectorAll">#</a></h4>
+<div class="doc">
+<p>Deprecated: use query("#$elementId") instead.</p>
+<pre class="source">
+@JSName('querySelectorAll')
+/// Deprecated: use query("#$elementId") instead.
+@DomName('Document.querySelectorAll')
+@DocsEditable
+@Returns('NodeList')
+@Creates('NodeList')
+List&lt;Node&gt; $dom_querySelectorAll(String selectors) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_removeChild">
+<button class="show-code">Code</button>
+<a href="../dart_html/Node.html">Node</a> <strong>$dom_removeChild</strong>(<a href="../dart_html/Node.html">Node</a> oldChild) <a class="anchor-link" href="#$dom_removeChild"
+              title="Permalink to Document.$dom_removeChild">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@JSName('removeChild')
+@DomName('Node.removeChild')
+@DocsEditable
+Node $dom_removeChild(Node oldChild) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_removeEventListener">
+<button class="show-code">Code</button>
+void <strong>$dom_removeEventListener</strong>(<a href="../dart_core/String.html">String</a> type, <a href="../dart_html/EventListener.html">EventListener</a> listener, [<a href="../dart_core/bool.html">bool</a> useCapture]) <a class="anchor-link" href="#$dom_removeEventListener"
+              title="Permalink to Document.$dom_removeEventListener">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@JSName('removeEventListener')
+@DomName('Node.removeEventListener')
+@DocsEditable
+void $dom_removeEventListener(String type, EventListener listener, [bool useCapture]) native;
+</pre>
+</div>
+</div>
+<div class="method inherited"><h4 id="$dom_replaceChild">
+<button class="show-code">Code</button>
+<a href="../dart_html/Node.html">Node</a> <strong>$dom_replaceChild</strong>(<a href="../dart_html/Node.html">Node</a> newChild, <a href="../dart_html/Node.html">Node</a> oldChild) <a class="anchor-link" href="#$dom_replaceChild"
+              title="Permalink to Document.$dom_replaceChild">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_html/Node.html">Node</a> </div><div class="doc">
+<pre class="source">
+@JSName('replaceChild')
+@DomName('Node.replaceChild')
+@DocsEditable
+Node $dom_replaceChild(Node newChild, Node oldChild) native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_webkitCancelFullScreen">
+<button class="show-code">Code</button>
+void <strong>$dom_webkitCancelFullScreen</strong>() <a class="anchor-link" href="#$dom_webkitCancelFullScreen"
+              title="Permalink to Document.$dom_webkitCancelFullScreen">#</a></h4>
+<div class="doc">
+<p>Moved to <a class="crossref" href="../dart_html/HtmlDocument.html">HtmlDocument</a>.</p>
+<pre class="source">
+@JSName('webkitCancelFullScreen')
+/// Moved to [HtmlDocument].
+@DomName('Document.webkitCancelFullScreen')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+// https://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html
+@deprecated // deprecated
+void $dom_webkitCancelFullScreen() native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_webkitExitFullscreen">
+<button class="show-code">Code</button>
+void <strong>$dom_webkitExitFullscreen</strong>() <a class="anchor-link" href="#$dom_webkitExitFullscreen"
+              title="Permalink to Document.$dom_webkitExitFullscreen">#</a></h4>
+<div class="doc">
+<p>Moved to <a class="crossref" href="../dart_html/HtmlDocument.html">HtmlDocument</a>.</p>
+<pre class="source">
+@JSName('webkitExitFullscreen')
+/// Moved to [HtmlDocument].
+@DomName('Document.webkitExitFullscreen')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+// https://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html#dom-document-exitfullscreen
+void $dom_webkitExitFullscreen() native;
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="$dom_webkitExitPointerLock">
+<button class="show-code">Code</button>
+void <strong>$dom_webkitExitPointerLock</strong>() <a class="anchor-link" href="#$dom_webkitExitPointerLock"
+              title="Permalink to Document.$dom_webkitExitPointerLock">#</a></h4>
+<div class="doc">
+<p>Moved to <a class="crossref" href="../dart_html/HtmlDocument.html">HtmlDocument</a>.</p>
+<pre class="source">
+@JSName('webkitExitPointerLock')
+/// Moved to [HtmlDocument].
+@DomName('Document.webkitExitPointerLock')
+@DocsEditable
+@SupportedBrowser(SupportedBrowser.CHROME)
+@SupportedBrowser(SupportedBrowser.SAFARI)
+@Experimental
+// https://dvcs.w3.org/hg/pointerlock/raw-file/default/index.html#widl-Document-exitPointerLock-void
+void $dom_webkitExitPointerLock() native;
+</pre>
+</div>
+</div>
+</div>
+          <p class="mdn-attribution">
+          <a href="https://developer.mozilla.org">
+            <img src="../mdn-logo-tiny.png" class="mdn-logo" />
+          </a>
+          This page includes <a href="https://developer.mozilla.org/en/DOM/document">content</a> from the
+          <a href="http://www.mozilla.org/">Mozilla Foundation</a> that is graciously
+          <a href="https://developer.mozilla.org/Project:Copyrights">licensed</a> under a
+          <a href="http://creativecommons.org/licenses/by-sa/2.5/">Creative Commons: Attribution-Sharealike license</a>.
+          Mozilla has no other association with Dart or dartlang.org. We
+          encourage you to improve the web by
+          <a href="https://developer.mozilla.org/Project:en/How_to_Help">contributing</a> to
+          <a href="https://developer.mozilla.org">The Mozilla Developer Network</a>.
+          </p>
+          
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-06-21 06:35:19.289</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        

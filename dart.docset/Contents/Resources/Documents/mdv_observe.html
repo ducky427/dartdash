@@ -1,0 +1,166 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>mdv_observe Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="styles.css">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="mdv_observe">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="index.html">Dart API Reference</a>
+         &rsaquo; <a href="mdv_observe.html">mdv_observe</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="args.html">args</a></h2><h2><div class="icon-library"></div><a href="crypto.html">crypto</a></h2><h2><div class="icon-library"></div><a href="dart_async.html">dart:async</a></h2><h2><div class="icon-library"></div><a href="dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="dart_typed_data.html">dart:typed_data</a></h2><h2><div class="icon-library"></div><a href="dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="dart_web_gl.html">dart:web_gl</a></h2><h2><div class="icon-library"></div><a href="dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="matcher.html">matcher</a></h2><h2><div class="icon-library"></div><strong>mdv_observe</strong></h2><ul class="icon">
+<li><a href="mdv_observe/MapChangeRecord.html"><div class="icon-class"></div>MapChangeRecord</a></li>
+<li><a href="mdv_observe/ObservableBox.html"><div class="icon-class"></div>ObservableBox&lt;T&gt;</a></li>
+<li><a href="mdv_observe/ObservableList.html"><div class="icon-class"></div>ObservableList&lt;E&gt;</a></li>
+<li><a href="mdv_observe/ObservableMap.html"><div class="icon-class"></div>ObservableMap&lt;K, V&gt;</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="source_maps.html">source_maps</a></h2><h2><div class="icon-library"></div><a href="unittest.html">unittest</a></h2></div>
+<div class="content">
+<h2><strong>mdv_observe</strong> library</h2>
+<div class="doc"><p><em>Warning</em>: this library is experimental, and APIs are subject to change.</p>
+<p>This library is used to observe changes to <code>Observable</code> types. It also
+has helpers to implement <code>Observable</code> objects.</p>
+<p>For example:</p>
+<pre><code>class Monster extends Object with ObservableMixin {
+  static const _HEALTH = const Symbol('health');
+
+  int _health = 100;
+  get health =&gt; _health;
+  set health(value) {
+    _health = notifyChange(_HEALTH, _health, value);
+  }
+
+  void damage(int amount) {
+    print('$this takes $amount damage!');
+    health -= amount;
+  }
+
+  toString() =&gt; 'Monster with $health hit points';
+
+  // These methods are temporary until dart2js supports mirrors.
+  getValueWorkaround(key) {
+    if (key == _HEALTH) return health;
+    return null;
+  }
+  setValueWorkaround(key, val) {
+    if (key == _HEALTH) health = val;
+  }
+}
+
+main() {
+  var obj = new Monster();
+  obj.changes.listen((records) {
+    print('Changes to $obj were: $records');
+  });
+  // Schedules asynchronous delivery of these changes
+  obj.damage(10);
+  obj.damage(20);
+  print('done!');
+}
+</code></pre></div>
+<div>
+<h3>Functions</h3>
+<div class="method"><h4 id="toObservable">
+<button class="show-code">Code</button>
+dynamic <strong>toObservable</strong>(value, {<a href="dart_core/bool.html">bool</a> deep: true}) <a class="anchor-link" href="#toObservable"
+              title="Permalink to toObservable">#</a></h4>
+<div class="doc">
+<p>Converts the <code>Iterable</code> or <code>Map</code> to an <a class="crossref" href="mdv_observe/ObservableList.html">ObservableList</a> or <a class="crossref" href="mdv_observe/ObservableMap.html">ObservableMap</a>,
+respectively. This is a convenience function to make it easier to convert
+literals into the corresponding observable collection type.</p>
+<p>If 
+<span class="param">value</span> is not one of those collection types, or is already <code>Observable</code>,
+it will be returned unmodified.</p>
+<p>If 
+<span class="param">value</span> is a <code>Map</code>, the resulting value will use the appropriate kind of
+backing map: either <code>HashMap</code>, <code>LinkedHashMap</code>, or <code>SplayTreeMap</code>.</p>
+<p>By default this performs a deep conversion, but you can set 
+<span class="param">deep</span> to false
+for a shallow conversion. This does not handle circular data structures.</p>
+<pre class="source">
+toObservable(value, {bool deep: true}) =&gt;
+   deep ? _toObservableDeep(value) : _toObservableShallow(value);
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Classes</h3>
+          <div class="type">
+          <h4>
+            <a href="mdv_observe/MapChangeRecord.html"><strong>MapChangeRecord</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="mdv_observe/ObservableBox.html"><strong>ObservableBox&lt;T&gt;</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="mdv_observe/ObservableList.html"><strong>ObservableList&lt;E&gt;</strong></a>
+          </h4>
+          </div>
+          
+          <div class="type">
+          <h4>
+            <a href="mdv_observe/ObservableMap.html"><strong>ObservableMap&lt;K, V&gt;</strong></a>
+          </h4>
+          </div>
+          
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-06-21 06:35:31.100</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="client-static.js"></script>
+        </body></html>
+        

@@ -1,0 +1,429 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                <meta charset="utf-8">
+        <title>StreamController&lt;T&gt; abstract class / dart:async Library / Dart API Reference</title>
+        <link rel="stylesheet" type="text/css"
+            href="../styles.css">
+        <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="../favicon.ico">
+        
+        <link rel="stylesheet" type="text/css"
+            href="../apidoc-styles.css" />
+        
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(["_setAccount", "UA-26406144-9"]);
+          _gaq.push(["_trackPageview"]);
+
+          (function() {
+            var ga = document.createElement("script");
+            ga.type = "text/javascript"; ga.async = true;
+            ga.src = ("https:" == document.location.protocol ?
+              "https://ssl" : "http://www") + ".google-analytics.com/ga.js";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+        
+        </head>
+        <body data-library="dart:async" data-type="StreamController&amp;lt;T&amp;gt;">
+        <div class="page">
+        <div class="header">
+          <a href="http://dartlang.org" ref="external"><div class="logo"></div></a>
+          <a href="../index.html">Dart API Reference</a>
+         &rsaquo; <a href="../dart_async.html">dart:async</a> &rsaquo; <a href="../dart_async/StreamController.html">StreamController&lt;T&gt;</a>        <form action="http://www.dartlang.org/search.html" id="search-box">
+          <input type="hidden" name="cx" value="011220921317074318178:i4mscbaxtru">
+          <input type="hidden" name="ie" value="UTF-8">
+          <input type="hidden" name="hl" value="en">
+          <input type="search" name="q" id="q" autocomplete="off"
+              class="search-input" placeholder="Search API">
+        </form>
+        
+      </div>
+      <div class="drop-down" id="drop-down"></div>
+      
+        <div class="nav">
+        
+<h2><div class="icon-library"></div><a href="../args.html">args</a></h2><h2><div class="icon-library"></div><a href="../crypto.html">crypto</a></h2><h2><div class="icon-library"></div><a href="../dart_async.html">dart:async</a></h2><ul class="icon">
+<li><a href="../dart_async/Completer.html"><div class="icon-class"></div>Completer&lt;T&gt;</a></li>
+<li><a href="../dart_async/DeferredLibrary.html"><div class="icon-class"></div>DeferredLibrary</a></li>
+<li><a href="../dart_async/EventSink.html"><div class="icon-class"></div>EventSink&lt;T&gt;</a></li>
+<li><a href="../dart_async/EventTransformStream.html"><div class="icon-class"></div>EventTransformStream&lt;S, T&gt;</a></li>
+<li><a href="../dart_async/Future.html"><div class="icon-class"></div>Future&lt;T&gt;</a></li>
+<li><a href="../dart_async/Stream.html"><div class="icon-class"></div>Stream&lt;T&gt;</a></li>
+<li><a href="../dart_async/StreamConsumer.html"><div class="icon-class"></div>StreamConsumer&lt;S&gt;</a></li>
+<li><div class="icon-class"></div><strong>StreamController&lt;T&gt;</strong></li>
+<li><a href="../dart_async/StreamEventTransformer.html"><div class="icon-class"></div>StreamEventTransformer&lt;S, T&gt;</a></li>
+<li><a href="../dart_async/StreamIterator.html"><div class="icon-class"></div>StreamIterator&lt;T&gt;</a></li>
+<li><a href="../dart_async/StreamSink.html"><div class="icon-class"></div>StreamSink&lt;S&gt;</a></li>
+<li><a href="../dart_async/StreamSubscription.html"><div class="icon-class"></div>StreamSubscription&lt;T&gt;</a></li>
+<li><a href="../dart_async/StreamTransformer.html"><div class="icon-class"></div>StreamTransformer&lt;S, T&gt;</a></li>
+<li><a href="../dart_async/StreamView.html"><div class="icon-class"></div>StreamView&lt;T&gt;</a></li>
+<li><a href="../dart_async/Timer.html"><div class="icon-class"></div>Timer</a></li>
+</ul>
+<h2><div class="icon-library"></div><a href="../dart_chrome.html">dart:chrome</a></h2><h2><div class="icon-library"></div><a href="../dart_collection.html">dart:collection</a></h2><h2><div class="icon-library"></div><a href="../dart_core.html">dart:core</a></h2><h2><div class="icon-library"></div><a href="../dart_html.html">dart:html</a></h2><h2><div class="icon-library"></div><a href="../dart_indexed_db.html">dart:indexed_db</a></h2><h2><div class="icon-library"></div><a href="../dart_io.html">dart:io</a></h2><h2><div class="icon-library"></div><a href="../dart_isolate.html">dart:isolate</a></h2><h2><div class="icon-library"></div><a href="../dart_json.html">dart:json</a></h2><h2><div class="icon-library"></div><a href="../dart_math.html">dart:math</a></h2><h2><div class="icon-library"></div><a href="../dart_mirrors.html">dart:mirrors</a></h2><h2><div class="icon-library"></div><a href="../dart_svg.html">dart:svg</a></h2><h2><div class="icon-library"></div><a href="../dart_typed_data.html">dart:typed_data</a></h2><h2><div class="icon-library"></div><a href="../dart_utf.html">dart:utf</a></h2><h2><div class="icon-library"></div><a href="../dart_web_audio.html">dart:web_audio</a></h2><h2><div class="icon-library"></div><a href="../dart_web_gl.html">dart:web_gl</a></h2><h2><div class="icon-library"></div><a href="../dart_web_sql.html">dart:web_sql</a></h2><h2><div class="icon-library"></div><a href="../fixnum.html">fixnum</a></h2><h2><div class="icon-library"></div><a href="../intl.html">intl</a></h2><h2><div class="icon-library"></div><a href="../logging.html">logging</a></h2><h2><div class="icon-library"></div><a href="../matcher.html">matcher</a></h2><h2><div class="icon-library"></div><a href="../mdv_observe.html">mdv_observe</a></h2><h2><div class="icon-library"></div><a href="../meta.html">meta</a></h2><h2><div class="icon-library"></div><a href="../mock.html">mock</a></h2><h2><div class="icon-library"></div><a href="../serialization.html">serialization</a></h2><h2><div class="icon-library"></div><a href="../source_maps.html">source_maps</a></h2><h2><div class="icon-library"></div><a href="../unittest.html">unittest</a></h2></div>
+<div class="content">
+        <h2><strong>StreamController&lt;T&gt;</strong>
+          abstract class
+        </h2>
+        
+<button id="show-inherited" class="show-inherited">Hide inherited</button>
+<div class="doc">
+<p>A controller with the stream it controls.</p>
+<p>This controller allows sending data, error and done events on
+its <a class="crossref" href="../dart_async/StreamController.html#stream">stream</a>.
+This class can be used to create a simple stream that others
+can listen on, and to push events to that stream.</p>
+<p>It's possible to check whether the stream is paused or not, and whether
+it has subscribers or not, as well as getting a callback when either of
+these change.</p>
+<p>If the stream starts or stops having listeners (first listener subscribing,
+last listener unsubscribing), the <code>onSubscriptionStateChange</code> callback
+is notified as soon as possible. If the subscription stat changes during
+an event firing or a callback being executed, the change will not be reported
+until the current event or callback has finished.
+If the pause state has also changed during an event or callback, only the
+subscription state callback is notified.</p>
+<p>If the subscriber state has not changed, but the pause state has, the
+<code>onPauseStateChange</code> callback is notified as soon as possible, after firing
+a current event or completing another callback. This happens if the stream
+is not paused, and a listener pauses it, or if the stream has been resumed
+from pause and has no pending events. If the listeners resume a paused stream
+while it still has queued events, the controller will still consider the
+stream paused until all queued events have been dispatched.</p>
+<p>Whether to invoke a callback depends only on the state before and after
+a stream action, for example firing an event. If the state changes multiple
+times during the action, and then ends up in the same state as before, no
+callback is performed.</p>
+<p>If listeners are added after the stream has completed (sent a "done" event),
+the listeners will be sent a "done" event eventually, but they won't affect
+the stream at all, and won't trigger callbacks. From the controller's point
+of view, the stream is completely inert when has completed.</p>
+<pre class="source">
+abstract class StreamController&lt;T&gt; implements EventSink&lt;T&gt; {
+ /** The stream that this controller is controlling. */
+ Stream&lt;T&gt; get stream;
+
+ /**
+  * A controller with a [stream] that supports only one single subscriber.
+  *
+  * If [sync] is true, events may be passed directly to the stream's listener
+  * during an [add], [addError] or [close] call. If [sync] is false, the event
+  * will be passed to the listener at a later time, after the code creating
+  * the event has returned.
+  *
+  * The controller will buffer all incoming events until the subscriber is
+  * registered.
+  *
+  * The [onPause] function is called when the stream becomes
+  * paused. [onResume] is called when the stream resumed.
+  *
+  * The [onListen] callback is called when the stream
+  * receives its listener and [onCancel] when the listener ends
+  * its subscription.
+  *
+  * If the stream is canceled before the controller needs new data the
+  * [onResume] call might not be executed.
+  */
+ factory StreamController({void onListen(),
+                           void onPause(),
+                           void onResume(),
+                           void onCancel(),
+                           bool sync: false})
+     =&gt; sync
+        ? new _SyncStreamController&lt;T&gt;(onListen, onPause, onResume, onCancel)
+        : new _AsyncStreamController&lt;T&gt;(onListen, onPause, onResume, onCancel);
+
+ /**
+  * A controller where [stream] can be listened to more than once.
+  *
+  * The [Stream] returned by [stream] is a broadcast stream. It can be listened
+  * to more than once.
+  *
+  * The controller distributes any events to all currently subscribed
+  * listeners.
+  * It is not allowed to call [add], [addError], or [close] before a previous
+  * call has returned.
+  *
+  * If [sync] is true, events may be passed directly to the stream's listener
+  * during an [add], [addError] or [close] call. If [sync] is false, the event
+  * will be passed to the listener at a later time, after the code creating
+  * the event has returned.
+  *
+  * Each listener is handled independently, and if they pause, only the pausing
+  * listener is affected. A paused listener will buffer events internally until
+  * unpaused or canceled.
+  *
+  * If [sync] is false, no guarantees are given with regard to when
+  * multiple listeners get the events, except that each listener will get
+  * all events in the correct order. If two events are sent on an async
+  * controller with two listeners, one of the listeners may get both events
+  * before the other listener gets any.
+  * A listener must be subscribed both when the event is initiated (that is,
+  * when [add] is called) and when the event is later delivered, in order to
+  * get the event.
+  *
+  * The [onListen] callback is called when the first listener is subscribed,
+  * and the [onCancel] is called when there are no longer any active listeners.
+  * If a listener is added again later, after the [onCancel] was called,
+  * the [onListen] will be called again.
+  */
+ factory StreamController.broadcast({void onListen(),
+                                     void onCancel(),
+                                     bool sync: false}) {
+   return sync
+       ? new _SyncBroadcastStreamController&lt;T&gt;(onListen, onCancel)
+       : new _AsyncBroadcastStreamController&lt;T&gt;(onListen, onCancel);
+ }
+
+ /**
+  * Returns a view of this object that only exposes the [EventSink] interface.
+  */
+ EventSink&lt;T&gt; get sink;
+
+ /**
+  * Whether the stream is closed for adding more events.
+  *
+  * If true, the "done" event might not have fired yet, but it has been
+  * scheduled, and it is too late to add more events.
+  */
+ bool get isClosed;
+
+ /**
+  * Whether the subscription would need to buffer events.
+  *
+  * This is the case if the controller's stream has a listener and it is
+  * paused, or if it has not received a listener yet. In that case, the
+  * controller is considered paused as well.
+  *
+  * A broadcast stream controller is never considered paused. It always
+  * forwards its events to all uncanceled listeners, if any, and let them
+  * handle their own pausing.
+  */
+ bool get isPaused;
+
+ /** Whether there is a subscriber on the [Stream]. */
+ bool get hasListener;
+
+ /**
+  * Send or enqueue an error event.
+  *
+  * Also allows an objection stack trace object, on top of what [EventSink]
+  * allows.
+  */
+ void addError(Object error, [Object stackTrace]);
+}
+</pre>
+</div>
+<h3>Implements</h3>
+<p>
+<span class="type-box"><span class="icon-class"></span><a href="../dart_async/EventSink.html">EventSink&lt;T&gt;</a></span></p>
+<div>
+<h3>Constructors</h3>
+<div class="method"><h4 id="StreamController">
+<button class="show-code">Code</button>
+factory <strong>StreamController</strong>({void onListen(), void onPause(), void onResume(), void onCancel(), <a href="../dart_core/bool.html">bool</a> sync: false}) <a class="anchor-link" href="#StreamController"
+              title="Permalink to StreamController&lt;T&gt;.StreamController">#</a></h4>
+<div class="doc">
+<p>A controller with a <a class="crossref" href="../dart_async/StreamController.html#stream">stream</a> that supports only one single subscriber.</p>
+<p>If 
+<span class="param">sync</span> is true, events may be passed directly to the stream's listener
+during an <code>add</code>, <a class="crossref" href="../dart_async/StreamController.html#addError">addError</a> or <code>close</code> call. If 
+<span class="param">sync</span> is false, the event
+will be passed to the listener at a later time, after the code creating
+the event has returned.</p>
+<p>The controller will buffer all incoming events until the subscriber is
+registered.</p>
+<p>The 
+<span class="param">onPause</span> function is called when the stream becomes
+paused. 
+<span class="param">onResume</span> is called when the stream resumed.</p>
+<p>The 
+<span class="param">onListen</span> callback is called when the stream
+receives its listener and 
+<span class="param">onCancel</span> when the listener ends
+its subscription.</p>
+<p>If the stream is canceled before the controller needs new data the
+
+<span class="param">onResume</span> call might not be executed.</p>
+<pre class="source">
+factory StreamController({void onListen(),
+                         void onPause(),
+                         void onResume(),
+                         void onCancel(),
+                         bool sync: false})
+   =&gt; sync
+      ? new _SyncStreamController&lt;T&gt;(onListen, onPause, onResume, onCancel)
+      : new _AsyncStreamController&lt;T&gt;(onListen, onPause, onResume, onCancel);
+</pre>
+</div>
+</div>
+<div class="method"><h4 id="StreamController.broadcast">
+<button class="show-code">Code</button>
+factory <strong>StreamController.broadcast</strong>({void onListen(), void onCancel(), <a href="../dart_core/bool.html">bool</a> sync: false}) <a class="anchor-link" href="#StreamController.broadcast"
+              title="Permalink to StreamController&lt;T&gt;.StreamController.broadcast">#</a></h4>
+<div class="doc">
+<p>A controller where <a class="crossref" href="../dart_async/StreamController.html#stream">stream</a> can be listened to more than once.</p>
+<p>The <a class="crossref" href="../dart_async/Stream.html">Stream</a> returned by <a class="crossref" href="../dart_async/StreamController.html#stream">stream</a> is a broadcast stream. It can be listened
+to more than once.</p>
+<p>The controller distributes any events to all currently subscribed
+listeners.
+It is not allowed to call <code>add</code>, <a class="crossref" href="../dart_async/StreamController.html#addError">addError</a>, or <code>close</code> before a previous
+call has returned.</p>
+<p>If 
+<span class="param">sync</span> is true, events may be passed directly to the stream's listener
+during an <code>add</code>, <a class="crossref" href="../dart_async/StreamController.html#addError">addError</a> or <code>close</code> call. If 
+<span class="param">sync</span> is false, the event
+will be passed to the listener at a later time, after the code creating
+the event has returned.</p>
+<p>Each listener is handled independently, and if they pause, only the pausing
+listener is affected. A paused listener will buffer events internally until
+unpaused or canceled.</p>
+<p>If 
+<span class="param">sync</span> is false, no guarantees are given with regard to when
+multiple listeners get the events, except that each listener will get
+all events in the correct order. If two events are sent on an async
+controller with two listeners, one of the listeners may get both events
+before the other listener gets any.
+A listener must be subscribed both when the event is initiated (that is,
+when <code>add</code> is called) and when the event is later delivered, in order to
+get the event.</p>
+<p>The 
+<span class="param">onListen</span> callback is called when the first listener is subscribed,
+and the 
+<span class="param">onCancel</span> is called when there are no longer any active listeners.
+If a listener is added again later, after the 
+<span class="param">onCancel</span> was called,
+the 
+<span class="param">onListen</span> will be called again.</p>
+<pre class="source">
+factory StreamController.broadcast({void onListen(),
+                                   void onCancel(),
+                                   bool sync: false}) {
+ return sync
+     ? new _SyncBroadcastStreamController&lt;T&gt;(onListen, onCancel)
+     : new _AsyncBroadcastStreamController&lt;T&gt;(onListen, onCancel);
+}
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Properties</h3>
+<div class="field"><h4 id="hasListener">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>hasListener</strong> <a class="anchor-link"
+            href="#hasListener"
+            title="Permalink to StreamController&lt;T&gt;.hasListener">#</a>
+        </h4>
+        <div class="doc">
+<p>Whether there is a subscriber on the <a class="crossref" href="../dart_async/Stream.html">Stream</a>. </p>
+<pre class="source">
+bool get hasListener;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="isClosed">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isClosed</strong> <a class="anchor-link"
+            href="#isClosed"
+            title="Permalink to StreamController&lt;T&gt;.isClosed">#</a>
+        </h4>
+        <div class="doc">
+<p>Whether the stream is closed for adding more events.</p>
+<p>If true, the "done" event might not have fired yet, but it has been
+scheduled, and it is too late to add more events.</p>
+<pre class="source">
+bool get isClosed;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="isPaused">
+<button class="show-code">Code</button>
+final <a href="../dart_core/bool.html">bool</a>         <strong>isPaused</strong> <a class="anchor-link"
+            href="#isPaused"
+            title="Permalink to StreamController&lt;T&gt;.isPaused">#</a>
+        </h4>
+        <div class="doc">
+<p>Whether the subscription would need to buffer events.</p>
+<p>This is the case if the controller's stream has a listener and it is
+paused, or if it has not received a listener yet. In that case, the
+controller is considered paused as well.</p>
+<p>A broadcast stream controller is never considered paused. It always
+forwards its events to all uncanceled listeners, if any, and let them
+handle their own pausing.</p>
+<pre class="source">
+bool get isPaused;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="sink">
+<button class="show-code">Code</button>
+final <a href="../dart_async/EventSink.html">EventSink</a>&lt;<a href="../dart_async/StreamController.html">T</a>&gt;         <strong>sink</strong> <a class="anchor-link"
+            href="#sink"
+            title="Permalink to StreamController&lt;T&gt;.sink">#</a>
+        </h4>
+        <div class="doc">
+<p>Returns a view of this object that only exposes the <a class="crossref" href="../dart_async/EventSink.html">EventSink</a> interface.</p>
+<pre class="source">
+EventSink&lt;T&gt; get sink;
+</pre>
+</div>
+</div>
+<div class="field"><h4 id="stream">
+<button class="show-code">Code</button>
+final <a href="../dart_async/Stream.html">Stream</a>&lt;<a href="../dart_async/StreamController.html">T</a>&gt;         <strong>stream</strong> <a class="anchor-link"
+            href="#stream"
+            title="Permalink to StreamController&lt;T&gt;.stream">#</a>
+        </h4>
+        <div class="doc">
+<p>The stream that this controller is controlling. </p>
+<pre class="source">
+Stream&lt;T&gt; get stream;
+</pre>
+</div>
+</div>
+</div>
+<div>
+<h3>Methods</h3>
+<div class="method inherited"><h4 id="add">
+abstract void <strong>add</strong>(<a href="../dart_async/StreamController.html">T</a> event) <a class="anchor-link" href="#add"
+              title="Permalink to StreamController&lt;T&gt;.add">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_async/EventSink.html">EventSink</a> </div><div class="doc">
+<p>Create a data event </p>
+</div>
+</div>
+<div class="method"><h4 id="addError">
+abstract void <strong>addError</strong>(<a href="../dart_core/Object.html">Object</a> error, [<a href="../dart_core/Object.html">Object</a> stackTrace]) <a class="anchor-link" href="#addError"
+              title="Permalink to StreamController&lt;T&gt;.addError">#</a></h4>
+<div class="doc">
+<p>Send or enqueue an error event.</p>
+<p>Also allows an objection stack trace object, on top of what <a class="crossref" href="../dart_async/EventSink.html">EventSink</a>
+allows.</p>
+</div>
+</div>
+<div class="method inherited"><h4 id="close">
+abstract void <strong>close</strong>() <a class="anchor-link" href="#close"
+              title="Permalink to StreamController&lt;T&gt;.close">#</a></h4>
+<div class="inherited-from">inherited from <a href="../dart_async/EventSink.html">EventSink</a> </div><div class="doc">
+<p>Request a stream to close. </p>
+</div>
+</div>
+</div>
+        </div>
+        <div class="clear"></div>
+        </div>
+        <div class="footer">
+          <div>This page was generated at 2013-06-21 06:35:06.176</div>
+<div>        <p>Except as otherwise <a href="http://code.google.com/policies.html#restrictions">noted</a>, the content of this
+        page is licensed under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+        3.0 License</a>, and code samples are licensed under the
+        <a href="http://code.google.com/google_bsd_license.html">BSD License</a>.</p>
+        <p><a href="http://www.dartlang.org/tos.html">Terms of Service</a> |
+        <a href="http://www.google.com/intl/en/privacy/privacy-policy.html">Privacy Policy</a></p>
+        </div>
+        </div>
+        <script async src="../client-static.js"></script>
+        </body></html>
+        
