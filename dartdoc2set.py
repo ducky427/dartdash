@@ -1,4 +1,3 @@
-#!/usr/local/bin/python
 
 import os
 import sqlite3
@@ -6,6 +5,24 @@ from bs4 import BeautifulSoup
 
 DOCPATH = 'dart.docset/Contents/Resources/Documents'
 DBPATH = 'dart.docset/Contents/Resources/docSet.dsidx'
+
+DASH_TYPES = {
+    'Functions': 'Function',
+    'Constructors': 'Function',
+    'Properties': 'Property',
+    'Methods': 'Method',
+    'Opertors': 'Operator',
+    'Abstract Classes': 'Class',
+    'Classes': 'Class',
+    'Typedefs': 'Type',
+    'Exceptions': 'Exception',
+    'Operators': 'Operator'
+}
+
+
+ANCHOR_TYPES = ['Functions', 'Constructors', 'Properties', 'Methods', 'Operators']
+TYPE_TYPES = ['Abstract Classes', 'Classes', 'Typedefs', 'Exceptions']
+ALL_TYPES = ANCHOR_TYPES + TYPE_TYPES
 
 
 def get_soup(path):
@@ -20,24 +37,45 @@ def insert(cursor, name, doc_type, path):
     print 'name: %s, type: %s, path: %s' % (name, 'Module', path)
 
 
-def process_module(mod_path, cursor):
-    soup = get_soup(mod_path)
-    content = soup.find('div', {"class": "content"})
-    functions = content.find_all('a', {"class": 'anchor-link'})
-    classes = content.find_all('div', {"class": 'type'})
-
-    for f in functions:
+def parse_anchor_type(mod_path, parent):
+    links = parent.find_all('a', {"class": 'anchor-link'})
+    for f in links:
         link = '%s%s' % (mod_path, f.attrs['href'])
         name = f.parent.attrs['id']
-        f_type = f.parent.parent.attrs['class'][0]
-        insert(cur, name, f_type.capitalize(), link)
+        yield link, "%s.%s" % (mod_path.replace('_', '.').replace('/', '.')[:-5], name)
 
-    for c in classes:
+
+def parse_type_type(mod_path, parent):
+    links = parent.find_all('div', {"class": 'type'})
+    for c in links:
         class_link = c.find('a')
         link = class_link.attrs['href']
         name = class_link.text.strip()
-        insert(cur, name, 'Class', link)
-        yield link
+        yield link, name
+
+
+def process_module(mod_path, cursor):
+    soup = get_soup(mod_path)
+    children = []
+    for tag in soup.find_all('h3'):
+        if tag.text not in ALL_TYPES:
+            print "ignoring: %s" % tag.text
+            continue
+        parent = tag.parent
+
+        gen = None
+        to_return = False
+        if tag.text in ANCHOR_TYPES:
+            gen = parse_anchor_type(mod_path, parent)
+        else:
+            gen = parse_type_type(mod_path, parent)
+            to_return = True
+
+        for link, name in gen:
+            insert(cursor, name, DASH_TYPES[tag.text], link)
+            if to_return:
+                children.append(link)
+    return children
 
 
 def get_modules(cursor):
@@ -65,8 +103,8 @@ if __name__ == '__main__':
     cur.execute('CREATE UNIQUE INDEX anchor ON searchIndex (name, type, path);')
 
     for mod_path in get_modules(cur):
-        classes = list(process_module(mod_path, cur))
-        for c in classes:
+        children = process_module(mod_path, cur)
+        for c in children:
             process_module(c, cur)
 
     cur.execute("VACUUM ANALYZE;")
