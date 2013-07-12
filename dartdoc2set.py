@@ -41,7 +41,11 @@ def parse_anchor_type(mod_path, parent):
     links = parent.find_all('a', {"class": 'anchor-link'})
     for f in links:
         link = '%s%s' % (mod_path, f.attrs['href'])
-        name = f.parent.attrs['id']
+        parent = f.parent
+        if 'id' not in parent.attrs:
+            parent = parent.parent
+
+        name = parent.attrs['id']
         yield link, "%s.%s" % (mod_path.replace('_', '.').replace('/', '.')[:-5], name)
 
 
