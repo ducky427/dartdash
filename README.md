@@ -3,7 +3,7 @@ dartdash
 
 Dart docset for Dash (http://kapeli.com/dash/)
 
-Now included with Dash. Enable Dash docfeed for [updates](http://ducky427.github.io/dart/2013/07/10/dash-dart-docset/).
+Enable Dash docfeed by clicking on the feed mentioned [here](http://ducky427.github.io/dart/2013/07/10/dash-dart-docset/).
 
 Building
 ==========
