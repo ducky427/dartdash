@@ -111,6 +111,5 @@ if __name__ == '__main__':
         for c in children:
             process_module(c, cur)
 
-    cur.execute("VACUUM ANALYZE;")
     db.commit()
     db.close()

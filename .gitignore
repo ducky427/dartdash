@@ -29,3 +29,5 @@ pip-log.txt
 *.tgz
 
 dart.docset/Contents/Resources/Documents/*
+
+dart-api-docs.zip
