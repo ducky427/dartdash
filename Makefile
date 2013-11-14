@@ -7,7 +7,7 @@ package:
 	tar --exclude='.DS_Store' -cvzf dart.tgz dart.docset
 
 download:
-	curl -O https://storage.googleapis.com/dart-editor-archive-integration/latest/dart-api-docs.zip
+	curl -O http://storage.googleapis.com/dart-archive/channels/stable/release/latest/api-docs/dart-api-docs.zip
 	unzip dart-api-docs.zip
 	rm -r dart.docset/Contents/Resources/Documents/
 	mv api_docs/ dart.docset/Contents/Resources/
